@@ -1,0 +1,721 @@
+================================================================================
+FILE: 37e06e35-Thu_moi_Khoa_23_AI_Quan_ly_Dao_tao/
+================================================================================
+CHƯƠNG TRÌNH TẬP HUẤN AI CHUYÊN SÂU CHO CHUYỂN ĐỔI SỐ ĐẠI HỌC
+THƯ MỜI THAM DỰ
+KHÓA TẬP HUẤN CHUYÊN SÂU SỐ 3
+ỨNG DỤNG TRÍ TUỆ NHÂN TẠO TRONG
+QUẢN LÝ ĐÀO TẠO ĐẠI HỌC
+AI Academic Copilot & Student Early Warning
+THỜI LƯỢNG
+02 ngày chuyên sâu
+PHƯƠNG PHÁP
+30% nền tảng · 70% workshop
+ĐẦU RA
+Prototype + Pilot + Phần mềm
+Kính gửi: Lãnh đạo và cán bộ phụ trách Quản lý đào tạo, Chương trình đào tạo, Cố vấn học tập, Công tác sinh viên và Chuyển đổi số tại các cơ sở giáo dục đại học.
+Trong bối cảnh quy mô đào tạo, chương trình, học phần và dữ liệu sinh viên ngày càng lớn, công tác quản lý đào tạo cần chuyển từ xử lý thủ công và phản ứng theo sự vụ sang mô hình quản trị chủ động, nhất quán và dựa trên dữ liệu.
+Khóa học được thiết kế để giúp học viên đi từ mức “biết sử dụng AI” sang mức “thiết kế, vận hành và làm chủ hệ thống AI chuyên dụng cho quản lý đào tạo”. Trọng tâm không phải ChatGPT cơ bản, mà là AI workflow, RAG, AI Agents, Academic Analytics, Student Risk và triển khai phần mềm thực tế.
+ĐẶC BIỆT: HỌC VIÊN/ĐƠN VỊ THAM DỰ ĐƯỢC CHUYỂN GIAO MIỄN PHÍ
+AI Academic Copilot – phiên bản triển khai thử nghiệm, kèm hướng dẫn cấu hình và pilot.
+1. GIÁ TRỊ THU ĐƯỢC SAU KHÓA TẬP HUẤN
+NĂNG LỰC CHUYÊN SÂU
+Thiết kế AI workflow cho quy chế, chương trình, cố vấn học tập, xét tốt nghiệp và cảnh báo sớm.
+SẢN PHẨM THỰC TẾ
+Có prototype AI Academic Copilot, Early Warning workflow, bộ KPI và kế hoạch pilot 3–6 tháng.
+HIỆU QUẢ VẬN HÀNH
+Rút ngắn tra cứu quy chế, đối chiếu tín chỉ, kiểm tra điều kiện tốt nghiệp và xử lý câu hỏi học vụ lặp lại.
+KHẢ NĂNG NHÂN RỘNG
+Có nền tảng để tích hợp SIS/LMS, mở rộng cho nhiều chương trình đào tạo và phục vụ hàng nghìn sinh viên.
+2. ĐỐI TƯỢNG NÊN CỬ ĐI HỌC
+Để khóa học tạo ra sản phẩm có thể đưa vào pilot ngay, mỗi đơn vị nên cử nhóm 03–05 người theo mô hình “Nghiệp vụ – Cố vấn – Công nghệ”:
+Thành phần
+Vai trò trong khóa học
+01 lãnh đạo phụ trách đào tạo
+Định hướng bài toán ưu tiên, xác định phạm vi pilot và quyết định quy trình đưa vào thử nghiệm.
+01–02 chuyên viên quản lý đào tạo
+Cung cấp quy chế, quy trình, biểu mẫu, logic nghiệp vụ và các tình huống học vụ thực tế.
+01 cán bộ CTĐT/cố vấn học tập
+Phối hợp kiểm tra chương trình, điều kiện tiên quyết, kế hoạch học và logic tư vấn sinh viên.
+01 cán bộ CNTT/chuyển đổi số (nếu có)
+Hỗ trợ dữ liệu, kết nối SIS/LMS, API, bảo mật và triển khai phần mềm.
+3. NỘI DUNG TẬP HUẤN CHUYÊN SÂU – 02 NGÀY
+NGÀY 1
+AI FOR ACADEMIC MANAGEMENT & ACADEMIC ADVISING
+Từ quy chế và chương trình đào tạo đến AI Academic Advisor
+• Generative AI, RAG và AI Agents trong quản lý đào tạo đại học.
+• Xây dựng AI Knowledge Base từ quy chế, chương trình đào tạo và danh mục học phần.
+• AI Regulation Assistant và AI Curriculum Assistant.
+• Kiểm tra môn tiên quyết, điều kiện đăng ký học và cấu trúc học phần bắt buộc/tự chọn.
+• Phân tích tiến độ tích lũy tín chỉ và các yêu cầu còn thiếu.
+• AI Study Planner, AI Graduation Planner và AI Academic Advisor.
+• Thiết kế Human-in-the-loop để giảm rủi ro AI trả lời sai quy định.
+• Workshop: Student Question → Student Data → Rules → AI Recommendation → Human Verification.
+KẾT QUẢ ĐẦU RA: 01 AI Academic Advisor prototype + 01 workflow quản lý đào tạo hoàn chỉnh.
+NGÀY 2
+AI STUDENT EARLY WARNING & ACADEMIC INTELLIGENCE
+Từ dữ liệu học tập đến cảnh báo sớm và hỗ trợ ra quyết định
+• Student 360 và Academic Data Model.
+• GPA trend, credit accumulation, failed-course analysis, attendance và LMS engagement.
+• Phân tích hành vi đăng ký học, cảnh báo học vụ và tiến độ so với chương trình chuẩn.
+• Xây dựng Student Risk Score: Low / Medium / High Risk.
+• Dropout Risk và Graduation Delay Risk.
+• AI Recommendation Engine cho cố vấn học tập và workflow can thiệp sớm.
+• Academic Intelligence Dashboard cho lãnh đạo và chuyên viên.
+• Workshop: Student Data → Risk Detection → Explanation → Recommended Action → Advisor → Follow-up.
+KẾT QUẢ ĐẦU RA: 01 AI Student Early Warning prototype + 01 Academic Intelligence Dashboard concept.
+4. KẾT QUẢ ĐẦU RA CỤ THỂ CỦA MỖI ĐƠN VỊ
+• 01 danh mục 10–20 pain point trong quản lý đào tạo có thể ứng dụng AI.
+• 03–05 quy trình ưu tiên để số hóa/tái thiết kế bằng AI.
+• 01 AI Academic Copilot prototype phục vụ tra cứu, tư vấn và kiểm tra học vụ.
+• 01 AI Student Early Warning prototype hoặc workflow cảnh báo sớm.
+• 01 danh mục dữ liệu cần tích hợp từ SIS/LMS và các nguồn liên quan.
+• 01 sơ đồ tích hợp hệ thống và nguyên tắc phân quyền/bảo mật.
+• 01 bộ KPI đánh giá hiệu quả pilot.
+• 01 kế hoạch pilot 3–6 tháng và roadmap từ prototype đến production.
+5. PHẦN MỀM ĐƯỢC CHUYỂN GIAO MIỄN PHÍ
+Các đơn vị tham dự được chuyển giao miễn phí AI Academic Copilot – phiên bản triển khai thử nghiệm, nhằm tiếp tục thực hành, cấu hình dữ liệu và triển khai pilot sau khóa học.
+1. AI Regulation Assistant
+Tra cứu và giải thích quy chế đào tạo, học vụ, đăng ký học, cảnh báo và tốt nghiệp.
+2. AI Curriculum Assistant
+Phân tích cấu trúc CTĐT, học phần bắt buộc/tự chọn, tiên quyết và tiến độ chương trình.
+3. AI Academic Advisor
+Tư vấn lộ trình học, đề xuất học phần, kiểm tra tín chỉ và hỗ trợ cố vấn cá nhân hóa.
+4. AI Graduation Checker
+Đối chiếu transcript + CTĐT + quy định để kiểm tra điều kiện tốt nghiệp và chỉ ra phần còn thiếu.
+5. AI Study Planner
+Xây dựng kế hoạch học theo học kỳ, kịch bản tăng/giảm tải và lộ trình tốt nghiệp đúng hạn.
+6. AI Student Early Warning
+Phát hiện nguy cơ học tập, phân loại rủi ro, giải thích nguyên nhân và đề xuất hành động can thiệp.
+7. Academic Intelligence Dashboard
+Dashboard tiến độ học tập, học lại, cảnh báo, bottleneck courses, student risk và graduation forecast.
+Thiết kế theo hướng module hóa, có thể cấu hình theo dữ liệu và quy định của từng trường.
+Phạm vi chuyển giao bao gồm: phần mềm thử nghiệm, hướng dẫn cài đặt/cấu hình, cấu trúc dữ liệu mẫu, hướng dẫn xây dựng Knowledge Base, cấu hình quy chế – chương trình đào tạo – Academic Advisor – Early Warning, và hướng dẫn tích hợp API/LMS/SIS khi điều kiện kỹ thuật cho phép.
+Mục tiêu: kết thúc khóa học, đơn vị mang về “Năng lực + Prototype + Phần mềm + Dữ liệu mẫu + KPI + Kế hoạch pilot”, không chỉ là kiến thức lý thuyết.
+6. HIỆU QUẢ KỲ VỌNG KHI TRIỂN KHAI PILOT
+Tùy mức độ số hóa, chất lượng dữ liệu và khả năng kết nối hệ thống, đơn vị có thể sử dụng các chỉ số sau làm mục tiêu tham chiếu:
+Chỉ số tham chiếu
+Mức kỳ vọng khi pilot
+Câu hỏi học vụ lặp lại được AI hỗ trợ
+50–70%
+Thời gian xử lý một số tác vụ thường xuyên
+Giảm khoảng 30–50%
+Tra cứu quy chế/CTĐT/điều kiện tốt nghiệp
+Rút ngắn đáng kể
+Sinh viên/cố vấn trong phạm vi pilot
+Theo quy mô và dữ liệu của đơn vị
+Lưu ý: các chỉ tiêu trên là mức tham chiếu để thiết kế pilot; kết quả thực tế phụ thuộc vào dữ liệu, quy trình và phạm vi triển khai của từng trường.
+7. DỮ LIỆU KHUYẾN KHÍCH MANG THEO ĐỂ THỰC HÀNH
+• Quy chế đào tạo và các quy định học vụ hiện hành.
+• Chương trình đào tạo, danh mục học phần và quan hệ tiên quyết.
+• Transcript/dữ liệu học tập mẫu đã được ẩn danh.
+• Quy định xét tốt nghiệp, cảnh báo học vụ và biểu mẫu nghiệp vụ.
+• Dữ liệu LMS hoặc báo cáo học tập mẫu nếu được phép sử dụng.
+8. LỘ TRÌNH SAU KHÓA TẬP HUẤN
+TRAINING
+SOFTWARE
+TRANSFER
+DATA
+PREP
+CONFIG
+PILOT
+KPI
+EVALUATION
+SCALE-UP
+Mục tiêu dài hạn là hình thành mô hình AI-Powered Academic Management: quản lý đào tạo thông minh, chủ động, cá nhân hóa và dựa trên dữ liệu; trong đó AI là trợ lý cho cán bộ, copilot cho cố vấn, trợ lý học vụ cho sinh viên và hệ thống hỗ trợ ra quyết định cho lãnh đạo.
+KHÓA TẬP HUẤN HƯỚNG TỚI MỤC TIÊU
+Làm chủ nghiệp vụ + Làm chủ dữ liệu + Làm chủ AI workflow + Làm chủ phần mềm
+Nhà trường trân trọng kính mời Quý đơn vị quan tâm và cử cán bộ phù hợp tham dự chương trình.
+TRÂN TRỌNG KÍNH MỜI
+================================================================================
+FILE: 7d07c093-Thu_moi_Khoa_24_AI_Quan_ly_Khoa_hoc_Nghien_cuu/
+================================================================================
+CHƯƠNG TRÌNH TẬP HUẤN AI CHUYÊN SÂU CHO CHUYỂN ĐỔI SỐ ĐẠI HỌC
+THƯ MỜI THAM DỰ
+KHÓA TẬP HUẤN CHUYÊN SÂU SỐ 4
+ỨNG DỤNG TRÍ TUỆ NHÂN TẠO TRONG
+QUẢN LÝ KHOA HỌC VÀ NGHIÊN CỨU
+AI Research Copilot & Research Intelligence
+THỜI LƯỢNG
+02 ngày chuyên sâu
+PHƯƠNG PHÁP
+30% nền tảng · 70% workshop
+ĐẦU RA
+Copilot + Dashboard + Pilot
+Kính gửi: Lãnh đạo và cán bộ phụ trách Quản lý khoa học, Nghiên cứu, Hợp tác học thuật, Thư viện/Học liệu số và Chuyển đổi số tại các cơ sở giáo dục đại học.
+Trong bối cảnh dữ liệu đề tài, công bố, nhóm nghiên cứu, hồ sơ khoa học và yêu cầu báo cáo ngày càng lớn, AI có thể giúp chuyển hoạt động quản lý khoa học từ xử lý phân tán sang mô hình có tri thức dùng chung, workflow tự động và Research Intelligence hỗ trợ ra quyết định.
+Đây là khóa chuyên sâu, không dừng ở việc dùng ChatGPT để tìm ý tưởng hay viết nội dung. Học viên sẽ làm việc với RAG, AI Agents, Research Workflow, Research Analytics và Human-in-the-loop để xây dựng giải pháp có thể đưa vào pilot ngay sau khóa học.
+ĐẶC BIỆT: ĐƠN VỊ THAM DỰ ĐƯỢC CHUYỂN GIAO MIỄN PHÍ
+AI Research Copilot – phiên bản triển khai thử nghiệm, kèm hướng dẫn cấu hình dữ liệu và pilot.
+1. GIÁ TRỊ THU ĐƯỢC SAU KHÓA TẬP HUẤN
+NĂNG LỰC CHUYÊN SÂU
+Thiết kế AI workflow cho tra cứu học thuật, quản lý đề tài, hồ sơ khoa học, báo cáo và hỗ trợ nghiên cứu.
+SẢN PHẨM THỰC TẾ
+Có AI Research Copilot prototype, Research Intelligence dashboard concept, bộ KPI và kế hoạch pilot.
+HIỆU QUẢ VẬN HÀNH
+Rút ngắn tra cứu, tổng hợp hồ sơ, phân loại nhiệm vụ, theo dõi tiến độ và chuẩn bị báo cáo nghiên cứu.
+NĂNG LỰC QUẢN TRỊ
+Biến dữ liệu công bố, đề tài, nhóm nghiên cứu và hợp tác thành Research Intelligence phục vụ quyết định lãnh đạo.
+2. ĐỐI TƯỢNG NÊN CỬ ĐI HỌC
+Để khóa học tạo ra sản phẩm có thể tiếp tục triển khai tại đơn vị, khuyến nghị mỗi trường/đơn vị cử nhóm 03–05 người theo mô hình “Quản lý – Nghiệp vụ – Nghiên cứu – Công nghệ”:
+Thành phần nên cử
+Vai trò trong khóa học
+01 lãnh đạo phụ trách khoa học & công nghệ
+Xác định bài toán ưu tiên, phạm vi dữ liệu, mục tiêu pilot và các dashboard phục vụ quản trị.
+01–02 chuyên viên quản lý khoa học
+Cung cấp quy trình đề tài, hồ sơ, biểu mẫu, báo cáo, dữ liệu công bố và các pain point thực tế.
+01 giảng viên/nhà nghiên cứu nòng cốt
+Kiểm thử Research Copilot trên tình huống nghiên cứu, literature review, methodology và publication workflow.
+01 cán bộ CNTT/chuyển đổi số (nếu có)
+Hỗ trợ dữ liệu, RAG, tích hợp repository/API, phân quyền, bảo mật và triển khai phần mềm.
+3. NỘI DUNG TẬP HUẤN CHUYÊN SÂU – 02 NGÀY
+NGÀY 1
+AI RESEARCH COPILOT & RESEARCH WORKFLOW
+Từ kho tri thức nghiên cứu đến AI trợ lý cho cán bộ và nhà nghiên cứu
+• Kiến trúc Generative AI, RAG và AI Agents cho quản lý khoa học và nghiên cứu.
+• Xây dựng Research Knowledge Base từ quy định, biểu mẫu, hướng dẫn, repository và dữ liệu nội bộ.
+• AI hỗ trợ literature mapping, evidence matrix, thematic synthesis và research gap discovery.
+• AI hỗ trợ cấu trúc research question, conceptual model, methodology checklist và kế hoạch dữ liệu.
+• AI hỗ trợ quản lý đề tài: hồ sơ, nhiệm vụ, mốc tiến độ, sản phẩm đầu ra và báo cáo.
+• AI hỗ trợ publication workflow: journal fit, submission checklist, reviewer simulation và revision plan.
+• Research Integrity, citation checking, bảo mật dữ liệu và Human-in-the-loop.
+• Workshop: Research Problem → Knowledge Base → AI Copilot → Workflow → Human Review.
+KẾT QUẢ ĐẦU RA: 01 AI Research Copilot prototype + 01 Research Knowledge Base/workflow mẫu.
+NGÀY 2
+RESEARCH INTELLIGENCE & AI-POWERED RESEARCH MANAGEMENT
+Từ dữ liệu công bố – đề tài – hợp tác đến dashboard hỗ trợ quyết định
+• Chuẩn hóa dữ liệu công bố, đề tài, tác giả, đơn vị, lĩnh vực nghiên cứu và đối tác.
+• Phân tích năng suất nghiên cứu, xu hướng chủ đề, lĩnh vực mạnh và emerging topics.
+• Phân tích mạng lưới cộng tác nội bộ/ngoài trường và tiềm năng hợp tác.
+• Researcher/Research Group profiling và expertise matching.
+• AI hỗ trợ phân loại cơ hội tài trợ, grant scouting và matching với nhóm nghiên cứu.
+• Xây dựng Research Intelligence Dashboard cho lãnh đạo và đơn vị quản lý khoa học.
+• Thiết kế KPI: publications, citations, collaboration, grants, project completion và strategic themes.
+• Workshop: Research Data → AI Analytics → Insight → Dashboard → Management Action.
+KẾT QUẢ ĐẦU RA: 01 Research Intelligence dashboard concept + 01 bộ KPI + 01 kế hoạch pilot 3–6 tháng.
+4. KẾT QUẢ ĐẦU RA CỤ THỂ CỦA MỖI ĐƠN VỊ
+• 01 danh mục 10–20 pain point trong quản lý khoa học/nghiên cứu có thể ứng dụng AI.
+• 03–05 quy trình ưu tiên để tái thiết kế bằng AI.
+• 01 AI Research Copilot prototype và 01 Research Knowledge Base mẫu.
+• 01 Research Intelligence dashboard concept phục vụ quản trị.
+• 01 danh mục dữ liệu cần chuẩn hóa/kết nối từ repository, hệ thống QLKH và nguồn liên quan.
+• 01 sơ đồ AI workflow + Human Review + nguyên tắc bảo mật/liêm chính nghiên cứu.
+• 01 bộ KPI đánh giá hiệu quả pilot.
+• 01 kế hoạch pilot 3–6 tháng và roadmap từ prototype đến triển khai thực tế.
+5. PHẦN MỀM ĐƯỢC CHUYỂN GIAO MIỄN PHÍ
+Các đơn vị tham dự được chuyển giao miễn phí AI Research Copilot – phiên bản triển khai thử nghiệm, để tiếp tục thực hành, cấu hình dữ liệu và tổ chức pilot sau khóa học.
+1  AI Research Knowledge Assistant
+Tra cứu quy định, biểu mẫu, quy trình, hướng dẫn nghiên cứu và kho tri thức nội bộ bằng RAG.
+2  AI Literature & Gap Assistant
+Hỗ trợ tổ chức tài liệu, tổng hợp chủ đề, lập evidence matrix và phát hiện khoảng trống cần nghiên cứu.
+3  AI Proposal & Methodology Copilot
+Hỗ trợ cấu trúc đề xuất, câu hỏi nghiên cứu, phương pháp, kế hoạch dữ liệu và checklist chất lượng.
+4  AI Research Workflow Manager
+Theo dõi đề tài, nhiệm vụ, mốc tiến độ, hồ sơ, sản phẩm đầu ra và cảnh báo công việc cần xử lý.
+5  AI Publication & Journal Assistant
+Hỗ trợ kiểm tra cấu trúc bài, journal fit, submission checklist, phản biện mô phỏng và kế hoạch chỉnh sửa.
+6  Research Intelligence Dashboard
+Tổng hợp công bố, trích dẫn, lĩnh vực mạnh, nhóm nghiên cứu, đối tác và xu hướng để hỗ trợ quyết định.
+7  AI Grant & Collaboration Scout
+Hỗ trợ phân loại cơ hội tài trợ/hợp tác, matching chuyên môn và xây shortlist cơ hội phù hợp.
+8  Research Integrity & Human Review
+Checklist liêm chính nghiên cứu, trích dẫn, bảo mật dữ liệu và cơ chế Human-in-the-loop.
+Phạm vi chuyển giao gồm: phần mềm thử nghiệm, hướng dẫn cài đặt/cấu hình, cấu trúc dữ liệu mẫu, hướng dẫn xây dựng Research Knowledge Base, thiết lập workflow quản lý đề tài – publication – research intelligence, và hướng dẫn tích hợp dữ liệu/API khi điều kiện kỹ thuật cho phép.
+Mục tiêu: kết thúc khóa học, đơn vị mang về “Năng lực + Prototype + Phần mềm + Knowledge Base mẫu + Dashboard + KPI + Kế hoạch pilot”.
+6. HIỆU QUẢ KỲ VỌNG KHI TRIỂN KHAI PILOT
+Tùy chất lượng dữ liệu, mức độ số hóa và phạm vi pilot, đơn vị có thể sử dụng các chỉ số sau làm mục tiêu tham chiếu:
+Chỉ số tham chiếu
+Mục tiêu pilot
+Tra cứu quy định/hồ sơ/tài liệu nghiên cứu
+Rút ngắn đáng kể
+Tổng hợp báo cáo & chuẩn bị hồ sơ lặp lại
+Giảm khoảng 30–50% thời gian
+Đề tài/công bố được chuẩn hóa dữ liệu trong pilot
+Theo phạm vi đơn vị
+Dashboard Research Intelligence
+Tối thiểu 01 dashboard mẫu
+Workflow AI đưa vào thử nghiệm
+Tối thiểu 03 quy trình
+Lưu ý: AI trong nghiên cứu phải được triển khai theo nguyên tắc hỗ trợ chuyên gia, không thay thế phán đoán học thuật; kết quả do AI sinh ra cần được kiểm tra nguồn, trích dẫn, phương pháp và tính liêm chính trước khi sử dụng.
+7. DỮ LIỆU KHUYẾN KHÍCH MANG THEO ĐỂ THỰC HÀNH
+• Quy chế/quy trình quản lý khoa học, biểu mẫu đề tài và báo cáo.
+• Danh mục đề tài, nhiệm vụ khoa học hoặc hồ sơ mẫu đã loại bỏ dữ liệu nhạy cảm.
+• Danh mục công bố, tác giả, đơn vị, nhóm nghiên cứu và lĩnh vực nghiên cứu.
+• Một số bài báo/tài liệu học thuật hoặc repository nội bộ phù hợp để xây Knowledge Base.
+• Báo cáo KPI nghiên cứu, dữ liệu hợp tác hoặc nhu cầu dashboard của lãnh đạo.
+8. LỘ TRÌNH SAU KHÓA TẬP HUẤN
+TRAINING
+SOFTWARE
+TRANSFER
+DATA
+PREP
+CONFIG
+PILOT
+KPI
+EVALUATION
+SCALE-UP
+Mục tiêu dài hạn là hình thành AI-Powered Research Management: dữ liệu nghiên cứu được chuẩn hóa, quy trình được hỗ trợ bằng AI, nhà nghiên cứu có Research Copilot, và lãnh đạo có Research Intelligence phục vụ quyết định chiến lược.
+KHÓA TẬP HUẤN HƯỚNG TỚI MỤC TIÊU
+Làm chủ nghiệp vụ + Làm chủ dữ liệu nghiên cứu + Làm chủ AI workflow + Làm chủ phần mềm
+Nhà trường trân trọng kính mời Quý đơn vị quan tâm và cử cán bộ, giảng viên phù hợp tham dự chương trình.
+TRÂN TRỌNG KÍNH MỜI
+================================================================================
+FILE: a20c8e7a-Thu_moi_Khoa_25_AI_Thuong_mai_dien_tu_Kinh_doanh_so_Marketing_so/
+================================================================================
+CHƯƠNG TRÌNH TẬP HUẤN AI CHUYÊN SÂU CHO CHUYỂN ĐỔI SỐ ĐẠI HỌC
+THƯ MỜI THAM DỰ
+KHÓA TẬP HUẤN CHUYÊN SÂU SỐ 5
+ỨNG DỤNG TRÍ TUỆ NHÂN TẠO TRONG
+THƯƠNG MẠI ĐIỆN TỬ, KINH DOANH SỐ VÀ MARKETING SỐ
+AI Agents, Agentic Commerce & Digital Business Simulation
+THỜI LƯỢNG
+02 ngày chuyên sâu
+PHƯƠNG PHÁP
+30% nền tảng · 70% workshop
+ĐẦU RA
+AI Agents + Simulator + Pilot
+Kính gửi: Lãnh đạo và giảng viên các Khoa/Bộ môn Thương mại điện tử, Kinh doanh số, Marketing số, Digital Business, Business Analytics, Entrepreneurship và các lĩnh vực liên quan tại các cơ sở giáo dục đại học.
+AI đang chuyển thương mại số từ mô hình “doanh nghiệp sử dụng công cụ AI” sang mô hình “AI Agents tham gia trực tiếp vào tìm kiếm, tư vấn, định giá, bán hàng, marketing, chăm sóc khách hàng và ra quyết định”. Điều này đặt ra yêu cầu mới cho chương trình đào tạo: sinh viên phải được học bằng trải nghiệm, dữ liệu và mô phỏng, thay vì chỉ học lý thuyết về AI.
+Đây là khóa chuyên sâu, không dừng ở việc dùng ChatGPT để tạo nội dung hoặc soạn bài. Học viên sẽ trực tiếp thiết kế AI Agents, Multi-Agent workflows, Agentic Customer Journey và vận hành Digital Business Simulator để xây dựng bài tập, case và môi trường thực hành có thể đưa vào lớp học ngay sau khóa học.
+ĐẶC BIỆT: KHOA/BỘ MÔN THAM DỰ ĐƯỢC CHUYỂN GIAO MIỄN PHÍ
+AI Digital Business Lab & Simulator – phiên bản triển khai thử nghiệm, kèm bộ kịch bản, dữ liệu mẫu và hướng dẫn pilot.
+1. GIÁ TRỊ THU ĐƯỢC SAU KHÓA TẬP HUẤN
+NĂNG LỰC CHUYÊN SÂU
+Thiết kế AI Agents và Multi-Agent workflows cho marketing, sales, pricing, recommendation, customer service và analytics.
+SẢN PHẨM GIẢNG DẠY
+Có AI Commerce Agent, Agentic Customer Journey, simulation scenario, case và lesson plan có thể sử dụng ngay trong học phần.
+ĐỔI MỚI PHƯƠNG PHÁP
+Chuyển từ lecture-based learning sang experiential & simulation-based learning: sinh viên ra quyết định và quan sát hệ quả.
+NĂNG LỰC KHÁC BIỆT
+Hình thành AI Digital Business Lab để phục vụ đào tạo, cuộc thi, capstone, nghiên cứu ứng dụng và chuyển giao cho doanh nghiệp/trường khác.
+2. ĐỐI TƯỢNG NÊN CỬ ĐI HỌC
+Để khóa học tạo ra sản phẩm có thể tiếp tục triển khai tại Khoa/Bộ môn, khuyến nghị mỗi đơn vị cử nhóm 05–10 người theo mô hình “Quản lý – Chuyên môn – Dữ liệu – Công nghệ – Đổi mới giảng dạy”:
+Thành phần nên cử
+Vai trò trong khóa học
+01 lãnh đạo Khoa/Bộ môn
+Xác định học phần ưu tiên, định hướng AI Lab, phạm vi pilot và kế hoạch tích hợp vào chương trình đào tạo.
+02–04 giảng viên E-commerce/Digital Business/Digital Marketing
+Thiết kế use case, AI Agent, case study, simulation và đánh giá khả năng đưa vào lớp học.
+01 giảng viên Business Analytics/Entrepreneurship/Strategy
+Thiết kế KPI, mô hình quyết định, market scenario và debriefing sau simulation.
+01 cán bộ LMS/CNTT/chuyển đổi số (nếu có)
+Hỗ trợ cấu hình nền tảng, dữ liệu, tài khoản lớp học, tích hợp LMS/API và triển khai phần mềm.
+3. NỘI DUNG TẬP HUẤN CHUYÊN SÂU – 02 NGÀY
+NGÀY 1
+AI AGENTS & AGENTIC COMMERCE
+Từ Generative AI đến hệ sinh thái AI Agents trong thương mại và marketing số
+• Generative AI → Copilot → AI Agent → Multi-Agent System: kiến trúc, khả năng và giới hạn.
+• Agentic Commerce và AI-enabled Customer Journey: Discover → Search → Compare → Recommend → Buy → Pay → Deliver → Service → Retain.
+• Thiết kế AI Marketing Agent, Sales Agent, Pricing Agent, Recommendation Agent, Customer Service Agent và Analytics Agent.
+• AI Agents cho omnichannel, social commerce, cross-border commerce và personalized marketing.
+• Thiết kế Multi-Agent workflow: phân vai, memory, tool use, hand-off, guardrails và Human-in-the-loop.
+• Business KPI: conversion, CAC, ROAS, AOV, retention, profit, customer satisfaction và market share.
+• Workshop: Business Problem → Customer Journey → AI Agents → Workflow → KPI → Classroom Use Case.
+KẾT QUẢ ĐẦU RA: 01 AI Commerce Agent prototype + 01 Multi-Agent workflow + 01 Agentic Customer Journey + 01 use case/case study đưa vào lớp học.
+NGÀY 2
+AI DIGITAL BUSINESS SIMULATION & EXPERIENTIAL LEARNING
+Từ lý thuyết kinh doanh số đến “Business War Room” có AI
+• Thiết kế Digital Business Simulator: Price → Demand → Traffic → Conversion → Orders → Revenue → Cost → Profit → Satisfaction → Market Share.
+• Mode 1 – Student vs AI: một doanh nghiệp sinh viên cạnh tranh với nhiều AI Companies theo chiến lược khác nhau.
+• Mode 2 – Student vs Student: nhiều nhóm cạnh tranh trong cùng một thị trường và tác động lẫn nhau qua từng vòng quyết định.
+• AI Consumer Simulator: mô phỏng segment, nhu cầu, price sensitivity, loyalty và phản ứng với marketing.
+• AI Competitor Simulator: cost leadership, premium, growth, customer intimacy và aggressive promotion.
+• AI Market Shock Generator: trend, biến động chi phí quảng cáo, supply disruption, thay đổi thuật toán, đối thủ giảm giá, regulation shock.
+• Thiết kế scoring, team ranking, strategic KPI và debriefing để biến simulation thành learning outcome đo được.
+• Workshop: Market Design → Decision Round → AI Reaction → Dashboard → Debrief → Lesson Plan.
+KẾT QUẢ ĐẦU RA: 01 Digital Business Simulation + 01 AI Competitor model + 01 bộ Market Shock scenarios + 01 KPI/rubric + 01 lesson plan.
+4. KẾT QUẢ ĐẦU RA CỤ THỂ CỦA MỖI KHOA/BỘ MÔN
+• 01 danh mục 10–20 use case AI ưu tiên cho Thương mại điện tử, Kinh doanh số và Marketing số.
+• 01 AI Commerce Agent và 01 Multi-Agent Commerce workflow.
+• 01 Agentic Customer Journey cho một doanh nghiệp/case cụ thể.
+• 01 Digital Business Simulation scenario và 01 AI Competitor model.
+• 01 bộ Market Shock scenarios + dữ liệu/tham số mẫu.
+• 01 bộ KPI/rubric đánh giá sinh viên trong simulation.
+• 01 lesson plan/case study tích hợp AI vào học phần.
+• 01 kế hoạch pilot 3–6 tháng và roadmap xây dựng AI Digital Business Lab của Khoa.
+5. PHẦN MỀM ĐƯỢC CHUYỂN GIAO MIỄN PHÍ
+Các Khoa/Bộ môn tham dự được chuyển giao miễn phí AI Digital Business Lab & Simulator – phiên bản triển khai thử nghiệm, để tiếp tục thực hành, cấu hình môn học và tổ chức pilot sau khóa học.
+1  AI Marketing Lab
+Thực hành segmentation, campaign planning, content, targeting, marketing analytics và tối ưu ROAS.
+2  AI Sales Agent
+Mô phỏng lead qualification, product recommendation, upsell/cross-sell và sales conversation.
+3  AI Pricing Agent
+Thực hành dynamic pricing, competitive pricing, promotion và revenue/profit optimization.
+4  AI Recommendation Agent
+Mô phỏng customer profile, personalization, next-best-offer và recommendation logic.
+5  AI Customer Service Agent
+Mô phỏng inquiry, complaint, return, service recovery, sentiment và customer retention.
+6  AI Digital Business Simulator
+Mô phỏng traffic, conversion, demand, revenue, cost, profit, satisfaction và market share.
+7  AI Competitor Simulator
+Tạo các doanh nghiệp AI với chiến lược cạnh tranh khác nhau và phản ứng theo thị trường.
+8  AI Consumer Simulator
+Mô phỏng customer segments, purchase behavior, price sensitivity, loyalty và phản ứng chiến dịch.
+9  AI Market Shock Generator
+Tạo sự kiện bất ngờ để sinh viên phân tích và điều chỉnh chiến lược theo từng vòng.
+10  Digital Business Analytics Dashboard
+Theo dõi revenue, profit, CAC, ROAS, conversion, satisfaction, market share, ranking và strategic performance.
+Phạm vi chuyển giao gồm: phần mềm thử nghiệm; hướng dẫn cài đặt/cấu hình; tài khoản/lớp mẫu; bộ dữ liệu và kịch bản simulation mẫu; hướng dẫn tạo AI Competitors, Market Shocks, KPI và dashboard; hướng dẫn tích hợp LMS/API khi điều kiện kỹ thuật cho phép.
+KẾT QUẢ ĐẦU RA: Kết thúc khóa học, Khoa/Bộ môn mang về “Năng lực + AI Agents + Simulator + Cases + Dataset + Lesson Plan + KPI + Kế hoạch pilot”.
+Lưu ý: Phần mềm phiên bản thử nghiệm được chuyển giao miễn phí trong khuôn khổ chương trình; chi phí hạ tầng máy chủ, API/model thương mại hoặc dịch vụ bên thứ ba (nếu phát sinh) do đơn vị chủ động lựa chọn và cân đối.
+6. HIỆU QUẢ KỲ VỌNG KHI TRIỂN KHAI PILOT
+Tùy phạm vi học phần, dữ liệu và mức độ tích hợp, Khoa/Bộ môn có thể sử dụng các chỉ số sau làm mục tiêu tham chiếu:
+Chỉ số tham chiếu
+Mục tiêu pilot
+Học phần tích hợp AI Lab/Simulation
+Tối thiểu 03–05 học phần
+AI Agents/AI workflows được sử dụng
+Tối thiểu 05 use case
+Simulation scenarios/cases
+Tối thiểu 10–20 kịch bản
+Sinh viên tham gia pilot
+Theo quy mô môn học/Khoa
+Tỷ trọng experiential learning
+Tăng rõ rệt so với lecture-only
+Sản phẩm có thể showcase/chuyển giao
+Tối thiểu 01 mô hình AI Digital Business Lab
+7. DỮ LIỆU/HỌC LIỆU KHUYẾN KHÍCH MANG THEO ĐỂ THỰC HÀNH
+• Syllabus môn Thương mại điện tử, Kinh doanh số, Marketing số hoặc môn liên quan.
+• Case study, business scenario, dataset, assignment và rubric đang sử dụng.
+• Dữ liệu marketing/sales giả lập hoặc dữ liệu đã ẩn danh phù hợp để xây dashboard.
+• Một ý tưởng simulation: thị trường, doanh nghiệp, quyết định, KPI và sự kiện bất ngờ.
+• Một use case AI mà Khoa muốn đưa vào pilot ngay sau khóa học.
+8. LỘ TRÌNH SAU KHÓA TẬP HUẤN
+TRAINING
+SOFTWARE
+TRANSFER
+COURSE
+DESIGN
+SIMULATION
+DESIGN
+PILOT
+KPI
+EVALUATION
+SCALE-UP
+Mục tiêu dài hạn là hình thành UNIVERSITY AI DIGITAL BUSINESS LAB dùng chung cho E-commerce, Digital Business, Digital Marketing, Business Analytics và Entrepreneurship – nơi sinh viên được học bằng cách xây AI Agents, vận hành doanh nghiệp, cạnh tranh với AI và ra quyết định dựa trên dữ liệu.
+KHÓA TẬP HUẤN HƯỚNG TỚI MỤC TIÊU
+Không chỉ “dạy sinh viên dùng AI”, mà xây dựng môi trường để sinh viên Learn by Building, Deciding, Competing & Experimenting with AI.
+Nhà trường trân trọng kính mời Quý Khoa/Bộ môn quan tâm và cử cán bộ, giảng viên phù hợp tham dự chương trình.
+TRÂN TRỌNG KÍNH MỜI
+================================================================================
+FILE: ac485c75-Thu_moi_Khoa_22_AI_Dam_bao_Chat_luong/
+================================================================================
+CHƯƠNG TRÌNH TẬP HUẤN AI CHUYÊN SÂU CHO CHUYỂN ĐỔI SỐ ĐẠI HỌC
+THƯ MỜI THAM DỰ
+KHÓA TẬP HUẤN CHUYÊN SÂU SỐ 2
+ỨNG DỤNG TRÍ TUỆ NHÂN TẠO TRONG
+ĐẢM BẢO CHẤT LƯỢNG VÀ KIỂM ĐỊNH GIÁO DỤC ĐẠI HỌC
+AI Quality & Accreditation Copilot
+THỜI LƯỢNG
+02 ngày chuyên sâu
+PHƯƠNG PHÁP
+30% nền tảng · 70% workshop
+ĐẦU RA
+Prototype + Pilot + Phần mềm
+Kính gửi: Lãnh đạo và cán bộ phụ trách Đảm bảo chất lượng, Khảo thí, Kiểm định, Quản lý đào tạo và Chuyển đổi số tại các cơ sở giáo dục đại học.
+Trong bối cảnh khối lượng chương trình đào tạo, chuẩn đầu ra, đề cương học phần, ma trận đánh giá, báo cáo tự đánh giá và hệ thống minh chứng ngày càng lớn, công tác đảm bảo chất lượng cần chuyển từ xử lý thủ công sang mô hình quản trị chất lượng dựa trên dữ liệu và AI.
+Khóa học được thiết kế để giúp học viên đi từ mức “biết sử dụng AI” sang mức “thiết kế, vận hành và làm chủ hệ thống AI chuyên dụng cho đảm bảo chất lượng và kiểm định”. Trọng tâm không phải là ChatGPT cơ bản, mà là AI workflow, RAG, Knowledge Base, AI Agents, kiểm soát chất lượng kết quả và triển khai phần mềm thực tế.
+ĐẶC BIỆT: HỌC VIÊN/ĐƠN VỊ THAM DỰ ĐƯỢC CHUYỂN GIAO MIỄN PHÍ
+AI Quality & Accreditation Copilot – phiên bản triển khai thử nghiệm, kèm hướng dẫn cấu hình và pilot.
+1. GIÁ TRỊ THU ĐƯỢC SAU KHÓA TẬP HUẤN
+NĂNG LỰC CHUYÊN SÂU
+Thiết kế AI workflow cho CLO/PLO, assessment, accreditation, evidence và quality improvement.
+SẢN PHẨM THỰC TẾ
+Có prototype AI Quality Copilot, workflow kiểm định, Knowledge Base và kế hoạch pilot.
+HIỆU QUẢ VẬN HÀNH
+Rút ngắn thời gian rà soát hồ sơ, tìm minh chứng, kiểm tra mapping và tổng hợp báo cáo.
+KHẢ NĂNG NHÂN RỘNG
+Có nền tảng để tích hợp vào quy trình QA của đơn vị và mở rộng sang nhiều chương trình/tiêu chuẩn kiểm định.
+2. ĐỐI TƯỢNG NÊN CỬ ĐI HỌC
+Để khóa học tạo ra sản phẩm có thể đưa vào pilot ngay, mỗi đơn vị nên cử nhóm 03–05 người theo mô hình “Nghiệp vụ – Chất lượng – Công nghệ”:
+Thành phần
+Vai trò trong khóa học
+01 lãnh đạo phụ trách QA/khảo thí
+Định hướng, lựa chọn bài toán ưu tiên, quyết định phạm vi pilot.
+01–02 chuyên viên QA/kiểm định
+Cung cấp quy trình, biểu mẫu, tiêu chí và minh chứng thực tế.
+01 cán bộ CTĐT/khảo thí
+Phối hợp CLO–PLO–Assessment, rubric, ma trận đề thi.
+01 cán bộ CNTT/chuyển đổi số (nếu có)
+Hỗ trợ dữ liệu, tích hợp, bảo mật, triển khai phần mềm.
+3. NỘI DUNG TẬP HUẤN CHUYÊN SÂU – 02 NGÀY
+NGÀY 1
+AI FOR CURRICULUM, LEARNING OUTCOMES & ASSESSMENT
+Từ chuẩn đầu ra đến hệ thống đánh giá nhất quán
+• Generative AI, RAG và AI Agents trong đảm bảo chất lượng giáo dục đại học.
+• Phân tích và chuẩn hóa CLO/PLO; kiểm tra động từ và mức độ Bloom.
+• Tự động mapping CLO–PLO và CLO–Assessment; phát hiện chuẩn đầu ra chưa được đánh giá đầy đủ.
+• AI hỗ trợ xây dựng và rà soát rubric.
+• AI hỗ trợ xây dựng câu hỏi, đề thi và ma trận đề thi theo CLO/Bloom.
+• Phân tích sự phù hợp giữa syllabus – CLO – assessment – examination.
+• AI hỗ trợ tổng hợp Course Report và Programme Report.
+• Workshop trên đề cương học phần/chương trình đào tạo thực tế.
+KẾT QUẢ ĐẦU RA: 01 AI Curriculum & Assessment Analyzer prototype + 01 workflow QA hoàn chỉnh.
+NGÀY 2
+AI FOR ACCREDITATION, EVIDENCE & AUN-QA
+Từ kho minh chứng đến AI Accreditation Copilot
+• Xây dựng AI Knowledge Base cho đảm bảo chất lượng và kiểm định.
+• RAG cho tiêu chuẩn kiểm định, quy định, SAR và tài liệu nội bộ.
+• AI đọc và phân tích Self-Assessment Report.
+• Tự động phân loại, tìm kiếm và liên kết minh chứng với từng criterion.
+• Evidence Matching Score; phát hiện thiếu minh chứng hoặc minh chứng chưa phù hợp.
+• AI Accreditation Gap Analysis và Improvement Plan.
+• AI mô phỏng câu hỏi của đoàn đánh giá ngoài.
+• Human-in-the-loop, kiểm soát hallucination, bảo mật và AI Governance.
+• Workshop: Criterion → SAR → Evidence → Gap → Recommendation → Improvement Plan.
+KẾT QUẢ ĐẦU RA: 01 AI Quality & Accreditation Copilot prototype + 01 kế hoạch pilot 3–6 tháng.
+4. KẾT QUẢ CỤ THỂ MỖI ĐƠN VỊ MANG VỀ
+01  01 danh mục 10–20 pain point có thể ứng dụng AI trong QA/kiểm định.
+02  03–05 quy trình ưu tiên để triển khai AI.
+03  01 AI Quality Copilot prototype và 01 AI Accreditation workflow.
+04  01 Knowledge Base mẫu từ tài liệu của đơn vị.
+05  01 bộ rubric/logic kiểm soát kết quả AI và Human-in-the-loop.
+06  01 danh mục dữ liệu cần tích hợp và sơ đồ hệ thống liên quan.
+07  01 bộ KPI đánh giá hiệu quả pilot.
+08  01 kế hoạch triển khai thử nghiệm 3–6 tháng.
+5. PHẦN MỀM ĐƯỢC CHUYỂN GIAO MIỄN PHÍ
+Mỗi đơn vị tham dự được chuyển giao miễn phí phần mềm AI Quality & Accreditation Copilot – phiên bản triển khai thử nghiệm, nhằm tiếp tục thực hành, cấu hình dữ liệu và triển khai pilot sau khóa học.
+#
+Module phần mềm
+Giá trị ứng dụng
+01
+AI CLO/PLO Analyzer
+Phân tích chuẩn đầu ra, mức độ Bloom, tính đo lường và tính nhất quán.
+02
+CLO–PLO Mapping Assistant
+Hỗ trợ mapping, rà soát coverage và phát hiện liên kết chưa hợp lý.
+03
+AI Assessment Mapper
+Kiểm tra sự phù hợp giữa CLO, phương pháp đánh giá và đề thi.
+04
+AI Rubric Generator & Analyzer
+Tạo/rà soát rubric và kiểm tra độ rõ ràng của tiêu chí.
+05
+AI Exam Matrix Generator
+Sinh ma trận đề thi theo CLO, Bloom, tỷ trọng và cấu trúc đánh giá.
+06
+AI Evidence Finder
+Tìm kiếm, phân loại và liên kết minh chứng theo ngữ nghĩa.
+07
+AI Accreditation Gap Analyzer
+Phân tích khoảng trống giữa hiện trạng, SAR, evidence và tiêu chuẩn.
+08
+AI Accreditation Assistant
+Tra cứu tiêu chuẩn, hỗ trợ SAR, action plan và chuẩn bị đánh giá ngoài.
+6. PHẠM VI CHUYỂN GIAO VÀ HỖ TRỢ
+• Cung cấp phần mềm phiên bản triển khai thử nghiệm để đơn vị tiếp tục sử dụng sau khóa học.
+• Hướng dẫn cài đặt/cấu hình cơ bản và tạo tài khoản sử dụng.
+• Hướng dẫn xây dựng Knowledge Base từ tiêu chuẩn, quy định, SAR, syllabus và minh chứng.
+• Cung cấp cấu trúc dữ liệu và bộ mẫu để cấu hình nhanh.
+• Hướng dẫn tùy chỉnh module theo nghiệp vụ của đơn vị.
+• Hướng dẫn xây dựng pilot, KPI và quy trình Human-in-the-loop.
+• Hướng dẫn kết nối/tích hợp với hệ thống hiện có khi điều kiện kỹ thuật cho phép.
+GIÁ TRỊ CHUYỂN GIAO: Phần mềm + Knowledge Base mẫu + Workflow + Cấu hình + Kế hoạch Pilot
+7. HIỆU QUẢ KỲ VỌNG KHI TRIỂN KHAI PILOT
+40–60%
+giảm thời gian ở một số tác vụ QA lặp lại
+50%+
+giảm thời gian tìm kiếm/phân loại minh chứng
+100%
+syllabus thí điểm được kiểm tra CLO/PLO bằng AI
+01
+Knowledge Base QA dùng chung được hình thành
+8. DỮ LIỆU KHUYẾN KHÍCH MANG THEO
+Để workshop tạo ra kết quả sát thực tế, học viên nên chuẩn bị một số tài liệu đã được phép sử dụng: đề cương học phần, chương trình đào tạo, CLO/PLO, rubric, ma trận đề thi, báo cáo tự đánh giá, bộ tiêu chuẩn kiểm định và danh mục minh chứng. Dữ liệu có thông tin cá nhân cần được ẩn danh trước khi sử dụng.
+9. LỘ TRÌNH SAU KHÓA HỌC
+TRAINING
+SOFTWARE
+TRANSFER
+DATA
+CONFIG
+PILOT
+KPI
+EVALUATION
+IMPROVE
+SCALE
+MỤC TIÊU CUỐI CÙNG
+AI-Powered Quality Assurance
+Đảm bảo chất lượng dựa trên dữ liệu, AI và sự giám sát chuyên môn của con người.
+Nhà trường trân trọng kính mời Quý đơn vị quan tâm và cử cán bộ phù hợp tham dự chương trình.
+TRÂN TRỌNG KÍNH MỜI
+================================================================================
+FILE: b7182056-Thu_moi_Khoa_21_AI_Chuyen_doi_so_Dai_hoc/
+================================================================================
+THƯ MỜI THAM DỰ
+KHÓA TẬP HUẤN CHUYÊN SÂU SỐ 1
+ỨNG DỤNG AI TRONG CHUYỂN ĐỔI SỐ ĐẠI HỌC
+VÀ PHÁT TRIỂN CÁC GIẢI PHÁP AI DÙNG CHUNG
+05 NGÀY • 05 CHUYÊN ĐỀ • 05 NHÓM SẢN PHẨM AI
+Khóa tập huấn được thiết kế theo mô hình Learn → Design → Build → Pilot → Transfer, hướng tới việc tạo ra các AI Copilot/AI Agent có thể triển khai thực tế trong quản lý, đào tạo, nghiên cứu và phục vụ người học.
+Đối tượng: Lãnh đạo đơn vị • Chuyên viên nghiệp vụ • Cán bộ CNTT/Chuyển đổi số
+Thời gian: ........................................    Địa điểm: ........................................
+ĐẶC BIỆT
+CHUYỂN GIAO MIỄN PHÍ CÁC PHẦN MỀM AI PHIÊN BẢN TRIỂN KHAI THỬ NGHIỆM
+THƯ MỜI
+Kính gửi: Lãnh đạo và cán bộ các đơn vị thuộc Trường/Quý cơ sở giáo dục đại học
+Trí tuệ nhân tạo đang chuyển nhanh từ công cụ hỗ trợ cá nhân sang một lớp năng lực số mới, có thể tham gia trực tiếp vào các quy trình quản trị, đào tạo, nghiên cứu, đảm bảo chất lượng và phục vụ người học. Vì vậy, thách thức hiện nay không còn là “có sử dụng AI hay không”, mà là lựa chọn đúng bài toán, xây dựng đúng dữ liệu, thiết kế đúng AI workflow và tổ chức triển khai để tạo ra hiệu quả có thể đo lường.
+Nhằm giúp các đơn vị đi từ mức sử dụng AI rời rạc sang khả năng thiết kế, vận hành và làm chủ các giải pháp AI chuyên dụng, Nhà trường tổ chức Khóa tập huấn chuyên sâu số 1: “Ứng dụng AI trong chuyển đổi số đại học và phát triển các giải pháp AI dùng chung”.
+Khóa học được tổ chức trong 05 ngày với 05 chuyên đề, kết hợp kiến thức nền tảng, phân tích quy trình nghiệp vụ, workshop thực hành, xây dựng prototype và định hướng pilot. Điểm nổi bật của chương trình là học viên không chỉ thu nhận kiến thức, mà còn được hướng dẫn tạo ra sản phẩm cụ thể và được chuyển giao miễn phí các phần mềm AI phiên bản triển khai thử nghiệm để tiếp tục áp dụng sau khóa học.
+MỤC TIÊU CỐT LÕI
+Mỗi đơn vị sau khóa học có thể xác định các pain point ưu tiên, thiết kế quy trình có AI hỗ trợ, xây dựng hoặc cấu hình prototype, xác định dữ liệu/API cần tích hợp, xây dựng KPI pilot và tiếp tục triển khai bằng phần mềm được chuyển giao.
+1. Giá trị nổi bật học viên và đơn vị nhận được
+GIÁ TRỊ
+KẾT QUẢ THU ĐƯỢC
+Tư duy triển khai AI đúng bài toán
+Biết chuyển từ nhu cầu nghiệp vụ sang use case, workflow, dữ liệu, AI Agent và KPI.
+Năng lực làm chủ AI chuyên dụng
+Không chỉ sử dụng chatbot; học viên hiểu cách xây Knowledge Base, RAG, AI Agent, dashboard và cơ chế Human-in-the-loop.
+Prototype có thể tiếp tục pilot
+Mỗi nhóm hình thành ít nhất một prototype/workflow phục vụ chính nghiệp vụ của đơn vị.
+Bộ yêu cầu triển khai thực tế
+Xác định dữ liệu, tích hợp SIS/LMS/ERP/API, phân quyền, bảo mật, audit log và AI governance.
+Bộ KPI đo hiệu quả
+Đo thời gian xử lý, workload, mức độ sử dụng, chất lượng phản hồi, tỷ lệ cảnh báo hoặc các chỉ số phù hợp từng chuyên đề.
+Phần mềm AI được chuyển giao miễn phí
+Được cung cấp phiên bản triển khai thử nghiệm, hướng dẫn cấu hình, xây Knowledge Base và tổ chức pilot sau khóa học.
+2. Đối tượng đề nghị cử tham dự
+Để đảm bảo khóa học tạo ra kết quả triển khai thực tế, đề nghị mỗi đơn vị cử khoảng 03 cán bộ theo mô hình “Business – Process – Technology”:
+01 lãnh đạo đơn vị: định hướng, lựa chọn bài toán và quyết định phạm vi pilot.
+01 chuyên viên nghiệp vụ nòng cốt: am hiểu quy trình, biểu mẫu, dữ liệu và các pain point thực tế.
+01 cán bộ CNTT/AI/chuyển đổi số hoặc cán bộ có năng lực số tốt: tham gia cấu hình, tích hợp và duy trì giải pháp.
+Các đơn vị ưu tiên
+Phòng Quản lý đào tạo • Đảm bảo chất lượng/Khảo thí • Quản lý khoa học • Công tác sinh viên/Tuyển sinh • Phòng/Trung tâm CNTT & Chuyển đổi số. Các đơn vị khác có thể tham gia tùy nhu cầu và quy mô.
+CHƯƠNG TRÌNH 05 NGÀY – 05 CHUYÊN ĐỀ
+THỜI GIAN
+CHUYÊN ĐỀ
+SẢN PHẨM TRỌNG TÂM
+NỘI DUNG CHÍNH
+NGÀY 1
+AI cho Quản lý đào tạo
+AI Academic Copilot
+Quy chế, chương trình, cố vấn học tập, kiểm tra tốt nghiệp, study planner, early warning.
+NGÀY 2
+AI cho Đảm bảo chất lượng & Khảo thí
+AI Quality & Accreditation Copilot
+CLO/PLO, Bloom, mapping, rubric, exam matrix, evidence, gap analysis, AUN-QA.
+NGÀY 3
+AI cho Quản lý khoa học & Nghiên cứu
+AI Research Copilot
+Literature discovery, research gap, methodology, research intelligence, reviewer simulation.
+NGÀY 4
+AI cho Tuyển sinh & Công tác sinh viên
+AI Student 360 & Admissions Agent
+Tư vấn 24/7, student support, student 360, risk score, early intervention.
+NGÀY 5
+Nền tảng AI dùng chung toàn trường
+University AI Platform / AI9
+LLM gateway, RAG, multi-agent, API, SSO, governance, security, multi-tenant và productization.
+NGÀY 1 – AI cho Quản lý đào tạo
+AI Regulation Assistant và Knowledge Base quy chế đào tạo
+AI Curriculum Assistant, kiểm tra học phần tiên quyết và điều kiện đăng ký
+AI Academic Advisor, Study Planner và Graduation Checker
+Student 360, Academic Analytics và cảnh báo sớm nguy cơ chậm tiến độ
+Thiết kế workflow kết nối SIS/LMS và cơ chế Human-in-the-loop
+Kết quả đầu ra
+01 prototype AI Academic Copilot + 01 workflow học vụ ưu tiên + danh mục dữ liệu/API cần tích hợp.
+NGÀY 2 – AI cho Đảm bảo chất lượng & Khảo thí
+AI phân tích và chuẩn hóa CLO/PLO; kiểm tra cấp độ Bloom
+CLO–PLO–Assessment Mapping và phát hiện khoảng trống đánh giá
+AI Rubric Generator, Exam Matrix Generator và Quality Report
+RAG/Knowledge Base cho kiểm định, SAR và evidence
+AI Evidence Finder, Accreditation Gap Analysis và Improvement Plan
+Kết quả đầu ra
+01 prototype AI Quality & Accreditation Copilot + 01 quy trình QA được AI hóa + bộ KPI pilot.
+NGÀY 3 – AI cho Quản lý khoa học & Nghiên cứu
+AI Literature Discovery và tổng quan nghiên cứu
+Research Gap Finder, Research Question và Conceptual Model support
+Methodology/Analysis Assistant và Reviewer Simulation
+Research Integrity và nguyên tắc sử dụng AI có trách nhiệm
+Research Intelligence: chủ đề mạnh, tác giả, đối tác, xu hướng và dashboard
+Kết quả đầu ra
+01 AI Research workflow + 01 prototype Research Copilot/Research Intelligence.
+NGÀY 4 – AI cho Tuyển sinh & Công tác sinh viên
+AI Admissions Agent và tư vấn chương trình/ngành học
+AI Student Assistant cho thủ tục, học vụ và dịch vụ sinh viên
+Student 360 và phân tích hành trình người học
+Student Risk Score và Early Warning
+Workflow Advisor Alert → Intervention → Follow-up
+Kết quả đầu ra
+01 prototype AI Student 360/Admissions Agent + 01 mô hình cảnh báo sớm.
+NGÀY 5 – Nền tảng AI dùng chung toàn trường
+Kiến trúc University AI Platform: LLM Gateway, RAG, Vector DB, Agent Framework
+Kết nối OpenAI/Gemini/Claude/Local LLM/Private AI theo nhu cầu
+API Gateway, SSO, phân quyền, audit log và prompt management
+AI Security, Governance, Responsible AI và quản lý chi phí
+Kiến trúc Multi-Tenant và đóng gói sản phẩm để chuyển giao cho nhiều trường
+Kết quả đầu ra
+01 kiến trúc AI Platform/AI9 + roadmap pilot 3–6 tháng + kế hoạch productization/transfer.
+BỘ PHẦN MỀM AI ĐƯỢC CHUYỂN GIAO MIỄN PHÍ
+Các đơn vị tham dự được chuyển giao MIỄN PHÍ các phần mềm/phiên bản triển khai thử nghiệm trong khuôn khổ khóa tập huấn, kèm hướng dẫn cấu hình và tổ chức pilot. Bộ giải pháp dự kiến gồm:
+#
+PHẦN MỀM
+CHỨC NĂNG/MODULE CHÍNH
+1
+AI Academic Copilot
+Regulation Assistant • Curriculum Assistant • Academic Advisor • Graduation Checker • Study Planner • Early Warning.
+2
+AI Quality & Accreditation Copilot
+CLO/PLO Analyzer • Assessment Mapper • Rubric Generator • Exam Matrix • Evidence Finder • Gap Analyzer.
+3
+AI Research Copilot
+Literature/Research Assistant • Research Gap • Methodology Support • Research Intelligence • Reviewer Simulation.
+4
+AI Student 360 & Admissions Agent
+Admissions Agent • Student Assistant • Student 360 • Risk Score • Early Intervention.
+5
+University AI Platform / AI9
+LLM Gateway • RAG • Vector DB • Multi-Agent • API • SSO • Audit • Governance • Multi-Tenant foundation.
+Phạm vi chuyển giao
+Cung cấp phần mềm phiên bản triển khai thử nghiệm; hướng dẫn cài đặt/cấu hình; cấu trúc dữ liệu mẫu; hướng dẫn xây Knowledge Base; cấu hình workflow; hướng dẫn tích hợp API khi điều kiện kỹ thuật cho phép; hướng dẫn triển khai pilot và đánh giá KPI.
+3. Sản phẩm đầu ra sau 05 ngày
+Danh mục 10–20 pain point/use case AI ưu tiên của mỗi đơn vị.
+03–05 quy trình nghiệp vụ ưu tiên để AI hóa.
+Ít nhất 01 AI Agent/AI Copilot prototype cho mỗi nhóm.
+Danh mục dữ liệu, Knowledge Base và API cần tích hợp.
+01 sơ đồ kiến trúc/tích hợp với các hệ thống hiện có.
+01 bộ KPI đánh giá hiệu quả và rủi ro.
+01 kế hoạch pilot 3–6 tháng.
+01 đề xuất nhân rộng/đóng gói sản phẩm để chuyển giao.
+4. Hiệu quả kỳ vọng sau giai đoạn pilot
+CHỈ SỐ THAM CHIẾU
+MỤC TIÊU
+Giảm thời gian xử lý một số nghiệp vụ lặp lại
+30–50%
+Giảm câu hỏi/tra cứu thủ công ở các quy trình phù hợp
+50–70%
+Quy trình có AI hỗ trợ
+≥ 20
+AI Agent/Copilot đưa vào thử nghiệm
+≥ 10
+Người dùng nội bộ
+≥ 500
+Sinh viên tiếp cận dịch vụ AI khi scale
+≥ 5.000
+Giải pháp đủ điều kiện đóng gói chuyển giao
+≥ 3
+LỘ TRÌNH SAU TẬP HUẤN
+TRAINING
+SOFTWARE TRANSFER
+DATA CONFIGURATION
+PILOT
+KPI EVALUATION
+IMPROVEMENT
+SCALE & TRANSFER
+Mục tiêu dài hạn: hình thành một hệ sinh thái AI dùng chung cho Nhà trường, trong đó AI không chỉ là công cụ hỗ trợ cá nhân mà trở thành một lớp năng lực số tích hợp vào quản trị, đào tạo, nghiên cứu và phục vụ người học; đồng thời các giải pháp hiệu quả có thể được chuẩn hóa để chuyển giao cho các cơ sở giáo dục đại học khác.
+Thông điệp của khóa học
+Không chỉ “học cách dùng AI”, mà tiến tới “làm chủ bài toán – làm chủ dữ liệu – làm chủ workflow – làm chủ phần mềm – đo được hiệu quả”.
+5. Đăng ký và thông tin tổ chức
+Thời gian
+........................................................................................................
+Địa điểm
+........................................................................................................
+Hình thức
+Trực tiếp, kết hợp workshop và thực hành trên dữ liệu/tình huống thực tế
+Đầu mối đăng ký
+........................................................................................................
+Hạn đăng ký
+........................................................................................................
+Nhà trường trân trọng đề nghị Quý đơn vị lựa chọn cán bộ phù hợp và đăng ký tham dự khóa tập huấn.
+TRÂN TRỌNG KÍNH MỜI
+ĐẠI DIỆN ĐƠN VỊ TỔ CHỨC
+(Ký, ghi rõ họ tên)
