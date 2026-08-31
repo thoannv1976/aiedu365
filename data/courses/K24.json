@@ -1,0 +1,134 @@
+{
+  "code": "K24",
+  "legacyNumber": 4,
+  "slug": "ai-quan-ly-khoa-hoc-nghien-cuu",
+  "group": "khoa-hoc-xuat-ban",
+  "order": 4,
+  "featured": false,
+  "title": "Ứng dụng trí tuệ nhân tạo trong quản lý khoa học và nghiên cứu",
+  "shortTitle": "AI trong Quản lý khoa học & Nghiên cứu",
+  "tagline": "AI Research Copilot & Research Intelligence",
+  "duration": "02 ngày chuyên sâu",
+  "durationDays": 2,
+  "method": "30% nền tảng · 70% workshop",
+  "outputSummary": "Copilot + Dashboard + Pilot",
+  "aliases": [
+    "quản lý khoa học", "QLKH", "nghiên cứu", "đề tài", "công bố", "literature review",
+    "tổng quan tài liệu", "research gap", "methodology", "phương pháp nghiên cứu",
+    "research intelligence", "grant", "tài trợ", "hợp tác học thuật", "thư viện số"
+  ],
+  "recipients": "Lãnh đạo và cán bộ phụ trách Quản lý khoa học, Nghiên cứu, Hợp tác học thuật, Thư viện/Học liệu số và Chuyển đổi số tại các cơ sở giáo dục đại học.",
+  "intro": [
+    "Trong bối cảnh dữ liệu đề tài, công bố, nhóm nghiên cứu, hồ sơ khoa học và yêu cầu báo cáo ngày càng lớn, AI có thể giúp chuyển hoạt động quản lý khoa học từ xử lý phân tán sang mô hình có tri thức dùng chung, workflow tự động và Research Intelligence hỗ trợ ra quyết định.",
+    "Đây là khóa chuyên sâu, không dừng ở việc dùng ChatGPT để tìm ý tưởng hay viết nội dung. Học viên sẽ làm việc với RAG, AI Agents, Research Workflow, Research Analytics và Human-in-the-loop để xây dựng giải pháp có thể đưa vào pilot ngay sau khóa học."
+  ],
+  "coreGoal": "Chuyển quản lý khoa học từ xử lý phân tán sang mô hình có tri thức dùng chung, workflow tự động và Research Intelligence hỗ trợ ra quyết định.",
+  "highlight": {
+    "label": "ĐẶC BIỆT",
+    "text": "Đơn vị tham dự được chuyển giao miễn phí AI Research Copilot – phiên bản triển khai thử nghiệm, kèm hướng dẫn cấu hình dữ liệu và pilot."
+  },
+  "values": [
+    { "title": "Năng lực chuyên sâu", "description": "Thiết kế AI workflow cho tra cứu học thuật, quản lý đề tài, hồ sơ khoa học, báo cáo và hỗ trợ nghiên cứu." },
+    { "title": "Sản phẩm thực tế", "description": "Có AI Research Copilot prototype, Research Intelligence dashboard concept, bộ KPI và kế hoạch pilot." },
+    { "title": "Hiệu quả vận hành", "description": "Rút ngắn tra cứu, tổng hợp hồ sơ, phân loại nhiệm vụ, theo dõi tiến độ và chuẩn bị báo cáo nghiên cứu." },
+    { "title": "Năng lực quản trị", "description": "Biến dữ liệu công bố, đề tài, nhóm nghiên cứu và hợp tác thành Research Intelligence phục vụ quyết định lãnh đạo." }
+  ],
+  "audience": {
+    "note": "Để khóa học tạo ra sản phẩm có thể tiếp tục triển khai tại đơn vị, khuyến nghị mỗi trường/đơn vị cử nhóm 03–05 người theo mô hình “Quản lý – Nghiệp vụ – Nghiên cứu – Công nghệ”.",
+    "headcount": "03–05 người/đơn vị",
+    "rows": [
+      { "role": "01 lãnh đạo phụ trách khoa học & công nghệ", "duty": "Xác định bài toán ưu tiên, phạm vi dữ liệu, mục tiêu pilot và các dashboard phục vụ quản trị." },
+      { "role": "01–02 chuyên viên quản lý khoa học", "duty": "Cung cấp quy trình đề tài, hồ sơ, biểu mẫu, báo cáo, dữ liệu công bố và các pain point thực tế." },
+      { "role": "01 giảng viên/nhà nghiên cứu nòng cốt", "duty": "Kiểm thử Research Copilot trên tình huống nghiên cứu, literature review, methodology và publication workflow." },
+      { "role": "01 cán bộ CNTT/chuyển đổi số (nếu có)", "duty": "Hỗ trợ dữ liệu, RAG, tích hợp repository/API, phân quyền, bảo mật và triển khai phần mềm." }
+    ]
+  },
+  "days": [
+    {
+      "no": 1,
+      "title": "AI Research Copilot & Research Workflow",
+      "subtitle": "Từ kho tri thức nghiên cứu đến AI trợ lý cho cán bộ và nhà nghiên cứu",
+      "topics": [
+        "Kiến trúc Generative AI, RAG và AI Agents cho quản lý khoa học và nghiên cứu.",
+        "Xây dựng Research Knowledge Base từ quy định, biểu mẫu, hướng dẫn, repository và dữ liệu nội bộ.",
+        "AI hỗ trợ literature mapping, evidence matrix, thematic synthesis và research gap discovery.",
+        "AI hỗ trợ cấu trúc research question, conceptual model, methodology checklist và kế hoạch dữ liệu.",
+        "AI hỗ trợ quản lý đề tài: hồ sơ, nhiệm vụ, mốc tiến độ, sản phẩm đầu ra và báo cáo.",
+        "AI hỗ trợ publication workflow: journal fit, submission checklist, reviewer simulation và revision plan.",
+        "Research Integrity, citation checking, bảo mật dữ liệu và Human-in-the-loop.",
+        "Workshop: Research Problem → Knowledge Base → AI Copilot → Workflow → Human Review."
+      ],
+      "output": "01 AI Research Copilot prototype + 01 Research Knowledge Base/workflow mẫu."
+    },
+    {
+      "no": 2,
+      "title": "Research Intelligence & AI-Powered Research Management",
+      "subtitle": "Từ dữ liệu công bố – đề tài – hợp tác đến dashboard hỗ trợ quyết định",
+      "topics": [
+        "Chuẩn hóa dữ liệu công bố, đề tài, tác giả, đơn vị, lĩnh vực nghiên cứu và đối tác.",
+        "Phân tích năng suất nghiên cứu, xu hướng chủ đề, lĩnh vực mạnh và emerging topics.",
+        "Phân tích mạng lưới cộng tác nội bộ/ngoài trường và tiềm năng hợp tác.",
+        "Researcher/Research Group profiling và expertise matching.",
+        "AI hỗ trợ phân loại cơ hội tài trợ, grant scouting và matching với nhóm nghiên cứu.",
+        "Xây dựng Research Intelligence Dashboard cho lãnh đạo và đơn vị quản lý khoa học.",
+        "Thiết kế KPI: publications, citations, collaboration, grants, project completion và strategic themes.",
+        "Workshop: Research Data → AI Analytics → Insight → Dashboard → Management Action."
+      ],
+      "output": "01 Research Intelligence dashboard concept + 01 bộ KPI + 01 kế hoạch pilot 3–6 tháng."
+    }
+  ],
+  "deliverables": [
+    "01 danh mục 10–20 pain point trong quản lý khoa học/nghiên cứu có thể ứng dụng AI.",
+    "03–05 quy trình ưu tiên để tái thiết kế bằng AI.",
+    "01 AI Research Copilot prototype và 01 Research Knowledge Base mẫu.",
+    "01 Research Intelligence dashboard concept phục vụ quản trị.",
+    "01 danh mục dữ liệu cần chuẩn hóa/kết nối từ repository, hệ thống QLKH và nguồn liên quan.",
+    "01 sơ đồ AI workflow + Human Review + nguyên tắc bảo mật/liêm chính nghiên cứu.",
+    "01 bộ KPI đánh giá hiệu quả pilot.",
+    "01 kế hoạch pilot 3–6 tháng và roadmap từ prototype đến triển khai thực tế."
+  ],
+  "software": {
+    "name": "AI Research Copilot",
+    "intro": "Các đơn vị tham dự được chuyển giao miễn phí AI Research Copilot – phiên bản triển khai thử nghiệm, để tiếp tục thực hành, cấu hình dữ liệu và tổ chức pilot sau khóa học.",
+    "modules": [
+      { "no": 1, "name": "AI Research Knowledge Assistant", "description": "Tra cứu quy định, biểu mẫu, quy trình, hướng dẫn nghiên cứu và kho tri thức nội bộ bằng RAG." },
+      { "no": 2, "name": "AI Literature & Gap Assistant", "description": "Hỗ trợ tổ chức tài liệu, tổng hợp chủ đề, lập evidence matrix và phát hiện khoảng trống cần nghiên cứu." },
+      { "no": 3, "name": "AI Proposal & Methodology Copilot", "description": "Hỗ trợ cấu trúc đề xuất, câu hỏi nghiên cứu, phương pháp, kế hoạch dữ liệu và checklist chất lượng." },
+      { "no": 4, "name": "AI Research Workflow Manager", "description": "Theo dõi đề tài, nhiệm vụ, mốc tiến độ, hồ sơ, sản phẩm đầu ra và cảnh báo công việc cần xử lý." },
+      { "no": 5, "name": "AI Publication & Journal Assistant", "description": "Hỗ trợ kiểm tra cấu trúc bài, journal fit, submission checklist, phản biện mô phỏng và kế hoạch chỉnh sửa." },
+      { "no": 6, "name": "Research Intelligence Dashboard", "description": "Tổng hợp công bố, trích dẫn, lĩnh vực mạnh, nhóm nghiên cứu, đối tác và xu hướng để hỗ trợ quyết định." },
+      { "no": 7, "name": "AI Grant & Collaboration Scout", "description": "Hỗ trợ phân loại cơ hội tài trợ/hợp tác, matching chuyên môn và xây shortlist cơ hội phù hợp." },
+      { "no": 8, "name": "Research Integrity & Human Review", "description": "Checklist liêm chính nghiên cứu, trích dẫn, bảo mật dữ liệu và cơ chế Human-in-the-loop." }
+    ],
+    "scope": "Phần mềm thử nghiệm, hướng dẫn cài đặt/cấu hình, cấu trúc dữ liệu mẫu, hướng dẫn xây dựng Research Knowledge Base, thiết lập workflow quản lý đề tài – publication – research intelligence, và hướng dẫn tích hợp dữ liệu/API khi điều kiện kỹ thuật cho phép."
+  },
+  "kpis": {
+    "note": "Tùy chất lượng dữ liệu, mức độ số hóa và phạm vi pilot, đơn vị có thể sử dụng các chỉ số sau làm mục tiêu tham chiếu.",
+    "rows": [
+      { "metric": "Tra cứu quy định/hồ sơ/tài liệu nghiên cứu", "target": "Rút ngắn đáng kể" },
+      { "metric": "Tổng hợp báo cáo & chuẩn bị hồ sơ lặp lại", "target": "Giảm khoảng 30–50% thời gian" },
+      { "metric": "Đề tài/công bố được chuẩn hóa dữ liệu trong pilot", "target": "Theo phạm vi đơn vị" },
+      { "metric": "Dashboard Research Intelligence", "target": "Tối thiểu 01 dashboard mẫu" },
+      { "metric": "Workflow AI đưa vào thử nghiệm", "target": "Tối thiểu 03 quy trình" }
+    ],
+    "caveat": "AI trong nghiên cứu phải được triển khai theo nguyên tắc hỗ trợ chuyên gia, không thay thế phán đoán học thuật; kết quả do AI sinh ra cần được kiểm tra nguồn, trích dẫn, phương pháp và tính liêm chính trước khi sử dụng."
+  },
+  "dataToBring": [
+    "Quy chế/quy trình quản lý khoa học, biểu mẫu đề tài và báo cáo.",
+    "Danh mục đề tài, nhiệm vụ khoa học hoặc hồ sơ mẫu đã loại bỏ dữ liệu nhạy cảm.",
+    "Danh mục công bố, tác giả, đơn vị, nhóm nghiên cứu và lĩnh vực nghiên cứu.",
+    "Một số bài báo/tài liệu học thuật hoặc repository nội bộ phù hợp để xây Knowledge Base.",
+    "Báo cáo KPI nghiên cứu, dữ liệu hợp tác hoặc nhu cầu dashboard của lãnh đạo."
+  ],
+  "roadmap": ["TRAINING", "SOFTWARE TRANSFER", "DATA PREP", "CONFIG", "PILOT", "KPI EVALUATION", "SCALE-UP"],
+  "longTermGoal": "Hình thành AI-Powered Research Management: dữ liệu nghiên cứu được chuẩn hóa, quy trình được hỗ trợ bằng AI, nhà nghiên cứu có Research Copilot, và lãnh đạo có Research Intelligence phục vụ quyết định chiến lược.",
+  "motto": "Làm chủ nghiệp vụ + Làm chủ dữ liệu nghiên cứu + Làm chủ AI workflow + Làm chủ phần mềm.",
+  "responsibleAi": [
+    "AI hỗ trợ chuyên gia, không thay thế phán đoán học thuật.",
+    "Kết quả do AI sinh ra cần được kiểm tra nguồn, trích dẫn, phương pháp và tính liêm chính trước khi sử dụng."
+  ],
+  "relatedCourses": [
+    { "code": "K28", "reason": "Hai khóa chồng lấn về Research Copilot và Research Intelligence. Khóa 24 phục vụ nhà nghiên cứu và phòng QLKH (literature review, methodology, publication workflow của tác giả). Khóa 28 phục vụ tòa soạn tạp chí và quản trị nghiên cứu cấp trường (biên tập, phản biện, xuất bản, Researcher 360, OJS). Đơn vị có tạp chí riêng nên chọn Khóa 28." },
+    { "code": "K21", "reason": "Khóa 21 dành 01 ngày cho quản lý khoa học trong bức tranh 05 lĩnh vực; Khóa 24 đi sâu 02 ngày." }
+  ]
+}

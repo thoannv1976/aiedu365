@@ -1,0 +1,167 @@
+{
+  "code": "K21",
+  "legacyNumber": 1,
+  "slug": "ai-chuyen-doi-so-dai-hoc",
+  "group": "nen-tang-toan-truong",
+  "order": 1,
+  "featured": true,
+  "title": "Ứng dụng AI trong chuyển đổi số đại học và phát triển các giải pháp AI dùng chung",
+  "shortTitle": "AI trong Chuyển đổi số Đại học",
+  "tagline": "05 ngày • 05 chuyên đề • 05 nhóm sản phẩm AI",
+  "duration": "05 ngày",
+  "durationDays": 5,
+  "method": "Learn → Design → Build → Pilot → Transfer",
+  "outputSummary": "05 nhóm sản phẩm AI + Roadmap productization",
+  "aliases": [
+    "chuyển đổi số đại học", "AI dùng chung", "nền tảng AI", "university ai platform",
+    "AI9", "llm gateway", "khóa tổng quan", "khóa 5 ngày", "toàn trường", "khóa nền tảng"
+  ],
+  "recipients": "Lãnh đạo và cán bộ các đơn vị thuộc Trường/Quý cơ sở giáo dục đại học.",
+  "intro": [
+    "Trí tuệ nhân tạo đang chuyển nhanh từ công cụ hỗ trợ cá nhân sang một lớp năng lực số mới, có thể tham gia trực tiếp vào các quy trình quản trị, đào tạo, nghiên cứu, đảm bảo chất lượng và phục vụ người học. Vì vậy, thách thức hiện nay không còn là “có sử dụng AI hay không”, mà là lựa chọn đúng bài toán, xây dựng đúng dữ liệu, thiết kế đúng AI workflow và tổ chức triển khai để tạo ra hiệu quả có thể đo lường.",
+    "Khóa học được tổ chức trong 05 ngày với 05 chuyên đề, kết hợp kiến thức nền tảng, phân tích quy trình nghiệp vụ, workshop thực hành, xây dựng prototype và định hướng pilot. Điểm nổi bật của chương trình là học viên không chỉ thu nhận kiến thức, mà còn được hướng dẫn tạo ra sản phẩm cụ thể và được chuyển giao miễn phí các phần mềm AI phiên bản triển khai thử nghiệm để tiếp tục áp dụng sau khóa học."
+  ],
+  "coreGoal": "Mỗi đơn vị sau khóa học có thể xác định các pain point ưu tiên, thiết kế quy trình có AI hỗ trợ, xây dựng hoặc cấu hình prototype, xác định dữ liệu/API cần tích hợp, xây dựng KPI pilot và tiếp tục triển khai bằng phần mềm được chuyển giao.",
+  "highlight": {
+    "label": "ĐẶC BIỆT",
+    "text": "Chuyển giao miễn phí các phần mềm AI phiên bản triển khai thử nghiệm."
+  },
+  "values": [
+    { "title": "Tư duy triển khai AI đúng bài toán", "description": "Biết chuyển từ nhu cầu nghiệp vụ sang use case, workflow, dữ liệu, AI Agent và KPI." },
+    { "title": "Năng lực làm chủ AI chuyên dụng", "description": "Không chỉ sử dụng chatbot; học viên hiểu cách xây Knowledge Base, RAG, AI Agent, dashboard và cơ chế Human-in-the-loop." },
+    { "title": "Prototype có thể tiếp tục pilot", "description": "Mỗi nhóm hình thành ít nhất một prototype/workflow phục vụ chính nghiệp vụ của đơn vị." },
+    { "title": "Bộ yêu cầu triển khai thực tế", "description": "Xác định dữ liệu, tích hợp SIS/LMS/ERP/API, phân quyền, bảo mật, audit log và AI governance." },
+    { "title": "Bộ KPI đo hiệu quả", "description": "Đo thời gian xử lý, workload, mức độ sử dụng, chất lượng phản hồi, tỷ lệ cảnh báo hoặc các chỉ số phù hợp từng chuyên đề." },
+    { "title": "Phần mềm AI được chuyển giao miễn phí", "description": "Được cung cấp phiên bản triển khai thử nghiệm, hướng dẫn cấu hình, xây Knowledge Base và tổ chức pilot sau khóa học." }
+  ],
+  "audience": {
+    "note": "Để đảm bảo khóa học tạo ra kết quả triển khai thực tế, đề nghị mỗi đơn vị cử khoảng 03 cán bộ theo mô hình “Business – Process – Technology”.",
+    "headcount": "~03 người/đơn vị",
+    "rows": [
+      { "role": "01 lãnh đạo đơn vị", "duty": "Định hướng, lựa chọn bài toán và quyết định phạm vi pilot." },
+      { "role": "01 chuyên viên nghiệp vụ nòng cốt", "duty": "Am hiểu quy trình, biểu mẫu, dữ liệu và các pain point thực tế." },
+      { "role": "01 cán bộ CNTT/AI/chuyển đổi số", "duty": "Tham gia cấu hình, tích hợp và duy trì giải pháp." }
+    ],
+    "priorityUnits": "Phòng Quản lý đào tạo • Đảm bảo chất lượng/Khảo thí • Quản lý khoa học • Công tác sinh viên/Tuyển sinh • Phòng/Trung tâm CNTT & Chuyển đổi số. Các đơn vị khác có thể tham gia tùy nhu cầu và quy mô."
+  },
+  "days": [
+    {
+      "no": 1,
+      "title": "AI cho Quản lý đào tạo",
+      "subtitle": "Sản phẩm trọng tâm: AI Academic Copilot",
+      "topics": [
+        "AI Regulation Assistant và Knowledge Base quy chế đào tạo.",
+        "AI Curriculum Assistant, kiểm tra học phần tiên quyết và điều kiện đăng ký.",
+        "AI Academic Advisor, Study Planner và Graduation Checker.",
+        "Student 360, Academic Analytics và cảnh báo sớm nguy cơ chậm tiến độ.",
+        "Thiết kế workflow kết nối SIS/LMS và cơ chế Human-in-the-loop."
+      ],
+      "output": "01 prototype AI Academic Copilot + 01 workflow học vụ ưu tiên + danh mục dữ liệu/API cần tích hợp."
+    },
+    {
+      "no": 2,
+      "title": "AI cho Đảm bảo chất lượng & Khảo thí",
+      "subtitle": "Sản phẩm trọng tâm: AI Quality & Accreditation Copilot",
+      "topics": [
+        "AI phân tích và chuẩn hóa CLO/PLO; kiểm tra cấp độ Bloom.",
+        "CLO–PLO–Assessment Mapping và phát hiện khoảng trống đánh giá.",
+        "AI Rubric Generator, Exam Matrix Generator và Quality Report.",
+        "RAG/Knowledge Base cho kiểm định, SAR và evidence.",
+        "AI Evidence Finder, Accreditation Gap Analysis và Improvement Plan."
+      ],
+      "output": "01 prototype AI Quality & Accreditation Copilot + 01 quy trình QA được AI hóa + bộ KPI pilot."
+    },
+    {
+      "no": 3,
+      "title": "AI cho Quản lý khoa học & Nghiên cứu",
+      "subtitle": "Sản phẩm trọng tâm: AI Research Copilot",
+      "topics": [
+        "AI Literature Discovery và tổng quan nghiên cứu.",
+        "Research Gap Finder, Research Question và Conceptual Model support.",
+        "Methodology/Analysis Assistant và Reviewer Simulation.",
+        "Research Integrity và nguyên tắc sử dụng AI có trách nhiệm.",
+        "Research Intelligence: chủ đề mạnh, tác giả, đối tác, xu hướng và dashboard."
+      ],
+      "output": "01 AI Research workflow + 01 prototype Research Copilot/Research Intelligence."
+    },
+    {
+      "no": 4,
+      "title": "AI cho Tuyển sinh & Công tác sinh viên",
+      "subtitle": "Sản phẩm trọng tâm: AI Student 360 & Admissions Agent",
+      "topics": [
+        "AI Admissions Agent và tư vấn chương trình/ngành học.",
+        "AI Student Assistant cho thủ tục, học vụ và dịch vụ sinh viên.",
+        "Student 360 và phân tích hành trình người học.",
+        "Student Risk Score và Early Warning.",
+        "Workflow Advisor Alert → Intervention → Follow-up."
+      ],
+      "output": "01 prototype AI Student 360/Admissions Agent + 01 mô hình cảnh báo sớm."
+    },
+    {
+      "no": 5,
+      "title": "Nền tảng AI dùng chung toàn trường",
+      "subtitle": "Sản phẩm trọng tâm: University AI Platform / AI9",
+      "topics": [
+        "Kiến trúc University AI Platform: LLM Gateway, RAG, Vector DB, Agent Framework.",
+        "Kết nối OpenAI/Gemini/Claude/Local LLM/Private AI theo nhu cầu.",
+        "API Gateway, SSO, phân quyền, audit log và prompt management.",
+        "AI Security, Governance, Responsible AI và quản lý chi phí.",
+        "Kiến trúc Multi-Tenant và đóng gói sản phẩm để chuyển giao cho nhiều trường."
+      ],
+      "output": "01 kiến trúc AI Platform/AI9 + roadmap pilot 3–6 tháng + kế hoạch productization/transfer."
+    }
+  ],
+  "deliverables": [
+    "Danh mục 10–20 pain point/use case AI ưu tiên của mỗi đơn vị.",
+    "03–05 quy trình nghiệp vụ ưu tiên để AI hóa.",
+    "Ít nhất 01 AI Agent/AI Copilot prototype cho mỗi nhóm.",
+    "Danh mục dữ liệu, Knowledge Base và API cần tích hợp.",
+    "01 sơ đồ kiến trúc/tích hợp với các hệ thống hiện có.",
+    "01 bộ KPI đánh giá hiệu quả và rủi ro.",
+    "01 kế hoạch pilot 3–6 tháng.",
+    "01 đề xuất nhân rộng/đóng gói sản phẩm để chuyển giao."
+  ],
+  "software": {
+    "name": "Bộ 05 phần mềm AI",
+    "intro": "Các đơn vị tham dự được chuyển giao MIỄN PHÍ các phần mềm/phiên bản triển khai thử nghiệm trong khuôn khổ khóa tập huấn, kèm hướng dẫn cấu hình và tổ chức pilot.",
+    "modules": [
+      { "no": 1, "name": "AI Academic Copilot", "description": "Regulation Assistant • Curriculum Assistant • Academic Advisor • Graduation Checker • Study Planner • Early Warning." },
+      { "no": 2, "name": "AI Quality & Accreditation Copilot", "description": "CLO/PLO Analyzer • Assessment Mapper • Rubric Generator • Exam Matrix • Evidence Finder • Gap Analyzer." },
+      { "no": 3, "name": "AI Research Copilot", "description": "Literature/Research Assistant • Research Gap • Methodology Support • Research Intelligence • Reviewer Simulation." },
+      { "no": 4, "name": "AI Student 360 & Admissions Agent", "description": "Admissions Agent • Student Assistant • Student 360 • Risk Score • Early Intervention." },
+      { "no": 5, "name": "University AI Platform / AI9", "description": "LLM Gateway • RAG • Vector DB • Multi-Agent • API • SSO • Audit • Governance • Multi-Tenant foundation." }
+    ],
+    "scope": "Cung cấp phần mềm phiên bản triển khai thử nghiệm; hướng dẫn cài đặt/cấu hình; cấu trúc dữ liệu mẫu; hướng dẫn xây Knowledge Base; cấu hình workflow; hướng dẫn tích hợp API khi điều kiện kỹ thuật cho phép; hướng dẫn triển khai pilot và đánh giá KPI."
+  },
+  "kpis": {
+    "note": "Hiệu quả kỳ vọng sau giai đoạn pilot.",
+    "rows": [
+      { "metric": "Giảm thời gian xử lý một số nghiệp vụ lặp lại", "target": "30–50%" },
+      { "metric": "Giảm câu hỏi/tra cứu thủ công ở các quy trình phù hợp", "target": "50–70%" },
+      { "metric": "Quy trình có AI hỗ trợ", "target": "≥ 20" },
+      { "metric": "AI Agent/Copilot đưa vào thử nghiệm", "target": "≥ 10" },
+      { "metric": "Người dùng nội bộ", "target": "≥ 500" },
+      { "metric": "Sinh viên tiếp cận dịch vụ AI khi scale", "target": "≥ 5.000" },
+      { "metric": "Giải pháp đủ điều kiện đóng gói chuyển giao", "target": "≥ 3" }
+    ],
+    "caveat": "Các chỉ số trên là mục tiêu tham chiếu để thiết kế pilot, không phải cam kết kết quả. Kết quả thực tế phụ thuộc dữ liệu, quy trình và phạm vi triển khai của từng trường."
+  },
+  "dataToBring": [
+    "Quy chế, quy trình và biểu mẫu nghiệp vụ của đơn vị.",
+    "Dữ liệu mẫu đã được ẩn danh và được phép sử dụng.",
+    "Danh mục hệ thống hiện có (SIS/LMS/ERP) và khả năng kết nối API.",
+    "Danh sách pain point mà đơn vị muốn ưu tiên xử lý."
+  ],
+  "roadmap": ["TRAINING", "SOFTWARE TRANSFER", "DATA CONFIGURATION", "PILOT", "KPI EVALUATION", "IMPROVEMENT", "SCALE & TRANSFER"],
+  "longTermGoal": "Hình thành một hệ sinh thái AI dùng chung cho Nhà trường, trong đó AI không chỉ là công cụ hỗ trợ cá nhân mà trở thành một lớp năng lực số tích hợp vào quản trị, đào tạo, nghiên cứu và phục vụ người học; đồng thời các giải pháp hiệu quả có thể được chuẩn hóa để chuyển giao cho các cơ sở giáo dục đại học khác.",
+  "motto": "Không chỉ “học cách dùng AI”, mà tiến tới “làm chủ bài toán – làm chủ dữ liệu – làm chủ workflow – làm chủ phần mềm – đo được hiệu quả”.",
+  "responsibleAi": [
+    "Human-in-the-loop ở mọi quy trình có tác động tới người học và cán bộ.",
+    "Phân quyền, audit log và AI governance là điều kiện bắt buộc khi triển khai."
+  ],
+  "relatedCourses": [
+    { "code": "K22", "reason": "Khóa 21 đi qua đảm bảo chất lượng trong 01 ngày; Khóa 22 đi sâu 02 ngày cho riêng nghiệp vụ này." },
+    { "code": "K23", "reason": "Khóa 21 đi qua quản lý đào tạo trong 01 ngày; Khóa 23 đi sâu 02 ngày cho riêng nghiệp vụ này." },
+    { "code": "K24", "reason": "Khóa 21 đi qua quản lý khoa học trong 01 ngày; Khóa 24 đi sâu 02 ngày cho riêng nghiệp vụ này." }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "code": "K27",
+  "legacyNumber": 7,
+  "slug": "ai-to-chuc-nhan-su-hanh-chinh",
+  "group": "quan-tri-van-hanh",
+  "order": 7,
+  "featured": false,
+  "title": "Ứng dụng trí tuệ nhân tạo thúc đẩy chuyển đổi số trong tổ chức nhân sự và hành chính tổng hợp",
+  "shortTitle": "AI trong Tổ chức nhân sự & Hành chính tổng hợp",
+  "tagline": "AI-Powered HR & Administration Transformation",
+  "duration": "02 ngày chuyên sâu",
+  "durationDays": 2,
+  "method": "Khoảng 30% nền tảng – 70% thực hành theo quy trình và dữ liệu thực tế",
+  "outputSummary": "AI HR Copilot + AI Administration Copilot + Knowledge Base + Pilot Plan",
+  "aliases": [
+    "tổ chức cán bộ", "tổ chức nhân sự", "nhân sự", "HR", "hành chính", "hành chính tổng hợp",
+    "văn phòng", "văn thư", "lưu trữ", "văn bản", "biên bản họp", "vị trí việc làm",
+    "khung năng lực", "tuyển dụng", "onboarding", "workflow automation", "SLA", "tờ trình", "báo cáo"
+  ],
+  "recipients": "Lãnh đạo và cán bộ các đơn vị Tổ chức cán bộ/Tổ chức nhân sự, Hành chính – Tổng hợp, Văn phòng và các đơn vị liên quan.",
+  "intro": [
+    "Trong quá trình chuyển đổi số đại học, tổ chức nhân sự và hành chính tổng hợp là hai lĩnh vực có số lượng lớn quy trình lặp lại, hồ sơ – văn bản đa dạng, yêu cầu phối hợp nhiều đơn vị và nhu cầu báo cáo thường xuyên. Đây cũng là nhóm nghiệp vụ có tiềm năng ứng dụng AI rất cao để giảm thời gian xử lý, chuẩn hóa quy trình, nâng chất lượng dịch vụ nội bộ và hỗ trợ ra quyết định.",
+    "Khóa tập huấn tập trung vào việc đưa Generative AI, RAG, AI Agents và workflow automation vào các quy trình thật của nhà trường; đồng thời bảo đảm nguyên tắc bảo mật dữ liệu, phân quyền, lưu vết và Human-in-the-loop đối với các quyết định nhân sự."
+  ],
+  "coreGoal": "Từ “dùng AI” đến “thiết kế quy trình và làm chủ phần mềm AI”: rà soát 5–10 quy trình nhân sự/hành chính có thể ứng dụng AI ngay, thiết kế workflow mới có AI hỗ trợ nhưng vẫn giữ quyền quyết định cuối cùng cho cán bộ có thẩm quyền.",
+  "highlight": {
+    "label": "CHUYỂN GIAO",
+    "text": "Miễn phí bộ phần mềm AI HR & Administration Copilot Suite – phiên bản triển khai thử nghiệm."
+  },
+  "objectives": [
+    "Rà soát và lựa chọn 5–10 quy trình nhân sự/hành chính có khả năng ứng dụng AI ngay.",
+    "Thiết kế workflow mới có AI hỗ trợ nhưng vẫn giữ quyền quyết định cuối cùng cho cán bộ có thẩm quyền.",
+    "Xây dựng Knowledge Base từ quy định, quy trình, biểu mẫu, quyết định và tài liệu nội bộ.",
+    "Tạo prototype AI Copilot phục vụ cán bộ nhân sự và hành chính.",
+    "Hình thành kế hoạch pilot 3–6 tháng với KPI đo hiệu quả rõ ràng."
+  ],
+  "values": [
+    { "title": "Bản đồ pain point", "description": "Danh mục các quy trình ưu tiên ứng dụng AI và 01 kiến trúc AI HR & Administration Copilot phù hợp với môi trường đại học." },
+    { "title": "Knowledge Base và workflow", "description": "01 Knowledge Base mẫu từ quy định, quy trình, biểu mẫu; ít nhất 02 workflow mẫu — một nhân sự, một hành chính." },
+    { "title": "Bộ KPI đánh giá", "description": "Thời gian xử lý, tỷ lệ tự động hóa, chất lượng câu trả lời, mức độ sử dụng và mức độ hài lòng." },
+    { "title": "Năng lực cá nhân", "description": "Biết thiết kế AI workflow thay vì chỉ dùng prompt đơn lẻ; biết xây RAG từ tài liệu nội bộ; biết kiểm soát dữ liệu nhạy cảm, phân quyền và lưu vết." }
+  ],
+  "audience": {
+    "note": "Để tạo được một nhóm triển khai có đủ năng lực nghiệp vụ – dữ liệu – công nghệ, đề nghị mỗi đơn vị cử 03–05 cán bộ.",
+    "headcount": "03–05 người/đơn vị",
+    "rows": [
+      { "role": "Lãnh đạo — Trưởng/Phó đơn vị Tổ chức nhân sự, Hành chính – Tổng hợp, Văn phòng", "duty": "Chọn bài toán ưu tiên, phê duyệt quy trình và KPI." },
+      { "role": "Nghiệp vụ nhân sự — cán bộ vị trí việc làm, hồ sơ cán bộ, tuyển dụng, đào tạo, đánh giá", "duty": "Cung cấp quy trình, biểu mẫu, rule và tình huống thật." },
+      { "role": "Nghiệp vụ hành chính — cán bộ văn thư, lưu trữ, tổng hợp, thư ký, quản lý văn bản", "duty": "Thiết kế workflow văn bản, họp, báo cáo và hồ sơ." },
+      { "role": "CNTT/DX — cán bộ CNTT, dữ liệu hoặc chuyển đổi số", "duty": "Kết nối hệ thống, phân quyền, API, triển khai và bảo mật." }
+    ]
+  },
+  "days": [
+    {
+      "no": 1,
+      "title": "AI for Organization & Human Resources Management",
+      "subtitle": "Biến AI thành copilot nghiệp vụ cho tổ chức – nhân sự, không thay thế quyền quyết định của người có thẩm quyền",
+      "topics": [
+        "AI HR Copilot & HR Knowledge Base: trợ lý tra cứu quy định, quy trình, chế độ, biểu mẫu và hướng dẫn nghiệp vụ dựa trên tài liệu chính thức.",
+        "Vị trí việc làm & năng lực: chuẩn hóa mô tả công việc, khung năng lực, mapping nhiệm vụ – năng lực và phát hiện điểm chưa nhất quán.",
+        "Hồ sơ & quy trình cán bộ: AI hỗ trợ kiểm tra thành phần hồ sơ, checklist quy trình, tóm tắt hồ sơ và nhắc bước xử lý; cán bộ chuyên môn phê duyệt cuối cùng.",
+        "Tuyển dụng & Onboarding: soạn tiêu chí, sàng lọc hỗ trợ theo tiêu chí minh bạch, tạo câu hỏi phỏng vấn, onboarding assistant; chú trọng fairness và human review.",
+        "Đào tạo & phát triển: phân tích nhu cầu đào tạo, gợi ý learning path, tổng hợp năng lực và hỗ trợ xây dựng kế hoạch bồi dưỡng.",
+        "HR Analytics & Workforce Planning: phân tích cơ cấu nhân sự, biến động, tải công việc, nhu cầu nhân lực và dashboard hỗ trợ ra quyết định.",
+        "Workshop — workflow mẫu: Câu hỏi nghiệp vụ/Hồ sơ → Xác định quyền truy cập → Tra cứu Knowledge Base → Kiểm tra rule/checklist → AI hỗ trợ phân tích/tóm tắt → Cán bộ chuyên môn xác nhận → Lưu vết."
+      ],
+      "output": "01 AI HR Knowledge Base prototype + 01 HR workflow đã tái thiết kế có AI hỗ trợ + 01 prototype AI HR Copilot cho một bài toán ưu tiên + danh mục dữ liệu, phân quyền và tiêu chí kiểm soát."
+    },
+    {
+      "no": 2,
+      "title": "AI for General Administration, Office & Workflow Automation",
+      "subtitle": "Các quy trình hành chính tần suất cao: văn bản – hồ sơ – họp – nhiệm vụ – báo cáo",
+      "topics": [
+        "AI Document & Records Assistant: phân loại văn bản, tóm tắt, trích xuất thông tin, gợi ý nơi xử lý, checklist hồ sơ, tìm kiếm theo ngữ nghĩa.",
+        "AI Meeting Copilot: chuẩn bị agenda, tóm tắt tài liệu trước họp, biên bản, trích xuất quyết định – nhiệm vụ – deadline – đầu mối phụ trách.",
+        "AI Office Knowledge Base: trợ lý tra cứu quy trình, quy định, biểu mẫu, hướng dẫn thủ tục nội bộ 24/7 dựa trên tài liệu chính thức.",
+        "AI Report & Drafting Assistant: tổng hợp báo cáo từ nhiều nguồn, tạo bản nháp thông báo/tờ trình/báo cáo, kiểm tra tính nhất quán và chuẩn hóa cấu trúc.",
+        "Task & Workflow Automation: tự động tạo nhiệm vụ từ văn bản/họp, nhắc hạn, theo dõi trạng thái, escalations và dashboard điều hành.",
+        "Executive Administration Dashboard: theo dõi văn bản, nhiệm vụ, SLA, khối lượng xử lý, backlog và các chỉ số vận hành cho lãnh đạo.",
+        "Workshop — workflow mẫu: Văn bản/Họp/Yêu cầu → AI phân loại & tóm tắt → Trích xuất nhiệm vụ → Gợi ý đầu mối → Cán bộ xác nhận → Theo dõi deadline → Dashboard → Báo cáo tổng hợp."
+      ],
+      "output": "01 AI Administration Copilot prototype + 01 workflow văn bản/họp/nhiệm vụ đã số hóa + 01 mẫu dashboard theo dõi công việc và SLA + 01 kế hoạch tích hợp với hệ thống văn bản, HRM, DMS, email."
+    }
+  ],
+  "deliverables": [
+    "Bản đồ pain point và danh mục các quy trình ưu tiên ứng dụng AI.",
+    "01 kiến trúc AI HR & Administration Copilot phù hợp với môi trường đại học.",
+    "01 Knowledge Base mẫu từ quy định, quy trình, biểu mẫu và tài liệu nội bộ.",
+    "Ít nhất 02 workflow mẫu: một workflow nhân sự và một workflow hành chính.",
+    "Bộ KPI đánh giá: thời gian xử lý, tỷ lệ tự động hóa, chất lượng câu trả lời, mức độ sử dụng và mức độ hài lòng.",
+    "Roadmap pilot 3–6 tháng và phương án tích hợp với hệ thống quản trị hiện có."
+  ],
+  "software": {
+    "name": "AI HR & Administration Copilot Suite",
+    "intro": "Đơn vị tham dự được chuyển giao MIỄN PHÍ bộ phần mềm phiên bản triển khai thử nghiệm, kèm hướng dẫn cấu hình Knowledge Base, workflow, phân quyền và pilot.",
+    "modules": [
+      { "no": 1, "name": "HR Policy & Organization Copilot", "description": "Tra cứu quy định, quy trình, biểu mẫu, vị trí việc làm và hỏi đáp nghiệp vụ có nguồn." },
+      { "no": 2, "name": "Job Position & Competency Assistant", "description": "Hỗ trợ mô tả vị trí việc làm, khung năng lực và mapping nhiệm vụ – năng lực." },
+      { "no": 3, "name": "HR Profile & Process Assistant", "description": "Checklist hồ sơ, tóm tắt hồ sơ, theo dõi bước xử lý và nhắc thiếu tài liệu." },
+      { "no": 4, "name": "Recruitment & Onboarding Assistant", "description": "Hỗ trợ tiêu chí tuyển dụng, câu hỏi phỏng vấn, onboarding và FAQ nhân sự; có human review." },
+      { "no": 5, "name": "HR Analytics Dashboard", "description": "Theo dõi cơ cấu, biến động, tải nhân lực, đào tạo và các chỉ số nhân sự." },
+      { "no": 6, "name": "AI Document & Records Assistant", "description": "Phân loại, tóm tắt, trích xuất thông tin, tìm kiếm và quản lý hồ sơ/văn bản." },
+      { "no": 7, "name": "AI Meeting & Task Copilot", "description": "Biên bản, quyết định, nhiệm vụ, deadline, đầu mối và theo dõi tiến độ." },
+      { "no": 8, "name": "AI Office Knowledge Base", "description": "Trợ lý thủ tục hành chính và tra cứu nội bộ dựa trên tài liệu chính thức." },
+      { "no": 9, "name": "AI Report & Drafting Assistant", "description": "Tổng hợp báo cáo và tạo bản nháp văn bản hành chính theo mẫu được cấu hình." },
+      { "no": 10, "name": "Workflow Automation & Dashboard", "description": "Luồng phê duyệt, thông báo, nhắc việc, SLA và dashboard vận hành." }
+    ],
+    "scope": "Cung cấp phần mềm phiên bản triển khai thử nghiệm và tài liệu hướng dẫn sử dụng; hướng dẫn cấu hình Knowledge Base, biểu mẫu, workflow và các rule nghiệp vụ cơ bản; hướng dẫn phân quyền, nguyên tắc bảo mật dữ liệu và Human-in-the-loop; hướng dẫn triển khai pilot, đo KPI và cải tiến sau pilot; hỗ trợ định hướng tích hợp API với các hệ thống hiện có khi điều kiện kỹ thuật cho phép.",
+    "note": "Phần mềm được chuyển giao miễn phí trong khuôn khổ chương trình; chi phí hạ tầng máy chủ, API/model AI hoặc dịch vụ bên thứ ba (nếu phát sinh) không thuộc phạm vi chuyển giao phần mềm."
+  },
+  "kpis": {
+    "note": "KPI kỳ vọng sau khóa học và pilot.",
+    "rows": [
+      { "metric": "Hiệu quả quy trình", "target": "Giảm 30–50% thời gian cho một số tác vụ lặp lại có thể chuẩn hóa" },
+      { "metric": "Tra cứu nội bộ", "target": "Rút ngắn mạnh thời gian tìm quy định, biểu mẫu và hồ sơ; tăng tính nhất quán" },
+      { "metric": "Văn bản – họp – nhiệm vụ", "target": "Tự động hóa bước tóm tắt, trích xuất nhiệm vụ, nhắc hạn và báo cáo theo dõi" },
+      { "metric": "Pilot", "target": "Tối thiểu 02 workflow được pilot trong 3–6 tháng" }
+    ],
+    "caveat": "Các chỉ số trên là mục tiêu tham chiếu để thiết kế pilot, không phải cam kết kết quả."
+  },
+  "dataToBring": [
+    "Quy chế/quy trình nhân sự và hành chính hiện hành.",
+    "Mô tả vị trí việc làm và biểu mẫu nhân sự.",
+    "Văn bản, báo cáo và biên bản họp mẫu.",
+    "Một số hồ sơ mẫu đã ẩn danh (nếu được phép sử dụng)."
+  ],
+  "roadmap": ["TRAINING", "SOFTWARE TRANSFER", "DATA & KNOWLEDGE BASE", "WORKFLOW CONFIGURATION", "PILOT", "KPI EVALUATION", "INTEGRATION", "SCALE-UP"],
+  "longTermGoal": "Hình thành các quy trình nhân sự – hành chính thông minh, minh bạch, an toàn và có khả năng nhân rộng.",
+  "motto": "Mỗi đơn vị rời khóa học với: Quy trình ưu tiên + Prototype + Knowledge Base + Phần mềm + KPI + Kế hoạch pilot.",
+  "responsibleAi": [
+    "KHÔNG sử dụng AI như công cụ tự động quyết định tuyển dụng, bổ nhiệm, đánh giá hoặc kỷ luật.",
+    "Dữ liệu nhân sự phải được phân quyền, ẩn danh khi cần và có audit log.",
+    "Kết quả AI là đầu vào hỗ trợ; người có thẩm quyền chịu trách nhiệm quyết định cuối cùng.",
+    "Sàng lọc tuyển dụng chỉ được hỗ trợ theo tiêu chí minh bạch, chú trọng fairness và human review."
+  ],
+  "relatedCourses": [
+    { "code": "K23", "reason": "Cùng nhóm quản trị & vận hành; nếu đơn vị muốn AI hóa cả học vụ lẫn hành chính thì nên cử người dự cả hai." },
+    { "code": "K21", "reason": "Nếu đơn vị muốn kết nối AI HR/Administration Copilot với nền tảng AI dùng chung toàn trường." }
+  ]
+}

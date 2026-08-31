@@ -1,0 +1,134 @@
+{
+  "code": "K22",
+  "legacyNumber": 2,
+  "slug": "ai-dam-bao-chat-luong-kiem-dinh",
+  "group": "chat-luong-kiem-dinh",
+  "order": 2,
+  "featured": false,
+  "title": "Ứng dụng trí tuệ nhân tạo trong đảm bảo chất lượng và kiểm định giáo dục đại học",
+  "shortTitle": "AI trong Đảm bảo chất lượng & Kiểm định",
+  "tagline": "AI Quality & Accreditation Copilot",
+  "duration": "02 ngày chuyên sâu",
+  "durationDays": 2,
+  "method": "30% nền tảng · 70% workshop",
+  "outputSummary": "Prototype + Pilot + Phần mềm",
+  "aliases": [
+    "đảm bảo chất lượng", "ĐBCL", "kiểm định", "khảo thí", "AUN-QA", "CLO", "PLO",
+    "chuẩn đầu ra", "rubric", "ma trận đề thi", "minh chứng", "SAR", "tự đánh giá", "accreditation"
+  ],
+  "recipients": "Lãnh đạo và cán bộ phụ trách Đảm bảo chất lượng, Khảo thí, Kiểm định, Quản lý đào tạo và Chuyển đổi số tại các cơ sở giáo dục đại học.",
+  "intro": [
+    "Trong bối cảnh khối lượng chương trình đào tạo, chuẩn đầu ra, đề cương học phần, ma trận đánh giá, báo cáo tự đánh giá và hệ thống minh chứng ngày càng lớn, công tác đảm bảo chất lượng cần chuyển từ xử lý thủ công sang mô hình quản trị chất lượng dựa trên dữ liệu và AI.",
+    "Khóa học được thiết kế để giúp học viên đi từ mức “biết sử dụng AI” sang mức “thiết kế, vận hành và làm chủ hệ thống AI chuyên dụng cho đảm bảo chất lượng và kiểm định”. Trọng tâm không phải là ChatGPT cơ bản, mà là AI workflow, RAG, Knowledge Base, AI Agents, kiểm soát chất lượng kết quả và triển khai phần mềm thực tế."
+  ],
+  "coreGoal": "Đi từ mức “biết sử dụng AI” sang mức “thiết kế, vận hành và làm chủ hệ thống AI chuyên dụng cho đảm bảo chất lượng và kiểm định”.",
+  "highlight": {
+    "label": "ĐẶC BIỆT",
+    "text": "Học viên/đơn vị tham dự được chuyển giao miễn phí AI Quality & Accreditation Copilot – phiên bản triển khai thử nghiệm, kèm hướng dẫn cấu hình và pilot."
+  },
+  "values": [
+    { "title": "Năng lực chuyên sâu", "description": "Thiết kế AI workflow cho CLO/PLO, assessment, accreditation, evidence và quality improvement." },
+    { "title": "Sản phẩm thực tế", "description": "Có prototype AI Quality Copilot, workflow kiểm định, Knowledge Base và kế hoạch pilot." },
+    { "title": "Hiệu quả vận hành", "description": "Rút ngắn thời gian rà soát hồ sơ, tìm minh chứng, kiểm tra mapping và tổng hợp báo cáo." },
+    { "title": "Khả năng nhân rộng", "description": "Có nền tảng để tích hợp vào quy trình QA của đơn vị và mở rộng sang nhiều chương trình/tiêu chuẩn kiểm định." }
+  ],
+  "audience": {
+    "note": "Để khóa học tạo ra sản phẩm có thể đưa vào pilot ngay, mỗi đơn vị nên cử nhóm 03–05 người theo mô hình “Nghiệp vụ – Chất lượng – Công nghệ”.",
+    "headcount": "03–05 người/đơn vị",
+    "rows": [
+      { "role": "01 lãnh đạo phụ trách QA/khảo thí", "duty": "Định hướng, lựa chọn bài toán ưu tiên, quyết định phạm vi pilot." },
+      { "role": "01–02 chuyên viên QA/kiểm định", "duty": "Cung cấp quy trình, biểu mẫu, tiêu chí và minh chứng thực tế." },
+      { "role": "01 cán bộ CTĐT/khảo thí", "duty": "Phối hợp CLO–PLO–Assessment, rubric, ma trận đề thi." },
+      { "role": "01 cán bộ CNTT/chuyển đổi số (nếu có)", "duty": "Hỗ trợ dữ liệu, tích hợp, bảo mật, triển khai phần mềm." }
+    ]
+  },
+  "days": [
+    {
+      "no": 1,
+      "title": "AI for Curriculum, Learning Outcomes & Assessment",
+      "subtitle": "Từ chuẩn đầu ra đến hệ thống đánh giá nhất quán",
+      "topics": [
+        "Generative AI, RAG và AI Agents trong đảm bảo chất lượng giáo dục đại học.",
+        "Phân tích và chuẩn hóa CLO/PLO; kiểm tra động từ và mức độ Bloom.",
+        "Tự động mapping CLO–PLO và CLO–Assessment; phát hiện chuẩn đầu ra chưa được đánh giá đầy đủ.",
+        "AI hỗ trợ xây dựng và rà soát rubric.",
+        "AI hỗ trợ xây dựng câu hỏi, đề thi và ma trận đề thi theo CLO/Bloom.",
+        "Phân tích sự phù hợp giữa syllabus – CLO – assessment – examination.",
+        "AI hỗ trợ tổng hợp Course Report và Programme Report.",
+        "Workshop trên đề cương học phần/chương trình đào tạo thực tế."
+      ],
+      "output": "01 AI Curriculum & Assessment Analyzer prototype + 01 workflow QA hoàn chỉnh."
+    },
+    {
+      "no": 2,
+      "title": "AI for Accreditation, Evidence & AUN-QA",
+      "subtitle": "Từ kho minh chứng đến AI Accreditation Copilot",
+      "topics": [
+        "Xây dựng AI Knowledge Base cho đảm bảo chất lượng và kiểm định.",
+        "RAG cho tiêu chuẩn kiểm định, quy định, SAR và tài liệu nội bộ.",
+        "AI đọc và phân tích Self-Assessment Report.",
+        "Tự động phân loại, tìm kiếm và liên kết minh chứng với từng criterion.",
+        "Evidence Matching Score; phát hiện thiếu minh chứng hoặc minh chứng chưa phù hợp.",
+        "AI Accreditation Gap Analysis và Improvement Plan.",
+        "AI mô phỏng câu hỏi của đoàn đánh giá ngoài.",
+        "Human-in-the-loop, kiểm soát hallucination, bảo mật và AI Governance.",
+        "Workshop: Criterion → SAR → Evidence → Gap → Recommendation → Improvement Plan."
+      ],
+      "output": "01 AI Quality & Accreditation Copilot prototype + 01 kế hoạch pilot 3–6 tháng."
+    }
+  ],
+  "deliverables": [
+    "01 danh mục 10–20 pain point có thể ứng dụng AI trong QA/kiểm định.",
+    "03–05 quy trình ưu tiên để triển khai AI.",
+    "01 AI Quality Copilot prototype và 01 AI Accreditation workflow.",
+    "01 Knowledge Base mẫu từ tài liệu của đơn vị.",
+    "01 bộ rubric/logic kiểm soát kết quả AI và Human-in-the-loop.",
+    "01 danh mục dữ liệu cần tích hợp và sơ đồ hệ thống liên quan.",
+    "01 bộ KPI đánh giá hiệu quả pilot.",
+    "01 kế hoạch triển khai thử nghiệm 3–6 tháng."
+  ],
+  "software": {
+    "name": "AI Quality & Accreditation Copilot",
+    "intro": "Mỗi đơn vị tham dự được chuyển giao miễn phí phần mềm AI Quality & Accreditation Copilot – phiên bản triển khai thử nghiệm, nhằm tiếp tục thực hành, cấu hình dữ liệu và triển khai pilot sau khóa học.",
+    "modules": [
+      { "no": 1, "name": "AI CLO/PLO Analyzer", "description": "Phân tích chuẩn đầu ra, mức độ Bloom, tính đo lường và tính nhất quán." },
+      { "no": 2, "name": "CLO–PLO Mapping Assistant", "description": "Hỗ trợ mapping, rà soát coverage và phát hiện liên kết chưa hợp lý." },
+      { "no": 3, "name": "AI Assessment Mapper", "description": "Kiểm tra sự phù hợp giữa CLO, phương pháp đánh giá và đề thi." },
+      { "no": 4, "name": "AI Rubric Generator & Analyzer", "description": "Tạo/rà soát rubric và kiểm tra độ rõ ràng của tiêu chí." },
+      { "no": 5, "name": "AI Exam Matrix Generator", "description": "Sinh ma trận đề thi theo CLO, Bloom, tỷ trọng và cấu trúc đánh giá." },
+      { "no": 6, "name": "AI Evidence Finder", "description": "Tìm kiếm, phân loại và liên kết minh chứng theo ngữ nghĩa." },
+      { "no": 7, "name": "AI Accreditation Gap Analyzer", "description": "Phân tích khoảng trống giữa hiện trạng, SAR, evidence và tiêu chuẩn." },
+      { "no": 8, "name": "AI Accreditation Assistant", "description": "Tra cứu tiêu chuẩn, hỗ trợ SAR, action plan và chuẩn bị đánh giá ngoài." }
+    ],
+    "scope": "Cung cấp phần mềm phiên bản triển khai thử nghiệm; hướng dẫn cài đặt/cấu hình và tạo tài khoản sử dụng; hướng dẫn xây dựng Knowledge Base từ tiêu chuẩn, quy định, SAR, syllabus và minh chứng; cung cấp cấu trúc dữ liệu và bộ mẫu để cấu hình nhanh; hướng dẫn tùy chỉnh module theo nghiệp vụ; hướng dẫn xây dựng pilot, KPI và quy trình Human-in-the-loop; hướng dẫn kết nối/tích hợp với hệ thống hiện có khi điều kiện kỹ thuật cho phép."
+  },
+  "kpis": {
+    "note": "Hiệu quả kỳ vọng khi triển khai pilot.",
+    "rows": [
+      { "metric": "Giảm thời gian ở một số tác vụ QA lặp lại", "target": "40–60%" },
+      { "metric": "Giảm thời gian tìm kiếm/phân loại minh chứng", "target": "50%+" },
+      { "metric": "Syllabus thí điểm được kiểm tra CLO/PLO bằng AI", "target": "100%" },
+      { "metric": "Knowledge Base QA dùng chung được hình thành", "target": "01" }
+    ],
+    "caveat": "Các chỉ số trên là mục tiêu tham chiếu để thiết kế pilot, không phải cam kết kết quả."
+  },
+  "dataToBring": [
+    "Đề cương học phần và chương trình đào tạo.",
+    "CLO/PLO hiện hành.",
+    "Rubric và ma trận đề thi.",
+    "Báo cáo tự đánh giá (SAR).",
+    "Bộ tiêu chuẩn kiểm định và danh mục minh chứng.",
+    "Dữ liệu có thông tin cá nhân cần được ẩn danh trước khi sử dụng."
+  ],
+  "roadmap": ["TRAINING", "SOFTWARE TRANSFER", "DATA CONFIG", "PILOT", "KPI EVALUATION", "IMPROVE", "SCALE"],
+  "longTermGoal": "AI-Powered Quality Assurance — đảm bảo chất lượng dựa trên dữ liệu, AI và sự giám sát chuyên môn của con người.",
+  "motto": "Làm chủ nghiệp vụ + Làm chủ dữ liệu + Làm chủ AI workflow + Làm chủ phần mềm.",
+  "responsibleAi": [
+    "Human-in-the-loop bắt buộc: kết quả AI phải được chuyên viên QA kiểm tra trước khi đưa vào hồ sơ kiểm định.",
+    "Kiểm soát hallucination và bảo mật dữ liệu minh chứng là nội dung riêng của Ngày 2."
+  ],
+  "relatedCourses": [
+    { "code": "K21", "reason": "Khóa 21 dành 01 ngày cho đảm bảo chất lượng trong bức tranh 05 lĩnh vực; Khóa 22 đi sâu 02 ngày cho riêng nghiệp vụ này." },
+    { "code": "K23", "reason": "Quản lý đào tạo và đảm bảo chất lượng dùng chung dữ liệu CTĐT, học phần và chuẩn đầu ra." }
+  ]
+}

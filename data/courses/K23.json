@@ -1,0 +1,133 @@
+{
+  "code": "K23",
+  "legacyNumber": 3,
+  "slug": "ai-quan-ly-dao-tao",
+  "group": "quan-tri-van-hanh",
+  "order": 3,
+  "featured": false,
+  "title": "Ứng dụng trí tuệ nhân tạo trong quản lý đào tạo đại học",
+  "shortTitle": "AI trong Quản lý đào tạo",
+  "tagline": "AI Academic Copilot & Student Early Warning",
+  "duration": "02 ngày chuyên sâu",
+  "durationDays": 2,
+  "method": "30% nền tảng · 70% workshop",
+  "outputSummary": "Prototype + Pilot + Phần mềm",
+  "aliases": [
+    "quản lý đào tạo", "QLĐT", "học vụ", "quy chế đào tạo", "cố vấn học tập",
+    "chương trình đào tạo", "CTĐT", "tiên quyết", "tín chỉ", "xét tốt nghiệp",
+    "cảnh báo học vụ", "early warning", "academic advisor", "study planner", "công tác sinh viên"
+  ],
+  "recipients": "Lãnh đạo và cán bộ phụ trách Quản lý đào tạo, Chương trình đào tạo, Cố vấn học tập, Công tác sinh viên và Chuyển đổi số tại các cơ sở giáo dục đại học.",
+  "intro": [
+    "Trong bối cảnh quy mô đào tạo, chương trình, học phần và dữ liệu sinh viên ngày càng lớn, công tác quản lý đào tạo cần chuyển từ xử lý thủ công và phản ứng theo sự vụ sang mô hình quản trị chủ động, nhất quán và dựa trên dữ liệu.",
+    "Khóa học được thiết kế để giúp học viên đi từ mức “biết sử dụng AI” sang mức “thiết kế, vận hành và làm chủ hệ thống AI chuyên dụng cho quản lý đào tạo”. Trọng tâm không phải ChatGPT cơ bản, mà là AI workflow, RAG, AI Agents, Academic Analytics, Student Risk và triển khai phần mềm thực tế."
+  ],
+  "coreGoal": "Chuyển quản lý đào tạo từ xử lý thủ công sang mô hình quản trị chủ động, nhất quán và dựa trên dữ liệu.",
+  "highlight": {
+    "label": "ĐẶC BIỆT",
+    "text": "Học viên/đơn vị tham dự được chuyển giao miễn phí AI Academic Copilot – phiên bản triển khai thử nghiệm, kèm hướng dẫn cấu hình và pilot."
+  },
+  "values": [
+    { "title": "Năng lực chuyên sâu", "description": "Thiết kế AI workflow cho quy chế, chương trình, cố vấn học tập, xét tốt nghiệp và cảnh báo sớm." },
+    { "title": "Sản phẩm thực tế", "description": "Có prototype AI Academic Copilot, Early Warning workflow, bộ KPI và kế hoạch pilot 3–6 tháng." },
+    { "title": "Hiệu quả vận hành", "description": "Rút ngắn tra cứu quy chế, đối chiếu tín chỉ, kiểm tra điều kiện tốt nghiệp và xử lý câu hỏi học vụ lặp lại." },
+    { "title": "Khả năng nhân rộng", "description": "Có nền tảng để tích hợp SIS/LMS, mở rộng cho nhiều chương trình đào tạo và phục vụ hàng nghìn sinh viên." }
+  ],
+  "audience": {
+    "note": "Để khóa học tạo ra sản phẩm có thể đưa vào pilot ngay, mỗi đơn vị nên cử nhóm 03–05 người theo mô hình “Nghiệp vụ – Cố vấn – Công nghệ”.",
+    "headcount": "03–05 người/đơn vị",
+    "rows": [
+      { "role": "01 lãnh đạo phụ trách đào tạo", "duty": "Định hướng bài toán ưu tiên, xác định phạm vi pilot và quyết định quy trình đưa vào thử nghiệm." },
+      { "role": "01–02 chuyên viên quản lý đào tạo", "duty": "Cung cấp quy chế, quy trình, biểu mẫu, logic nghiệp vụ và các tình huống học vụ thực tế." },
+      { "role": "01 cán bộ CTĐT/cố vấn học tập", "duty": "Phối hợp kiểm tra chương trình, điều kiện tiên quyết, kế hoạch học và logic tư vấn sinh viên." },
+      { "role": "01 cán bộ CNTT/chuyển đổi số (nếu có)", "duty": "Hỗ trợ dữ liệu, kết nối SIS/LMS, API, bảo mật và triển khai phần mềm." }
+    ]
+  },
+  "days": [
+    {
+      "no": 1,
+      "title": "AI for Academic Management & Academic Advising",
+      "subtitle": "Từ quy chế và chương trình đào tạo đến AI Academic Advisor",
+      "topics": [
+        "Generative AI, RAG và AI Agents trong quản lý đào tạo đại học.",
+        "Xây dựng AI Knowledge Base từ quy chế, chương trình đào tạo và danh mục học phần.",
+        "AI Regulation Assistant và AI Curriculum Assistant.",
+        "Kiểm tra môn tiên quyết, điều kiện đăng ký học và cấu trúc học phần bắt buộc/tự chọn.",
+        "Phân tích tiến độ tích lũy tín chỉ và các yêu cầu còn thiếu.",
+        "AI Study Planner, AI Graduation Planner và AI Academic Advisor.",
+        "Thiết kế Human-in-the-loop để giảm rủi ro AI trả lời sai quy định.",
+        "Workshop: Student Question → Student Data → Rules → AI Recommendation → Human Verification."
+      ],
+      "output": "01 AI Academic Advisor prototype + 01 workflow quản lý đào tạo hoàn chỉnh."
+    },
+    {
+      "no": 2,
+      "title": "AI Student Early Warning & Academic Intelligence",
+      "subtitle": "Từ dữ liệu học tập đến cảnh báo sớm và hỗ trợ ra quyết định",
+      "topics": [
+        "Student 360 và Academic Data Model.",
+        "GPA trend, credit accumulation, failed-course analysis, attendance và LMS engagement.",
+        "Phân tích hành vi đăng ký học, cảnh báo học vụ và tiến độ so với chương trình chuẩn.",
+        "Xây dựng Student Risk Score: Low / Medium / High Risk.",
+        "Dropout Risk và Graduation Delay Risk.",
+        "AI Recommendation Engine cho cố vấn học tập và workflow can thiệp sớm.",
+        "Academic Intelligence Dashboard cho lãnh đạo và chuyên viên.",
+        "Workshop: Student Data → Risk Detection → Explanation → Recommended Action → Advisor → Follow-up."
+      ],
+      "output": "01 AI Student Early Warning prototype + 01 Academic Intelligence Dashboard concept."
+    }
+  ],
+  "deliverables": [
+    "01 danh mục 10–20 pain point trong quản lý đào tạo có thể ứng dụng AI.",
+    "03–05 quy trình ưu tiên để số hóa/tái thiết kế bằng AI.",
+    "01 AI Academic Copilot prototype phục vụ tra cứu, tư vấn và kiểm tra học vụ.",
+    "01 AI Student Early Warning prototype hoặc workflow cảnh báo sớm.",
+    "01 danh mục dữ liệu cần tích hợp từ SIS/LMS và các nguồn liên quan.",
+    "01 sơ đồ tích hợp hệ thống và nguyên tắc phân quyền/bảo mật.",
+    "01 bộ KPI đánh giá hiệu quả pilot.",
+    "01 kế hoạch pilot 3–6 tháng và roadmap từ prototype đến production."
+  ],
+  "software": {
+    "name": "AI Academic Copilot",
+    "intro": "Các đơn vị tham dự được chuyển giao miễn phí AI Academic Copilot – phiên bản triển khai thử nghiệm, nhằm tiếp tục thực hành, cấu hình dữ liệu và triển khai pilot sau khóa học. Thiết kế theo hướng module hóa, có thể cấu hình theo dữ liệu và quy định của từng trường.",
+    "modules": [
+      { "no": 1, "name": "AI Regulation Assistant", "description": "Tra cứu và giải thích quy chế đào tạo, học vụ, đăng ký học, cảnh báo và tốt nghiệp." },
+      { "no": 2, "name": "AI Curriculum Assistant", "description": "Phân tích cấu trúc CTĐT, học phần bắt buộc/tự chọn, tiên quyết và tiến độ chương trình." },
+      { "no": 3, "name": "AI Academic Advisor", "description": "Tư vấn lộ trình học, đề xuất học phần, kiểm tra tín chỉ và hỗ trợ cố vấn cá nhân hóa." },
+      { "no": 4, "name": "AI Graduation Checker", "description": "Đối chiếu transcript + CTĐT + quy định để kiểm tra điều kiện tốt nghiệp và chỉ ra phần còn thiếu." },
+      { "no": 5, "name": "AI Study Planner", "description": "Xây dựng kế hoạch học theo học kỳ, kịch bản tăng/giảm tải và lộ trình tốt nghiệp đúng hạn." },
+      { "no": 6, "name": "AI Student Early Warning", "description": "Phát hiện nguy cơ học tập, phân loại rủi ro, giải thích nguyên nhân và đề xuất hành động can thiệp." },
+      { "no": 7, "name": "Academic Intelligence Dashboard", "description": "Dashboard tiến độ học tập, học lại, cảnh báo, bottleneck courses, student risk và graduation forecast." }
+    ],
+    "scope": "Phần mềm thử nghiệm, hướng dẫn cài đặt/cấu hình, cấu trúc dữ liệu mẫu, hướng dẫn xây dựng Knowledge Base, cấu hình quy chế – chương trình đào tạo – Academic Advisor – Early Warning, và hướng dẫn tích hợp API/LMS/SIS khi điều kiện kỹ thuật cho phép."
+  },
+  "kpis": {
+    "note": "Tùy mức độ số hóa, chất lượng dữ liệu và khả năng kết nối hệ thống, đơn vị có thể sử dụng các chỉ số sau làm mục tiêu tham chiếu.",
+    "rows": [
+      { "metric": "Câu hỏi học vụ lặp lại được AI hỗ trợ", "target": "50–70%" },
+      { "metric": "Thời gian xử lý một số tác vụ thường xuyên", "target": "Giảm khoảng 30–50%" },
+      { "metric": "Tra cứu quy chế/CTĐT/điều kiện tốt nghiệp", "target": "Rút ngắn đáng kể" },
+      { "metric": "Sinh viên/cố vấn trong phạm vi pilot", "target": "Theo quy mô và dữ liệu của đơn vị" }
+    ],
+    "caveat": "Các chỉ tiêu trên là mức tham chiếu để thiết kế pilot; kết quả thực tế phụ thuộc vào dữ liệu, quy trình và phạm vi triển khai của từng trường."
+  },
+  "dataToBring": [
+    "Quy chế đào tạo và các quy định học vụ hiện hành.",
+    "Chương trình đào tạo, danh mục học phần và quan hệ tiên quyết.",
+    "Transcript/dữ liệu học tập mẫu đã được ẩn danh.",
+    "Quy định xét tốt nghiệp, cảnh báo học vụ và biểu mẫu nghiệp vụ.",
+    "Dữ liệu LMS hoặc báo cáo học tập mẫu nếu được phép sử dụng."
+  ],
+  "roadmap": ["TRAINING", "SOFTWARE TRANSFER", "DATA PREP", "CONFIG", "PILOT", "KPI EVALUATION", "SCALE-UP"],
+  "longTermGoal": "Hình thành mô hình AI-Powered Academic Management: quản lý đào tạo thông minh, chủ động, cá nhân hóa và dựa trên dữ liệu; trong đó AI là trợ lý cho cán bộ, copilot cho cố vấn, trợ lý học vụ cho sinh viên và hệ thống hỗ trợ ra quyết định cho lãnh đạo.",
+  "motto": "Làm chủ nghiệp vụ + Làm chủ dữ liệu + Làm chủ AI workflow + Làm chủ phần mềm.",
+  "responsibleAi": [
+    "Thiết kế Human-in-the-loop để giảm rủi ro AI trả lời sai quy định — nội dung riêng trong Ngày 1.",
+    "Kết quả AI về điều kiện tốt nghiệp, cảnh báo học vụ phải được cán bộ có thẩm quyền xác nhận trước khi thông báo cho sinh viên."
+  ],
+  "relatedCourses": [
+    { "code": "K21", "reason": "Khóa 21 dành 01 ngày cho quản lý đào tạo trong bức tranh 05 lĩnh vực; Khóa 23 đi sâu 02 ngày." },
+    { "code": "K22", "reason": "Cùng làm việc trên dữ liệu chương trình đào tạo và học phần, ở hai góc nhìn khác nhau." },
+    { "code": "K27", "reason": "Cùng nhóm quản trị & vận hành; nếu đơn vị muốn AI hóa cả học vụ lẫn hành chính thì nên cử người dự cả hai." }
+  ]
+}

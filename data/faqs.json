@@ -1,0 +1,152 @@
+[
+  {
+    "id": "faq-so-khoa",
+    "question": "Chương trình có bao nhiêu khóa và đánh mã như thế nào?",
+    "answer": "Chương trình gồm 08 khóa tập huấn chuyên sâu, đánh mã từ Khóa 21 đến Khóa 28, tổng cộng 19 ngày. Trong thư mời, các khóa này được gọi là “khóa tập huấn chuyên sâu số 1” đến “số 8” — hai cách gọi cùng chỉ một khóa (số 1 tương ứng Khóa 21, số 8 tương ứng Khóa 28).",
+    "category": "Tổng quan",
+    "courseCodes": [],
+    "priority": 100,
+    "published": true,
+    "order": 1
+  },
+  {
+    "id": "faq-hoc-phi",
+    "question": "Học phí khóa tập huấn là bao nhiêu?",
+    "answer": "Thông tin về kinh phí tham dự do ban tổ chức cung cấp theo từng đợt khai giảng. Xin liên hệ đầu mối đăng ký để nhận thông tin chính thức.",
+    "category": "Đăng ký",
+    "courseCodes": [],
+    "priority": 90,
+    "published": true,
+    "order": 2
+  },
+  {
+    "id": "faq-thoi-gian-dia-diem",
+    "question": "Khóa học tổ chức khi nào và ở đâu?",
+    "answer": "Thời gian và địa điểm của từng đợt sẽ được ban tổ chức thông báo cụ thể. Hình thức tổ chức là trực tiếp, kết hợp workshop và thực hành trên dữ liệu/tình huống thực tế của chính đơn vị tham dự.",
+    "category": "Đăng ký",
+    "courseCodes": [],
+    "priority": 90,
+    "published": true,
+    "order": 3
+  },
+  {
+    "id": "faq-phan-mem-mien-phi",
+    "question": "Phần mềm được chuyển giao miễn phí gồm những gì?",
+    "answer": "Mỗi khóa chuyển giao một bộ phần mềm riêng, tổng cộng 61 module chi tiết cộng 05 suite nền tảng của Khóa 21. Phạm vi chuyển giao gồm: phần mềm phiên bản triển khai thử nghiệm, hướng dẫn cài đặt/cấu hình, cấu trúc dữ liệu mẫu, hướng dẫn xây dựng Knowledge Base, cấu hình workflow và hướng dẫn tích hợp API khi điều kiện kỹ thuật cho phép. Lưu ý: chi phí hạ tầng máy chủ, API/model AI thương mại hoặc dịch vụ bên thứ ba (nếu phát sinh) do đơn vị chủ động cân đối, không thuộc phạm vi chuyển giao.",
+    "category": "Phần mềm",
+    "courseCodes": [],
+    "priority": 85,
+    "published": true,
+    "order": 4
+  },
+  {
+    "id": "faq-cu-bao-nhieu-nguoi",
+    "question": "Mỗi đơn vị nên cử bao nhiêu người tham dự?",
+    "answer": "Tùy khóa. Khóa 21 khuyến nghị khoảng 03 người theo mô hình Business – Process – Technology. Khóa 22, 23, 24, 27 khuyến nghị 03–05 người. Khóa 28 khuyến nghị 03–06 người. Khóa 25 và Khóa 26 dành cho Khoa/Bộ môn nên khuyến nghị 05–10 người. Điểm chung là nên cử một nhóm gồm lãnh đạo, chuyên viên nghiệp vụ và cán bộ CNTT/chuyển đổi số để sản phẩm làm ra có thể tiếp tục pilot tại đơn vị.",
+    "category": "Đối tượng",
+    "courseCodes": [],
+    "priority": 85,
+    "published": true,
+    "order": 5
+  },
+  {
+    "id": "faq-can-biet-lap-trinh",
+    "question": "Học viên có cần biết lập trình không?",
+    "answer": "Không bắt buộc. Khóa học dành cho cán bộ nghiệp vụ và lãnh đạo, tập trung vào thiết kế AI workflow, xây dựng Knowledge Base và cấu hình phần mềm — không phải viết code. Tuy nhiên, mỗi đơn vị nên có ít nhất 01 cán bộ CNTT/chuyển đổi số đi cùng để hỗ trợ phần dữ liệu, tích hợp và triển khai sau khóa học.",
+    "category": "Đối tượng",
+    "courseCodes": [],
+    "priority": 80,
+    "published": true,
+    "order": 6
+  },
+  {
+    "id": "faq-mang-du-lieu",
+    "question": "Chúng tôi cần chuẩn bị gì trước khi đến?",
+    "answer": "Mỗi khóa có danh mục dữ liệu riêng, xem ở phần “Chuẩn bị gì” trên trang chi tiết khóa. Nguyên tắc chung: mang theo quy chế, quy trình, biểu mẫu và một số dữ liệu mẫu đã được phép sử dụng của chính đơn vị mình. Dữ liệu có thông tin cá nhân cần được ẩn danh trước khi sử dụng. Vì 70% thời lượng là workshop trên dữ liệu thật, việc chuẩn bị tốt quyết định chất lượng sản phẩm mang về.",
+    "category": "Chuẩn bị",
+    "courseCodes": [],
+    "priority": 80,
+    "published": true,
+    "order": 7
+  },
+  {
+    "id": "faq-k24-k28",
+    "question": "Khóa 24 và Khóa 28 khác nhau thế nào?",
+    "answer": "Hai khóa có phần chồng lấn về Research Copilot và Research Intelligence, nhưng phục vụ hai đối tượng khác nhau. Khóa 24 hướng tới nhà nghiên cứu và Phòng Quản lý khoa học: literature review, research gap, methodology, publication workflow của tác giả. Khóa 28 hướng tới tòa soạn tạp chí và quản trị nghiên cứu cấp trường: biên tập, phản biện, xuất bản, chuẩn hóa metadata, Researcher 360, tích hợp OJS. Nếu đơn vị có tạp chí khoa học riêng thì chọn Khóa 28; nếu chỉ quản lý đề tài và công bố thì chọn Khóa 24.",
+    "category": "Chọn khóa",
+    "courseCodes": ["K24", "K28"],
+    "priority": 95,
+    "published": true,
+    "order": 8
+  },
+  {
+    "id": "faq-k21-vs-chuyen-de",
+    "question": "Nên chọn Khóa 21 hay các khóa chuyên đề 02 ngày?",
+    "answer": "Khóa 21 là bản tổng quan 05 lĩnh vực trong 05 ngày, phù hợp khi nhà trường muốn cử một đoàn liên phòng ban và xây dựng nền tảng AI dùng chung toàn trường. Các khóa chuyên đề 02 ngày (Khóa 22 đến Khóa 28) đi sâu hơn vào đúng một nghiệp vụ, phù hợp khi một đơn vị đã xác định rõ bài toán ưu tiên của mình. Nhiều trường chọn cách cử đoàn dự Khóa 21 trước để định hướng, sau đó cử các phòng chuyên môn dự khóa chuyên đề tương ứng.",
+    "category": "Chọn khóa",
+    "courseCodes": ["K21"],
+    "priority": 95,
+    "published": true,
+    "order": 9
+  },
+  {
+    "id": "faq-human-in-the-loop",
+    "question": "AI có thay thế cán bộ ra quyết định không?",
+    "answer": "Không. Toàn bộ chương trình được thiết kế theo nguyên tắc Human-in-the-loop: AI là công cụ hỗ trợ, người có thẩm quyền chịu trách nhiệm quyết định cuối cùng. Một số ràng buộc được nêu rõ trong thư mời: Khóa 27 quy định không sử dụng AI như công cụ tự động quyết định tuyển dụng, bổ nhiệm, đánh giá hoặc kỷ luật; Khóa 26 quy định điểm số và phản hồi phải qua Human Review trước khi dùng cho quyết định đánh giá quan trọng; Khóa 28 quy định AI không tự quyết định chấp nhận hay từ chối bản thảo.",
+    "category": "Nguyên tắc",
+    "courseCodes": ["K26", "K27", "K28"],
+    "priority": 90,
+    "published": true,
+    "order": 10
+  },
+  {
+    "id": "faq-chi-so-kpi",
+    "question": "Các con số như “giảm 30–50% thời gian” có phải là cam kết không?",
+    "answer": "Không. Đây là các mức tham chiếu để đơn vị sử dụng khi thiết kế pilot và đặt KPI, không phải cam kết kết quả. Kết quả thực tế phụ thuộc vào chất lượng dữ liệu, mức độ số hóa, quy trình và phạm vi triển khai của từng trường.",
+    "category": "Nguyên tắc",
+    "courseCodes": [],
+    "priority": 95,
+    "published": true,
+    "order": 11
+  },
+  {
+    "id": "faq-sau-khoa-hoc",
+    "question": "Sau khóa học đơn vị được hỗ trợ tiếp như thế nào?",
+    "answer": "Lộ trình sau tập huấn gồm các bước: chuyển giao phần mềm → chuẩn bị dữ liệu và Knowledge Base → cấu hình workflow → pilot → đánh giá KPI → cải tiến → nhân rộng. Phạm vi hỗ trợ gồm hướng dẫn cài đặt/cấu hình, cấu trúc dữ liệu mẫu, hướng dẫn xây Knowledge Base, hướng dẫn triển khai pilot và đo KPI, cùng định hướng tích hợp API với hệ thống hiện có khi điều kiện kỹ thuật cho phép.",
+    "category": "Sau khóa học",
+    "courseCodes": [],
+    "priority": 75,
+    "published": true,
+    "order": 12
+  },
+  {
+    "id": "faq-nhieu-khoa",
+    "question": "Một đơn vị có thể đăng ký nhiều khóa không?",
+    "answer": "Có. Nhiều trường cử các phòng ban khác nhau dự các khóa khác nhau trong cùng một đợt. Khi đăng ký, anh/chị có thể chọn nhiều khóa cùng lúc và ghi rõ số lượng người cho từng khóa.",
+    "category": "Đăng ký",
+    "courseCodes": [],
+    "priority": 70,
+    "published": true,
+    "order": 13
+  },
+  {
+    "id": "faq-truong-ngoai",
+    "question": "Trường ngoài hệ thống có tham dự được không?",
+    "answer": "Chương trình hướng tới các cơ sở giáo dục đại học nói chung. Xin liên hệ đầu mối đăng ký để được xác nhận về điều kiện và phạm vi tham dự của đợt gần nhất.",
+    "category": "Đăng ký",
+    "courseCodes": [],
+    "priority": 60,
+    "published": true,
+    "order": 14
+  },
+  {
+    "id": "faq-ty-le-thuc-hanh",
+    "question": "Khóa học thiên về lý thuyết hay thực hành?",
+    "answer": "Các khóa chuyên đề 02 ngày áp dụng tỷ lệ 30% nền tảng và 70% workshop, thực hành trực tiếp trên quy trình và dữ liệu thật của đơn vị tham dự. Kết thúc mỗi ngày đều có sản phẩm cụ thể — prototype, workflow hoặc dashboard — chứ không dừng ở kiến thức.",
+    "category": "Tổng quan",
+    "courseCodes": [],
+    "priority": 75,
+    "published": true,
+    "order": 15
+  }
+]

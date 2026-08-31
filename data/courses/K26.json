@@ -1,0 +1,136 @@
+{
+  "code": "K26",
+  "legacyNumber": 6,
+  "slug": "ai-ngoai-ngu",
+  "group": "dao-tao-chuyen-nganh",
+  "order": 6,
+  "featured": false,
+  "title": "Ứng dụng trí tuệ nhân tạo trong giảng dạy, đánh giá và cá nhân hóa học tập ngoại ngữ",
+  "shortTitle": "AI trong Giảng dạy & Đánh giá Ngoại ngữ",
+  "tagline": "AI-Powered Foreign Language Teaching, Assessment & Personalized Learning",
+  "duration": "02 ngày chuyên sâu",
+  "durationDays": 2,
+  "method": "30% nền tảng · 70% workshop",
+  "outputSummary": "AI Tutor + Graders + Pilot",
+  "aliases": [
+    "ngoại ngữ", "tiếng Anh", "tiếng Pháp", "tiếng Trung", "tiếng Nhật", "tiếng Hàn",
+    "writing", "speaking", "pronunciation", "phát âm", "chấm bài", "rubric ngoại ngữ",
+    "AI tutor", "language tutor", "course brain", "multi-agent grading", "learning analytics",
+    "cá nhân hóa học tập", "khoa ngoại ngữ", "bộ môn ngoại ngữ"
+  ],
+  "recipients": "Lãnh đạo và giảng viên các Khoa/Bộ môn Ngoại ngữ: Tiếng Anh, Tiếng Pháp, Tiếng Trung, Tiếng Nhật, Tiếng Hàn và các ngoại ngữ khác tại các cơ sở giáo dục đại học.",
+  "intro": [
+    "AI đang mở ra khả năng chuyển dạy – học ngoại ngữ từ mô hình phản hồi theo lớp sang môi trường luyện tập liên tục, cá nhân hóa và dựa trên dữ liệu. Đặc biệt với Writing, Speaking, Pronunciation và ngoại ngữ chuyên ngành, AI có thể hỗ trợ giảng viên tăng tần suất phản hồi mà vẫn duy trì vai trò kiểm soát chuyên môn.",
+    "Đây là khóa chuyên sâu, không dừng ở việc dùng ChatGPT để soạn bài hoặc tạo nội dung. Học viên sẽ trực tiếp xây AI Course Brain, AI Tutor, Writing/Speaking Grader, Pronunciation Coach, Multi-Agent Grading và Learning Analytics để đưa vào classroom pilot ngay sau khóa học."
+  ],
+  "coreGoal": "Tăng tần suất luyện tập và phản hồi cho sinh viên, hỗ trợ lớp đông, trong khi giảng viên vẫn giữ vai trò kiểm soát chuyên môn.",
+  "highlight": {
+    "label": "ĐẶC BIỆT",
+    "text": "Khoa/Bộ môn tham dự được chuyển giao miễn phí AI Foreign Language Learning & Assessment Platform – phiên bản triển khai thử nghiệm, kèm hướng dẫn cấu hình ngôn ngữ, rubric và pilot."
+  },
+  "values": [
+    { "title": "Năng lực chuyên sâu", "description": "Thiết kế AI Tutor, RAG/Knowledge Base, Writing/Speaking workflows và mô hình đánh giá đa tác tử cho ngoại ngữ." },
+    { "title": "Sản phẩm thực tế", "description": "Có AI Course Brain, Language Tutor, Writing/Speaking Grader prototype, rubric cấu hình và kế hoạch classroom pilot." },
+    { "title": "Hiệu quả giảng dạy", "description": "Tăng tần suất luyện tập và phản hồi, hỗ trợ lớp đông, giảm tác vụ chấm sơ bộ lặp lại và cá nhân hóa học tập." },
+    { "title": "Năng lực đa ngôn ngữ", "description": "Cấu hình cho Anh, Pháp, Trung, Nhật, Hàn và các ngoại ngữ khác theo học liệu, rubric và đặc thù phát âm của từng khoa." }
+  ],
+  "audience": {
+    "note": "Để khóa học tạo ra sản phẩm có thể tiếp tục triển khai tại Khoa/Bộ môn, khuyến nghị mỗi đơn vị cử nhóm 05–10 người theo mô hình “Quản lý – Giảng dạy – Đánh giá – Học liệu – Công nghệ”.",
+    "headcount": "05–10 người/đơn vị",
+    "rows": [
+      { "role": "01 lãnh đạo Khoa/Bộ môn", "duty": "Xác định học phần ưu tiên, mục tiêu pilot, chuẩn đánh giá và kế hoạch triển khai AI ở cấp Khoa/Bộ môn." },
+      { "role": "02–04 giảng viên Writing/Speaking/Ngữ âm", "duty": "Cung cấp rubric, bài mẫu, dữ liệu thực hành; kiểm thử AI Grader, Pronunciation Coach và Human Review." },
+      { "role": "01–02 giảng viên học liệu/LMS/EdTech", "duty": "Xây dựng AI Course Brain, Knowledge Base, bài tập thích ứng và tích hợp vào hoạt động dạy – học." },
+      { "role": "01 cán bộ khảo thí/đánh giá hoặc CNTT (nếu có)", "duty": "Hỗ trợ chuẩn hóa rubric, dữ liệu, phân quyền, bảo mật, API/LMS và triển khai phần mềm thử nghiệm." }
+    ]
+  },
+  "days": [
+    {
+      "no": 1,
+      "title": "AI for Foreign Language Teaching & Personalized Learning",
+      "subtitle": "Từ học liệu của Khoa đến AI Tutor, Course Brain và học tập cá nhân hóa",
+      "topics": [
+        "Generative AI, AI Agents và vai trò mới của AI trong đào tạo ngoại ngữ đa ngôn ngữ.",
+        "Xây dựng AI Course Brain/Knowledge Base bằng RAG từ giáo trình, slide, rubric và học liệu chính thức.",
+        "Thiết kế AI Language Tutor cho grammar, vocabulary, reading, writing, speaking, conversation và ngoại ngữ chuyên ngành.",
+        "AI Lesson Planning, học liệu số và AI Exercise Generator cho bài tập thích ứng theo trình độ.",
+        "AI Conversation Partner và Pronunciation Coach; lưu ý đặc thù từng ngôn ngữ như thanh điệu, liaison, pitch/accent và ngữ điệu.",
+        "Personalized Learning Path: phân tích lỗi, đề xuất bài luyện tiếp theo và theo dõi tiến bộ.",
+        "Tích hợp AI Tutor với LMS, phân quyền, dữ liệu học liệu và guardrails để hạn chế hallucination.",
+        "Workshop: Course Materials → Knowledge Base → AI Tutor → Practice → Feedback → Personalized Recommendation."
+      ],
+      "output": "01 AI Language Tutor + 01 AI Course Brain/Knowledge Base + 01 workflow cá nhân hóa học tập."
+    },
+    {
+      "no": 2,
+      "title": "AI for Writing, Speaking & Pronunciation Assessment",
+      "subtitle": "Từ rubric đến Multi-Agent Grading, Confidence Score và Human Review",
+      "topics": [
+        "AI Writing Assessment: rubric-based scoring, grammar, vocabulary, coherence, content relevance, error classification và feedback.",
+        "AI Speaking Assessment: Speech-to-Text, fluency, grammar, vocabulary, coherence, response relevance và rubric scoring.",
+        "AI Pronunciation Assessment/Coach: phát âm, nhịp, độ trôi chảy và phản hồi phù hợp với từng ngôn ngữ.",
+        "Cấu hình rubric theo từng học phần, chuẩn đầu ra và ngôn ngữ; kiểm soát consistency giữa AI và giảng viên.",
+        "Multi-Agent AI Grading: AI Examiner 1 → AI Examiner 2 → AI Judge → Confidence Score → Human Review.",
+        "Learning Analytics: lỗi phổ biến, mức độ luyện tập, tiến bộ theo thời gian và phát hiện sinh viên cần hỗ trợ.",
+        "Nguyên tắc Human-in-the-loop, fairness, privacy và sử dụng AI có trách nhiệm trong assessment.",
+        "Workshop: Student Work → Rubric → AI Examiners → Score/Feedback → Confidence → Lecturer Review → Analytics."
+      ],
+      "output": "01 Writing Grader workflow + 01 Speaking/Pronunciation workflow + 01 Multi-Agent Assessment model + 01 kế hoạch pilot."
+    }
+  ],
+  "deliverables": [
+    "01 danh mục 10–20 use case AI ưu tiên cho dạy – học – đánh giá ngoại ngữ.",
+    "01 AI Language Tutor và 01 AI Course Brain cho một học phần thực tế.",
+    "01 AI Writing Assessment workflow và 01 AI Speaking/Pronunciation workflow.",
+    "01 bộ rubric chuẩn hóa để cấu hình AI theo từng môn/ngôn ngữ.",
+    "01 Multi-Agent AI Grading workflow có Confidence Score và Human Review.",
+    "01 Learning Analytics model theo dõi tiến bộ và lỗi phổ biến của sinh viên.",
+    "01 lesson plan/classroom workflow tích hợp AI vào học phần.",
+    "01 kế hoạch pilot 3–6 tháng + bộ KPI đánh giá hiệu quả."
+  ],
+  "software": {
+    "name": "AI Foreign Language Learning & Assessment Platform",
+    "intro": "Các Khoa/Bộ môn tham dự được chuyển giao miễn phí AI Foreign Language Learning & Assessment Platform – phiên bản triển khai thử nghiệm, để tiếp tục thực hành, cấu hình theo ngôn ngữ và tổ chức classroom pilot sau khóa học.",
+    "modules": [
+      { "no": 1, "name": "AI Writing Grader", "description": "Chấm bài theo rubric, phân tích lỗi, phản hồi cá nhân hóa, theo dõi tiến bộ và cấu hình theo từng ngôn ngữ." },
+      { "no": 2, "name": "AI Speaking Grader", "description": "Speech-to-Text, fluency, grammar, vocabulary, coherence, rubric-based scoring và phản hồi cho bài nói." },
+      { "no": 3, "name": "AI Pronunciation Coach", "description": "Luyện phát âm, phản hồi theo ngôn ngữ, so sánh các lần luyện và hỗ trợ cải thiện âm/nhịp/độ trôi chảy." },
+      { "no": 4, "name": "AI Language Tutor", "description": "Hỗ trợ grammar, vocabulary, conversation, reading, writing, speaking và ngoại ngữ chuyên ngành 24/7." },
+      { "no": 5, "name": "AI Course Brain", "description": "RAG/Knowledge Base từ giáo trình, slide, rubric, sample answers và học liệu đã được Khoa/Bộ môn phê duyệt." },
+      { "no": 6, "name": "AI Exercise Generator", "description": "Sinh bài tập grammar, vocabulary, reading, listening, speaking, writing và adaptive practice theo trình độ." },
+      { "no": 7, "name": "Multi-Agent AI Grading", "description": "AI Examiner 1 → AI Examiner 2 → AI Judge → Confidence Score → Human Review để tăng độ ổn định." },
+      { "no": 8, "name": "Learning Analytics Dashboard", "description": "Theo dõi Writing, Speaking, lỗi phổ biến, mức độ luyện tập, tiến bộ và sinh viên cần hỗ trợ theo lớp/môn/ngôn ngữ." }
+    ],
+    "scope": "Phần mềm thử nghiệm, hướng dẫn cài đặt/cấu hình, cấu trúc dữ liệu mẫu, hướng dẫn cấu hình ngôn ngữ và rubric, xây dựng AI Course Brain, thiết lập Writing/Speaking Grader, Multi-Agent Grading, Learning Analytics và hướng dẫn tích hợp LMS khi điều kiện kỹ thuật cho phép."
+  },
+  "kpis": {
+    "note": "Tùy chất lượng dữ liệu, độ phù hợp của mô hình ngôn ngữ/giọng nói và phạm vi pilot, Khoa/Bộ môn có thể sử dụng các chỉ số sau làm mục tiêu tham chiếu.",
+    "rows": [
+      { "metric": "Bài Writing được AI hỗ trợ đánh giá vòng đầu", "target": "Mục tiêu tham chiếu ≥ 70% trong pilot" },
+      { "metric": "Bài Speaking được AI pre-assessment", "target": "Mục tiêu tham chiếu ≥ 70% trong pilot" },
+      { "metric": "Thời gian chấm sơ bộ một số dạng bài", "target": "Có thể giảm khoảng 40–60%" },
+      { "metric": "Học phần tích hợp AI Tutor/Course Brain", "target": "Tối thiểu 02–03 học phần pilot" },
+      { "metric": "AI workflows đưa vào lớp học", "target": "Tối thiểu 03 quy trình" }
+    ],
+    "caveat": "AI trong đánh giá ngoại ngữ nên được dùng như công cụ hỗ trợ chuyên môn. Điểm số, phản hồi và phân tích phát âm cần được hiệu chỉnh theo rubric, dữ liệu của từng ngôn ngữ và có cơ chế Human Review trước khi dùng cho các quyết định đánh giá quan trọng."
+  },
+  "dataToBring": [
+    "Syllabus, giáo trình, slide và học liệu của một học phần cụ thể.",
+    "Rubric Writing, Speaking, Pronunciation hoặc các tiêu chí đánh giá hiện hành.",
+    "Bài Writing mẫu đã ẩn danh và audio Speaking mẫu phù hợp với quy định dữ liệu.",
+    "Sample answers, bộ câu hỏi, vocabulary/grammar materials và bài tập đang sử dụng.",
+    "Một số yêu cầu/ý tưởng tích hợp LMS hoặc quy trình đánh giá của Khoa/Bộ môn."
+  ],
+  "roadmap": ["TRAINING", "SOFTWARE TRANSFER", "LANGUAGE CONFIG", "COURSE CONFIG", "PILOT", "KPI EVALUATION", "SCALE-UP"],
+  "longTermGoal": "Hình thành University AI Foreign Language Lab – một nền tảng dùng chung cho Tiếng Anh, Pháp, Trung, Nhật, Hàn và các ngoại ngữ khác, trong đó mỗi Khoa/Bộ môn có thể cấu hình riêng học liệu, rubric, AI Tutor và assessment workflow.",
+  "motto": "Làm chủ học liệu + Làm chủ rubric + Làm chủ AI workflow + Làm chủ phần mềm đa ngôn ngữ.",
+  "responsibleAi": [
+    "AI không thay giảng viên chấm điểm chính thức. Mô hình Multi-Agent Grading luôn kết thúc bằng Confidence Score và Human Review.",
+    "Điểm số, phản hồi và phân tích phát âm phải được hiệu chỉnh theo rubric và dữ liệu của từng ngôn ngữ trước khi dùng cho quyết định đánh giá quan trọng.",
+    "Fairness và privacy là nội dung riêng trong Ngày 2."
+  ],
+  "relatedCourses": [
+    { "code": "K25", "reason": "Cùng nhóm đào tạo chuyên ngành: đều xây môi trường thực hành có AI cho sinh viên, ở hai lĩnh vực khác nhau." },
+    { "code": "K22", "reason": "Nếu Khoa muốn chuẩn hóa rubric và gắn kết quả đánh giá với CLO/PLO của chương trình đào tạo." }
+  ]
+}

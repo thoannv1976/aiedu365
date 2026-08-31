@@ -1,0 +1,47 @@
+[
+  {
+    "id": "nen-tang-toan-truong",
+    "name": "Nền tảng toàn trường",
+    "shortName": "Nền tảng",
+    "description": "Khóa bao trùm cả 05 lĩnh vực, dành cho đoàn liên phòng ban và bộ phận CNTT/chuyển đổi số.",
+    "targetUnits": "Ban giám hiệu · Trung tâm CNTT/Chuyển đổi số",
+    "accent": "indigo",
+    "order": 1
+  },
+  {
+    "id": "quan-tri-van-hanh",
+    "name": "Quản trị & vận hành",
+    "shortName": "Quản trị",
+    "description": "AI hóa các quy trình nội bộ có tần suất cao: học vụ, nhân sự, văn bản, họp và nhiệm vụ.",
+    "targetUnits": "Phòng Đào tạo · Tổ chức cán bộ · Hành chính – Tổng hợp · Văn phòng",
+    "accent": "cyan",
+    "order": 2
+  },
+  {
+    "id": "chat-luong-kiem-dinh",
+    "name": "Chất lượng & kiểm định",
+    "shortName": "Chất lượng",
+    "description": "Chuẩn đầu ra, đánh giá, minh chứng và chuẩn bị kiểm định theo hướng dữ liệu.",
+    "targetUnits": "Phòng Đảm bảo chất lượng · Khảo thí",
+    "accent": "emerald",
+    "order": 3
+  },
+  {
+    "id": "khoa-hoc-xuat-ban",
+    "name": "Khoa học & xuất bản",
+    "shortName": "Khoa học",
+    "description": "Nghiên cứu, đề tài, công bố, tạp chí khoa học và Research Intelligence phục vụ lãnh đạo.",
+    "targetUnits": "Phòng Quản lý khoa học · Tạp chí khoa học · Thư viện số",
+    "accent": "violet",
+    "order": 4
+  },
+  {
+    "id": "dao-tao-chuyen-nganh",
+    "name": "Đào tạo chuyên ngành",
+    "shortName": "Chuyên ngành",
+    "description": "Xây môi trường thực hành có AI cho sinh viên ngay trong học phần của Khoa/Bộ môn.",
+    "targetUnits": "Khoa/Bộ môn TMĐT – Kinh doanh số · Khoa/Bộ môn Ngoại ngữ",
+    "accent": "amber",
+    "order": 5
+  }
+]

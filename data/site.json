@@ -1,0 +1,80 @@
+{
+  "programName": "Chương trình tập huấn AI chuyên sâu cho Chuyển đổi số Đại học",
+  "organizer": "",
+  "organizerNote": "Ban tổ chức cập nhật tên đơn vị trong trang quản trị.",
+  "hero": {
+    "eyebrow": "08 khóa · 19 ngày · 66 module phần mềm",
+    "title": "Tập huấn AI chuyên sâu cho Chuyển đổi số Đại học",
+    "subtitle": "Không dừng ở việc dùng ChatGPT. Mỗi đơn vị mang về năng lực, prototype, phần mềm được chuyển giao miễn phí, bộ KPI và kế hoạch pilot 3–6 tháng.",
+    "primaryCta": { "label": "Chọn khóa phù hợp", "href": "/chon-khoa-hoc" },
+    "secondaryCta": { "label": "Đăng ký tham dự", "href": "/dang-ky" }
+  },
+  "stats": [
+    { "value": 8, "suffix": "", "label": "khóa tập huấn", "note": "Khóa 21 – Khóa 28" },
+    { "value": 19, "suffix": "", "label": "ngày tập huấn", "note": "Khóa 21 kéo dài 05 ngày" },
+    { "value": 66, "suffix": "", "label": "module phần mềm", "note": "61 module chi tiết + 05 suite" },
+    { "value": 70, "suffix": "%", "label": "thời lượng workshop", "note": "Trên dữ liệu thật của đơn vị" },
+    { "value": 100, "suffix": "%", "label": "chuyển giao miễn phí", "note": "Phiên bản triển khai thử nghiệm" }
+  ],
+  "differentiators": [
+    {
+      "title": "Không phải ChatGPT cơ bản",
+      "description": "Trọng tâm là AI workflow, RAG, Knowledge Base, AI Agents và triển khai phần mềm thực tế — không phải mẹo viết prompt."
+    },
+    {
+      "title": "70% workshop trên dữ liệu thật",
+      "description": "Học viên làm việc trực tiếp trên quy chế, biểu mẫu, hồ sơ và tình huống nghiệp vụ của chính đơn vị mình."
+    },
+    {
+      "title": "Mang về phần mềm, không chỉ kiến thức",
+      "description": "Mỗi khóa chuyển giao miễn phí một bộ phần mềm phiên bản triển khai thử nghiệm, kèm hướng dẫn cấu hình và dữ liệu mẫu."
+    },
+    {
+      "title": "Có KPI và kế hoạch pilot 3–6 tháng",
+      "description": "Kết thúc khóa học, đơn vị có bộ chỉ số đo hiệu quả và lộ trình cụ thể từ prototype đến triển khai thật."
+    }
+  ],
+  "roadmap": [
+    { "step": "Training", "description": "Tập huấn chuyên sâu, 30% nền tảng và 70% workshop." },
+    { "step": "Software transfer", "description": "Chuyển giao miễn phí phần mềm phiên bản triển khai thử nghiệm." },
+    { "step": "Data & Knowledge Base", "description": "Chuẩn bị dữ liệu, xây kho tri thức từ tài liệu nội bộ." },
+    { "step": "Config", "description": "Cấu hình workflow, biểu mẫu, rule nghiệp vụ và phân quyền." },
+    { "step": "Pilot", "description": "Triển khai thử nghiệm 3–6 tháng trên phạm vi đã chọn." },
+    { "step": "KPI evaluation", "description": "Đo hiệu quả theo bộ chỉ số đã thiết kế trong khóa học." },
+    { "step": "Integration", "description": "Kết nối với SIS/LMS/HRM/OJS và các hệ thống hiện có." },
+    { "step": "Scale-up", "description": "Nhân rộng, chuẩn hóa và đóng gói để chuyển giao." }
+  ],
+  "responsibleAi": {
+    "title": "Nguyên tắc sử dụng AI có trách nhiệm",
+    "intro": "Toàn bộ chương trình vận hành theo nguyên tắc Human-in-the-loop: AI là công cụ hỗ trợ, người có thẩm quyền chịu trách nhiệm quyết định cuối cùng. Một số ràng buộc được nêu rõ ngay trong thư mời của từng khóa.",
+    "rules": [
+      { "courseCode": "K27", "text": "Không sử dụng AI như công cụ tự động quyết định tuyển dụng, bổ nhiệm, đánh giá hoặc kỷ luật. Dữ liệu nhân sự phải được phân quyền, ẩn danh khi cần và có audit log." },
+      { "courseCode": "K26", "text": "AI không thay giảng viên chấm điểm chính thức. Mô hình Multi-Agent Grading luôn kết thúc bằng Confidence Score và Human Review trước khi dùng cho quyết định đánh giá quan trọng." },
+      { "courseCode": "K28", "text": "AI không tự quyết định chấp nhận hay từ chối bản thảo. Kiểm tra xung đột lợi ích của reviewer do con người thực hiện theo quy trình." },
+      { "courseCode": "K24", "text": "AI hỗ trợ chuyên gia, không thay thế phán đoán học thuật. Kết quả do AI sinh ra cần được kiểm tra nguồn, trích dẫn, phương pháp và tính liêm chính." },
+      { "courseCode": "K22", "text": "Kết quả AI phải được chuyên viên đảm bảo chất lượng kiểm tra trước khi đưa vào hồ sơ kiểm định." },
+      { "courseCode": "K23", "text": "Kết quả AI về điều kiện tốt nghiệp và cảnh báo học vụ phải được cán bộ có thẩm quyền xác nhận trước khi thông báo cho sinh viên." }
+    ],
+    "kpiNote": "Các chỉ số hiệu quả nêu trong chương trình (30–50%, 50–70%, ≥ 70%…) là mức tham chiếu để thiết kế pilot, không phải cam kết kết quả."
+  },
+  "contact": {
+    "unit": "",
+    "address": "",
+    "email": "",
+    "phone": "",
+    "registrationDeadline": "",
+    "note": "Thông tin đầu mối đăng ký sẽ được ban tổ chức cập nhật."
+  },
+  "chat": {
+    "greeting": "Xin chào! Tôi là trợ lý tư vấn của chương trình tập huấn AI. Tôi trả lời dựa trên nội dung 08 thư mời (Khóa 21 – Khóa 28). Anh/chị muốn tìm hiểu điều gì?",
+    "suggestions": [
+      "So sánh các khóa với nhau",
+      "Khóa nào phù hợp với phòng Đảm bảo chất lượng?",
+      "Khóa 24 và Khóa 28 khác nhau thế nào?",
+      "Phần mềm được chuyển giao gồm những gì?",
+      "Mỗi đơn vị nên cử bao nhiêu người?",
+      "Cần chuẩn bị dữ liệu gì trước khi đến?"
+    ],
+    "fallback": "Thông tin này chưa có trong bộ tài liệu của chương trình. Anh/chị vui lòng liên hệ ban tổ chức để được trả lời chính xác."
+  }
+}

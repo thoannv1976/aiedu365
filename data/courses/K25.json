@@ -1,0 +1,137 @@
+{
+  "code": "K25",
+  "legacyNumber": 5,
+  "slug": "ai-thuong-mai-dien-tu-kinh-doanh-so",
+  "group": "dao-tao-chuyen-nganh",
+  "order": 5,
+  "featured": false,
+  "title": "Ứng dụng trí tuệ nhân tạo trong thương mại điện tử, kinh doanh số và marketing số",
+  "shortTitle": "AI trong TMĐT, Kinh doanh số & Marketing số",
+  "tagline": "AI Agents, Agentic Commerce & Digital Business Simulation",
+  "duration": "02 ngày chuyên sâu",
+  "durationDays": 2,
+  "method": "30% nền tảng · 70% workshop",
+  "outputSummary": "AI Agents + Simulator + Pilot",
+  "aliases": [
+    "thương mại điện tử", "TMĐT", "e-commerce", "kinh doanh số", "digital business",
+    "marketing số", "digital marketing", "business analytics", "entrepreneurship",
+    "AI agents", "agentic commerce", "simulation", "mô phỏng kinh doanh", "simulator",
+    "pricing", "recommendation", "customer service", "ROAS", "conversion"
+  ],
+  "recipients": "Lãnh đạo và giảng viên các Khoa/Bộ môn Thương mại điện tử, Kinh doanh số, Marketing số, Digital Business, Business Analytics, Entrepreneurship và các lĩnh vực liên quan tại các cơ sở giáo dục đại học.",
+  "intro": [
+    "AI đang chuyển thương mại số từ mô hình “doanh nghiệp sử dụng công cụ AI” sang mô hình “AI Agents tham gia trực tiếp vào tìm kiếm, tư vấn, định giá, bán hàng, marketing, chăm sóc khách hàng và ra quyết định”. Điều này đặt ra yêu cầu mới cho chương trình đào tạo: sinh viên phải được học bằng trải nghiệm, dữ liệu và mô phỏng, thay vì chỉ học lý thuyết về AI.",
+    "Đây là khóa chuyên sâu, không dừng ở việc dùng ChatGPT để tạo nội dung hoặc soạn bài. Học viên sẽ trực tiếp thiết kế AI Agents, Multi-Agent workflows, Agentic Customer Journey và vận hành Digital Business Simulator để xây dựng bài tập, case và môi trường thực hành có thể đưa vào lớp học ngay sau khóa học."
+  ],
+  "coreGoal": "Chuyển từ lecture-based learning sang experiential & simulation-based learning: sinh viên ra quyết định và quan sát hệ quả.",
+  "highlight": {
+    "label": "ĐẶC BIỆT",
+    "text": "Khoa/Bộ môn tham dự được chuyển giao miễn phí AI Digital Business Lab & Simulator – phiên bản triển khai thử nghiệm, kèm bộ kịch bản, dữ liệu mẫu và hướng dẫn pilot."
+  },
+  "values": [
+    { "title": "Năng lực chuyên sâu", "description": "Thiết kế AI Agents và Multi-Agent workflows cho marketing, sales, pricing, recommendation, customer service và analytics." },
+    { "title": "Sản phẩm giảng dạy", "description": "Có AI Commerce Agent, Agentic Customer Journey, simulation scenario, case và lesson plan có thể sử dụng ngay trong học phần." },
+    { "title": "Đổi mới phương pháp", "description": "Chuyển từ lecture-based learning sang experiential & simulation-based learning: sinh viên ra quyết định và quan sát hệ quả." },
+    { "title": "Năng lực khác biệt", "description": "Hình thành AI Digital Business Lab để phục vụ đào tạo, cuộc thi, capstone, nghiên cứu ứng dụng và chuyển giao cho doanh nghiệp/trường khác." }
+  ],
+  "audience": {
+    "note": "Để khóa học tạo ra sản phẩm có thể tiếp tục triển khai tại Khoa/Bộ môn, khuyến nghị mỗi đơn vị cử nhóm 05–10 người theo mô hình “Quản lý – Chuyên môn – Dữ liệu – Công nghệ – Đổi mới giảng dạy”.",
+    "headcount": "05–10 người/đơn vị",
+    "rows": [
+      { "role": "01 lãnh đạo Khoa/Bộ môn", "duty": "Xác định học phần ưu tiên, định hướng AI Lab, phạm vi pilot và kế hoạch tích hợp vào chương trình đào tạo." },
+      { "role": "02–04 giảng viên E-commerce/Digital Business/Digital Marketing", "duty": "Thiết kế use case, AI Agent, case study, simulation và đánh giá khả năng đưa vào lớp học." },
+      { "role": "01 giảng viên Business Analytics/Entrepreneurship/Strategy", "duty": "Thiết kế KPI, mô hình quyết định, market scenario và debriefing sau simulation." },
+      { "role": "01 cán bộ LMS/CNTT/chuyển đổi số (nếu có)", "duty": "Hỗ trợ cấu hình nền tảng, dữ liệu, tài khoản lớp học, tích hợp LMS/API và triển khai phần mềm." }
+    ]
+  },
+  "days": [
+    {
+      "no": 1,
+      "title": "AI Agents & Agentic Commerce",
+      "subtitle": "Từ Generative AI đến hệ sinh thái AI Agents trong thương mại và marketing số",
+      "topics": [
+        "Generative AI → Copilot → AI Agent → Multi-Agent System: kiến trúc, khả năng và giới hạn.",
+        "Agentic Commerce và AI-enabled Customer Journey: Discover → Search → Compare → Recommend → Buy → Pay → Deliver → Service → Retain.",
+        "Thiết kế AI Marketing Agent, Sales Agent, Pricing Agent, Recommendation Agent, Customer Service Agent và Analytics Agent.",
+        "AI Agents cho omnichannel, social commerce, cross-border commerce và personalized marketing.",
+        "Thiết kế Multi-Agent workflow: phân vai, memory, tool use, hand-off, guardrails và Human-in-the-loop.",
+        "Business KPI: conversion, CAC, ROAS, AOV, retention, profit, customer satisfaction và market share.",
+        "Workshop: Business Problem → Customer Journey → AI Agents → Workflow → KPI → Classroom Use Case."
+      ],
+      "output": "01 AI Commerce Agent prototype + 01 Multi-Agent workflow + 01 Agentic Customer Journey + 01 use case/case study đưa vào lớp học."
+    },
+    {
+      "no": 2,
+      "title": "AI Digital Business Simulation & Experiential Learning",
+      "subtitle": "Từ lý thuyết kinh doanh số đến “Business War Room” có AI",
+      "topics": [
+        "Thiết kế Digital Business Simulator: Price → Demand → Traffic → Conversion → Orders → Revenue → Cost → Profit → Satisfaction → Market Share.",
+        "Mode 1 – Student vs AI: một doanh nghiệp sinh viên cạnh tranh với nhiều AI Companies theo chiến lược khác nhau.",
+        "Mode 2 – Student vs Student: nhiều nhóm cạnh tranh trong cùng một thị trường và tác động lẫn nhau qua từng vòng quyết định.",
+        "AI Consumer Simulator: mô phỏng segment, nhu cầu, price sensitivity, loyalty và phản ứng với marketing.",
+        "AI Competitor Simulator: cost leadership, premium, growth, customer intimacy và aggressive promotion.",
+        "AI Market Shock Generator: trend, biến động chi phí quảng cáo, supply disruption, thay đổi thuật toán, đối thủ giảm giá, regulation shock.",
+        "Thiết kế scoring, team ranking, strategic KPI và debriefing để biến simulation thành learning outcome đo được.",
+        "Workshop: Market Design → Decision Round → AI Reaction → Dashboard → Debrief → Lesson Plan."
+      ],
+      "output": "01 Digital Business Simulation + 01 AI Competitor model + 01 bộ Market Shock scenarios + 01 KPI/rubric + 01 lesson plan."
+    }
+  ],
+  "deliverables": [
+    "01 danh mục 10–20 use case AI ưu tiên cho Thương mại điện tử, Kinh doanh số và Marketing số.",
+    "01 AI Commerce Agent và 01 Multi-Agent Commerce workflow.",
+    "01 Agentic Customer Journey cho một doanh nghiệp/case cụ thể.",
+    "01 Digital Business Simulation scenario và 01 AI Competitor model.",
+    "01 bộ Market Shock scenarios + dữ liệu/tham số mẫu.",
+    "01 bộ KPI/rubric đánh giá sinh viên trong simulation.",
+    "01 lesson plan/case study tích hợp AI vào học phần.",
+    "01 kế hoạch pilot 3–6 tháng và roadmap xây dựng AI Digital Business Lab của Khoa."
+  ],
+  "software": {
+    "name": "AI Digital Business Lab & Simulator",
+    "intro": "Các Khoa/Bộ môn tham dự được chuyển giao miễn phí AI Digital Business Lab & Simulator – phiên bản triển khai thử nghiệm, để tiếp tục thực hành, cấu hình môn học và tổ chức pilot sau khóa học.",
+    "modules": [
+      { "no": 1, "name": "AI Marketing Lab", "description": "Thực hành segmentation, campaign planning, content, targeting, marketing analytics và tối ưu ROAS." },
+      { "no": 2, "name": "AI Sales Agent", "description": "Mô phỏng lead qualification, product recommendation, upsell/cross-sell và sales conversation." },
+      { "no": 3, "name": "AI Pricing Agent", "description": "Thực hành dynamic pricing, competitive pricing, promotion và revenue/profit optimization." },
+      { "no": 4, "name": "AI Recommendation Agent", "description": "Mô phỏng customer profile, personalization, next-best-offer và recommendation logic." },
+      { "no": 5, "name": "AI Customer Service Agent", "description": "Mô phỏng inquiry, complaint, return, service recovery, sentiment và customer retention." },
+      { "no": 6, "name": "AI Digital Business Simulator", "description": "Mô phỏng traffic, conversion, demand, revenue, cost, profit, satisfaction và market share." },
+      { "no": 7, "name": "AI Competitor Simulator", "description": "Tạo các doanh nghiệp AI với chiến lược cạnh tranh khác nhau và phản ứng theo thị trường." },
+      { "no": 8, "name": "AI Consumer Simulator", "description": "Mô phỏng customer segments, purchase behavior, price sensitivity, loyalty và phản ứng chiến dịch." },
+      { "no": 9, "name": "AI Market Shock Generator", "description": "Tạo sự kiện bất ngờ để sinh viên phân tích và điều chỉnh chiến lược theo từng vòng." },
+      { "no": 10, "name": "Digital Business Analytics Dashboard", "description": "Theo dõi revenue, profit, CAC, ROAS, conversion, satisfaction, market share, ranking và strategic performance." }
+    ],
+    "scope": "Phần mềm thử nghiệm; hướng dẫn cài đặt/cấu hình; tài khoản/lớp mẫu; bộ dữ liệu và kịch bản simulation mẫu; hướng dẫn tạo AI Competitors, Market Shocks, KPI và dashboard; hướng dẫn tích hợp LMS/API khi điều kiện kỹ thuật cho phép.",
+    "note": "Phần mềm phiên bản thử nghiệm được chuyển giao miễn phí trong khuôn khổ chương trình; chi phí hạ tầng máy chủ, API/model thương mại hoặc dịch vụ bên thứ ba (nếu phát sinh) do đơn vị chủ động lựa chọn và cân đối."
+  },
+  "kpis": {
+    "note": "Tùy phạm vi học phần, dữ liệu và mức độ tích hợp, Khoa/Bộ môn có thể sử dụng các chỉ số sau làm mục tiêu tham chiếu.",
+    "rows": [
+      { "metric": "Học phần tích hợp AI Lab/Simulation", "target": "Tối thiểu 03–05 học phần" },
+      { "metric": "AI Agents/AI workflows được sử dụng", "target": "Tối thiểu 05 use case" },
+      { "metric": "Simulation scenarios/cases", "target": "Tối thiểu 10–20 kịch bản" },
+      { "metric": "Sinh viên tham gia pilot", "target": "Theo quy mô môn học/Khoa" },
+      { "metric": "Tỷ trọng experiential learning", "target": "Tăng rõ rệt so với lecture-only" },
+      { "metric": "Sản phẩm có thể showcase/chuyển giao", "target": "Tối thiểu 01 mô hình AI Digital Business Lab" }
+    ],
+    "caveat": "Các chỉ số trên là mục tiêu tham chiếu để thiết kế pilot, không phải cam kết kết quả."
+  },
+  "dataToBring": [
+    "Syllabus môn Thương mại điện tử, Kinh doanh số, Marketing số hoặc môn liên quan.",
+    "Case study, business scenario, dataset, assignment và rubric đang sử dụng.",
+    "Dữ liệu marketing/sales giả lập hoặc dữ liệu đã ẩn danh phù hợp để xây dashboard.",
+    "Một ý tưởng simulation: thị trường, doanh nghiệp, quyết định, KPI và sự kiện bất ngờ.",
+    "Một use case AI mà Khoa muốn đưa vào pilot ngay sau khóa học."
+  ],
+  "roadmap": ["TRAINING", "SOFTWARE TRANSFER", "COURSE DESIGN", "SIMULATION DESIGN", "PILOT", "KPI EVALUATION", "SCALE-UP"],
+  "longTermGoal": "Hình thành UNIVERSITY AI DIGITAL BUSINESS LAB dùng chung cho E-commerce, Digital Business, Digital Marketing, Business Analytics và Entrepreneurship – nơi sinh viên được học bằng cách xây AI Agents, vận hành doanh nghiệp, cạnh tranh với AI và ra quyết định dựa trên dữ liệu.",
+  "motto": "Không chỉ “dạy sinh viên dùng AI”, mà xây dựng môi trường để sinh viên Learn by Building, Deciding, Competing & Experimenting with AI.",
+  "responsibleAi": [
+    "Multi-Agent workflow phải có guardrails và Human-in-the-loop — nội dung riêng trong Ngày 1."
+  ],
+  "relatedCourses": [
+    { "code": "K26", "reason": "Cùng nhóm đào tạo chuyên ngành: đều xây môi trường thực hành có AI cho sinh viên, ở hai lĩnh vực khác nhau." },
+    { "code": "K21", "reason": "Nếu Khoa muốn kết nối AI Lab với nền tảng AI dùng chung toàn trường." }
+  ]
+}

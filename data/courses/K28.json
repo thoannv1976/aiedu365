@@ -1,0 +1,141 @@
+{
+  "code": "K28",
+  "legacyNumber": 8,
+  "slug": "ai-tap-chi-khoa-hoc-quan-ly-khoa-hoc",
+  "group": "khoa-hoc-xuat-ban",
+  "order": 8,
+  "featured": false,
+  "title": "Ứng dụng trí tuệ nhân tạo thúc đẩy chuyển đổi số tạp chí khoa học và quản lý khoa học",
+  "shortTitle": "AI cho Tạp chí khoa học & Quản lý khoa học",
+  "tagline": "AI-Powered Scientific Journal & Research Management",
+  "duration": "02 ngày",
+  "durationDays": 2,
+  "method": "30% nền tảng • 70% workshop",
+  "outputSummary": "Prototype + Workflow + Pilot",
+  "aliases": [
+    "tạp chí khoa học", "tòa soạn", "tổng biên tập", "thư ký tòa soạn", "biên tập",
+    "phản biện", "reviewer", "bản thảo", "manuscript", "xuất bản", "OJS", "DOI",
+    "metadata", "researcher 360", "research intelligence", "quản lý khoa học", "liêm chính nghiên cứu"
+  ],
+  "recipients": "Lãnh đạo và cán bộ phụ trách Tạp chí khoa học, Quản lý khoa học, Nghiên cứu, Xuất bản, Thư viện số và Chuyển đổi số.",
+  "intro": [
+    "Trong bối cảnh hoạt động công bố khoa học, xuất bản tạp chí và quản trị nghiên cứu đang chịu áp lực ngày càng lớn về tốc độ, chất lượng, chuẩn mực quốc tế, minh bạch và dữ liệu, trí tuệ nhân tạo mở ra cơ hội tái thiết kế toàn bộ chu trình từ tiếp nhận bản thảo, phản biện, biên tập, xuất bản đến quản lý đề tài, công bố, hồ sơ nhà khoa học và phân tích năng lực nghiên cứu.",
+    "Khóa tập huấn được thiết kế để đưa các đơn vị từ mức “dùng AI hỗ trợ từng tác vụ” sang mức “thiết kế và làm chủ quy trình số có AI hỗ trợ”, với trọng tâm là AI Agents, RAG/Knowledge Base, Research Intelligence, tự động hóa workflow và Human-in-the-loop."
+  ],
+  "coreGoal": "Đưa đơn vị từ mức “dùng AI hỗ trợ từng tác vụ” sang mức “thiết kế và làm chủ quy trình số có AI hỗ trợ” cho cả tòa soạn tạp chí và quản trị nghiên cứu.",
+  "highlight": {
+    "label": "ĐẶC BIỆT",
+    "text": "Học viên được chuyển giao MIỄN PHÍ bộ phần mềm AI Journal & Research Management Suite phiên bản triển khai thử nghiệm."
+  },
+  "values": [
+    { "title": "Quy trình tạp chí có AI hỗ trợ", "description": "Biết thiết kế chu trình tiếp nhận – sàng lọc – phản biện – biên tập – xuất bản – phân tích." },
+    { "title": "Knowledge Base nghiệp vụ", "description": "Xây dựng AI Knowledge Base từ quy định tạp chí, hướng dẫn tác giả, tiêu chí phản biện, quy chế nghiên cứu và dữ liệu nội bộ." },
+    { "title": "Hỗ trợ biên tập", "description": "Ứng dụng AI để screening bản thảo, kiểm tra cấu trúc, chuẩn hóa metadata, gợi ý reviewer và theo dõi tiến độ xử lý." },
+    { "title": "Research Intelligence", "description": "Dashboard cho lãnh đạo: lĩnh vực mạnh, mạng lưới hợp tác, xu hướng, năng suất và tác động nghiên cứu." }
+  ],
+  "audience": {
+    "note": "Đề nghị mỗi đơn vị ưu tiên cử 03–06 cán bộ theo mô hình “Nghiệp vụ – Dữ liệu – Công nghệ”.",
+    "headcount": "03–06 người/đơn vị",
+    "rows": [
+      { "role": "Lãnh đạo/Thư ký tòa soạn/Tổng biên tập hoặc cán bộ phụ trách tạp chí khoa học", "duty": "Định hướng bài toán ưu tiên và phạm vi pilot cho tòa soạn." },
+      { "role": "Cán bộ biên tập, phản biện, xuất bản, quản trị OJS hoặc website tạp chí", "duty": "Cung cấp quy trình, biểu mẫu, tiêu chí và tình huống biên tập thực tế." },
+      { "role": "Lãnh đạo/chuyên viên Phòng Quản lý khoa học hoặc bộ phận quản lý đề tài – công bố", "duty": "Cung cấp quy chế, hồ sơ đề tài, dữ liệu công bố và yêu cầu báo cáo." },
+      { "role": "Giảng viên/nhà nghiên cứu nòng cốt có kinh nghiệm công bố và phản biện", "duty": "Kiểm thử Copilot trên tình huống nghiên cứu và phản biện thực tế." },
+      { "role": "Cán bộ thư viện số, dữ liệu nghiên cứu, CNTT/chuyển đổi số", "duty": "Hỗ trợ dữ liệu, RAG, tích hợp OJS/repository/API, phân quyền và bảo mật." }
+    ]
+  },
+  "days": [
+    {
+      "no": 1,
+      "title": "AI for Scientific Journal Digital Transformation",
+      "subtitle": "Tái thiết kế quy trình tạp chí khoa học theo hướng dữ liệu, chuẩn hóa và AI-assisted editorial workflow",
+      "topics": [
+        "Bản đồ quy trình số của một tạp chí khoa học: Submission → Screening → Review → Revision → Editing → Publication → Analytics.",
+        "AI Journal Copilot: hỏi đáp quy định, hướng dẫn tác giả, quy trình biên tập và tiêu chí phản biện.",
+        "AI-assisted manuscript screening: phạm vi chủ đề, cấu trúc bài, độ đầy đủ metadata, định dạng và các điểm cần biên tập rà soát.",
+        "AI hỗ trợ tạo checklist cho biên tập viên và tác giả; chuẩn hóa title, abstract, keywords, author metadata và references ở mức hỗ trợ.",
+        "Reviewer Discovery & Matching: gợi ý chuyên gia theo chủ đề, từ khóa, hồ sơ học thuật và xung đột lợi ích cần kiểm tra bởi con người.",
+        "AI hỗ trợ tóm tắt phản biện, theo dõi vòng sửa và đối chiếu phản hồi tác giả – reviewer.",
+        "AI hỗ trợ biên tập ngôn ngữ, consistency check và chuẩn hóa nội dung trước xuất bản.",
+        "Tích hợp với OJS/website tạp chí, DOI/metadata và các hệ thống hiện có thông qua API khi điều kiện cho phép.",
+        "AI Governance cho tạp chí: bảo mật bản thảo chưa công bố, bản quyền, đạo đức xuất bản, log và Human-in-the-loop.",
+        "Workshop: vẽ quy trình hiện tại và xác định 10–15 pain point; xây 01 AI Journal Copilot; thiết kế workflow screening – reviewer matching – editorial tracking."
+      ],
+      "output": "01 AI Journal Workflow + 01 prototype Journal Copilot."
+    },
+    {
+      "no": 2,
+      "title": "AI for Research Management & Research Intelligence",
+      "subtitle": "Từ hồ sơ đề tài đến phân tích năng lực nghiên cứu cấp đơn vị/trường",
+      "topics": [
+        "AI Research Management Copilot: hỏi đáp quy chế, quy trình đề tài, hồ sơ, biểu mẫu, định mức và yêu cầu báo cáo.",
+        "AI hỗ trợ tiếp nhận – phân loại – kiểm tra hồ sơ đề xuất đề tài trước khi chuyên viên thẩm định.",
+        "Theo dõi tiến độ đề tài, sản phẩm cam kết, mốc báo cáo, rủi ro và cảnh báo trễ hạn.",
+        "AI Publication Assistant cho công tác quản lý: chuẩn hóa metadata công bố, phân loại lĩnh vực, đối chiếu hồ sơ và thống kê sản phẩm.",
+        "Researcher Profile 360: hồ sơ nhà khoa học, đề tài, công bố, hợp tác, hướng nghiên cứu và sản phẩm.",
+        "Research Intelligence: phân tích lĩnh vực mạnh, emerging topics, network tác giả – đối tác, publication/citation trends và cơ hội hợp tác.",
+        "Grant/Call Matching: hỗ trợ tìm kiếm và đối chiếu cơ hội tài trợ với năng lực nhóm nghiên cứu.",
+        "Dashboard cho lãnh đạo: KPI, tiến độ đề tài, công bố, hợp tác, năng suất và xu hướng nghiên cứu.",
+        "Responsible AI & Research Integrity: nguyên tắc sử dụng AI minh bạch, không tạo dữ liệu/bằng chứng giả, không thay thế phán đoán khoa học.",
+        "Workshop: thiết kế Research Management Copilot; xây mô hình dữ liệu Researcher 360; thiết kế Research Intelligence Dashboard; hoàn thiện kế hoạch pilot."
+      ],
+      "output": "01 Research Management Workflow + 01 dashboard/prototype Research Intelligence."
+    }
+  ],
+  "deliverables": [
+    "01 Bản đồ AI Opportunity: danh mục 15–25 pain point/use case cho tạp chí và quản lý khoa học.",
+    "Ít nhất 02 workflow AI + 01–02 prototype có thể tiếp tục pilot.",
+    "01 cấu trúc Knowledge Base từ quy định, hướng dẫn, biểu mẫu, tiêu chí và tài liệu nghiệp vụ.",
+    "01 bộ KPI, dữ liệu cần tích hợp, rủi ro/kiểm soát và kế hoạch pilot 3–6 tháng.",
+    "Bộ phần mềm phiên bản thử nghiệm + hướng dẫn cấu hình và triển khai."
+  ],
+  "software": {
+    "name": "AI Journal & Research Management Suite",
+    "intro": "Các đơn vị tham dự được chuyển giao MIỄN PHÍ bộ AI Journal & Research Management Suite phiên bản triển khai thử nghiệm trong khuôn khổ khóa tập huấn.",
+    "modules": [
+      { "no": 1, "name": "AI Journal Copilot", "description": "Tra cứu quy định, hướng dẫn tác giả, quy trình biên tập và tiêu chí tạp chí." },
+      { "no": 2, "name": "AI Manuscript Screening Assistant", "description": "Hỗ trợ screening cấu trúc, metadata, checklist và các vấn đề cần biên tập viên rà soát." },
+      { "no": 3, "name": "AI Reviewer Matching Assistant", "description": "Gợi ý reviewer theo chủ đề/hồ sơ; hỗ trợ kiểm tra xung đột lợi ích theo quy trình." },
+      { "no": 4, "name": "AI Editorial & Revision Tracker", "description": "Theo dõi vòng phản biện – sửa bài – quyết định; tóm tắt và đối chiếu phản hồi." },
+      { "no": 5, "name": "AI Metadata & Publication Assistant", "description": "Hỗ trợ chuẩn hóa metadata, abstract/keywords và dữ liệu phục vụ xuất bản." },
+      { "no": 6, "name": "AI Research Management Copilot", "description": "Tra cứu quy chế, đề tài, biểu mẫu, quy trình và hỗ trợ theo dõi hồ sơ nghiên cứu." },
+      { "no": 7, "name": "Researcher 360", "description": "Tổng hợp hồ sơ nhà khoa học: đề tài, công bố, hợp tác, hướng nghiên cứu và sản phẩm." },
+      { "no": 8, "name": "Research Intelligence Dashboard", "description": "Phân tích KPI, xu hướng, lĩnh vực mạnh, mạng lưới hợp tác và năng lực nghiên cứu." },
+      { "no": 9, "name": "Grant & Collaboration Matcher", "description": "Hỗ trợ đối chiếu cơ hội tài trợ/hợp tác với nhóm nghiên cứu phù hợp." },
+      { "no": 10, "name": "AI Knowledge Base & RAG", "description": "Kho tri thức dùng chung cho tạp chí và quản lý khoa học, có phân quyền và truy xuất nguồn." }
+    ],
+    "scope": "Cung cấp bộ phần mềm phiên bản triển khai thử nghiệm; hướng dẫn cài đặt/cấu hình, tạo Knowledge Base và phân quyền người dùng; cung cấp cấu trúc dữ liệu và workflow mẫu; hướng dẫn cấu hình quy định, checklist, rubric/criteria, danh mục đề tài và hồ sơ nhà khoa học; hướng dẫn tích hợp OJS, website, hệ thống quản lý nghiên cứu hoặc API khi điều kiện kỹ thuật cho phép; hướng dẫn lựa chọn mô hình AI/LLM phù hợp với yêu cầu bảo mật và chi phí; hướng dẫn triển khai pilot, thu thập phản hồi và đánh giá KPI."
+  },
+  "kpis": {
+    "note": "KPI kỳ vọng sau pilot 3–6 tháng.",
+    "rows": [
+      { "metric": "Thời gian xử lý tác vụ biên tập/tra cứu lặp lại", "target": "Giảm 30–50% ở các workflow phù hợp" },
+      { "metric": "Tra cứu quy định và tài liệu nghiệp vụ", "target": "Rút ngắn đáng kể; trả lời có nguồn từ Knowledge Base" },
+      { "metric": "Theo dõi bản thảo/đề tài", "target": "Tăng khả năng cảnh báo trạng thái và trễ hạn" },
+      { "metric": "Chuẩn hóa metadata/báo cáo", "target": "Tăng tính nhất quán, giảm thao tác nhập/tổng hợp thủ công" },
+      { "metric": "Research Intelligence", "target": "Có dashboard phục vụ lãnh đạo và báo cáo định kỳ" },
+      { "metric": "AI workflow đưa vào pilot", "target": "Tối thiểu 2–4 workflow/đơn vị" }
+    ],
+    "caveat": "Các chỉ số trên là mục tiêu tham chiếu để thiết kế pilot, không phải cam kết kết quả."
+  },
+  "dataToBring": [
+    "Quy định tạp chí, Author Guidelines, reviewer form/checklist, quy trình biên tập, mẫu email và metadata.",
+    "Một số bản thảo hoặc dữ liệu mô phỏng đã được phép sử dụng và ẩn danh phù hợp.",
+    "Quy chế quản lý khoa học, biểu mẫu đề tài, báo cáo tiến độ/nghiệm thu.",
+    "Danh mục đề tài, công bố, hồ sơ nhà khoa học hoặc dữ liệu mẫu đã được phép sử dụng.",
+    "Các báo cáo KPI, thống kê nghiên cứu hoặc dashboard hiện có."
+  ],
+  "roadmap": ["TRAINING", "SOFTWARE TRANSFER", "KNOWLEDGE BASE", "PILOT", "KPI & SCALE-UP"],
+  "longTermGoal": "Hình thành mô hình “AI-Powered Scientific Publishing & Research Management”, trong đó AI giúp tăng tốc xử lý, chuẩn hóa dữ liệu, hỗ trợ ra quyết định và mở rộng năng lực phục vụ; mọi quyết định học thuật, phản biện, xuất bản và quản trị nghiên cứu quan trọng vẫn được kiểm soát bởi con người.",
+  "motto": "Từ “dùng AI hỗ trợ từng tác vụ” đến “thiết kế và làm chủ quy trình số có AI hỗ trợ”.",
+  "responsibleAi": [
+    "AI KHÔNG tự quyết định chấp nhận hay từ chối bản thảo; AI hỗ trợ screening và gợi ý reviewer, quyết định biên tập thuộc về con người.",
+    "Kiểm tra xung đột lợi ích của reviewer phải do con người thực hiện theo quy trình.",
+    "Bảo mật bản thảo chưa công bố, bản quyền và đạo đức xuất bản là nội dung riêng trong Ngày 1.",
+    "Nguyên tắc sử dụng AI minh bạch, không tạo dữ liệu/bằng chứng giả, không thay thế phán đoán khoa học."
+  ],
+  "relatedCourses": [
+    { "code": "K24", "reason": "Hai khóa chồng lấn về Research Copilot và Research Intelligence. Khóa 28 phục vụ tòa soạn tạp chí và quản trị nghiên cứu cấp trường (biên tập, phản biện, xuất bản, Researcher 360, OJS). Khóa 24 phục vụ nhà nghiên cứu và phòng QLKH (literature review, methodology, publication workflow của tác giả). Đơn vị không có tạp chí riêng nên chọn Khóa 24." },
+    { "code": "K21", "reason": "Nếu đơn vị muốn kết nối hệ thống tạp chí với nền tảng AI dùng chung toàn trường." }
+  ]
+}
