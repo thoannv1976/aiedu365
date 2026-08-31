@@ -1,0 +1,72 @@
+name: Deploy lên Cloud Run
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+env:
+  PROJECT_ID: aiedu365
+  REGION: asia-southeast1
+
+jobs:
+  test:
+    name: Kiểm thử
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Cài đặt phụ thuộc API
+        run: pip install -r api/requirements.txt pytest pytest-asyncio
+
+      - name: Chạy test API
+        working-directory: api
+        env:
+          LLM_PROVIDER: echo
+          USE_FIRESTORE: 'false'
+        run: python -m pytest tests/ -q
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Cài đặt phụ thuộc web
+        working-directory: web
+        run: npm ci
+
+      - name: Kiểm tra kiểu dữ liệu
+        working-directory: web
+        run: npm run typecheck
+
+  deploy:
+    name: Deploy
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Workload Identity Federation — không tạo và lưu file khóa service account.
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.WIF_PROVIDER }}
+          service_account: ${{ secrets.DEPLOY_SERVICE_ACCOUNT }}
+
+      - uses: google-github-actions/setup-gcloud@v2
+
+      - name: Build và deploy
+        run: |
+          gcloud builds submit --config cloudbuild.yaml \
+            --substitutions=_REGION=${{ env.REGION }},_SITE_URL=${{ secrets.SITE_URL }}

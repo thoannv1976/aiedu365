@@ -1,18 +1,14 @@
-/**
- * Trình duyệt gọi API qua chính domain của web (`/api/*`) rồi Next chuyển tiếp
- * sang service API. Nhờ vậy không cần cấu hình CORS, không lộ URL nội bộ, và
- * service API có thể để ở chế độ chỉ nhận traffic nội bộ.
+/*
+ * Trình duyệt gọi API qua chính domain của web (`/api/*`). Việc chuyển tiếp do
+ * route handler `src/app/api/[...path]/route.ts` đảm nhiệm, vì nó cần gắn thêm
+ * ID token để gọi được service API đang ở chế độ không mở ra Internet — điều
+ * mà `rewrites` không làm được.
  */
-const API_INTERNAL_URL = process.env.API_INTERNAL_URL ?? 'http://127.0.0.1:8080'
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
   reactStrictMode: true,
   poweredByHeader: false,
-  async rewrites() {
-    return [{ source: '/api/:path*', destination: `${API_INTERNAL_URL}/api/:path*` }]
-  },
   async headers() {
     return [
       {

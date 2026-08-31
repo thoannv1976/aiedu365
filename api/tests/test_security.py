@@ -70,3 +70,18 @@ def test_role_hierarchy(role, minimum, allowed):
         with pytest.raises(HTTPException) as exc:
             dependency(identity)
         assert exc.value.status_code == 403
+
+
+def test_admin_token_read_from_dedicated_header():
+    """Trên Cloud Run, Authorization đã dùng cho ID token của IAM."""
+    settings = _settings(dev_admin_token="token-cuc-bo")
+    identity = get_identity(
+        _Request(
+            {
+                "authorization": "Bearer id-token-cua-iam",
+                "x-admin-authorization": "Bearer token-cuc-bo",
+            }
+        ),
+        settings,
+    )
+    assert identity.role == "super_admin"

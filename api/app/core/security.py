@@ -38,7 +38,12 @@ def _verify_firebase_token(token: str, settings: Settings) -> dict:
 
 
 def get_identity(request: Request, settings: Settings = Depends(get_settings)) -> AdminIdentity:
-    header = request.headers.get("authorization", "")
+    # Trên Cloud Run, header Authorization đã bị dùng cho ID token của IAM khi
+    # service web gọi sang, nên token quản trị của người dùng tới qua header
+    # riêng. Chạy cục bộ thì chỉ có Authorization.
+    header = request.headers.get("x-admin-authorization") or request.headers.get(
+        "authorization", ""
+    )
     if not header.lower().startswith("bearer "):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,

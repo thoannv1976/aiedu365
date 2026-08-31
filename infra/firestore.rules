@@ -1,0 +1,30 @@
+rules_version = '2';
+
+// Trình duyệt không ghi trực tiếp vào Firestore. Mọi thao tác ghi đi qua API
+// có xác thực, nên rules ở đây chặn tất cả — đây là lớp phòng thủ cuối cùng
+// nếu ai đó lấy được cấu hình Firebase phía client.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Nội dung công khai: chỉ đọc.
+    match /courses/{courseId} {
+      allow read: if resource.data.published == true;
+      allow write: if false;
+    }
+
+    match /faqs/{faqId} {
+      allow read: if resource.data.published == true;
+      allow write: if false;
+    }
+
+    match /site_content/{key} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Dữ liệu vận hành: client không đọc cũng không ghi.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

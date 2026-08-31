@@ -1,34 +1,117 @@
 # AIEDU365
 
-Landing page + AI Chatbot tư vấn **Chương trình tập huấn AI chuyên sâu cho Chuyển đổi số Đại học** (08 khóa).
+Landing page và AI chatbot tư vấn cho **Chương trình tập huấn AI chuyên sâu cho
+Chuyển đổi số Đại học** — 08 khóa, Khóa 21 đến Khóa 28.
 
-> Trạng thái hiện tại: **đang chờ phê duyệt kế hoạch**. Chưa triển khai code sản phẩm.
+Chạy trên Google Cloud Platform: Cloud Run + Firestore + Vertex AI.
 
-## Tài liệu
+---
 
-| Tài liệu | Nội dung |
-|---|---|
-| [`docs/KE-HOACH-XAY-DUNG.md`](docs/KE-HOACH-XAY-DUNG.md) | Kế hoạch xây dựng đầy đủ: kiến trúc GCP, landing page, chatbot RAG, admin, lộ trình |
-| [`docs/source/`](docs/source/) | 08 thư mời gốc (.docx) và bản trích xuất nội dung |
+## Chạy thử trong 2 phút
 
-## Tóm tắt hệ thống dự kiến
+Không cần tài khoản GCP — provider `echo` chạy hoàn toàn ngoại tuyến nhưng vẫn
+đi qua đầy đủ luồng RAG, trích dẫn và guardrail.
 
-- **Landing page** — Next.js 15 + TypeScript + Tailwind, 15 section, 8 trang chi tiết khóa học, công cụ "Chọn khóa phù hợp", SEO + dark mode.
-- **Chatbot RAG** — FastAPI + Vertex AI Gemini + Firestore Vector Search, phân loại ý định (tra cứu · so sánh · định tuyến khóa), trả lời có trích dẫn nguồn, guardrail chặn các khẳng định sai lệch, thu thập lead.
-- **Admin** — 11 module: quản lý khóa học, Knowledge Base, FAQ, hội thoại, lead, cấu hình AI, phân quyền, audit log.
-- **Hạ tầng** — Google Cloud Platform, project `aiedu365`, Cloud Run + Firestore + Vertex AI.
+```bash
+# Terminal 1 — API
+python3 -m venv .venv && .venv/bin/pip install -r api/requirements.txt
+cd api && LLM_PROVIDER=echo USE_FIRESTORE=false \
+  ../.venv/bin/uvicorn app.main:app --port 8080
+
+# Terminal 2 — Web
+cd web && npm install
+API_INTERNAL_URL=http://127.0.0.1:8080 npm run dev
+```
+
+Mở http://localhost:3000
+
+Để vào thử khu quản trị, chạy API kèm `ENVIRONMENT=development
+DEV_ADMIN_TOKEN=demo-token`, rồi dán `demo-token` ở màn hình đăng nhập `/admin`.
+Biến này chỉ có tác dụng ở môi trường development.
+
+---
+
+## Cấu trúc
+
+```
+aiedu365/
+├── data/                    Dữ liệu khóa học — nguồn sự thật
+│   ├── courses/K21..K28.json
+│   ├── groups.json · faqs.json · site.json
+│   └── eval/questions.json  36 câu kiểm thử chatbot
+├── api/                     FastAPI: RAG, guardrail, admin
+├── web/                     Next.js 15: landing page + khu quản trị
+├── infra/                   Script khởi tạo GCP, Firestore rules
+├── docs/
+│   ├── KE-HOACH-XAY-DUNG.md Kế hoạch đã duyệt
+│   ├── KIEN-TRUC.md         Tài liệu kỹ thuật
+│   ├── HUONG-DAN-VAN-HANH.md Dành cho ban tổ chức
+│   └── source/              08 thư mời gốc
+└── cloudbuild.yaml
+```
+
+---
 
 ## 08 khóa tập huấn
 
+Mã chính thức là **K21–K28**. Thân thư mời gọi các khóa này là *"khóa tập huấn
+chuyên sâu số 1"* đến *"số 8"* — hệ thống nhận cả hai cách gọi.
+
 | Mã | Khóa | Thời lượng | Nhóm |
 |---|---|---|---|
-| K21 | AI trong Chuyển đổi số Đại học & phát triển giải pháp AI dùng chung | 05 ngày | Nền tảng toàn trường |
-| K22 | AI trong Đảm bảo chất lượng và Kiểm định GDĐH | 02 ngày | Chất lượng & kiểm định |
-| K23 | AI trong Quản lý đào tạo Đại học | 02 ngày | Quản trị & vận hành |
+| K21 | AI trong Chuyển đổi số Đại học & giải pháp AI dùng chung | 05 ngày | Nền tảng toàn trường |
+| K22 | AI trong Đảm bảo chất lượng và Kiểm định | 02 ngày | Chất lượng & kiểm định |
+| K23 | AI trong Quản lý đào tạo | 02 ngày | Quản trị & vận hành |
 | K24 | AI trong Quản lý khoa học và Nghiên cứu | 02 ngày | Khoa học & xuất bản |
-| K25 | AI trong Thương mại điện tử, Kinh doanh số và Marketing số | 02 ngày | Đào tạo chuyên ngành |
-| K26 | AI trong Giảng dạy, Đánh giá và Cá nhân hóa học tập Ngoại ngữ | 02 ngày | Đào tạo chuyên ngành |
+| K25 | AI trong TMĐT, Kinh doanh số và Marketing số | 02 ngày | Đào tạo chuyên ngành |
+| K26 | AI trong Giảng dạy và Đánh giá Ngoại ngữ | 02 ngày | Đào tạo chuyên ngành |
 | K27 | AI trong Tổ chức nhân sự và Hành chính tổng hợp | 02 ngày | Quản trị & vận hành |
-| K28 | AI thúc đẩy chuyển đổi số Tạp chí khoa học và Quản lý khoa học | 02 ngày | Khoa học & xuất bản |
+| K28 | AI cho Tạp chí khoa học và Quản lý khoa học | 02 ngày | Khoa học & xuất bản |
 
-Tổng: **19 ngày tập huấn · 61 module phần mềm chi tiết + 05 suite nền tảng**.
+**19 ngày · 66 module phần mềm** (61 module chi tiết + 05 suite nền tảng).
+
+---
+
+## Tính năng
+
+**Trang công khai**
+- Trang chủ 15 phần, 08 trang chi tiết khóa dựng tĩnh, SEO + JSON-LD, dark mode
+- Công cụ **Chọn khóa phù hợp**: 3 câu hỏi, gợi ý kèm lý do và số người nên cử
+- Catalog 66 module phần mềm, lọc và tìm kiếm không dấu
+- Phiếu đăng ký chọn nhiều khóa
+
+**Chatbot**
+- RAG có chốt chặn: thiếu căn cứ thì từ chối, không gọi model để bịa
+- Phân loại ý định — câu so sánh và định tuyến khóa dùng luồng truy hồi riêng
+- Chuẩn hóa mã khóa trước khi truy hồi, không phó mặc cho mô hình
+- Trích dẫn nguồn dưới mỗi câu trả lời
+- Guardrail chặn khẳng định vi phạm ràng buộc trong thư mời
+
+**Khu quản trị**
+- Bảng điều khiển, hội thoại, Knowledge Base (index lại + thử truy hồi)
+- Vòng lặp cải tiến: câu trả lời kém → viết lại thành FAQ → chatbot tốt lên
+- Đăng ký + xuất CSV, cấu hình AI, system prompt có version, audit log
+- Ba vai trò: Super Admin · Editor · Viewer
+
+---
+
+## Kiểm thử
+
+```bash
+cd api && ../.venv/bin/python -m pytest tests/ -q    # 134 test
+cd web && npm run typecheck
+```
+
+Bộ câu hỏi eval ở `data/eval/questions.json` gồm cả các câu **phải bị từ chối**
+(ngoài phạm vi, prompt injection).
+
+---
+
+## Triển khai lên GCP
+
+```bash
+./infra/setup-gcp.sh aiedu365 asia-southeast1
+gcloud builds submit --config cloudbuild.yaml
+```
+
+Chi tiết ở [`docs/KIEN-TRUC.md`](docs/KIEN-TRUC.md).
