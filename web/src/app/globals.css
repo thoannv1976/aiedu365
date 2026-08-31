@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 248 250 252;
+    --surface: 255 255 255;
+    --border: 226 232 240;
+    --text: 15 23 42;
+    --text-muted: 71 85 105;
+  }
+
+  .dark {
+    --bg: 7 15 28;
+    --surface: 15 26 43;
+    --border: 30 45 68;
+    --text: 226 235 245;
+    --text-muted: 148 166 186;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: rgb(var(--bg));
+    color: rgb(var(--text));
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: #f5a524;
+    color: #0b3b75;
+  }
+
+  :focus-visible {
+    outline: 2px solid #00a6ed;
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .surface {
+    background-color: rgb(var(--surface));
+    border-color: rgb(var(--border));
+  }
+
+  .muted {
+    color: rgb(var(--text-muted));
+  }
+
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.16em] text-brand-600 dark:text-brand-400;
+  }
+
+  .heading {
+    @apply font-display text-2xl font-bold leading-tight tracking-tight sm:text-3xl lg:text-4xl;
+    text-wrap: balance;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold
+           transition-colors disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent-500 text-ink-800 hover:bg-accent-400;
+  }
+
+  .btn-secondary {
+    @apply btn border border-white/30 bg-white/10 text-white hover:bg-white/20;
+  }
+
+  .btn-outline {
+    @apply btn border surface text-[rgb(var(--text))] hover:border-brand-500;
+  }
+
+  .card {
+    @apply surface rounded-xl border p-6 shadow-sm transition hover:shadow-md;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium;
+  }
+
+  .prose-vi p {
+    @apply mb-4 max-w-prose leading-relaxed;
+  }
+}
+
+/* Sắc độ riêng cho từng nhóm khóa học, giúp phân biệt nhanh trong lưới 08 thẻ. */
+.group-nen-tang-toan-truong { --group-color: 11 59 117; }
+.group-quan-tri-van-hanh    { --group-color: 2 132 199; }
+.group-chat-luong-kiem-dinh { --group-color: 15 118 110; }
+.group-khoa-hoc-xuat-ban    { --group-color: 109 40 217; }
+.group-dao-tao-chuyen-nganh { --group-color: 180 83 9; }
+
+.group-accent-bar { background-color: rgb(var(--group-color, 11 59 117)); }
+.group-accent-text { color: rgb(var(--group-color, 11 59 117)); }
+.dark .group-accent-text { filter: brightness(1.6); }

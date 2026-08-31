@@ -23,3 +23,8 @@ build/
 *.local.json
 service-account*.json
 .DS_Store
+
+# Next.js
+web/.next/
+web/out/
+web/public/

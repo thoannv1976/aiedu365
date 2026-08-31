@@ -63,8 +63,22 @@ def list_faqs(course: str | None = Query(default=None)) -> list[Faq]:
 
 @router.get("/site")
 def get_site() -> dict:
+    """Nội dung trang chủ, với các ô số liệu được điền từ dữ liệu thật.
+
+    Số khóa, số ngày và số module không viết cứng trong nội dung: thêm hay bớt
+    một khóa là các con số trên trang tự đúng theo.
+    """
     store = get_store()
-    return {**store.site, "stats": store.stats()}
+    site = {**store.site}
+    catalog = store.stats()
+    site["stats"] = [
+        {**stat, "value": catalog.get(stat["source"], stat["value"])}
+        if stat.get("source")
+        else stat
+        for stat in site.get("stats", [])
+    ]
+    site["catalog"] = catalog
+    return site
 
 
 @router.get("/software")
