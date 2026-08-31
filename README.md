@@ -22,13 +22,13 @@ Landing page + AI Chatbot tư vấn **Chương trình tập huấn AI chuyên s�
 
 | Mã | Khóa | Thời lượng | Nhóm |
 |---|---|---|---|
-| K1 | AI trong Chuyển đổi số Đại học & phát triển giải pháp AI dùng chung | 05 ngày | Nền tảng toàn trường |
-| K2 | AI trong Đảm bảo chất lượng và Kiểm định GDĐH | 02 ngày | Chất lượng & kiểm định |
-| K3 | AI trong Quản lý đào tạo Đại học | 02 ngày | Quản trị & vận hành |
-| K4 | AI trong Quản lý khoa học và Nghiên cứu | 02 ngày | Khoa học & xuất bản |
-| K5 | AI trong Thương mại điện tử, Kinh doanh số và Marketing số | 02 ngày | Đào tạo chuyên ngành |
-| K6 | AI trong Giảng dạy, Đánh giá và Cá nhân hóa học tập Ngoại ngữ | 02 ngày | Đào tạo chuyên ngành |
-| K7 | AI trong Tổ chức nhân sự và Hành chính tổng hợp | 02 ngày | Quản trị & vận hành |
-| K8 | AI thúc đẩy chuyển đổi số Tạp chí khoa học và Quản lý khoa học | 02 ngày | Khoa học & xuất bản |
+| K21 | AI trong Chuyển đổi số Đại học & phát triển giải pháp AI dùng chung | 05 ngày | Nền tảng toàn trường |
+| K22 | AI trong Đảm bảo chất lượng và Kiểm định GDĐH | 02 ngày | Chất lượng & kiểm định |
+| K23 | AI trong Quản lý đào tạo Đại học | 02 ngày | Quản trị & vận hành |
+| K24 | AI trong Quản lý khoa học và Nghiên cứu | 02 ngày | Khoa học & xuất bản |
+| K25 | AI trong Thương mại điện tử, Kinh doanh số và Marketing số | 02 ngày | Đào tạo chuyên ngành |
+| K26 | AI trong Giảng dạy, Đánh giá và Cá nhân hóa học tập Ngoại ngữ | 02 ngày | Đào tạo chuyên ngành |
+| K27 | AI trong Tổ chức nhân sự và Hành chính tổng hợp | 02 ngày | Quản trị & vận hành |
+| K28 | AI thúc đẩy chuyển đổi số Tạp chí khoa học và Quản lý khoa học | 02 ngày | Khoa học & xuất bản |
 
 Tổng: **19 ngày tập huấn · 61 module phần mềm chi tiết + 05 suite nền tảng**.

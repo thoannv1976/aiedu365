@@ -4,7 +4,9 @@
 > Tài liệu trình duyệt. **Chưa viết code sản phẩm** cho tới khi kế hoạch này được phê duyệt.
 > Repo: `github.com/thoannv1976/aiedu365` · Hạ tầng: Google Cloud Platform (project `aiedu365`, số hiệu `240029683319`)
 >
-> **Cập nhật lần 2** — bổ sung Khóa 6 (Ngoại ngữ), Khóa 7 (Tổ chức nhân sự & Hành chính tổng hợp), Khóa 8 (Tạp chí khoa học & Quản lý khoa học). Tổng: **08 khóa · 19 ngày · hơn 60 module phần mềm**.
+> **Cập nhật lần 2** — bổ sung Khóa 26 (Ngoại ngữ), Khóa 27 (Tổ chức nhân sự & Hành chính tổng hợp), Khóa 28 (Tạp chí khoa học & Quản lý khoa học). Tổng: **08 khóa (K21–K28) · 19 ngày · hơn 60 module phần mềm**.
+>
+> **Lưu ý mã khóa:** mã chính thức là **K21–K28**. Phần thân thư mời ghi "Khóa tập huấn chuyên sâu số 1–8" — hai cách đánh số này cùng chỉ một khóa (số 1 = K21, số 8 = K28). Chatbot phải nhận cả hai cách gọi (xem §5.5).
 
 ---
 
@@ -30,14 +32,14 @@ Nguồn dữ liệu đầu vào: **08 thư mời** tham dự các khóa tập hu
 
 | Mã | Tên khóa | Thời lượng | Phần mềm chuyển giao | Đối tượng · số người |
 |---|---|---|---|---|
-| **K1** | Ứng dụng AI trong Chuyển đổi số Đại học và phát triển các giải pháp AI dùng chung | **05 ngày / 05 chuyên đề** | Trọn bộ 05 suite: AI Academic Copilot · AI Quality & Accreditation Copilot · AI Research Copilot · AI Student 360 & Admissions Agent · University AI Platform (AI9) | Lãnh đạo · Chuyên viên nghiệp vụ · CNTT/CĐS — **~03 người/đơn vị** (Business–Process–Technology) |
-| **K2** | AI trong Đảm bảo chất lượng và Kiểm định GDĐH | 02 ngày | **AI Quality & Accreditation Copilot** — 08 module | ĐBCL · Khảo thí · Kiểm định · QLĐT · CĐS — **03–05 người** |
-| **K3** | AI trong Quản lý đào tạo Đại học | 02 ngày | **AI Academic Copilot** — 07 module | QLĐT · CTĐT · Cố vấn học tập · CTSV · CĐS — **03–05 người** |
-| **K4** | AI trong Quản lý khoa học và Nghiên cứu | 02 ngày | **AI Research Copilot** — 08 module | QLKH · Nghiên cứu · Hợp tác học thuật · Thư viện số · CĐS — **03–05 người** |
-| **K5** | AI trong Thương mại điện tử, Kinh doanh số và Marketing số | 02 ngày | **AI Digital Business Lab & Simulator** — 10 module | Khoa/Bộ môn TMĐT · Kinh doanh số · Marketing số · Business Analytics · Entrepreneurship — **05–10 người** |
-| **K6** | AI trong Giảng dạy, Đánh giá và Cá nhân hóa học tập Ngoại ngữ | 02 ngày | **AI Foreign Language Learning & Assessment Platform** — 08 module | Khoa/Bộ môn Ngoại ngữ (Anh, Pháp, Trung, Nhật, Hàn…) — **05–10 người** |
-| **K7** | AI trong Tổ chức nhân sự và Hành chính tổng hợp | 02 ngày | **AI HR & Administration Copilot Suite** — 10 module | Tổ chức cán bộ · Hành chính – Tổng hợp · Văn phòng · CNTT/CĐS — **03–05 người** |
-| **K8** | AI thúc đẩy chuyển đổi số Tạp chí khoa học và Quản lý khoa học | 02 ngày | **AI Journal & Research Management Suite** — 10 module | Tạp chí khoa học · Tòa soạn · QLKH · Xuất bản · Thư viện số · CĐS — **03–06 người** |
+| **K21** | Ứng dụng AI trong Chuyển đổi số Đại học và phát triển các giải pháp AI dùng chung | **05 ngày / 05 chuyên đề** | Trọn bộ 05 suite: AI Academic Copilot · AI Quality & Accreditation Copilot · AI Research Copilot · AI Student 360 & Admissions Agent · University AI Platform (AI9) | Lãnh đạo · Chuyên viên nghiệp vụ · CNTT/CĐS — **~03 người/đơn vị** (Business–Process–Technology) |
+| **K22** | AI trong Đảm bảo chất lượng và Kiểm định GDĐH | 02 ngày | **AI Quality & Accreditation Copilot** — 08 module | ĐBCL · Khảo thí · Kiểm định · QLĐT · CĐS — **03–05 người** |
+| **K23** | AI trong Quản lý đào tạo Đại học | 02 ngày | **AI Academic Copilot** — 07 module | QLĐT · CTĐT · Cố vấn học tập · CTSV · CĐS — **03–05 người** |
+| **K24** | AI trong Quản lý khoa học và Nghiên cứu | 02 ngày | **AI Research Copilot** — 08 module | QLKH · Nghiên cứu · Hợp tác học thuật · Thư viện số · CĐS — **03–05 người** |
+| **K25** | AI trong Thương mại điện tử, Kinh doanh số và Marketing số | 02 ngày | **AI Digital Business Lab & Simulator** — 10 module | Khoa/Bộ môn TMĐT · Kinh doanh số · Marketing số · Business Analytics · Entrepreneurship — **05–10 người** |
+| **K26** | AI trong Giảng dạy, Đánh giá và Cá nhân hóa học tập Ngoại ngữ | 02 ngày | **AI Foreign Language Learning & Assessment Platform** — 08 module | Khoa/Bộ môn Ngoại ngữ (Anh, Pháp, Trung, Nhật, Hàn…) — **05–10 người** |
+| **K27** | AI trong Tổ chức nhân sự và Hành chính tổng hợp | 02 ngày | **AI HR & Administration Copilot Suite** — 10 module | Tổ chức cán bộ · Hành chính – Tổng hợp · Văn phòng · CNTT/CĐS — **03–05 người** |
+| **K28** | AI thúc đẩy chuyển đổi số Tạp chí khoa học và Quản lý khoa học | 02 ngày | **AI Journal & Research Management Suite** — 10 module | Tạp chí khoa học · Tòa soạn · QLKH · Xuất bản · Thư viện số · CĐS — **03–06 người** |
 
 Tổng: **08 khóa · 19 ngày tập huấn · 61 module chi tiết + 05 suite nền tảng**.
 
@@ -45,11 +47,11 @@ Tổng: **08 khóa · 19 ngày tập huấn · 61 module chi tiết + 05 suite n
 
 | Nhóm | Khóa | Đơn vị mục tiêu |
 |---|---|---|
-| **Nền tảng toàn trường** | K1 | Ban giám hiệu, Trung tâm CNTT/CĐS — khóa bao trùm cả 05 lĩnh vực |
-| **Quản trị & vận hành** | K3, K7 | Phòng Đào tạo · Tổ chức cán bộ · Hành chính – Tổng hợp · Văn phòng |
-| **Chất lượng & kiểm định** | K2 | Phòng ĐBCL · Khảo thí |
-| **Khoa học & xuất bản** | K4, K8 | Phòng QLKH · Tạp chí khoa học · Thư viện số |
-| **Đào tạo chuyên ngành** | K5, K6 | Khoa/Bộ môn TMĐT–Kinh doanh số · Khoa/Bộ môn Ngoại ngữ |
+| **Nền tảng toàn trường** | K21 | Ban giám hiệu, Trung tâm CNTT/CĐS — khóa bao trùm cả 05 lĩnh vực |
+| **Quản trị & vận hành** | K23, K27 | Phòng Đào tạo · Tổ chức cán bộ · Hành chính – Tổng hợp · Văn phòng |
+| **Chất lượng & kiểm định** | K22 | Phòng ĐBCL · Khảo thí |
+| **Khoa học & xuất bản** | K24, K28 | Phòng QLKH · Tạp chí khoa học · Thư viện số |
+| **Đào tạo chuyên ngành** | K25, K26 | Khoa/Bộ môn TMĐT–Kinh doanh số · Khoa/Bộ môn Ngoại ngữ |
 
 ### 2.3 Điểm chung của cả 08 khóa — "xương sống" nội dung landing page
 
@@ -63,7 +65,7 @@ Tổng: **08 khóa · 19 ngày tập huấn · 61 module chi tiết + 05 suite n
 
 ### 2.4 Ba khóa mới bổ sung — nội dung chi tiết
 
-**K6 — Ngoại ngữ (`AI-Powered Foreign Language Teaching, Assessment & Personalized Learning`)**
+**K26 — Ngoại ngữ (`AI-Powered Foreign Language Teaching, Assessment & Personalized Learning`)**
 
 - *Ngày 1 — Giảng dạy & cá nhân hóa*: AI Course Brain/Knowledge Base từ giáo trình · AI Language Tutor (grammar, vocabulary, reading, writing, speaking, ngoại ngữ chuyên ngành) · Lesson Planning · Exercise Generator thích ứng · Conversation Partner & Pronunciation Coach (lưu ý thanh điệu, liaison, pitch/accent) · Personalized Learning Path · tích hợp LMS và guardrails.
 - *Ngày 2 — Đánh giá*: Writing Assessment theo rubric · Speaking Assessment (Speech-to-Text, fluency, coherence) · Pronunciation Assessment · **Multi-Agent Grading: AI Examiner 1 → AI Examiner 2 → AI Judge → Confidence Score → Human Review** · Learning Analytics · fairness và privacy.
@@ -71,7 +73,7 @@ Tổng: **08 khóa · 19 ngày tập huấn · 61 module chi tiết + 05 suite n
 - *KPI tham chiếu*: ≥ 70% bài Writing và Speaking được AI hỗ trợ đánh giá vòng đầu · giảm 40–60% thời gian chấm sơ bộ · pilot 02–03 học phần · ≥ 03 quy trình đưa vào lớp.
 - *Mục tiêu dài hạn*: **University AI Foreign Language Lab** dùng chung cho nhiều ngôn ngữ, mỗi Khoa cấu hình riêng học liệu và rubric.
 
-**K7 — Tổ chức nhân sự & Hành chính tổng hợp (`AI-Powered HR & Administration Transformation`)**
+**K27 — Tổ chức nhân sự & Hành chính tổng hợp (`AI-Powered HR & Administration Transformation`)**
 
 - *Ngày 1 — Tổ chức & nhân sự*: HR Copilot & HR Knowledge Base · vị trí việc làm và khung năng lực · hồ sơ và quy trình cán bộ · tuyển dụng & onboarding · đào tạo và phát triển · HR Analytics & Workforce Planning.
 - *Ngày 2 — Hành chính & văn phòng*: Document & Records Assistant · Meeting Copilot (agenda, biên bản, trích xuất quyết định – nhiệm vụ – deadline) · Office Knowledge Base · Report & Drafting Assistant · Task & Workflow Automation · Executive Administration Dashboard.
@@ -79,7 +81,7 @@ Tổng: **08 khóa · 19 ngày tập huấn · 61 module chi tiết + 05 suite n
 - *KPI tham chiếu*: giảm 30–50% thời gian tác vụ lặp lại · tối thiểu 02 workflow pilot trong 3–6 tháng.
 - **Ràng buộc bắt buộc trong thư mời** — sẽ được mã hóa thành guardrail cứng của chatbot: *"Không sử dụng AI như công cụ tự động quyết định tuyển dụng, bổ nhiệm, đánh giá hoặc kỷ luật"*; dữ liệu nhân sự phải phân quyền, ẩn danh khi cần và có audit log.
 
-**K8 — Tạp chí khoa học & Quản lý khoa học (`AI-Powered Scientific Journal & Research Management`)**
+**K28 — Tạp chí khoa học & Quản lý khoa học (`AI-Powered Scientific Journal & Research Management`)**
 
 - *Ngày 1 — Tạp chí khoa học*: bản đồ quy trình `Submission → Screening → Review → Revision → Editing → Publication → Analytics` · AI Journal Copilot · manuscript screening · checklist biên tập · Reviewer Discovery & Matching (kiểm tra xung đột lợi ích do người thực hiện) · tóm tắt phản biện và theo dõi vòng sửa · tích hợp OJS/DOI/metadata · AI Governance cho tạp chí (bảo mật bản thảo chưa công bố, bản quyền, đạo đức xuất bản).
 - *Ngày 2 — Quản lý khoa học*: Research Management Copilot · tiếp nhận và phân loại hồ sơ đề tài · theo dõi tiến độ và cảnh báo trễ hạn · Publication Assistant · **Researcher Profile 360** · Research Intelligence · Grant/Call Matching · dashboard lãnh đạo · Responsible AI & Research Integrity.
@@ -92,8 +94,8 @@ Hai cặp khóa có nội dung giao nhau — nếu không xử lý, chatbot sẽ
 
 | Cặp | Phần chồng lấn | Cách phân biệt trong câu trả lời |
 |---|---|---|
-| **K4 ↔ K8** | Research Copilot, Research Intelligence Dashboard, Grant matching, Researcher profiling | K4 hướng tới **nhà nghiên cứu và phòng QLKH** (literature review, methodology, publication workflow của tác giả). K8 hướng tới **tòa soạn tạp chí + quản trị nghiên cứu cấp trường** (biên tập, phản biện, xuất bản, Researcher 360, OJS). Đơn vị có tạp chí riêng → K8; chỉ quản lý đề tài và công bố → K4 |
-| **K1 ↔ K2/K3/K4** | K1 ngày 1–3 trùng chủ đề với K3, K2, K4 | K1 là bản **tổng quan 05 lĩnh vực trong 05 ngày**, phù hợp khi cử đoàn liên phòng ban. K2/K3/K4 đi **sâu hơn trong 02 ngày** cho đúng một nghiệp vụ |
+| **K24 ↔ K28** | Research Copilot, Research Intelligence Dashboard, Grant matching, Researcher profiling | K24 hướng tới **nhà nghiên cứu và phòng QLKH** (literature review, methodology, publication workflow của tác giả). K28 hướng tới **tòa soạn tạp chí + quản trị nghiên cứu cấp trường** (biên tập, phản biện, xuất bản, Researcher 360, OJS). Đơn vị có tạp chí riêng → K28; chỉ quản lý đề tài và công bố → K24 |
+| **K21 ↔ K22/K23/K24** | K21 ngày 1–3 trùng chủ đề với K23, K22, K24 | K21 là bản **tổng quan 05 lĩnh vực trong 05 ngày**, phù hợp khi cử đoàn liên phòng ban. K22/K23/K24 đi **sâu hơn trong 02 ngày** cho đúng một nghiệp vụ |
 
 Chatbot bắt buộc nêu rõ điểm phân biệt này khi người dùng hỏi câu chạm vào vùng chồng lấn.
 
@@ -140,7 +142,7 @@ Chatbot bắt buộc nêu rõ điểm phân biệt này khi người dùng hỏi
 | CSDL | **Firestore Native mode** | Serverless, tích hợp sẵn Vector Search cho RAG, real-time cho admin dashboard, không tốn phí idle |
 | Vector / RAG | **Firestore Vector Search + `text-embedding-004`** | Corpus 08 khóa ≈ 650–750 chunk → vẫn dưới ngưỡng cần Vertex AI Search (đắt hơn ~10×) |
 | LLM | **Vertex AI — Gemini 2.5 Flash** (mặc định), Gemini 2.5 Pro cho câu hỏi so sánh/định tuyến khóa | Cùng project GCP, cùng IAM, không cần key ngoài, độ trễ thấp, tiếng Việt tốt |
-| LLM Gateway | Lớp trừu tượng `providers/` cho phép cắm thêm **Claude API / OpenAI / local LLM** | Đúng tinh thần "University AI Platform" của K1; tránh khoá cứng vào 1 nhà cung cấp |
+| LLM Gateway | Lớp trừu tượng `providers/` cho phép cắm thêm **Claude API / OpenAI / local LLM** | Đúng tinh thần "University AI Platform" của K21; tránh khoá cứng vào 1 nhà cung cấp |
 | Auth admin | **Firebase Auth** (email/password + Google SSO), custom claims phân quyền | Miễn phí ở quy mô này, tích hợp sẵn với Firestore Security Rules |
 | Bí mật | **Secret Manager** | Không hardcode key trong repo |
 | CI/CD | **GitHub Actions → Cloud Build → Cloud Run** (Workload Identity Federation, không dùng service-account key) | Deploy tự động khi merge vào `main` |
@@ -185,13 +187,13 @@ Chatbot bắt buộc nêu rõ điểm phân biệt này khi người dùng hỏi
 | 2 | **Dải số liệu** | 08 khóa · 19 ngày tập huấn · 60+ module phần mềm · 70% thực hành · 100% chuyển giao miễn phí (đếm số động khi cuộn) |
 | 3 | **Vì sao khóa này khác biệt** | 4 thẻ: *Không phải ChatGPT cơ bản* · *70% workshop trên dữ liệu thật* · *Mang về phần mềm, không chỉ kiến thức* · *Có KPI và kế hoạch pilot 3–6 tháng* |
 | 4 | **Chọn khóa phù hợp** | Công cụ 3 câu hỏi (đơn vị của anh/chị làm gì? · ưu tiên nào? · cử được bao nhiêu người?) → gợi ý 1–2 khóa kèm lý do. **Section mới, cần thiết khi đã có 08 khóa** |
-| 5 | **08 khóa tập huấn** | Nhóm theo 05 nhóm ở §2.2, K1 nổi bật full-width. Mỗi thẻ: nhóm, thời lượng, sản phẩm đầu ra, đối tượng, số người khuyến nghị, nút *Xem chi tiết* + *Hỏi về khóa này* |
+| 5 | **08 khóa tập huấn** | Nhóm theo 05 nhóm ở §2.2, K21 nổi bật full-width. Mỗi thẻ: nhóm, thời lượng, sản phẩm đầu ra, đối tượng, số người khuyến nghị, nút *Xem chi tiết* + *Hỏi về khóa này* |
 | 6 | **Lộ trình Learn → Transfer** | Timeline ngang: Training → Software Transfer → Data/KB → Config → Pilot → KPI Evaluation → Integration → Scale-up |
 | 7 | **Phần mềm chuyển giao miễn phí** | Tab theo từng khóa, liệt kê đầy đủ 61 module + 05 suite nền tảng, có ô tìm kiếm module |
 | 8 | **Nên cử ai đi học** | Bảng theo từng khóa: thành phần, vai trò, số người khuyến nghị (03–05 hoặc 05–10 tùy khóa) |
 | 9 | **Kết quả đầu ra cam kết** | Checklist trực quan: pain point · quy trình ưu tiên · prototype · Knowledge Base · KPI · kế hoạch pilot |
 | 10 | **Hiệu quả kỳ vọng khi pilot** | Chỉ số tham chiếu theo từng khóa **kèm ghi chú rõ đây là mức tham chiếu, không phải cam kết** |
-| 11 | **Nguyên tắc sử dụng AI có trách nhiệm** | Human-in-the-loop · không thay thế phán đoán chuyên môn · ràng buộc riêng của K7 (nhân sự) và K8 (liêm chính nghiên cứu). **Section mới — bắt buộc vì K6/K7/K8 đều nêu rõ trong thư mời** |
+| 11 | **Nguyên tắc sử dụng AI có trách nhiệm** | Human-in-the-loop · không thay thế phán đoán chuyên môn · ràng buộc riêng của K27 (nhân sự) và K28 (liêm chính nghiên cứu). **Section mới — bắt buộc vì K26/K27/K28 đều nêu rõ trong thư mời** |
 | 12 | **Chuẩn bị gì trước khi đến** | Danh mục dữ liệu khuyến khích mang theo, theo từng khóa |
 | 13 | **Hỏi đáp (FAQ)** | 15–20 câu accordion + ô "Không thấy câu trả lời? Hỏi trợ lý AI" |
 | 14 | **Đăng ký** | Form nhúng (chọn nhiều khóa) + thông tin đầu mối |
@@ -234,7 +236,7 @@ Câu hỏi
    │
    ├─▶ Gọi Gemini với system prompt + ngữ cảnh đã trích + lịch sử hội thoại
    │
-   ├─▶ Stream câu trả lời (SSE) + kèm chip nguồn ("Thư mời Khóa 7 — mục 4")
+   ├─▶ Stream câu trả lời (SSE) + kèm chip nguồn ("Thư mời Khóa 27 — mục 4")
    │
    └─▶ Ghi log: câu hỏi, ý định, đoạn ngữ cảnh, câu trả lời, độ trễ, token, phản hồi 👍/👎
 ```
@@ -256,10 +258,10 @@ Câu hỏi
 - Chỉ trả lời dựa trên ngữ cảnh được cung cấp; **không suy diễn, không bịa số liệu**.
 - Luôn phân biệt rõ đâu là **chỉ số tham chiếu** (30–50%, 50–70%, ≥ 70%…) và nói rõ đây là mục tiêu pilot, không phải cam kết kết quả.
 - Không tự đặt ra học phí, thời gian, địa điểm nếu admin chưa cấu hình → trả lời "thông tin này sẽ do ban tổ chức cung cấp" + hiển thị nút liên hệ.
-- **Khi câu hỏi chạm vùng chồng lấn K4↔K8 hoặc K1↔K2/K3/K4, bắt buộc nêu điểm phân biệt theo §2.5** thay vì chỉ nêu một khóa.
-- **Không mô tả K7 như công cụ tự động ra quyết định nhân sự.** Nếu người dùng hỏi "AI có tự chấm điểm đánh giá cán bộ / tự sàng lọc ứng viên để loại không?", trả lời rõ là **không** — thư mời quy định AI chỉ hỗ trợ, người có thẩm quyền quyết định cuối cùng.
-- **Không mô tả K6 như công cụ chấm điểm thay giảng viên** — luôn kèm Multi-Agent Grading có Confidence Score và Human Review.
-- **Không mô tả K8 như công cụ tự quyết định chấp nhận/từ chối bản thảo** — AI hỗ trợ screening và gợi ý reviewer; quyết định biên tập và kiểm tra xung đột lợi ích do người thực hiện.
+- **Khi câu hỏi chạm vùng chồng lấn K24↔K28 hoặc K21↔K22/K23/K24, bắt buộc nêu điểm phân biệt theo §2.5** thay vì chỉ nêu một khóa.
+- **Không mô tả K27 như công cụ tự động ra quyết định nhân sự.** Nếu người dùng hỏi "AI có tự chấm điểm đánh giá cán bộ / tự sàng lọc ứng viên để loại không?", trả lời rõ là **không** — thư mời quy định AI chỉ hỗ trợ, người có thẩm quyền quyết định cuối cùng.
+- **Không mô tả K26 như công cụ chấm điểm thay giảng viên** — luôn kèm Multi-Agent Grading có Confidence Score và Human Review.
+- **Không mô tả K28 như công cụ tự quyết định chấp nhận/từ chối bản thảo** — AI hỗ trợ screening và gợi ý reviewer; quyết định biên tập và kiểm tra xung đột lợi ích do người thực hiện.
 - Trả lời bằng **tiếng Việt** mặc định; tự chuyển sang tiếng Anh nếu người dùng hỏi tiếng Anh.
 - Giọng điệu: trang trọng, súc tích, có gạch đầu dòng; luôn kết bằng một gợi ý hành động.
 - Khi người dùng mô tả nhu cầu ("trường tôi đang chuẩn bị kiểm định AUN-QA", "khoa tôi dạy tiếng Nhật"), **chủ động tư vấn khóa phù hợp** kèm lý do và số người nên cử.
@@ -268,11 +270,11 @@ Câu hỏi
 
 | Tính năng | Mô tả |
 |---|---|
-| Câu hỏi gợi ý | 6 chip khi mở chat: *"So sánh các khóa"*, *"Khóa nào phù hợp với phòng ĐBCL?"*, *"Khóa 4 và khóa 8 khác nhau thế nào?"*, *"Phần mềm được chuyển giao gồm những gì?"*, *"Nên cử bao nhiêu người?"*, *"Có mất phí không?"* |
+| Câu hỏi gợi ý | 6 chip khi mở chat: *"So sánh các khóa"*, *"Khóa nào phù hợp với phòng ĐBCL?"*, *"Khóa 24 và khóa 28 khác nhau thế nào?"*, *"Phần mềm được chuyển giao gồm những gì?"*, *"Nên cử bao nhiêu người?"*, *"Có mất phí không?"* |
 | **Định tuyến khóa học** | Người dùng mô tả đơn vị và nhu cầu → bot gợi ý 1–2 khóa kèm lý do, số người nên cử và dữ liệu cần mang theo. Đây là tính năng giá trị nhất khi đã có 08 khóa |
 | Streaming | Trả lời hiện dần theo token (SSE) |
 | Trích dẫn nguồn | Chip dưới câu trả lời, bấm vào mở đúng section trên trang |
-| Ngữ cảnh theo trang | Mở chat từ thẻ Khóa 7 → bot biết đang nói về Khóa 7 |
+| Ngữ cảnh theo trang | Mở chat từ thẻ Khóa 27 → bot biết đang nói về Khóa 27 |
 | Thu thập lead | Sau 3–4 lượt hoặc khi phát hiện ý định đăng ký → hiện form nhẹ (tên, đơn vị, email, SĐT, khóa quan tâm — cho chọn nhiều khóa) |
 | So sánh khóa | Câu hỏi so sánh → render **bảng so sánh** có cấu trúc, tối đa 3 khóa một lần |
 | Phản hồi | 👍/👎 mỗi câu trả lời → dữ liệu cải thiện cho admin |
@@ -280,11 +282,35 @@ Câu hỏi
 | Lịch sử phiên | Lưu theo `session_id` trong localStorage, khôi phục khi quay lại |
 | Đa ngôn ngữ | VI (mặc định) / EN |
 
-### 5.5 Rào chắn an toàn (guardrails)
+### 5.5 Bảng quy đổi mã khóa — bắt buộc cho chatbot
+
+Mã chính thức của chương trình là **K21–K28** (theo tên hồ sơ thư mời), nhưng **phần thân của chính các thư mời lại ghi "Khóa tập huấn chuyên sâu số 1" đến "số 8"**. Người hỏi sẽ dùng lẫn cả hai cách. Nếu không xử lý, chatbot sẽ trả lời sai khóa — lỗi nghiêm trọng nhất có thể xảy ra.
+
+| Mã chính thức | Số hiệu trong thân thư mời | Tên rút gọn để nhận diện |
+|---|---|---|
+| **K21** | Khóa chuyên sâu số 1 | Chuyển đổi số đại học · AI dùng chung |
+| **K22** | Khóa chuyên sâu số 2 | Đảm bảo chất lượng · Kiểm định |
+| **K23** | Khóa chuyên sâu số 3 | Quản lý đào tạo |
+| **K24** | Khóa chuyên sâu số 4 | Quản lý khoa học · Nghiên cứu |
+| **K25** | Khóa chuyên sâu số 5 | Thương mại điện tử · Kinh doanh số · Marketing số |
+| **K26** | Khóa chuyên sâu số 6 | Ngoại ngữ |
+| **K27** | Khóa chuyên sâu số 7 | Tổ chức nhân sự · Hành chính tổng hợp |
+| **K28** | Khóa chuyên sâu số 8 | Tạp chí khoa học · Quản lý khoa học |
+
+**Cách xử lý trong hệ thống:**
+
+- Mỗi bản ghi `courses` lưu cả `code` (K21…K28), `legacyNumber` (1…8) và `aliases[]` (tên rút gọn, từ khóa lĩnh vực).
+- Bước viết lại truy vấn chuẩn hóa mọi cách gọi về `code` **trước khi** truy hồi: "khóa 3", "khóa số 3", "khóa quản lý đào tạo", "khóa academic copilot" → `K23`.
+- Câu trả lời **luôn dùng mã chính thức**, kèm số hiệu trong ngoặc ở lần nhắc đầu tiên: *"Khóa 23 (khóa chuyên sâu số 3 trong thư mời) — Quản lý đào tạo…"*.
+- Nếu câu hỏi mơ hồ giữa hai cách đánh số (ví dụ chỉ nói "khóa 8" mà ngữ cảnh không rõ là K28 hay khóa số 8), bot **hỏi lại một câu ngắn** thay vì đoán.
+- Landing page hiển thị nhất quán "Khóa 21 … Khóa 28"; trang chi tiết ghi thêm dòng "Khóa tập huấn chuyên sâu số N" để khớp với thư mời giấy mà các đơn vị đang cầm trên tay.
+
+### 5.6 Rào chắn an toàn (guardrails)
 
 - Rate limit: 20 tin nhắn/phiên/giờ, 100 request/IP/giờ.
 - Lọc prompt injection: bỏ qua chỉ dẫn trong nội dung người dùng nhằm thay đổi vai trò của bot.
 - Từ chối chủ đề ngoài phạm vi (chính trị, y tế, pháp lý cá nhân…) → chuyển hướng lịch sự về nội dung khóa học.
+- **Kiểm tra mã khóa trong câu trả lời**: nếu câu trả lời nhắc tới một khóa, mã nêu ra phải khớp với `course_code` của các chunk đã truy hồi — lệch thì chặn và truy hồi lại.
 - **Danh sách khẳng định bị cấm** (kiểm tra hậu kỳ trên câu trả lời trước khi gửi): AI tự quyết định tuyển dụng/bổ nhiệm/kỷ luật · AI thay thế giảng viên chấm điểm chính thức · AI tự quyết định chấp nhận bản thảo · bất kỳ con số nào không có trong ngữ cảnh.
 - Không lưu trữ thông tin cá nhân trong log hội thoại nếu người dùng không chủ động cung cấp; có banner đồng ý dữ liệu.
 - Ngân sách token/ngày, có cảnh báo khi vượt 80%.
@@ -315,7 +341,8 @@ Câu hỏi
 
 ```
 courses/{courseId}
-  code (K1..K8), group, slug, title, subtitle, duration, method, outputs[],
+  code (K21..K28), legacyNumber (1..8), aliases[], group, slug, title, subtitle,
+  duration, method, outputs[],
   audience[], recommendedHeadcount, days[{ title, subtitle, topics[], output }],
   deliverables[], softwareModules[{ no, name, description }], expectedKpis[],
   dataToBring[], responsibleAiNotes[], relatedCourses[], roadmap[],
@@ -361,7 +388,7 @@ app_config/{key}            // model, prompt version, thresholds, budgets, banne
 | POST | `/api/chat/feedback` | 👍/👎 cho một tin nhắn | Public |
 | POST | `/api/recommend` | Công cụ "Chọn khóa phù hợp" — nhận 3 câu trả lời, gợi ý khóa | Public |
 | GET | `/api/courses` · `/api/courses/{slug}` | Dữ liệu khóa học cho frontend | Public |
-| GET | `/api/courses/compare?codes=K4,K8` | Dữ liệu so sánh khóa | Public |
+| GET | `/api/courses/compare?codes=K24,K28` | Dữ liệu so sánh khóa | Public |
 | GET | `/api/faqs` | FAQ đã publish | Public |
 | POST | `/api/leads` | Gửi form đăng ký | Public + captcha |
 | GET/POST/PUT/DELETE | `/api/admin/courses/*` | CRUD khóa học | Admin |
@@ -423,7 +450,7 @@ aiedu365/
 │   ├── app/models/  · app/core/
 │   └── Dockerfile
 ├── data/
-│   ├── courses/K1..K8.json            ← dữ liệu 08 khóa
+│   ├── courses/K21..K28.json            ← dữ liệu 08 khóa
 │   ├── eval/questions.yaml            ← bộ 120 câu hỏi kiểm thử chatbot
 │   └── seed.py · ingest.py
 ├── infra/
@@ -447,8 +474,8 @@ aiedu365/
 | 7 | **Email gửi xác nhận đăng ký** | SendGrid free tier hoặc Gmail SMTP của BTC |
 | 8 | **Ngôn ngữ giao diện** | Tiếng Việt là chính, có công tắc EN |
 | 9 | **Tài khoản admin đầu tiên** | Email `hoanganh.goldenlight@gmail.com` làm Super Admin |
-| 10 | **Còn khóa nào nữa không?** | Kế hoạch thiết kế mở — thêm khóa mới chỉ cần tạo JSON + re-index, không phải sửa code. Nếu dự kiến có Khóa 9, 10… xin cho biết để chuẩn bị bố cục lưới |
-| 11 | **Cách gọi tên khóa trên giao diện** | Dùng "Khóa 1 … Khóa 8" theo đúng số hiệu trong thư mời ("Khóa tập huấn chuyên sâu số 1–8") |
+| 10 | **Còn khóa nào nữa không?** | Kế hoạch thiết kế mở — thêm khóa mới chỉ cần tạo JSON + re-index, không phải sửa code. Nếu dự kiến có Khóa 29, 30… xin cho biết để chuẩn bị bố cục lưới |
+| 11 | **Cách gọi tên khóa trên giao diện** | Hiển thị **"Khóa 21" … "Khóa 28"** (mã K21–K28). Chatbot đồng thời nhận cách gọi "khóa số 1–8" theo thân thư mời — xem §5.5 |
 
 ---
 
