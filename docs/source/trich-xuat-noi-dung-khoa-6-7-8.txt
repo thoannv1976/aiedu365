@@ -1,0 +1,485 @@
+======================================================================
+FILE: 610a0afd-Thu_moi_Khoa_28_AI_Tap_chi_Quan_ly_Khoa_hoc/
+======================================================================
+THƯ MỜI THAM DỰ
+KHÓA TẬP HUẤN CHUYÊN SÂU SỐ 8
+ỨNG DỤNG TRÍ TUỆ NHÂN TẠO THÚC ĐẨY CHUYỂN ĐỔI SỐ
+TẠP CHÍ KHOA HỌC & QUẢN LÝ KHOA HỌC
+AI-Powered Scientific Journal & Research Management
+THỜI LƯỢNG
+02 ngày
+PHƯƠNG PHÁP
+30% nền tảng • 70% workshop
+ĐẦU RA
+Prototype + Workflow + Pilot
+CHUYỂN GIAO
+Phần mềm AI miễn phí
+Kính gửi: Lãnh đạo và cán bộ phụ trách Tạp chí khoa học, Quản lý khoa học, Nghiên cứu, Xuất bản, Thư viện số và Chuyển đổi số
+Trong bối cảnh hoạt động công bố khoa học, xuất bản tạp chí và quản trị nghiên cứu đang chịu áp lực ngày càng lớn về tốc độ, chất lượng, chuẩn mực quốc tế, minh bạch và dữ liệu, trí tuệ nhân tạo mở ra cơ hội tái thiết kế toàn bộ chu trình từ tiếp nhận bản thảo, phản biện, biên tập, xuất bản đến quản lý đề tài, công bố, hồ sơ nhà khoa học và phân tích năng lực nghiên cứu.
+Khóa tập huấn được thiết kế để đưa các đơn vị từ mức “dùng AI hỗ trợ từng tác vụ” sang mức “thiết kế và làm chủ quy trình số có AI hỗ trợ”, với trọng tâm là AI Agents, RAG/Knowledge Base, Research Intelligence, tự động hóa workflow và Human-in-the-loop.
+ĐẶC BIỆT: Học viên được chuyển giao MIỄN PHÍ bộ phần mềm AI Journal & Research Management Suite phiên bản triển khai thử nghiệm.
+1. GIÁ TRỊ NỔI BẬT SAU KHÓA TẬP HUẤN
+Biết thiết kế quy trình tạp chí khoa học có AI hỗ trợ: tiếp nhận – sàng lọc – phản biện – biên tập – xuất bản – phân tích.
+Biết xây dựng AI Knowledge Base từ quy định tạp chí, hướng dẫn tác giả, tiêu chí phản biện, quy chế nghiên cứu và dữ liệu nội bộ.
+Biết ứng dụng AI để hỗ trợ screening bản thảo, kiểm tra cấu trúc, chuẩn hóa metadata, gợi ý reviewer và theo dõi tiến độ xử lý.
+Biết thiết kế Research Management Copilot cho đề tài, công bố, hồ sơ nhà khoa học, KPI và báo cáo nghiên cứu.
+Biết xây dựng Research Intelligence Dashboard phục vụ lãnh đạo: lĩnh vực mạnh, mạng lưới hợp tác, xu hướng, năng suất và tác động nghiên cứu.
+Hoàn thiện prototype, bộ workflow, KPI pilot và kế hoạch triển khai 3–6 tháng ngay sau khóa học.
+2. ĐỐI TƯỢNG NÊN CỬ ĐI HỌC
+Đề nghị mỗi đơn vị ưu tiên cử 03–06 cán bộ theo mô hình “Nghiệp vụ – Dữ liệu – Công nghệ”:
+Lãnh đạo/Thư ký tòa soạn/Tổng biên tập hoặc cán bộ phụ trách tạp chí khoa học.
+Cán bộ biên tập, phản biện, xuất bản, quản trị OJS hoặc website tạp chí.
+Lãnh đạo/chuyên viên Phòng Quản lý khoa học, phòng nghiên cứu hoặc bộ phận quản lý đề tài – công bố.
+Giảng viên/nhà nghiên cứu nòng cốt có kinh nghiệm công bố và phản biện.
+Cán bộ thư viện số, dữ liệu nghiên cứu, CNTT/chuyển đổi số có liên quan.
+3. CẤU TRÚC KHÓA TẬP HUẤN 02 NGÀY
+Ngày
+Chuyên đề trọng tâm
+Sản phẩm thực hành
+Ngày 1
+AI cho Tạp chí khoa học: AI Journal Copilot, screening, reviewer matching, biên tập, metadata, workflow OJS
+01 AI Journal Workflow + 01 prototype Journal Copilot
+Ngày 2
+AI cho Quản lý khoa học: Research Copilot, quản lý đề tài/công bố, hồ sơ nhà khoa học, Research Intelligence
+01 Research Management Workflow + 01 dashboard/prototype
+4. NGÀY 1 – AI FOR SCIENTIFIC JOURNAL DIGITAL TRANSFORMATION
+Mục tiêu: tái thiết kế quy trình tạp chí khoa học theo hướng dữ liệu, chuẩn hóa và AI-assisted editorial workflow.
+Bản đồ quy trình số của một tạp chí khoa học: Submission → Screening → Review → Revision → Editing → Publication → Analytics.
+AI Journal Copilot: hỏi đáp quy định, hướng dẫn tác giả, quy trình biên tập và tiêu chí phản biện.
+AI-assisted manuscript screening: phạm vi chủ đề, cấu trúc bài, độ đầy đủ metadata, định dạng và các điểm cần biên tập rà soát.
+AI hỗ trợ tạo checklist cho biên tập viên và tác giả; chuẩn hóa title, abstract, keywords, author metadata và references ở mức hỗ trợ.
+Reviewer Discovery & Matching: gợi ý chuyên gia theo chủ đề, từ khóa, hồ sơ học thuật và xung đột lợi ích cần kiểm tra bởi con người.
+AI hỗ trợ tóm tắt phản biện, theo dõi vòng sửa và đối chiếu phản hồi tác giả – reviewer.
+AI hỗ trợ biên tập ngôn ngữ, consistency check và chuẩn hóa nội dung trước xuất bản.
+Tích hợp với OJS/website tạp chí, DOI/metadata và các hệ thống hiện có thông qua API khi điều kiện cho phép.
+AI Governance cho tạp chí: bảo mật bản thảo chưa công bố, bản quyền, đạo đức xuất bản, log và Human-in-the-loop.
+WORKSHOP NGÀY 1
+Vẽ quy trình hiện tại và xác định 10–15 pain point có thể ứng dụng AI.
+Xây dựng 01 AI Journal Copilot từ bộ quy định/hướng dẫn tạp chí mẫu.
+Thiết kế 01 workflow screening – reviewer matching – editorial tracking.
+Xác định dữ liệu, quyền truy cập, KPI và điểm kiểm soát bắt buộc bởi biên tập viên.
+5. NGÀY 2 – AI FOR RESEARCH MANAGEMENT & RESEARCH INTELLIGENCE
+Mục tiêu: xây dựng năng lực quản trị nghiên cứu dựa trên dữ liệu và AI, từ hồ sơ đề tài đến phân tích năng lực nghiên cứu cấp đơn vị/trường.
+AI Research Management Copilot: hỏi đáp quy chế, quy trình đề tài, hồ sơ, biểu mẫu, định mức và yêu cầu báo cáo.
+AI hỗ trợ tiếp nhận – phân loại – kiểm tra hồ sơ đề xuất đề tài trước khi chuyên viên thẩm định.
+Theo dõi tiến độ đề tài, sản phẩm cam kết, mốc báo cáo, rủi ro và cảnh báo trễ hạn.
+AI Publication Assistant cho công tác quản lý: chuẩn hóa metadata công bố, phân loại lĩnh vực, đối chiếu hồ sơ và thống kê sản phẩm.
+Researcher Profile 360: hồ sơ nhà khoa học, đề tài, công bố, hợp tác, hướng nghiên cứu và sản phẩm.
+Research Intelligence: phân tích lĩnh vực mạnh, emerging topics, network tác giả – đối tác, publication/citation trends và cơ hội hợp tác.
+Grant/Call Matching: hỗ trợ tìm kiếm và đối chiếu cơ hội tài trợ với năng lực nhóm nghiên cứu.
+Dashboard cho lãnh đạo: KPI, tiến độ đề tài, công bố, hợp tác, năng suất và xu hướng nghiên cứu.
+Responsible AI & Research Integrity: nguyên tắc sử dụng AI minh bạch, không tạo dữ liệu/bằng chứng giả, không thay thế phán đoán khoa học.
+WORKSHOP NGÀY 2
+Thiết kế 01 Research Management Copilot từ quy chế và biểu mẫu nội bộ.
+Xây dựng mô hình dữ liệu Researcher 360 và danh mục KPI nghiên cứu.
+Thiết kế 01 Research Intelligence Dashboard/prototype.
+Hoàn thiện kế hoạch pilot 3–6 tháng cho một quy trình thực tế.
+6. KẾT QUẢ ĐẦU RA MỖI ĐƠN VỊ MANG VỀ
+01. Bản đồ AI Opportunity
+Danh mục 15–25 pain point/use case cho tạp chí và quản lý khoa học.
+02. Workflow & Prototype
+Ít nhất 02 workflow AI + 01–02 prototype có thể tiếp tục pilot.
+03. Knowledge Base
+Cấu trúc kho tri thức từ quy định, hướng dẫn, biểu mẫu, tiêu chí và tài liệu nghiệp vụ.
+04. KPI & Pilot Plan
+Bộ KPI, dữ liệu cần tích hợp, rủi ro/kiểm soát và kế hoạch pilot 3–6 tháng.
+05. Software Transfer
+Bộ phần mềm phiên bản thử nghiệm + hướng dẫn cấu hình và triển khai.
+7. PHẦN MỀM ĐƯỢC CHUYỂN GIAO MIỄN PHÍ
+Các đơn vị tham dự được chuyển giao MIỄN PHÍ bộ AI Journal & Research Management Suite phiên bản triển khai thử nghiệm trong khuôn khổ khóa tập huấn.
+1
+AI Journal Copilot
+Tra cứu quy định, hướng dẫn tác giả, quy trình biên tập và tiêu chí tạp chí.
+2
+AI Manuscript Screening Assistant
+Hỗ trợ screening cấu trúc, metadata, checklist và các vấn đề cần biên tập viên rà soát.
+3
+AI Reviewer Matching Assistant
+Gợi ý reviewer theo chủ đề/hồ sơ; hỗ trợ kiểm tra xung đột lợi ích theo quy trình.
+4
+AI Editorial & Revision Tracker
+Theo dõi vòng phản biện – sửa bài – quyết định; tóm tắt và đối chiếu phản hồi.
+5
+AI Metadata & Publication Assistant
+Hỗ trợ chuẩn hóa metadata, abstract/keywords và dữ liệu phục vụ xuất bản.
+6
+AI Research Management Copilot
+Tra cứu quy chế, đề tài, biểu mẫu, quy trình và hỗ trợ theo dõi hồ sơ nghiên cứu.
+7
+Researcher 360
+Tổng hợp hồ sơ nhà khoa học: đề tài, công bố, hợp tác, hướng nghiên cứu và sản phẩm.
+8
+Research Intelligence Dashboard
+Phân tích KPI, xu hướng, lĩnh vực mạnh, mạng lưới hợp tác và năng lực nghiên cứu.
+9
+Grant & Collaboration Matcher
+Hỗ trợ đối chiếu cơ hội tài trợ/hợp tác với nhóm nghiên cứu phù hợp.
+10
+AI Knowledge Base & RAG
+Kho tri thức dùng chung cho tạp chí và quản lý khoa học, có phân quyền và truy xuất nguồn.
+8. PHẠM VI HỖ TRỢ CHUYỂN GIAO
+Cung cấp bộ phần mềm phiên bản triển khai thử nghiệm trong khuôn khổ khóa học.
+Hướng dẫn cài đặt/cấu hình, tạo Knowledge Base và phân quyền người dùng.
+Cung cấp cấu trúc dữ liệu và workflow mẫu cho tạp chí và quản lý khoa học.
+Hướng dẫn cấu hình quy định, checklist, rubric/criteria, danh mục đề tài và hồ sơ nhà khoa học.
+Hướng dẫn tích hợp OJS, website, hệ thống quản lý nghiên cứu hoặc API khi điều kiện kỹ thuật cho phép.
+Hướng dẫn lựa chọn mô hình AI/LLM phù hợp với yêu cầu bảo mật và chi phí.
+Hướng dẫn triển khai pilot, thu thập phản hồi và đánh giá KPI.
+9. KPI KỲ VỌNG SAU PILOT 3–6 THÁNG
+Thời gian xử lý tác vụ biên tập/tra cứu lặp lại
+Giảm 30–50% ở các workflow phù hợp
+Tra cứu quy định và tài liệu nghiệp vụ
+Rút ngắn đáng kể; trả lời có nguồn từ Knowledge Base
+Theo dõi bản thảo/đề tài
+Tăng khả năng cảnh báo trạng thái và trễ hạn
+Chuẩn hóa metadata/báo cáo
+Tăng tính nhất quán, giảm thao tác nhập/tổng hợp thủ công
+Research Intelligence
+Có dashboard phục vụ lãnh đạo và báo cáo định kỳ
+AI workflow đưa vào pilot
+Tối thiểu 2–4 workflow/đơn vị
+10. DỮ LIỆU/HỌC LIỆU KHUYẾN KHÍCH MANG THEO
+Quy định tạp chí, Author Guidelines, reviewer form/checklist, quy trình biên tập, mẫu email và metadata.
+Một số bản thảo hoặc dữ liệu mô phỏng đã được phép sử dụng và ẩn danh phù hợp.
+Quy chế quản lý khoa học, biểu mẫu đề tài, báo cáo tiến độ/nghiệm thu.
+Danh mục đề tài, công bố, hồ sơ nhà khoa học hoặc dữ liệu mẫu đã được phép sử dụng.
+Các báo cáo KPI, thống kê nghiên cứu hoặc dashboard hiện có.
+11. LỘ TRÌNH SAU KHÓA TẬP HUẤN
+B1
+Training
+B2
+Software Transfer
+B3
+Knowledge Base
+B4
+Pilot
+B5
+KPI & Scale-up
+Mục tiêu cuối cùng là hình thành mô hình “AI-Powered Scientific Publishing & Research Management”, trong đó AI giúp tăng tốc xử lý, chuẩn hóa dữ liệu, hỗ trợ ra quyết định và mở rộng năng lực phục vụ; mọi quyết định học thuật, phản biện, xuất bản và quản trị nghiên cứu quan trọng vẫn được kiểm soát bởi con người.
+Nhà trường trân trọng kính mời Quý đơn vị quan tâm và cử cán bộ phù hợp tham dự chương trình.
+TRÂN TRỌNG KÍNH MỜI
+======================================================================
+FILE: d5bcb742-Thu_moi_Khoa_27_AI_To_chuc_Nhan_su_Hanh_chinh_Tong_hop/
+======================================================================
+THƯ MỜI THAM DỰ
+KHÓA TẬP HUẤN CHUYÊN SÂU SỐ 7
+ỨNG DỤNG TRÍ TUỆ NHÂN TẠO THÚC ĐẨY CHUYỂN ĐỔI SỐ
+TRONG TỔ CHỨC NHÂN SỰ & HÀNH CHÍNH TỔNG HỢP
+AI-Powered HR & Administration Transformation
+TỪ “DÙNG AI” ĐẾN “THIẾT KẾ QUY TRÌNH VÀ LÀM CHỦ PHẦN MỀM AI”
+Khóa học được thiết kế theo hướng chuyên sâu – thực hành – tạo sản phẩm. Học viên làm việc trực tiếp với các bài toán nhân sự, văn bản, hồ sơ, họp, báo cáo và quy trình hành chính; kết thúc khóa học có prototype, workflow, KPI pilot và bộ phần mềm AI được chuyển giao miễn phí.
+Kính gửi: Lãnh đạo và cán bộ các đơn vị Tổ chức cán bộ/Tổ chức nhân sự, Hành chính – Tổng hợp, Văn phòng và các đơn vị liên quan.
+Trong quá trình chuyển đổi số đại học, tổ chức nhân sự và hành chính tổng hợp là hai lĩnh vực có số lượng lớn quy trình lặp lại, hồ sơ – văn bản đa dạng, yêu cầu phối hợp nhiều đơn vị và nhu cầu báo cáo thường xuyên. Đây cũng là nhóm nghiệp vụ có tiềm năng ứng dụng AI rất cao để giảm thời gian xử lý, chuẩn hóa quy trình, nâng chất lượng dịch vụ nội bộ và hỗ trợ ra quyết định.
+Khóa tập huấn chuyên sâu số 7 tập trung vào việc đưa Generative AI, RAG, AI Agents và workflow automation vào các quy trình thật của nhà trường; đồng thời bảo đảm nguyên tắc bảo mật dữ liệu, phân quyền, lưu vết và Human-in-the-loop đối với các quyết định nhân sự.
+Thời lượng
+02 ngày – đào tạo chuyên sâu kết hợp workshop
+Phương pháp
+Khoảng 30% nền tảng – 70% thực hành theo quy trình và dữ liệu thực tế
+Sản phẩm cuối khóa
+AI HR Copilot + AI Administration Copilot + Knowledge Base + Pilot Plan
+Chuyển giao
+MIỄN PHÍ bộ phần mềm AI HR & Administration Copilot Suite – phiên bản triển khai thử nghiệm
+MỤC TIÊU TRỌNG TÂM
+• Rà soát và lựa chọn 5–10 quy trình nhân sự/hành chính có khả năng ứng dụng AI ngay.
+• Thiết kế workflow mới có AI hỗ trợ nhưng vẫn giữ quyền quyết định cuối cùng cho cán bộ có thẩm quyền.
+• Xây dựng Knowledge Base từ quy định, quy trình, biểu mẫu, quyết định và tài liệu nội bộ.
+• Tạo prototype AI Copilot phục vụ cán bộ nhân sự và hành chính.
+• Hình thành kế hoạch pilot 3–6 tháng với KPI đo hiệu quả rõ ràng.
+1. GIÁ TRỊ THU ĐƯỢC SAU KHÓA TẬP HUẤN
+Kết quả phải có khả năng áp dụng ngay – không chỉ dừng ở kiến thức
+Đối với đơn vị
+• Bản đồ pain point và danh mục các quy trình ưu tiên ứng dụng AI.
+• 01 kiến trúc AI HR & Administration Copilot phù hợp với môi trường đại học.
+• 01 Knowledge Base mẫu từ quy định, quy trình, biểu mẫu và tài liệu nội bộ.
+• Ít nhất 02 workflow mẫu: một workflow nhân sự và một workflow hành chính.
+• Bộ KPI đánh giá: thời gian xử lý, tỷ lệ tự động hóa, chất lượng câu trả lời, mức độ sử dụng và mức độ hài lòng.
+• Roadmap pilot 3–6 tháng và phương án tích hợp với hệ thống quản trị hiện có.
+Đối với học viên
+• Biết thiết kế AI workflow thay vì chỉ dùng prompt đơn lẻ.
+• Biết xây dựng RAG/Knowledge Base từ tài liệu nội bộ.
+• Biết tổ chức AI Agent/Copilot cho các tác vụ nghiệp vụ cụ thể.
+• Biết kiểm soát dữ liệu nhạy cảm, phân quyền truy cập và lưu vết sử dụng AI.
+• Biết đánh giá chất lượng đầu ra của AI và thiết lập Human-in-the-loop.
+• Có khả năng tham gia triển khai và vận hành phần mềm AI sau khóa học.
+GIÁ TRỊ CỐT LÕI
+Mỗi đơn vị rời khóa học với:  Quy trình ưu tiên + Prototype + Knowledge Base + Phần mềm + KPI + Kế hoạch pilot.
+2. ĐỐI TƯỢNG ĐỀ NGHỊ CỬ ĐI HỌC
+Để tạo được một nhóm triển khai có đủ năng lực nghiệp vụ – dữ liệu – công nghệ, đề nghị mỗi đơn vị cử 03–05 cán bộ theo cơ cấu sau:
+Nhóm
+Đối tượng phù hợp
+Vai trò trong khóa học/pilot
+Lãnh đạo
+Trưởng/Phó đơn vị Tổ chức nhân sự, Hành chính – Tổng hợp, Văn phòng
+Chọn bài toán ưu tiên, phê duyệt quy trình và KPI.
+Nghiệp vụ nhân sự
+Cán bộ vị trí việc làm, hồ sơ cán bộ, tuyển dụng, đào tạo – phát triển, đánh giá
+Cung cấp quy trình, biểu mẫu, rule và tình huống thật.
+Nghiệp vụ hành chính
+Cán bộ văn thư – lưu trữ, tổng hợp, thư ký, quản lý văn bản, theo dõi nhiệm vụ
+Thiết kế workflow văn bản, họp, báo cáo và hồ sơ.
+CNTT/DX
+Cán bộ CNTT, dữ liệu hoặc chuyển đổi số
+Kết nối hệ thống, phân quyền, API, triển khai và bảo mật.
+Dữ liệu nên mang theo: quy chế/quy trình, mô tả vị trí việc làm, biểu mẫu nhân sự, văn bản – báo cáo – biên bản họp và một số hồ sơ mẫu đã ẩn danh (nếu được phép sử dụng).
+3. NỘI DUNG NGÀY 1
+AI FOR ORGANIZATION & HUMAN RESOURCES MANAGEMENT
+Ngày 1 tập trung vào việc biến AI thành “copilot nghiệp vụ” cho tổ chức – nhân sự, không dùng AI để thay thế quyền quyết định của người có thẩm quyền.
+#
+Chuyên đề
+Nội dung thực hành
+1
+AI HR Copilot & HR Knowledge Base
+Xây dựng trợ lý tra cứu quy định, quy trình, chế độ, biểu mẫu và hướng dẫn nghiệp vụ dựa trên tài liệu chính thức.
+2
+Vị trí việc làm & năng lực
+Hỗ trợ chuẩn hóa mô tả công việc, khung năng lực, mapping nhiệm vụ – năng lực và phát hiện điểm chưa nhất quán.
+3
+Hồ sơ & quy trình cán bộ
+AI hỗ trợ kiểm tra thành phần hồ sơ, checklist quy trình, tóm tắt hồ sơ và nhắc bước xử lý; cán bộ chuyên môn phê duyệt cuối cùng.
+4
+Tuyển dụng & Onboarding
+Soạn tiêu chí, sàng lọc hỗ trợ theo tiêu chí minh bạch, tạo câu hỏi phỏng vấn, onboarding assistant; chú trọng fairness và human review.
+5
+Đào tạo & phát triển
+Phân tích nhu cầu đào tạo, gợi ý learning path, tổng hợp năng lực và hỗ trợ xây dựng kế hoạch bồi dưỡng.
+6
+HR Analytics & Workforce Planning
+Phân tích cơ cấu nhân sự, biến động, tải công việc, nhu cầu nhân lực và dashboard hỗ trợ ra quyết định.
+WORKSHOP NGÀY 1 – XÂY DỰNG AI HR COPILOT
+WORKFLOW MẪU
+Câu hỏi nghiệp vụ / Hồ sơ → Xác định quyền truy cập → Tra cứu Knowledge Base → Kiểm tra rule/checklist → AI hỗ trợ phân tích/tóm tắt → Cán bộ chuyên môn xác nhận → Lưu vết.
+Kết quả cuối ngày 1
+• 01 AI HR Knowledge Base prototype.
+• 01 HR workflow đã tái thiết kế có AI hỗ trợ.
+• 01 prototype AI HR Copilot cho một bài toán ưu tiên.
+• Danh mục dữ liệu, phân quyền và tiêu chí kiểm soát cần có khi triển khai.
+Nguyên tắc bắt buộc
+• Không sử dụng AI như công cụ tự động quyết định tuyển dụng, bổ nhiệm, đánh giá hoặc kỷ luật.
+• Dữ liệu nhân sự phải được phân quyền, ẩn danh khi cần và có audit log.
+• Kết quả AI là đầu vào hỗ trợ; người có thẩm quyền chịu trách nhiệm quyết định cuối cùng.
+4. NỘI DUNG NGÀY 2
+AI FOR GENERAL ADMINISTRATION, OFFICE & WORKFLOW AUTOMATION
+Ngày 2 tập trung vào các quy trình hành chính có tần suất cao: văn bản – hồ sơ – họp – nhiệm vụ – báo cáo – tra cứu nội bộ và phối hợp liên đơn vị.
+#
+Chuyên đề
+Nội dung thực hành
+1
+AI Document & Records Assistant
+Phân loại văn bản, tóm tắt, trích xuất thông tin, gợi ý nơi xử lý, checklist hồ sơ, tìm kiếm theo ngữ nghĩa.
+2
+AI Meeting Copilot
+Chuẩn bị agenda, tóm tắt tài liệu trước họp, biên bản, trích xuất quyết định – nhiệm vụ – deadline – đầu mối phụ trách.
+3
+AI Office Knowledge Base
+Trợ lý tra cứu quy trình, quy định, biểu mẫu, hướng dẫn thủ tục nội bộ 24/7 dựa trên tài liệu chính thức.
+4
+AI Report & Drafting Assistant
+Tổng hợp báo cáo từ nhiều nguồn, tạo bản nháp thông báo/tờ trình/báo cáo, kiểm tra tính nhất quán và chuẩn hóa cấu trúc.
+5
+Task & Workflow Automation
+Tự động tạo nhiệm vụ từ văn bản/họp, nhắc hạn, theo dõi trạng thái, escalations và dashboard điều hành.
+6
+Executive Administration Dashboard
+Theo dõi văn bản, nhiệm vụ, SLA, khối lượng xử lý, backlog và các chỉ số vận hành cho lãnh đạo.
+WORKSHOP NGÀY 2 – XÂY DỰNG AI ADMINISTRATION COPILOT
+WORKFLOW MẪU
+Văn bản/Họp/Yêu cầu → AI phân loại & tóm tắt → Trích xuất nhiệm vụ → Gợi ý đầu mối → Cán bộ xác nhận → Theo dõi deadline → Dashboard → Báo cáo tổng hợp.
+Kết quả cuối ngày 2
+• 01 AI Administration Copilot prototype.
+• 01 workflow văn bản/họp/nhiệm vụ đã được số hóa và có AI hỗ trợ.
+• 01 mẫu dashboard theo dõi công việc và SLA.
+• 01 kế hoạch tích hợp với hệ thống văn bản, HRM, DMS, email hoặc nền tảng nội bộ khi điều kiện cho phép.
+5. PHẦN MỀM ĐƯỢC CHUYỂN GIAO MIỄN PHÍ
+AI HR & Administration Copilot Suite – phiên bản triển khai thử nghiệm
+CAM KẾT GIÁ TRỊ SAU KHÓA HỌC
+Đơn vị tham dự được chuyển giao MIỄN PHÍ bộ phần mềm phiên bản triển khai thử nghiệm, kèm hướng dẫn cấu hình Knowledge Base, workflow, phân quyền và pilot.
+#
+Module phần mềm
+Chức năng chính
+1
+HR Policy & Organization Copilot
+Tra cứu quy định, quy trình, biểu mẫu, vị trí việc làm và hỏi đáp nghiệp vụ có nguồn.
+2
+Job Position & Competency Assistant
+Hỗ trợ mô tả vị trí việc làm, khung năng lực và mapping nhiệm vụ – năng lực.
+3
+HR Profile & Process Assistant
+Checklist hồ sơ, tóm tắt hồ sơ, theo dõi bước xử lý và nhắc thiếu tài liệu.
+4
+Recruitment & Onboarding Assistant
+Hỗ trợ tiêu chí tuyển dụng, câu hỏi phỏng vấn, onboarding và FAQ nhân sự; có human review.
+5
+HR Analytics Dashboard
+Theo dõi cơ cấu, biến động, tải nhân lực, đào tạo và các chỉ số nhân sự.
+6
+AI Document & Records Assistant
+Phân loại, tóm tắt, trích xuất thông tin, tìm kiếm và quản lý hồ sơ/văn bản.
+7
+AI Meeting & Task Copilot
+Biên bản, quyết định, nhiệm vụ, deadline, đầu mối và theo dõi tiến độ.
+8
+AI Office Knowledge Base
+Trợ lý thủ tục hành chính và tra cứu nội bộ dựa trên tài liệu chính thức.
+9
+AI Report & Drafting Assistant
+Tổng hợp báo cáo và tạo bản nháp văn bản hành chính theo mẫu được cấu hình.
+10
+Workflow Automation & Dashboard
+Luồng phê duyệt, thông báo, nhắc việc, SLA và dashboard vận hành.
+Phạm vi chuyển giao
+• Cung cấp phần mềm phiên bản triển khai thử nghiệm và tài liệu hướng dẫn sử dụng.
+• Hướng dẫn cấu hình Knowledge Base, biểu mẫu, workflow và các rule nghiệp vụ cơ bản.
+• Hướng dẫn phân quyền, nguyên tắc bảo mật dữ liệu và Human-in-the-loop.
+• Hướng dẫn triển khai pilot, đo KPI và cải tiến sau pilot.
+• Hỗ trợ định hướng tích hợp API với các hệ thống hiện có khi điều kiện kỹ thuật cho phép.
+Lưu ý: phần mềm được chuyển giao miễn phí trong khuôn khổ chương trình; chi phí hạ tầng máy chủ, API/model AI hoặc dịch vụ bên thứ ba (nếu phát sinh) không thuộc phạm vi chuyển giao phần mềm.
+6. KPI KỲ VỌNG VÀ LỘ TRÌNH SAU KHÓA HỌC
+Hiệu quả quy trình
+Giảm 30–50% thời gian cho một số tác vụ lặp lại có thể chuẩn hóa.
+Tra cứu nội bộ
+Rút ngắn mạnh thời gian tìm quy định, biểu mẫu và hồ sơ; tăng tính nhất quán.
+Văn bản – họp – nhiệm vụ
+Tự động hóa bước tóm tắt, trích xuất nhiệm vụ, nhắc hạn và báo cáo theo dõi.
+Pilot
+Tối thiểu 02 workflow được pilot trong 3–6 tháng.
+ROADMAP
+Training → Software Transfer → Data & Knowledge Base → Workflow Configuration → Pilot → KPI Evaluation → Integration → Scale-up
+Nhà trường trân trọng kính mời Quý đơn vị quan tâm, lựa chọn đúng cán bộ nòng cốt và cử tham dự khóa tập huấn để cùng hình thành các quy trình nhân sự – hành chính thông minh, minh bạch, an toàn và có khả năng nhân rộng.
+TRÂN TRỌNG KÍNH MỜI.
+ĐƠN VỊ TỔ CHỨC
+(Ký, ghi rõ họ tên)
+ĐẠI DIỆN BAN TỔ CHỨC
+(Ký, ghi rõ họ tên)
+======================================================================
+FILE: f424867f-Thu_moi_Khoa_26_AI_Cac_Khoa_Ngoai_ngu/
+======================================================================
+CHƯƠNG TRÌNH TẬP HUẤN AI CHUYÊN SÂU CHO CHUYỂN ĐỔI SỐ ĐẠI HỌC
+THƯ MỜI THAM DỰ
+KHÓA TẬP HUẤN CHUYÊN SÂU SỐ 6
+ỨNG DỤNG TRÍ TUỆ NHÂN TẠO TRONG
+GIẢNG DẠY, ĐÁNH GIÁ VÀ CÁ NHÂN HÓA HỌC TẬP NGOẠI NGỮ
+AI-Powered Foreign Language Teaching, Assessment & Personalized Learning
+THỜI LƯỢNG
+02 ngày chuyên sâu
+PHƯƠNG PHÁP
+30% nền tảng · 70% workshop
+ĐẦU RA
+AI Tutor + Graders + Pilot
+Kính gửi: Lãnh đạo và giảng viên các Khoa/Bộ môn Ngoại ngữ: Tiếng Anh, Tiếng Pháp, Tiếng Trung, Tiếng Nhật, Tiếng Hàn và các ngoại ngữ khác tại các cơ sở giáo dục đại học.
+AI đang mở ra khả năng chuyển dạy – học ngoại ngữ từ mô hình phản hồi theo lớp sang môi trường luyện tập liên tục, cá nhân hóa và dựa trên dữ liệu. Đặc biệt với Writing, Speaking, Pronunciation và ngoại ngữ chuyên ngành, AI có thể hỗ trợ giảng viên tăng tần suất phản hồi mà vẫn duy trì vai trò kiểm soát chuyên môn.
+Đây là khóa chuyên sâu, không dừng ở việc dùng ChatGPT để soạn bài hoặc tạo nội dung. Học viên sẽ trực tiếp xây AI Course Brain, AI Tutor, Writing/Speaking Grader, Pronunciation Coach, Multi-Agent Grading và Learning Analytics để đưa vào classroom pilot ngay sau khóa học.
+ĐẶC BIỆT: KHOA/BỘ MÔN THAM DỰ ĐƯỢC CHUYỂN GIAO MIỄN PHÍ
+AI Foreign Language Learning & Assessment Platform – phiên bản triển khai thử nghiệm, kèm hướng dẫn cấu hình ngôn ngữ, rubric và pilot.
+1. GIÁ TRỊ THU ĐƯỢC SAU KHÓA TẬP HUẤN
+NĂNG LỰC CHUYÊN SÂU
+Thiết kế AI Tutor, RAG/Knowledge Base, Writing/Speaking workflows và mô hình đánh giá đa tác tử cho ngoại ngữ.
+SẢN PHẨM THỰC TẾ
+Có AI Course Brain, Language Tutor, Writing/Speaking Grader prototype, rubric cấu hình và kế hoạch classroom pilot.
+HIỆU QUẢ GIẢNG DẠY
+Tăng tần suất luyện tập và phản hồi, hỗ trợ lớp đông, giảm tác vụ chấm sơ bộ lặp lại và cá nhân hóa học tập.
+NĂNG LỰC ĐA NGÔN NGỮ
+Cấu hình cho Anh, Pháp, Trung, Nhật, Hàn và các ngoại ngữ khác theo học liệu, rubric và đặc thù phát âm của từng khoa.
+2. ĐỐI TƯỢNG NÊN CỬ ĐI HỌC
+Để khóa học tạo ra sản phẩm có thể tiếp tục triển khai tại Khoa/Bộ môn, khuyến nghị mỗi đơn vị cử nhóm 05–10 người theo mô hình “Quản lý – Giảng dạy – Đánh giá – Học liệu – Công nghệ”:
+Thành phần nên cử
+Vai trò trong khóa học
+01 lãnh đạo Khoa/Bộ môn
+Xác định học phần ưu tiên, mục tiêu pilot, chuẩn đánh giá và kế hoạch triển khai AI ở cấp Khoa/Bộ môn.
+02–04 giảng viên Writing/Speaking/Ngữ âm
+Cung cấp rubric, bài mẫu, dữ liệu thực hành; kiểm thử AI Grader, Pronunciation Coach và Human Review.
+01–02 giảng viên học liệu/LMS/EdTech
+Xây dựng AI Course Brain, Knowledge Base, bài tập thích ứng và tích hợp vào hoạt động dạy – học.
+01 cán bộ khảo thí/đánh giá hoặc CNTT (nếu có)
+Hỗ trợ chuẩn hóa rubric, dữ liệu, phân quyền, bảo mật, API/LMS và triển khai phần mềm thử nghiệm.
+3. NỘI DUNG TẬP HUẤN CHUYÊN SÂU – 02 NGÀY
+NGÀY 1
+AI FOR FOREIGN LANGUAGE TEACHING & PERSONALIZED LEARNING
+Từ học liệu của Khoa đến AI Tutor, Course Brain và học tập cá nhân hóa
+• Generative AI, AI Agents và vai trò mới của AI trong đào tạo ngoại ngữ đa ngôn ngữ.
+• Xây dựng AI Course Brain/Knowledge Base bằng RAG từ giáo trình, slide, rubric và học liệu chính thức.
+• Thiết kế AI Language Tutor cho grammar, vocabulary, reading, writing, speaking, conversation và ngoại ngữ chuyên ngành.
+• AI Lesson Planning, học liệu số và AI Exercise Generator cho bài tập thích ứng theo trình độ.
+• AI Conversation Partner và Pronunciation Coach; lưu ý đặc thù từng ngôn ngữ như thanh điệu, liaison, pitch/accent và ngữ điệu.
+• Personalized Learning Path: phân tích lỗi, đề xuất bài luyện tiếp theo và theo dõi tiến bộ.
+• Tích hợp AI Tutor với LMS, phân quyền, dữ liệu học liệu và guardrails để hạn chế hallucination.
+• Workshop: Course Materials → Knowledge Base → AI Tutor → Practice → Feedback → Personalized Recommendation.
+KẾT QUẢ ĐẦU RA: 01 AI Language Tutor + 01 AI Course Brain/Knowledge Base + 01 workflow cá nhân hóa học tập.
+NGÀY 2
+AI FOR WRITING, SPEAKING & PRONUNCIATION ASSESSMENT
+Từ rubric đến Multi-Agent Grading, Confidence Score và Human Review
+• AI Writing Assessment: rubric-based scoring, grammar, vocabulary, coherence, content relevance, error classification và feedback.
+• AI Speaking Assessment: Speech-to-Text, fluency, grammar, vocabulary, coherence, response relevance và rubric scoring.
+• AI Pronunciation Assessment/Coach: phát âm, nhịp, độ trôi chảy và phản hồi phù hợp với từng ngôn ngữ.
+• Cấu hình rubric theo từng học phần, chuẩn đầu ra và ngôn ngữ; kiểm soát consistency giữa AI và giảng viên.
+• Multi-Agent AI Grading: AI Examiner 1 → AI Examiner 2 → AI Judge → Confidence Score → Human Review.
+• Learning Analytics: lỗi phổ biến, mức độ luyện tập, tiến bộ theo thời gian và phát hiện sinh viên cần hỗ trợ.
+• Nguyên tắc Human-in-the-loop, fairness, privacy và sử dụng AI có trách nhiệm trong assessment.
+• Workshop: Student Work → Rubric → AI Examiners → Score/Feedback → Confidence → Lecturer Review → Analytics.
+KẾT QUẢ ĐẦU RA: 01 Writing Grader workflow + 01 Speaking/Pronunciation workflow + 01 Multi-Agent Assessment model + 01 kế hoạch pilot.
+4. KẾT QUẢ ĐẦU RA CỤ THỂ CỦA MỖI KHOA/BỘ MÔN
+• 01 danh mục 10–20 use case AI ưu tiên cho dạy – học – đánh giá ngoại ngữ.
+• 01 AI Language Tutor và 01 AI Course Brain cho một học phần thực tế.
+• 01 AI Writing Assessment workflow và 01 AI Speaking/Pronunciation workflow.
+• 01 bộ rubric chuẩn hóa để cấu hình AI theo từng môn/ngôn ngữ.
+• 01 Multi-Agent AI Grading workflow có Confidence Score và Human Review.
+• 01 Learning Analytics model theo dõi tiến bộ và lỗi phổ biến của sinh viên.
+• 01 lesson plan/classroom workflow tích hợp AI vào học phần.
+• 01 kế hoạch pilot 3–6 tháng + bộ KPI đánh giá hiệu quả.
+5. PHẦN MỀM ĐƯỢC CHUYỂN GIAO MIỄN PHÍ
+Các Khoa/Bộ môn tham dự được chuyển giao miễn phí AI Foreign Language Learning & Assessment Platform – phiên bản triển khai thử nghiệm, để tiếp tục thực hành, cấu hình theo ngôn ngữ và tổ chức classroom pilot sau khóa học.
+1  AI Writing Grader
+Chấm bài theo rubric, phân tích lỗi, phản hồi cá nhân hóa, theo dõi tiến bộ và cấu hình theo từng ngôn ngữ.
+2  AI Speaking Grader
+Speech-to-Text, fluency, grammar, vocabulary, coherence, rubric-based scoring và phản hồi cho bài nói.
+3  AI Pronunciation Coach
+Luyện phát âm, phản hồi theo ngôn ngữ, so sánh các lần luyện và hỗ trợ cải thiện âm/nhịp/độ trôi chảy.
+4  AI Language Tutor
+Hỗ trợ grammar, vocabulary, conversation, reading, writing, speaking và ngoại ngữ chuyên ngành 24/7.
+5  AI Course Brain
+RAG/Knowledge Base từ giáo trình, slide, rubric, sample answers và học liệu đã được Khoa/Bộ môn phê duyệt.
+6  AI Exercise Generator
+Sinh bài tập grammar, vocabulary, reading, listening, speaking, writing và adaptive practice theo trình độ.
+7  Multi-Agent AI Grading
+AI Examiner 1 → AI Examiner 2 → AI Judge → Confidence Score → Human Review để tăng độ ổn định.
+8  Learning Analytics Dashboard
+Theo dõi Writing, Speaking, lỗi phổ biến, mức độ luyện tập, tiến bộ và sinh viên cần hỗ trợ theo lớp/môn/ngôn ngữ.
+Phạm vi chuyển giao gồm: phần mềm thử nghiệm, hướng dẫn cài đặt/cấu hình, cấu trúc dữ liệu mẫu, hướng dẫn cấu hình ngôn ngữ và rubric, xây dựng AI Course Brain, thiết lập Writing/Speaking Grader, Multi-Agent Grading, Learning Analytics và hướng dẫn tích hợp LMS khi điều kiện kỹ thuật cho phép.
+Mục tiêu: kết thúc khóa học, Khoa/Bộ môn mang về “Năng lực + Prototype + Phần mềm + Rubric + Knowledge Base + Learning Analytics + Kế hoạch pilot”.
+6. HIỆU QUẢ KỲ VỌNG KHI TRIỂN KHAI PILOT
+Tùy chất lượng dữ liệu, độ phù hợp của mô hình ngôn ngữ/giọng nói và phạm vi pilot, Khoa/Bộ môn có thể sử dụng các chỉ số sau làm mục tiêu tham chiếu:
+Chỉ số tham chiếu
+Mục tiêu pilot
+Bài Writing được AI hỗ trợ đánh giá vòng đầu
+Mục tiêu tham chiếu ≥ 70% trong pilot
+Bài Speaking được AI pre-assessment
+Mục tiêu tham chiếu ≥ 70% trong pilot
+Thời gian chấm sơ bộ một số dạng bài
+Có thể giảm khoảng 40–60%
+Học phần tích hợp AI Tutor/Course Brain
+Tối thiểu 02–03 học phần pilot
+AI workflows đưa vào lớp học
+Tối thiểu 03 quy trình
+Lưu ý: AI trong đánh giá ngoại ngữ nên được dùng như công cụ hỗ trợ chuyên môn. Điểm số, phản hồi và phân tích phát âm cần được hiệu chỉnh theo rubric, dữ liệu của từng ngôn ngữ và có cơ chế Human Review trước khi dùng cho các quyết định đánh giá quan trọng.
+7. HỌC LIỆU KHUYẾN KHÍCH MANG THEO ĐỂ THỰC HÀNH
+• Syllabus, giáo trình, slide và học liệu của một học phần cụ thể.
+• Rubric Writing, Speaking, Pronunciation hoặc các tiêu chí đánh giá hiện hành.
+• Bài Writing mẫu đã ẩn danh và audio Speaking mẫu phù hợp với quy định dữ liệu.
+• Sample answers, bộ câu hỏi, vocabulary/grammar materials và bài tập đang sử dụng.
+• Một số yêu cầu/ý tưởng tích hợp LMS hoặc quy trình đánh giá của Khoa/Bộ môn.
+8. LỘ TRÌNH SAU KHÓA TẬP HUẤN
+TRAINING
+SOFTWARE
+TRANSFER
+LANGUAGE
+CONFIG
+COURSE
+CONFIG
+PILOT
+KPI
+EVALUATION
+SCALE-UP
+Mục tiêu dài hạn là hình thành University AI Foreign Language Lab – một nền tảng dùng chung cho Tiếng Anh, Pháp, Trung, Nhật, Hàn và các ngoại ngữ khác, trong đó mỗi Khoa/Bộ môn có thể cấu hình riêng học liệu, rubric, AI Tutor và assessment workflow.
+KHÓA TẬP HUẤN HƯỚNG TỚI MỤC TIÊU
+Làm chủ học liệu + Làm chủ rubric + Làm chủ AI workflow + Làm chủ phần mềm đa ngôn ngữ
+Nhà trường trân trọng kính mời Quý Khoa/Bộ môn quan tâm và cử cán bộ, giảng viên phù hợp tham dự chương trình.
+TRÂN TRỌNG KÍNH MỜI
