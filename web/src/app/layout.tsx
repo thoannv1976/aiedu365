@@ -3,6 +3,7 @@ import { Be_Vietnam_Pro } from 'next/font/google'
 
 import { ChatWidget } from '@/components/chat/ChatWidget'
 import { SiteFooter } from '@/components/layout/SiteFooter'
+import { PublicChrome } from '@/components/layout/PublicChrome'
 import { SiteHeader } from '@/components/layout/SiteHeader'
 import { getSite } from '@/lib/api'
 
@@ -65,8 +66,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <main id="noi-dung" className="flex-1">
           {children}
         </main>
-        <SiteFooter site={site} />
-        <ChatWidget greeting={site.chat.greeting} suggestions={site.chat.suggestions} />
+        <PublicChrome>
+          <SiteFooter site={site} />
+          <ChatWidget greeting={site.chat.greeting} suggestions={site.chat.suggestions} />
+        </PublicChrome>
       </body>
     </html>
   )

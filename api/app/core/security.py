@@ -46,6 +46,17 @@ def get_identity(request: Request, settings: Settings = Depends(get_settings)) -
         )
     token = header[7:].strip()
 
+    if (
+        settings.environment == "development"
+        and settings.dev_admin_token
+        and token == settings.dev_admin_token
+    ):
+        # Lối vào dành riêng cho phát triển cục bộ. Ở production biến
+        # DEV_ADMIN_TOKEN để trống nên nhánh này không bao giờ đúng.
+        logger.warning("Đăng nhập quản trị bằng token phát triển.")
+        email = settings.admin_email_list[0] if settings.admin_email_list else "dev@local"
+        return AdminIdentity(uid="dev", email=email, role="super_admin")
+
     try:
         claims = _verify_firebase_token(token, settings)
     except Exception as exc:

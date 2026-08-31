@@ -56,6 +56,14 @@ class Settings(BaseSettings):
     admin_emails: str = "hoanganh.goldenlight@gmail.com"
     firebase_project_id: str = "aiedu365"
 
+    dev_admin_token: str = ""
+    """Lối vào quản trị cho môi trường phát triển.
+
+    Chỉ có tác dụng khi ``environment == "development"`` VÀ biến này được đặt
+    một giá trị khác rỗng. Ở production, biến để trống nên không tồn tại lối
+    vào nào ngoài Firebase — không phải một cửa hậu bị bỏ quên.
+    """
+
     @property
     def cors_origin_list(self) -> list[str]:
         return [o.strip() for o in self.cors_origins.split(",") if o.strip()]
