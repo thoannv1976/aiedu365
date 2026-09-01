@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import { ScheduleList } from '@/components/sections/ScheduleList'
 import { AskAboutCourse } from '@/components/ui/AskAboutCourse'
 import { courseName, getCourse, getCourses, getSchedules } from '@/lib/api'
+import { serializeJsonLd } from '@/lib/jsonld'
 
 export const revalidate = 60
 
@@ -61,7 +62,7 @@ export default async function CourseDetailPage({
     <article className={`group-${course.group}`}>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
       />
 
       <header className="border-b bg-ink-800 text-white">

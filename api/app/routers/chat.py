@@ -13,7 +13,8 @@ from app.core.config import get_settings
 from app.models.schemas import ChatFeedback, ChatRequest
 from app.services import firestore as fs
 from app.services.chat import get_chat_service
-from app.services.rate_limit import SlidingWindowLimiter, hash_ip
+from app.services.client_ip import client_key
+from app.services.rate_limit import SlidingWindowLimiter
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["chat"])
@@ -23,20 +24,13 @@ _session_limiter = SlidingWindowLimiter(_settings.rate_limit_messages_per_sessio
 _ip_limiter = SlidingWindowLimiter(_settings.rate_limit_requests_per_ip_hour)
 
 
-def _client_ip(request: Request) -> str:
-    forwarded = request.headers.get("x-forwarded-for", "")
-    if forwarded:
-        return forwarded.split(",")[0].strip()
-    return request.client.host if request.client else "unknown"
-
-
 def _sse(event: str, data: dict) -> str:
     return f"event: {event}\ndata: {json.dumps(data, ensure_ascii=False)}\n\n"
 
 
 @router.post("/chat")
 async def chat(payload: ChatRequest, request: Request) -> StreamingResponse:
-    ip_hash = hash_ip(_client_ip(request))
+    ip_hash = client_key(request)
     session_id = payload.sessionId or uuid.uuid4().hex[:20]
 
     allowed_ip, _ = _ip_limiter.allow(ip_hash)

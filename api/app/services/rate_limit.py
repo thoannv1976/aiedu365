@@ -6,7 +6,6 @@ thay bằng Firestore hoặc Memorystore mà không đổi giao diện gọi.
 
 from __future__ import annotations
 
-import hashlib
 import threading
 import time
 from collections import defaultdict, deque
@@ -41,8 +40,3 @@ class SlidingWindowLimiter:
                     bucket.popleft()
                 if not bucket:
                     del self._events[key]
-
-
-def hash_ip(ip: str, salt: str = "aiedu365") -> str:
-    """Băm IP — log lưu bản băm, không lưu IP thô."""
-    return hashlib.sha256(f"{salt}:{ip}".encode()).hexdigest()[:32]

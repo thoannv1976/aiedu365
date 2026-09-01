@@ -215,6 +215,22 @@ def update_lead(
     return {"ok": True}
 
 
+# Excel và LibreOffice coi ô bắt đầu bằng các ký tự này là công thức và THỰC THI
+# nó khi mở file. Người đăng ký nhập được tên và đơn vị, nên nếu xuất thẳng thì
+# file gửi cho ban tổ chức trở thành đường tấn công.
+_FORMULA_PREFIXES = ("=", "+", "-", "@", "\t", "\r")
+
+
+def _csv_safe(value: Any) -> str:
+    """Vô hiệu hóa công thức trong ô CSV mà vẫn giữ nguyên nội dung đọc được."""
+    text = "" if value is None else str(value)
+    if text.startswith(_FORMULA_PREFIXES):
+        # Dấu nháy đơn đầu ô là quy ước "đây là văn bản" của Excel; nó không
+        # hiện khi xem, và giá trị gốc vẫn nguyên vẹn.
+        return "'" + text
+    return text
+
+
 @router.get("/leads/export")
 def export_leads(identity: AdminIdentity = Depends(require_viewer)) -> StreamingResponse:
     rows = fs.list_documents("leads", limit=5000)
@@ -227,18 +243,20 @@ def export_leads(identity: AdminIdentity = Depends(require_viewer)) -> Streaming
     for r in rows:
         courses = r.get("courses", []) or []
         writer.writerow([
-            r.get("id", ""),
-            r.get("fullName", ""),
-            r.get("organization", ""),
-            r.get("position", ""),
-            r.get("email", ""),
-            r.get("phone", ""),
-            "; ".join(f"Khóa {c.get('code', '')[1:]} ({c.get('attendees', 0)} người)" for c in courses),
+            _csv_safe(r.get("id", "")),
+            _csv_safe(r.get("fullName", "")),
+            _csv_safe(r.get("organization", "")),
+            _csv_safe(r.get("position", "")),
+            _csv_safe(r.get("email", "")),
+            _csv_safe(r.get("phone", "")),
+            "; ".join(
+                f"Khóa {c.get('code', '')[1:]} ({c.get('attendees', 0)} người)" for c in courses
+            ),
             sum(int(c.get("attendees", 0) or 0) for c in courses),
-            r.get("source", ""),
-            r.get("status", ""),
-            r.get("message", ""),
-            r.get("_createdAt", ""),
+            _csv_safe(r.get("source", "")),
+            _csv_safe(r.get("status", "")),
+            _csv_safe(r.get("message", "")),
+            _csv_safe(r.get("_createdAt", "")),
         ])
     buffer.seek(0)
     # BOM để Excel trên Windows đọc đúng tiếng Việt.

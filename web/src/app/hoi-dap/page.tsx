@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { AskAssistant } from '@/components/ui/AskAssistant'
 import { getFaqs } from '@/lib/api'
+import { serializeJsonLd } from '@/lib/jsonld'
 
 export const metadata: Metadata = {
   title: 'Hỏi đáp',
@@ -25,7 +26,7 @@ export default async function FaqPage() {
 
   return (
     <div className="section">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} />
       <div className="container-page max-w-3xl">
         <p className="eyebrow">Hỏi đáp</p>
         <h1 className="heading mt-3">Câu hỏi thường gặp</h1>
