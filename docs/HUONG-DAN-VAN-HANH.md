@@ -102,7 +102,52 @@ nó hơn nội dung thư mời.
 
 ---
 
-## 4. Theo dõi hằng ngày
+## 4. Gợi ý câu hỏi trên màn hình chat
+
+Khi khách mở khung chat, họ thấy ba nhóm câu hỏi bấm được:
+
+| Nhóm | Nguồn |
+|---|---|
+| **Được hỏi nhiều nhất** | Câu thật của khách, tính theo số lượt hỏi |
+| **Câu hỏi gần đây** | Câu thật mới nhất, không trùng nhóm trên |
+| **Gợi ý** | Do ban tổ chức soạn, sửa ở **Nội dung trang** |
+
+Hai nhóm đầu tự cập nhật, không cần ai làm gì.
+
+### Câu nào được hiện, câu nào không
+
+Đây là câu hỏi do khách tự gõ, nên trước khi hiện lại cho người khác xem, mỗi
+câu phải qua ba lớp:
+
+1. **Chất lượng** — chatbot đã trả lời được, không bị guardrail chặn, không bị
+   khách đánh giá 👎.
+2. **Riêng tư** — tự động loại câu chứa email, số điện thoại, chuỗi số dài
+   (mã số thuế, mã sinh viên), đường dẫn, hoặc lời tự giới thiệu kiểu "tôi là
+   Nguyễn Văn A…". Câu quá ngắn hoặc quá dài cũng bị loại.
+3. **Kiểm duyệt** — anh/chị ẩn được bất kỳ câu nào.
+
+Riêng nhóm **Được hỏi nhiều nhất** còn yêu cầu câu đó đến từ **ít nhất hai
+phiên khác nhau**. Một câu chỉ một người hỏi thường mang tình huống riêng của
+họ, chưa phải câu hỏi chung.
+
+### Ẩn một câu
+
+Vào **Hội thoại**. Mỗi câu đang được gợi ý có nhãn xanh *"đang gợi ý"*; bấm
+**Ẩn khỏi gợi ý màn hình chat** là gỡ ngay. Câu không được gợi ý thì có dòng
+giải thích vì sao — bộ lọc không phải hộp đen.
+
+### Tắt hẳn mục này
+
+Vào **Nội dung trang**, bỏ chọn ô *"Hiện mục Được hỏi nhiều nhất và Câu hỏi gần
+đây"*. Khi đó khung chat chỉ còn các gợi ý do anh/chị soạn.
+
+> **Nên xem lại định kỳ.** Bộ lọc tự động chặn được các dạng thông tin cá nhân
+> phổ biến, nhưng không lường hết mọi cách một câu hỏi trở nên riêng tư. Mỗi
+> tuần nên lướt qua danh sách ở màn hình Hội thoại một lần.
+
+---
+
+## 5. Theo dõi hằng ngày
 
 Vào **Bảng điều khiển**, ba con số cần để mắt:
 
@@ -120,7 +165,7 @@ người chưa tự chọn được khóa. Cân nhắc làm rõ hơn phần gi�
 
 ---
 
-## 5. Quản lý đăng ký
+## 6. Quản lý đăng ký
 
 Vào **Đăng ký**:
 
@@ -133,7 +178,7 @@ khóa — giúp biết kênh nào hiệu quả.
 
 ---
 
-## 6. Sửa nội dung khóa học và hỏi đáp
+## 7. Sửa nội dung khóa học và hỏi đáp
 
 ### Nội dung khóa học
 
@@ -189,7 +234,7 @@ Anh/chị không thể tự gỡ quyền của chính mình.
 
 ---
 
-## 7. Chọn nhà cung cấp AI và nhập khóa API
+## 8. Chọn nhà cung cấp AI và nhập khóa API
 
 Vào **Nhà cung cấp AI** (cần quyền Super Admin).
 
@@ -248,9 +293,9 @@ Anh/chị không phải nhớ làm gì thêm.
 
 ---
 
-## 8. Điều chỉnh cách chatbot trả lời
+## 9. Điều chỉnh cách chatbot trả lời
 
-## 9. Thêm khóa học mới
+## 10. Thêm khóa học mới
 
 Hệ thống thiết kế mở. Thêm Khóa 29, 30… chỉ cần:
 
@@ -262,7 +307,7 @@ liệu thật — không cần sửa tay ở đâu cả.
 
 ---
 
-## 10. Khi có sự cố
+## 11. Khi có sự cố
 
 | Hiện tượng | Cách xử lý |
 |---|---|
@@ -272,6 +317,7 @@ liệu thật — không cần sửa tay ở đâu cả.
 | Chatbot nói sai mã khóa | Báo ngay bộ phận kỹ thuật — đây là lỗi nghiêm trọng |
 | Trang không hiện nội dung mới | Trang có bộ đệm 60 giây; đợi một phút rồi tải lại |
 | Không đăng nhập được quản trị | Token hết hạn. Đăng xuất rồi đăng nhập lại |
+| Câu hỏi riêng tư lọt lên màn hình chat | Vào **Hội thoại**, bấm *Ẩn khỏi gợi ý màn hình chat*. Nếu muốn tắt hẳn mục này thì bỏ chọn ở **Nội dung trang** |
 
 **Nhật ký kiểm toán** ghi lại mọi thay đổi trong khu quản trị: ai làm, làm gì,
 lúc nào. Bản ghi không sửa hay xóa được.

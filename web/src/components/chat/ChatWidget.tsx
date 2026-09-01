@@ -17,6 +17,8 @@ type Message = {
   pending?: boolean
 }
 
+type DigestQuestion = { question: string; count: number; courseCodes: string[] }
+
 const SESSION_KEY = 'aiedu-chat-session'
 const HISTORY_KEY = 'aiedu-chat-history'
 const LEAD_AFTER_TURNS = 3
@@ -33,6 +35,44 @@ function loadSessionId(): string {
   }
 }
 
+/** Một nhóm câu hỏi bấm được trên màn hình mở chat. Rỗng thì không hiện gì. */
+function QuestionGroup({
+  title,
+  items,
+  onPick,
+  showCount = false,
+}: {
+  title: string
+  items: DigestQuestion[]
+  onPick: (question: string) => void
+  showCount?: boolean
+}) {
+  if (items.length === 0) return null
+
+  return (
+    <section>
+      <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider muted">{title}</p>
+      <div className="flex flex-col gap-1.5">
+        {items.map((item) => (
+          <button
+            key={item.question}
+            type="button"
+            onClick={() => onPick(item.question)}
+            className="flex items-center justify-between gap-3 rounded-lg border surface px-3 py-2 text-left text-sm transition hover:border-brand-500"
+          >
+            <span className="min-w-0">{item.question}</span>
+            {showCount && item.count > 1 && (
+              <span className="shrink-0 rounded-full bg-brand-50 px-2 py-0.5 text-[11px] font-medium tabular-nums text-brand-700 dark:bg-brand-900/40 dark:text-brand-300">
+                {item.count} lượt
+              </span>
+            )}
+          </button>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 export function ChatWidget({
   greeting,
   suggestions,
@@ -47,6 +87,10 @@ export function ChatWidget({
   const [courseContext, setCourseContext] = useState<string | null>(null)
   const [leadDismissed, setLeadDismissed] = useState(false)
   const [leadDone, setLeadDone] = useState(false)
+  const [digest, setDigest] = useState<{ frequent: DigestQuestion[]; recent: DigestQuestion[] }>({
+    frequent: [],
+    recent: [],
+  })
   const sessionRef = useRef<string>('')
   const scrollRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
@@ -73,6 +117,26 @@ export function ChatWidget({
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' })
   }, [messages, open])
+
+  // Nạp câu hỏi phổ biến khi người dùng mở chat lần đầu. Không nạp sẵn lúc
+  // tải trang: phần lớn khách không mở chat, gọi trước là lãng phí.
+  useEffect(() => {
+    if (!open || digest.frequent.length || digest.recent.length) return
+    let cancelled = false
+    fetch(`${apiBase}/api/chat/questions?limit=4`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (!cancelled && data?.enabled) {
+          setDigest({ frequent: data.frequent ?? [], recent: data.recent ?? [] })
+        }
+      })
+      .catch(() => {
+        // Không lấy được thì vẫn còn các gợi ý do ban tổ chức soạn.
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [open, digest.frequent.length, digest.recent.length])
 
   // Mở chat từ nút "Hỏi về khóa này" trên thẻ khóa học, kèm ngữ cảnh khóa đó.
   useEffect(() => {
@@ -216,6 +280,7 @@ export function ChatWidget({
     }
   }
 
+  const hasDigest = digest.frequent.length > 0 || digest.recent.length > 0
   const userTurns = messages.filter((m) => m.role === 'user').length
   const showLead = !leadDismissed && !leadDone && userTurns >= LEAD_AFTER_TURNS && !busy
 
@@ -271,22 +336,33 @@ export function ChatWidget({
 
           <div ref={scrollRef} className="flex-1 space-y-4 overflow-y-auto px-4 py-4">
             {messages.length === 0 && (
-              <div className="space-y-4">
+              <div className="space-y-5">
                 <div className="rounded-xl rounded-tl-sm border surface px-4 py-3 text-sm leading-relaxed">
                   {greeting}
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  {suggestions.map((s) => (
-                    <button
-                      key={s}
-                      type="button"
-                      onClick={() => send(s)}
-                      className="chip border-brand-200 bg-brand-50 text-brand-700 transition hover:bg-brand-100 dark:border-brand-800 dark:bg-brand-900/30 dark:text-brand-300"
-                    >
-                      {s}
-                    </button>
-                  ))}
-                </div>
+
+                {/* Câu hỏi thật của người dùng lên trước: chúng đã được chứng
+                    minh là thứ người ta muốn biết. Danh sách do ban tổ chức
+                    soạn lùi xuống và rút gọn khi đã có dữ liệu thật, để cả ba
+                    mục cùng nằm trong tầm nhìn không phải cuộn. */}
+                <QuestionGroup
+                  title="Được hỏi nhiều nhất"
+                  items={digest.frequent}
+                  onPick={send}
+                  showCount
+                />
+
+                <QuestionGroup title="Câu hỏi gần đây" items={digest.recent} onPick={send} />
+
+                <QuestionGroup
+                  title={hasDigest ? 'Gợi ý khác' : 'Gợi ý'}
+                  items={(hasDigest ? suggestions.slice(0, 3) : suggestions).map((question) => ({
+                    question,
+                    count: 0,
+                    courseCodes: [],
+                  }))}
+                  onPick={send}
+                />
               </div>
             )}
 

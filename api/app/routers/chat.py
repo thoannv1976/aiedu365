@@ -13,6 +13,7 @@ from app.core.config import get_settings
 from app.models.schemas import ChatFeedback, ChatRequest
 from app.services import firestore as fs
 from app.services.chat import get_chat_service
+from app.services.question_digest import get_digest
 from app.services.client_ip import client_key
 from app.services.rate_limit import SlidingWindowLimiter
 
@@ -26,6 +27,23 @@ _ip_limiter = SlidingWindowLimiter(_settings.rate_limit_requests_per_ip_hour)
 
 def _sse(event: str, data: dict) -> str:
     return f"event: {event}\ndata: {json.dumps(data, ensure_ascii=False)}\n\n"
+
+
+@router.get("/chat/questions")
+def popular_questions(limit: int = 5) -> dict:
+    """Câu hỏi được hỏi nhiều nhất và mới nhất, hiện trên màn hình mở chat.
+
+    Chỉ gồm câu đã qua lọc riêng tư và kiểm duyệt — xem ``question_digest``.
+    Ban tổ chức tắt được mục này trong trang quản trị.
+    """
+    from app.services.store import get_store
+
+    chat_config = get_store().site.get("chat", {}) or {}
+    if chat_config.get("showPopularQuestions") is False:
+        return {"frequent": [], "recent": [], "enabled": False}
+
+    digest = get_digest().get(limit=max(1, min(limit, 10)))
+    return {**digest, "enabled": True}
 
 
 @router.post("/chat")
@@ -101,6 +119,7 @@ def _log_turn(session_id: str, ip_hash: str, payload: ChatRequest, outcome) -> N
             },
             doc_id=outcome.message_id,
         )
+        get_digest().invalidate()
     except Exception as exc:  # pragma: no cover
         logger.warning("Không ghi được log hội thoại: %s", exc)
 

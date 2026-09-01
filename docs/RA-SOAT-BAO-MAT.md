@@ -72,6 +72,7 @@ nền; nếu vẫn bị spam thì bật thêm captcha ở tầng frontend (xem m
 | Nhật ký | IP được băm trước khi ghi, không lưu IP thô |
 | Firestore rules | Client chỉ đọc nội dung đã publish, chặn mọi thao tác ghi |
 | Bí mật | Không có khóa nào trong repo; CI/CD dùng Workload Identity Federation nên không tạo file khóa service account |
+| Gợi ý câu hỏi trên màn hình chat | Câu hỏi do người dùng gõ được hiện lại công khai, nên qua ba lớp: chỉ lấy câu đã trả lời được và không bị guardrail chặn; lọc email, số điện thoại, chuỗi số dài, đường dẫn và lời tự giới thiệu; ban tổ chức ẩn được từng câu. Nhóm "được hỏi nhiều nhất" còn yêu cầu tối thiểu hai phiên khác nhau. Tắt được toàn bộ mục |
 | Khóa API nhà cung cấp | Lưu vào Secret Manager, không bao giờ ghi xuống Firestore. Chỉ ghi vào, không có đường đọc ngược ra qua API — trang quản trị chỉ thấy 4 ký tự cuối. Nhật ký kiểm toán ghi việc đổi khóa nhưng không ghi giá trị. Chỉ Super Admin nhập/xóa được. Có test khẳng định khóa không lộ ở bất kỳ endpoint nào |
 | Quyền service account | Đặc quyền tối thiểu: service API chỉ có `aiplatform.user`, `datastore.user`, `secretmanager.secretAccessor` |
 | Container | Chạy bằng user không phải root |
@@ -84,5 +85,6 @@ nền; nếu vẫn bị spam thì bật thêm captcha ở tầng frontend (xem m
 |---|---|
 | **Captcha cho form đăng ký** | Giới hạn tần suất đã chặn spam thô. Nếu bị tấn công có tổ chức thì bật Cloudflare Turnstile hoặc reCAPTCHA v3 — cần khóa API của dịch vụ đó |
 | **Giới hạn tần suất khi chạy nhiều instance** | Hiện lưu trong bộ nhớ tiến trình, đủ cho quy mô hiện tại. Khi Cloud Run scale lên nhiều instance, mỗi instance đếm riêng nên hạn mức thực tế nhân lên. Chuyển sang Firestore hoặc Memorystore nếu cần chính xác |
-| **Banner đồng ý thu thập dữ liệu** | Cần khi công bố chính thức, kèm trang chính sách dữ liệu |
+| **Banner đồng ý thu thập dữ liệu** | Cần khi công bố chính thức, kèm trang chính sách dữ liệu. Nên nêu rõ câu hỏi có thể được hiện lại ẩn danh ở mục gợi ý |
+| **Rà soát định kỳ mục gợi ý câu hỏi** | Bộ lọc chặn được các dạng thông tin cá nhân phổ biến nhưng không lường hết mọi trường hợp. Nên lướt màn hình Hội thoại mỗi tuần một lần |
 | **Sao lưu Firestore** | Script khởi tạo chưa bật lịch sao lưu tự động; nên bật trước khi có dữ liệu thật |

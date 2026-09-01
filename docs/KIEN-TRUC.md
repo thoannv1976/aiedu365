@@ -190,7 +190,42 @@ CI mà không tốn chi phí API.
 
 ---
 
-## 6. Dữ liệu
+## 6. Gợi ý câu hỏi trên màn hình chat
+
+`api/app/services/question_digest.py` tổng hợp câu được hỏi nhiều nhất và câu
+mới nhất từ log hội thoại.
+
+Việc hiện lại câu hỏi của người này cho người khác xem là một quyết định về
+quyền riêng tư, không chỉ là một truy vấn. Ba lớp lọc:
+
+1. **Chất lượng** — đã trả lời được, không vi phạm guardrail, không bị đánh
+   giá 👎.
+2. **Riêng tư** — loại câu chứa email, số điện thoại (kể cả dạng có dấu cách
+   và dấu chấm), chuỗi số từ 7 chữ số, đường dẫn, hoặc lời tự giới thiệu. Giới
+   hạn độ dài 10–120 ký tự: quá dài gần như chắc chắn là mô tả tình huống
+   riêng của một đơn vị cụ thể.
+3. **Kiểm duyệt** — ban tổ chức ẩn được từng câu, và tắt được cả mục.
+
+Nhóm "được hỏi nhiều nhất" yêu cầu **tối thiểu hai phiên khác nhau**: một câu
+chỉ một người hỏi thì nhiều khả năng mang tình huống riêng, không phải câu hỏi
+chung. Đây là lớp bảo vệ mạnh hơn cả bộ lọc mẫu, vì nó không phụ thuộc vào việc
+đoán trước mọi dạng thông tin cá nhân.
+
+Các biến thể của cùng một câu ("Khóa 22 học gì?" và "khóa 22 học gì") được gom
+làm một qua hàm chuẩn hóa dùng chung với bảng alias. Danh sách "gần đây" loại
+những câu đã nằm ở "nhiều nhất" — hai danh sách giống hệt nhau thì mục thứ hai
+vô dụng.
+
+Bản tổng hợp có bộ đệm 60 giây và bị làm mới ngay sau mỗi lượt hỏi mới, vì
+endpoint này bị gọi mỗi lần có người mở khung chat.
+
+Màn hình Hội thoại của trang quản trị hiển thị câu nào đang được gợi ý và **vì
+sao** câu khác thì không — nếu không, bộ lọc riêng tư trở thành hộp đen với
+người vận hành.
+
+---
+
+## 7. Dữ liệu
 
 Nguồn mặc định là các file JSON trong `data/`. Nội dung ban tổ chức sửa trong
 trang quản trị được ghi đè lên trên. JSON còn là phương án dự phòng — nhờ vậy
@@ -225,7 +260,7 @@ IP người dùng được **băm** trước khi ghi log, không lưu IP thô.
 
 ---
 
-## 7. Triển khai
+## 8. Triển khai
 
 ```bash
 ./infra/setup-gcp.sh aiedu365 asia-southeast1     # chạy một lần
@@ -249,7 +284,7 @@ nên không có file khóa service account nào được tạo hay lưu.
 
 ---
 
-## 8. Chi phí
+## 9. Chi phí
 
 Ước tính ~1.000 phiên chat/tháng:
 

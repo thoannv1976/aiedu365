@@ -14,6 +14,7 @@ from fastapi.responses import StreamingResponse
 from app.core.config import get_settings
 from app.core.security import AdminIdentity, require_editor, require_super_admin, require_viewer
 from app.services import firestore as fs
+from app.services.question_digest import get_digest, is_publishable, privacy_reason
 from app.services.retrieval import get_retrieval
 from app.services.store import get_store
 
@@ -95,7 +96,49 @@ def conversations(
     if course:
         code = course.upper()
         rows = [r for r in rows if code in (r.get("courseCodes") or [])]
+
+    # Cho ban tổ chức thấy câu nào đang được gợi ý trên màn hình chat và vì sao
+    # câu khác thì không — nếu không, bộ lọc riêng tư trở thành hộp đen.
+    for row in rows:
+        row["inDigest"] = is_publishable(row)
+        row["digestBlockedBy"] = (
+            "đã ẩn thủ công"
+            if row.get("hiddenFromDigest")
+            else privacy_reason(row.get("question", ""))
+            or ("chưa trả lời được" if not row.get("answered") else "")
+            or ("người dùng đánh giá không hữu ích" if row.get("feedback") == "down" else "")
+            or ("guardrail chặn" if row.get("violations") else "")
+        )
     return rows[:limit]
+
+
+@router.post("/conversations/{message_id}/hide-from-digest")
+def hide_from_digest(
+    message_id: str,
+    hidden: bool = Body(default=True, embed=True),
+    identity: AdminIdentity = Depends(require_editor),
+) -> dict[str, Any]:
+    """Ẩn hoặc hiện lại một câu hỏi ở mục gợi ý trên màn hình chat.
+
+    Bộ lọc tự động đã chặn email, số điện thoại và lời tự giới thiệu, nhưng
+    không thể lường hết mọi cách một câu hỏi trở nên riêng tư. Đây là nút gỡ
+    thủ công cho ban tổ chức.
+    """
+    if not fs.get_document("chat_messages", message_id):
+        raise HTTPException(status_code=404, detail="Không tìm thấy tin nhắn.")
+    fs.update_document("chat_messages", message_id, {"hiddenFromDigest": hidden})
+    get_digest().invalidate()
+    fs.write_audit(
+        identity.email,
+        "conversation.hide_from_digest" if hidden else "conversation.show_in_digest",
+        f"chat_messages/{message_id}",
+    )
+    return {
+        "ok": True,
+        "message": "Đã ẩn khỏi gợi ý trên màn hình chat."
+        if hidden
+        else "Đã hiện lại ở gợi ý trên màn hình chat.",
+    }
 
 
 @router.post("/conversations/{message_id}/to-faq")

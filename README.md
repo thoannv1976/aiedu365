@@ -85,6 +85,8 @@ chuyên sâu số 1"* đến *"số 8"* — hệ thống nhận cả hai cách g
 - RAG có chốt chặn: thiếu căn cứ thì từ chối, không gọi model để bịa
 - Phân loại ý định — câu so sánh và định tuyến khóa dùng luồng truy hồi riêng
 - Chuẩn hóa mã khóa trước khi truy hồi, không phó mặc cho mô hình
+- Màn hình mở chat hiện câu **được hỏi nhiều nhất** và **gần đây** — lọc riêng
+  tư ba lớp trước khi hiện lại câu hỏi của người dùng
 - Trích dẫn nguồn dưới mỗi câu trả lời
 - Guardrail chặn khẳng định vi phạm ràng buộc trong thư mời
 - Chạy được trên Vertex AI, Gemini, Claude hoặc OpenAI — ban tổ chức tự chọn
@@ -104,7 +106,7 @@ chuyên sâu số 1"* đến *"số 8"* — hệ thống nhận cả hai cách g
 ## Kiểm thử
 
 ```bash
-cd api && ../.venv/bin/python -m pytest tests/ -q    # 184 test
+cd api && ../.venv/bin/python -m pytest tests/ -q    # 209 test
 cd web && npm run typecheck
 ```
 

@@ -151,6 +151,9 @@
       "Mỗi đơn vị nên cử bao nhiêu người?",
       "Cần chuẩn bị dữ liệu gì trước khi đến?"
     ],
-    "fallback": "Thông tin này chưa có trong bộ tài liệu của chương trình. Anh/chị vui lòng liên hệ ban tổ chức để được trả lời chính xác."
+    "fallback": "Thông tin này chưa có trong bộ tài liệu của chương trình. Anh/chị vui lòng liên hệ ban tổ chức để được trả lời chính xác.",
+    "showPopularQuestions": true,
+    "popularHeading": "Được hỏi nhiều nhất",
+    "recentHeading": "Câu hỏi gần đây"
   }
 }

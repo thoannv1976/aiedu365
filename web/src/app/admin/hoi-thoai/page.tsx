@@ -16,6 +16,9 @@ type Conversation = {
   topScore: number
   violations: string[]
   feedback?: 'up' | 'down'
+  hiddenFromDigest?: boolean
+  inDigest: boolean
+  digestBlockedBy: string
   _createdAt?: string
 }
 
@@ -29,6 +32,19 @@ export default function ConversationsPage() {
     () => adminGet(`/conversations?only_unanswered=${onlyUnanswered}&limit=150`),
     [onlyUnanswered],
   )
+
+  const toggleDigest = async (row: Conversation) => {
+    try {
+      const res = await adminPost<{ message: string }>(
+        `/conversations/${row.id}/hide-from-digest`,
+        { hidden: !row.hiddenFromDigest },
+      )
+      setNotice(res.message)
+      reload()
+    } catch (err) {
+      setNotice(err instanceof Error ? err.message : 'Không đổi được.')
+    }
+  }
 
   const promote = async (id: string) => {
     if (!answer.trim()) return
@@ -93,6 +109,14 @@ export default function ConversationsPage() {
                     guardrail
                   </span>
                 )}
+                {row.inDigest && (
+                  <span
+                    className="chip border-brand-500 text-[11px] text-brand-700 dark:text-brand-300"
+                    title="Câu này đang được gợi ý trên màn hình mở chat"
+                  >
+                    đang gợi ý
+                  </span>
+                )}
               </div>
             </div>
 
@@ -103,6 +127,12 @@ export default function ConversationsPage() {
               )}
               {row._createdAt && <span>· {new Date(row._createdAt).toLocaleString('vi-VN')}</span>}
             </p>
+
+            {!row.inDigest && row.digestBlockedBy && (
+              <p className="mt-2 text-xs muted">
+                Không hiện ở gợi ý màn hình chat: {row.digestBlockedBy}.
+              </p>
+            )}
 
             {promoting === row.id ? (
               <div className="mt-3 space-y-2">
@@ -130,13 +160,26 @@ export default function ConversationsPage() {
                 </div>
               </div>
             ) : (
-              <button
-                type="button"
-                onClick={() => setPromoting(row.id)}
-                className="mt-3 text-xs text-brand-600 hover:underline dark:text-brand-400"
-              >
-                Viết câu trả lời chuẩn → tạo FAQ
-              </button>
+              <div className="mt-3 flex flex-wrap gap-4 text-xs">
+                <button
+                  type="button"
+                  onClick={() => setPromoting(row.id)}
+                  className="text-brand-600 hover:underline dark:text-brand-400"
+                >
+                  Viết câu trả lời chuẩn → tạo FAQ
+                </button>
+                {(row.inDigest || row.hiddenFromDigest) && (
+                  <button
+                    type="button"
+                    onClick={() => toggleDigest(row)}
+                    className="muted hover:underline"
+                  >
+                    {row.hiddenFromDigest
+                      ? 'Hiện lại ở gợi ý màn hình chat'
+                      : 'Ẩn khỏi gợi ý màn hình chat'}
+                  </button>
+                )}
+              </div>
             )}
           </article>
         ))}

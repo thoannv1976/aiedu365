@@ -25,7 +25,12 @@ type Site = {
     registrationDeadline: string
     note: string
   }
-  chat: { greeting: string; suggestions: string[]; fallback: string }
+  chat: {
+    greeting: string
+    suggestions: string[]
+    fallback: string
+    showPopularQuestions?: boolean
+  }
 }
 
 export default function SiteContentPage() {
@@ -170,6 +175,27 @@ export default function SiteContentPage() {
               value={form.chat.suggestions}
               onChange={(v) => setForm({ ...form, chat: { ...form.chat, suggestions: v } })}
             />
+            <label className="flex items-start gap-2.5 text-sm">
+              <input
+                type="checkbox"
+                checked={form.chat.showPopularQuestions !== false}
+                onChange={(e) =>
+                  setForm({
+                    ...form,
+                    chat: { ...form.chat, showPopularQuestions: e.target.checked },
+                  })
+                }
+                className="mt-0.5 h-4 w-4 accent-[#0b3b75]"
+              />
+              <span>
+                Hiện mục “Được hỏi nhiều nhất” và “Câu hỏi gần đây” trên màn hình mở chat
+                <span className="mt-0.5 block text-xs muted">
+                  Chỉ hiện câu đã trả lời được và qua bộ lọc riêng tư (loại email, số điện thoại,
+                  lời tự giới thiệu). Ẩn từng câu ở màn hình Hội thoại.
+                </span>
+              </span>
+            </label>
+
             <TextArea
               label="Câu trả lời khi không đủ căn cứ"
               rows={3}
