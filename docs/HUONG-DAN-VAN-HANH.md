@@ -189,9 +189,68 @@ Anh/chị không thể tự gỡ quyền của chính mình.
 
 ---
 
-## 7. Điều chỉnh cách chatbot trả lời
+## 7. Chọn nhà cung cấp AI và nhập khóa API
 
-## 8. Thêm khóa học mới
+Vào **Nhà cung cấp AI** (cần quyền Super Admin).
+
+### Bốn lựa chọn
+
+| Nhà cung cấp | Cần khóa API | Có embedding | Ghi chú |
+|---|---|---|---|
+| **Google Vertex AI** | Không | Có | Gemini chạy trong chính project GCP, xác thực bằng IAM. Là lựa chọn mặc định |
+| **Google Gemini (AI Studio)** | Có | Có | Dùng khi chưa bật Vertex AI. Lấy khóa tại `aistudio.google.com/apikey` |
+| **Claude (Anthropic)** | Có | **Không** | Lấy khóa tại `console.anthropic.com` |
+| **OpenAI** | Có | Có | Lấy khóa tại `platform.openai.com/api-keys` |
+
+### Hai vai trò tách biệt
+
+Hệ thống dùng AI cho hai việc khác nhau, và anh/chị chọn riêng cho từng việc:
+
+- **Trả lời câu hỏi** — sinh câu trả lời cho người dùng.
+- **Tạo vector truy hồi** — biến tài liệu thành số để tìm đoạn liên quan.
+
+Sở dĩ tách ra vì **Claude không có dịch vụ embedding**. Muốn dùng Claude để trả
+lời thì phải chọn thêm một bên khác (Vertex AI, Gemini hoặc OpenAI) cho phần
+truy hồi. Hệ thống sẽ chặn nếu anh/chị chọn sai.
+
+### Cách nhập khóa
+
+1. Dán khóa vào ô của nhà cung cấp tương ứng, bấm **Lưu khóa**.
+2. Bấm **Kiểm tra kết nối** — hệ thống gọi thử một câu ngắn và báo lại có dùng
+   được không, mất bao lâu. Làm bước này *trước khi* chuyển sang dùng.
+3. Chọn nhà cung cấp ở phần **Đang sử dụng**, bấm **Áp dụng**.
+
+Khóa được lưu vào Secret Manager của GCP và **không đọc ngược ra được** — kể cả
+tài khoản Super Admin cũng chỉ thấy 4 ký tự cuối. Muốn đổi thì dán khóa mới đè
+lên. Nhật ký kiểm toán ghi lại việc đổi khóa nhưng không ghi giá trị khóa.
+
+### Lưu ý quan trọng khi đổi bên tạo vector
+
+Đổi bên tạo vector là **đổi hẳn không gian vector** — mọi vector cũ trở nên vô
+nghĩa và chatbot sẽ trả về kết quả gần như ngẫu nhiên. Hệ thống tự động index
+lại Knowledge Base ngay khi anh/chị bấm Áp dụng, mất khoảng vài chục giây.
+Anh/chị không phải nhớ làm gì thêm.
+
+Đổi bên **trả lời** thì không ảnh hưởng tới vector, không cần index lại.
+
+### Gợi ý cấu hình
+
+| Tình huống | Cấu hình |
+|---|---|
+| Đã bật Vertex AI trên project GCP | Vertex AI cho cả hai vai trò — không cần khóa nào |
+| Chưa bật Vertex AI | Gemini (AI Studio) cho cả hai vai trò |
+| Muốn chất lượng tiếng Việt cao nhất cho câu tư vấn | Claude trả lời + Vertex AI hoặc OpenAI tạo vector |
+| Đã có sẵn tài khoản OpenAI | OpenAI cho cả hai vai trò |
+
+> Nếu thấy cảnh báo "khóa đang nằm trong bộ nhớ tiến trình", nghĩa là service
+> chưa có quyền ghi Secret Manager — khóa sẽ mất khi khởi động lại. Báo bộ phận
+> kỹ thuật cấp quyền `roles/secretmanager.admin` cho service account.
+
+---
+
+## 8. Điều chỉnh cách chatbot trả lời
+
+## 9. Thêm khóa học mới
 
 Hệ thống thiết kế mở. Thêm Khóa 29, 30… chỉ cần:
 
@@ -203,11 +262,12 @@ liệu thật — không cần sửa tay ở đâu cả.
 
 ---
 
-## 9. Khi có sự cố
+## 10. Khi có sự cố
 
 | Hiện tượng | Cách xử lý |
 |---|---|
-| Chatbot không phản hồi | Kiểm tra `/healthz` của service API. Nếu lỗi, báo bộ phận kỹ thuật |
+| Chatbot không phản hồi | Vào **Nhà cung cấp AI**, bấm *Kiểm tra kết nối*. Khóa API hết hạn hoặc hết hạn mức là nguyên nhân thường gặp nhất |
+| Chatbot trả lời lung tung, không liên quan | Có thể vừa đổi bên tạo vector mà chưa index lại. Vào **Knowledge Base**, bấm *Cập nhật Knowledge Base* |
 | Chatbot trả lời sai nội dung | Vào Hội thoại, tìm câu đó, viết FAQ đè lên (mục 3) |
 | Chatbot nói sai mã khóa | Báo ngay bộ phận kỹ thuật — đây là lỗi nghiêm trọng |
 | Trang không hiện nội dung mới | Trang có bộ đệm 60 giây; đợi một phút rồi tải lại |

@@ -10,7 +10,9 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import get_settings
 from app.core.logging import configure_logging
-from app.routers import admin, admin_content, chat, content, leads
+from app.routers import admin, admin_content, admin_providers, chat, content, leads
+from app.providers import reset_providers
+from app.services.llm_settings import on_change
 from app.services.retrieval import get_retrieval
 from app.services.store import get_store
 
@@ -20,13 +22,18 @@ logger = logging.getLogger(__name__)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     configure_logging()
+    on_change(reset_providers)
     settings = get_settings()
     store = get_store()
+    from app.services.llm_settings import get_config
+
+    config = get_config()
     logger.info(
-        "Khởi động %s — %d khóa học, provider=%s",
+        "Khởi động %s — %d khóa học, hội thoại=%s, truy hồi=%s",
         settings.app_name,
         len(store.courses),
-        settings.llm_provider,
+        config.chat_provider,
+        config.embedding_provider,
     )
     try:
         await get_retrieval().ensure_index()
@@ -55,6 +62,7 @@ def create_app() -> FastAPI:
     app.include_router(leads.router, prefix="/api")
     app.include_router(admin.router, prefix="/api")
     app.include_router(admin_content.router, prefix="/api")
+    app.include_router(admin_providers.router, prefix="/api")
 
     @app.get("/healthz", tags=["system"])
     def healthz() -> dict:

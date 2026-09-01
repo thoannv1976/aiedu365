@@ -38,7 +38,9 @@ echo "▸ Service account cho API — chỉ quyền tối thiểu"
 gcloud iam service-accounts describe "aiedu365-api@$PROJECT.iam.gserviceaccount.com" >/dev/null 2>&1 || \
   gcloud iam service-accounts create aiedu365-api --display-name="AIEDU365 API"
 
-for role in roles/aiplatform.user roles/datastore.user roles/secretmanager.secretAccessor; do
+# secretAdmin cần cho việc ban tổ chức nhập khóa API của Claude/OpenAI/Gemini
+# trong trang quản trị: service phải tạo được secret và thêm phiên bản mới.
+for role in roles/aiplatform.user roles/datastore.user roles/secretmanager.admin; do
   gcloud projects add-iam-policy-binding "$PROJECT" \
     --member="serviceAccount:aiedu365-api@$PROJECT.iam.gserviceaccount.com" \
     --role="$role" --condition=None --quiet >/dev/null

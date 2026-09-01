@@ -147,15 +147,44 @@ với Khóa 21 là căn cứ hợp lệ để nhắc Khóa 21.
 
 ## 5. LLM Gateway
 
-`api/app/providers/` — đổi nhà cung cấp chỉ cần đổi biến `LLM_PROVIDER`:
+`api/app/providers/` — bốn nhà cung cấp thật cộng một chế độ thử. Ban tổ chức
+chọn trong trang quản trị; client được dựng lại ngay khi cấu hình hoặc khóa
+thay đổi, không cần khởi động lại service.
 
-| Provider | Dùng khi |
-|---|---|
-| `vertex` | Mặc định. Gemini qua Vertex AI, cùng project, cùng IAM |
-| `anthropic` | Claude API. Không có embedding nên phần đó tự quay về Vertex |
-| `echo` | Phát triển và kiểm thử. Không gọi mạng, vẫn đi hết luồng RAG |
+| Provider | Xác thực | Hội thoại | Embedding |
+|---|---|---|---|
+| `vertex` | IAM của project GCP | Có | Có |
+| `gemini` | Khóa API (AI Studio) | Có | Có |
+| `anthropic` | Khóa API | Có | **Không** |
+| `openai` | Khóa API | Có | Có |
+| `echo` | — | Có | Có (hash tất định) |
 
-Provider `echo` dùng embedding hash bag-of-words tất định — không thay được mô
+### Hai vai trò tách biệt
+
+Hệ thống chọn riêng provider cho **sinh câu trả lời** và cho **tạo vector**.
+Không phải để cho linh hoạt, mà vì Claude không có dịch vụ embedding: gộp một
+lựa chọn duy nhất thì không dùng được Claude. `validate()` chặn cấu hình sai
+ngay từ API thay vì để hỏng lúc chạy.
+
+### Đổi embedding buộc index lại
+
+Mỗi mô hình embedding sinh ra một không gian vector riêng. Giữ vector cũ khi
+đổi mô hình thì truy hồi trả về kết quả gần như ngẫu nhiên — hỏng âm thầm,
+không có lỗi nào báo ra. Vì vậy endpoint đổi cấu hình **tự index lại** khi
+phát hiện embedding thay đổi, thay vì tin rằng người vận hành sẽ nhớ.
+
+### Lưu khóa API
+
+`api/app/services/secrets.py` — Secret Manager của GCP, có phương án dự phòng
+trong bộ nhớ tiến trình khi chạy cục bộ. Khóa **không bao giờ** ghi xuống
+Firestore: Firestore có nhiều tài khoản đọc được và bí mật không nên nằm cạnh
+dữ liệu nghiệp vụ.
+
+Khóa chỉ ghi vào, không có đường đọc ngược ra qua API. Trang quản trị thấy
+trạng thái và 4 ký tự cuối. Nhật ký kiểm toán ghi việc đổi khóa nhưng không ghi
+giá trị. Có test khẳng định khóa không xuất hiện ở bất kỳ endpoint nào.
+
+Chế độ `echo` dùng embedding hash bag-of-words tất định — không thay được mô
 hình thật, nhưng đủ để kiểm thử luồng truy hồi và chạy toàn bộ test suite trong
 CI mà không tốn chi phí API.
 

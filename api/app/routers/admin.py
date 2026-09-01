@@ -275,12 +275,23 @@ def export_leads(identity: AdminIdentity = Depends(require_viewer)) -> Streaming
 
 @router.get("/config")
 def get_config(identity: AdminIdentity = Depends(require_viewer)) -> dict[str, Any]:
+    """Tham số truy hồi và sinh câu trả lời.
+
+    Việc chọn nhà cung cấp và tên model nằm ở ``/admin/providers`` — giữ một
+    nguồn sự thật duy nhất cho mỗi thứ, tránh hai màn hình cùng sửa một giá trị.
+    """
+    from app.services.llm_settings import PROVIDERS, get_config as get_llm_config
+
     settings = get_settings()
     stored = fs.get_document("app_config", "chat") or {}
+    llm = get_llm_config()
     return {
-        "provider": settings.llm_provider,
-        "chatModel": stored.get("chatModel", settings.chat_model),
-        "reasoningModel": stored.get("reasoningModel", settings.reasoning_model),
+        "provider": llm.chat_provider,
+        "providerLabel": PROVIDERS.get(llm.chat_provider, {}).get("label", llm.chat_provider),
+        "embeddingProvider": llm.embedding_provider,
+        "chatModel": llm.chat_model,
+        "reasoningModel": llm.reasoning_model,
+        "embeddingModel": llm.embedding_model,
         "temperature": stored.get("temperature", settings.temperature),
         "topK": stored.get("topK", settings.retrieval_top_k),
         "topKCompare": stored.get("topKCompare", settings.retrieval_top_k_compare),
@@ -297,17 +308,18 @@ def update_config(
 ) -> dict[str, Any]:
     settings = get_settings()
     before = fs.get_document("app_config", "chat") or {}
+    # Tên model không sửa ở đây: chúng thuộc về cấu hình nhà cung cấp.
     allowed = {
-        "chatModel", "reasoningModel", "temperature", "topK", "topKCompare",
-        "similarityThreshold", "maxOutputTokens",
+        "temperature", "topK", "topKCompare", "similarityThreshold", "maxOutputTokens",
     }
     update = {k: v for k, v in payload.items() if k in allowed}
+    if not update:
+        raise HTTPException(status_code=400, detail="Không có trường hợp lệ để cập nhật.")
+
     fs.add_document("app_config", {**before, **update}, doc_id="chat")
 
     # Áp dụng ngay cho tiến trình đang chạy.
     for key, attr in (
-        ("chatModel", "chat_model"),
-        ("reasoningModel", "reasoning_model"),
         ("temperature", "temperature"),
         ("topK", "retrieval_top_k"),
         ("topKCompare", "retrieval_top_k_compare"),

@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 import { ErrorNotice, PageHeader, useAdminData } from '@/components/admin/Panels'
@@ -7,8 +8,11 @@ import { adminGet, adminPut } from '@/lib/admin'
 
 type Config = {
   provider: string
+  providerLabel: string
+  embeddingProvider: string
   chatModel: string
   reasoningModel: string
+  embeddingModel: string
   temperature: number
   topK: number
   topKCompare: number
@@ -44,7 +48,13 @@ export default function ConfigPage() {
   const saveConfig = async () => {
     if (!form) return
     try {
-      await adminPut('/config', form)
+      await adminPut('/config', {
+        temperature: form.temperature,
+        topK: form.topK,
+        topKCompare: form.topKCompare,
+        similarityThreshold: form.similarityThreshold,
+        maxOutputTokens: form.maxOutputTokens,
+      })
       setNotice('Đã lưu cấu hình và áp dụng ngay cho các câu hỏi tiếp theo.')
       reload()
     } catch (err) {
@@ -93,36 +103,23 @@ export default function ConfigPage() {
       )}
 
       <section className="card">
-        <h2 className="font-display text-lg font-bold">Mô hình và truy hồi</h2>
+        <h2 className="font-display text-lg font-bold">Đang dùng</h2>
         <p className="mt-1 text-sm muted">
-          Nhà cung cấp hiện tại: <strong>{form.provider}</strong>. Đổi nhà cung cấp bằng biến môi
-          trường <code className="rounded bg-black/5 px-1 dark:bg-white/10">LLM_PROVIDER</code>.
+          <strong>{form.providerLabel}</strong> trả lời câu hỏi ({form.chatModel}), embedding bằng{' '}
+          <strong>{form.embeddingProvider}</strong> ({form.embeddingModel}).{' '}
+          <Link href="/admin/nha-cung-cap" className="text-brand-600 hover:underline dark:text-brand-400">
+            Đổi nhà cung cấp hoặc model →
+          </Link>
+        </p>
+      </section>
+
+      <section className="card mt-6">
+        <h2 className="font-display text-lg font-bold">Tham số truy hồi và sinh câu trả lời</h2>
+        <p className="mt-1 text-sm muted">
+          Hai giá trị đáng chú ý nhất là ngưỡng tương đồng và temperature — xem gợi ý dưới mỗi ô.
         </p>
 
         <div className="mt-5 grid gap-4 sm:grid-cols-2">
-          <div>
-            <label htmlFor="chatModel" className="block text-sm font-medium">
-              Model cho câu tra cứu
-            </label>
-            <input
-              id="chatModel"
-              value={form.chatModel}
-              onChange={(e) => setForm({ ...form, chatModel: e.target.value })}
-              className="mt-1.5 w-full rounded-lg border bg-transparent px-3 py-2 font-mono text-sm outline-none focus:border-brand-500"
-            />
-          </div>
-          <div>
-            <label htmlFor="reasoningModel" className="block text-sm font-medium">
-              Model cho câu so sánh và định tuyến
-            </label>
-            <input
-              id="reasoningModel"
-              value={form.reasoningModel}
-              onChange={(e) => setForm({ ...form, reasoningModel: e.target.value })}
-              className="mt-1.5 w-full rounded-lg border bg-transparent px-3 py-2 font-mono text-sm outline-none focus:border-brand-500"
-            />
-          </div>
-
           {numberFields.map((field) => (
             <div key={String(field.key)}>
               <label htmlFor={String(field.key)} className="block text-sm font-medium">

@@ -30,6 +30,7 @@ const NAV: { group: string; items: NavItem[] }[] = [
     group: 'Hệ thống',
     items: [
       { href: '/admin/knowledge-base', label: 'Knowledge Base', icon: '⚙' },
+      { href: '/admin/nha-cung-cap', label: 'Nhà cung cấp AI', icon: '⚡' },
       { href: '/admin/cau-hinh', label: 'Cấu hình AI', icon: '◆' },
       { href: '/admin/nguoi-dung', label: 'Người dùng', icon: '☺' },
       { href: '/admin/nhat-ky', label: 'Nhật ký', icon: '≡' },

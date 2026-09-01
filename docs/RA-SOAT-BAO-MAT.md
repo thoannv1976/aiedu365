@@ -72,6 +72,7 @@ nền; nếu vẫn bị spam thì bật thêm captcha ở tầng frontend (xem m
 | Nhật ký | IP được băm trước khi ghi, không lưu IP thô |
 | Firestore rules | Client chỉ đọc nội dung đã publish, chặn mọi thao tác ghi |
 | Bí mật | Không có khóa nào trong repo; CI/CD dùng Workload Identity Federation nên không tạo file khóa service account |
+| Khóa API nhà cung cấp | Lưu vào Secret Manager, không bao giờ ghi xuống Firestore. Chỉ ghi vào, không có đường đọc ngược ra qua API — trang quản trị chỉ thấy 4 ký tự cuối. Nhật ký kiểm toán ghi việc đổi khóa nhưng không ghi giá trị. Chỉ Super Admin nhập/xóa được. Có test khẳng định khóa không lộ ở bất kỳ endpoint nào |
 | Quyền service account | Đặc quyền tối thiểu: service API chỉ có `aiplatform.user`, `datastore.user`, `secretmanager.secretAccessor` |
 | Container | Chạy bằng user không phải root |
 

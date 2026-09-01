@@ -21,15 +21,16 @@ _VERSION = "2023-06-01"
 class AnthropicProvider(LlmProvider):
     name = "anthropic"
 
-    def __init__(self, settings: Settings) -> None:
+    def __init__(self, settings: Settings, api_key: str = "") -> None:
         self.settings = settings
+        self.api_key = api_key or settings.anthropic_api_key
         self._last_usage = LlmUsage()
 
     def _headers(self) -> dict[str, str]:
-        if not self.settings.anthropic_api_key:
-            raise RuntimeError("Thiếu ANTHROPIC_API_KEY.")
+        if not self.api_key:
+            raise RuntimeError("Chưa cấu hình khóa API của Claude.")
         return {
-            "x-api-key": self.settings.anthropic_api_key,
+            "x-api-key": self.api_key,
             "anthropic-version": _VERSION,
             "content-type": "application/json",
         }

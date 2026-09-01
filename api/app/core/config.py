@@ -26,7 +26,10 @@ class Settings(BaseSettings):
 
     # --- Mô hình ---
     llm_provider: str = "vertex"
-    """vertex | anthropic | openai | echo (echo dùng để test, không gọi mạng)."""
+    """Nhà cung cấp mặc định khi ban tổ chức chưa chọn trong trang quản trị.
+
+    vertex | gemini | anthropic | openai | echo (echo dùng để test, không gọi mạng).
+    """
     chat_model: str = "gemini-2.5-flash"
     reasoning_model: str = "gemini-2.5-pro"
     embedding_model: str = "text-embedding-004"
@@ -34,10 +37,15 @@ class Settings(BaseSettings):
     max_output_tokens: int = 1400
     temperature: float = 0.2
 
+    # Khóa API đặt sẵn bằng biến môi trường. Cách chính để cấu hình là nhập
+    # trong trang quản trị (lưu vào Secret Manager); các biến này chỉ là phương
+    # án dự phòng cho môi trường phát triển.
     anthropic_api_key: str = ""
     anthropic_model: str = "claude-sonnet-5"
     openai_api_key: str = ""
     openai_model: str = "gpt-4o-mini"
+    openai_embedding_model: str = "text-embedding-3-small"
+    gemini_api_key: str = ""
 
     # --- RAG ---
     retrieval_top_k: int = 8

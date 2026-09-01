@@ -87,12 +87,15 @@ chuyên sâu số 1"* đến *"số 8"* — hệ thống nhận cả hai cách g
 - Chuẩn hóa mã khóa trước khi truy hồi, không phó mặc cho mô hình
 - Trích dẫn nguồn dưới mỗi câu trả lời
 - Guardrail chặn khẳng định vi phạm ràng buộc trong thư mời
+- Chạy được trên Vertex AI, Gemini, Claude hoặc OpenAI — ban tổ chức tự chọn
+  và tự nhập khóa trong trang quản trị
 
 **Khu quản trị** — 11 màn hình, chia ba nhóm
 - *Vận hành*: bảng điều khiển, đăng ký + xuất CSV, hội thoại
 - *Nội dung*: sửa 08 khóa học (5 thẻ), lịch khai giảng, hỏi đáp, nội dung trang
-- *Hệ thống*: Knowledge Base (index lại + thử truy hồi), cấu hình AI,
-  người dùng, nhật ký kiểm toán
+- *Hệ thống*: Knowledge Base (index lại + thử truy hồi), **nhà cung cấp AI**
+  (nhập khóa Claude/OpenAI/Gemini, kiểm tra kết nối), cấu hình AI, người dùng,
+  nhật ký kiểm toán
 - Vòng lặp cải tiến: câu trả lời kém → viết lại thành FAQ → chatbot tốt lên
 - Ba vai trò: Super Admin · Editor · Viewer
 
@@ -101,7 +104,7 @@ chuyên sâu số 1"* đến *"số 8"* — hệ thống nhận cả hai cách g
 ## Kiểm thử
 
 ```bash
-cd api && ../.venv/bin/python -m pytest tests/ -q    # 156 test
+cd api && ../.venv/bin/python -m pytest tests/ -q    # 184 test
 cd web && npm run typecheck
 ```
 
