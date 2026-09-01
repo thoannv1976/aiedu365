@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
+import { ScheduleList } from '@/components/sections/ScheduleList'
 import { AskAboutCourse } from '@/components/ui/AskAboutCourse'
-import { courseName, getCourse, getCourses } from '@/lib/api'
+import { courseName, getCourse, getCourses, getSchedules } from '@/lib/api'
 
 export const revalidate = 60
 
@@ -36,6 +37,7 @@ export default async function CourseDetailPage({
   const course = await getCourse(slug)
   if (!course) notFound()
 
+  const schedules = await getSchedules(course.code)
   const name = courseName(course.code)
   const modules = course.software.modules ?? []
 
@@ -369,6 +371,17 @@ export default async function CourseDetailPage({
             <Link href={`/dang-ky?khoa=${course.code}`} className="btn-primary mt-5 w-full">
               Đăng ký khóa này
             </Link>
+          </div>
+
+          <div className="card mt-4">
+            <p className="text-xs font-semibold uppercase tracking-wide muted">Lịch khai giảng</p>
+            <div className="mt-3">
+              <ScheduleList
+                schedules={schedules}
+                showCourse={false}
+                emptyText="Ban tổ chức sẽ thông báo lịch cụ thể."
+              />
+            </div>
           </div>
 
           {course.motto && (

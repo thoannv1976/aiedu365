@@ -120,9 +120,20 @@ class ChatService:
 
         if intent_result.intent is Intent.REGISTER:
             # Câu hỏi về thời gian, địa điểm, học phí, đầu mối luôn có câu trả
-            # lời đúng — "ban tổ chức sẽ cung cấp" — nên phải kèm chunk thông
-            # tin tổ chức và không được rơi vào nhánh từ chối chung chung.
-            hits = self.retrieval.with_pinned(hits, ["site-lien-he"])
+            # lời đúng — hoặc là lịch cụ thể ban tổ chức đã nhập, hoặc là "ban
+            # tổ chức sẽ cung cấp". Ghim thẳng các chunk đó thay vì trông chờ
+            # điểm tương đồng: chunk lịch ngắn nên luôn thua các chunk nội dung
+            # dài của cùng khóa, dù câu hỏi nói rõ "khai giảng khi nào".
+            pinned = ["site-lien-he"]
+            if intent_result.course_codes:
+                pinned += [f"schedule-{c.lower()}" for c in intent_result.course_codes]
+            else:
+                pinned += [
+                    item.chunk.id
+                    for item in self.retrieval._index
+                    if item.chunk.section == "lich-khai-giang"
+                ]
+            hits = self.retrieval.with_pinned(hits, pinned)
 
         outcome.citations = _citations(hits)
         outcome.top_score = self.retrieval.top_score(hits)

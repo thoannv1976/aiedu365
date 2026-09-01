@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 
 import { RegistrationForm } from '@/components/sections/RegistrationForm'
-import { getCourses, getSite } from '@/lib/api'
+import { ScheduleList } from '@/components/sections/ScheduleList'
+import { getCourses, getSchedules, getSite } from '@/lib/api'
 
 export const metadata: Metadata = {
   title: 'Đăng ký tham dự',
@@ -15,7 +16,7 @@ export default async function RegisterPage({
   searchParams: Promise<{ khoa?: string }>
 }) {
   const { khoa } = await searchParams
-  const [courses, site] = await Promise.all([getCourses(), getSite()])
+  const [courses, site, schedules] = await Promise.all([getCourses(), getSite(), getSchedules()])
   const contact = site.contact
 
   return (
@@ -28,12 +29,26 @@ export default async function RegisterPage({
             Một đơn vị có thể đăng ký nhiều khóa trong cùng một đợt. Ban tổ chức sẽ liên hệ xác nhận
             thời gian, địa điểm và các thông tin còn lại.
           </p>
+          {schedules.length > 0 && (
+            <section className="mt-8">
+              <h2 className="font-display text-lg font-bold">Các đợt sắp tới</h2>
+              <div className="mt-4">
+                <ScheduleList schedules={schedules} />
+              </div>
+            </section>
+          )}
+
           <RegistrationForm courses={courses} preselected={khoa ?? null} />
         </div>
 
         <aside className="lg:sticky lg:top-24 lg:h-fit">
           <div className="card">
             <p className="font-semibold">Đầu mối ban tổ chức</p>
+            {contact.registrationDeadline && (
+              <p className="mt-2 text-sm">
+                <strong>Hạn đăng ký:</strong> {contact.registrationDeadline}
+              </p>
+            )}
             {contact.email || contact.phone || contact.unit ? (
               <ul className="mt-3 space-y-2 text-sm muted">
                 {contact.unit ? <li>{contact.unit}</li> : null}

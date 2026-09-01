@@ -182,16 +182,47 @@ def chunk_faq(faq: Faq) -> KbChunk:
     )
 
 
+_CONTACT_LABELS = [
+    ("unit", "Đơn vị đầu mối"),
+    ("address", "Địa chỉ"),
+    ("email", "Email"),
+    ("phone", "Điện thoại"),
+    ("registrationDeadline", "Hạn đăng ký"),
+]
+
+_SCHEDULE_STATUS = {
+    "planned": "dự kiến",
+    "open": "đang nhận đăng ký",
+    "closed": "đã đóng đăng ký",
+    "done": "đã tổ chức",
+}
+
+
+def _format_date(value: str) -> str:
+    """2026-10-15 → 15/10/2026. Giá trị khác giữ nguyên."""
+    parts = str(value or "").split("-")
+    if len(parts) == 3 and all(p.isdigit() for p in parts):
+        return f"{parts[2]}/{parts[1]}/{parts[0]}"
+    return str(value or "")
+
+
 def chunk_site(site: dict[str, Any]) -> Iterator[KbChunk]:
     contact = site.get("contact", {}) or {}
-    filled = {k: v for k, v in contact.items() if v and k != "note"}
-    body = (
-        "Thông tin tổ chức chương trình.\n"
-        + ("\n".join(f"{k}: {v}" for k, v in filled.items()) if filled
-           else "Ban tổ chức chưa công bố thời gian, địa điểm, hạn đăng ký và đầu mối liên hệ. "
-                "Khi được hỏi về các thông tin này, phải trả lời rằng ban tổ chức sẽ cung cấp, "
-                "TUYỆT ĐỐI không tự suy đoán.")
-    )
+    lines = [f"{label}: {contact[key]}" for key, label in _CONTACT_LABELS if contact.get(key)]
+    organizer = site.get("organizer", "")
+    if organizer:
+        lines.insert(0, f"Đơn vị tổ chức: {organizer}")
+
+    if lines:
+        body = "Thông tin tổ chức và đầu mối đăng ký của chương trình.\n" + "\n".join(lines)
+    else:
+        body = (
+            "Thông tin tổ chức chương trình.\n"
+            "Ban tổ chức CHƯA công bố thời gian, địa điểm, hạn đăng ký và đầu mối liên hệ. "
+            "Khi được hỏi về các thông tin này, phải trả lời rằng ban tổ chức sẽ cung cấp, "
+            "TUYỆT ĐỐI không tự suy đoán."
+        )
+
     yield KbChunk(
         id="site-lien-he",
         sourceDoc="Thông tin tổ chức",
@@ -217,10 +248,72 @@ def chunk_site(site: dict[str, Any]) -> Iterator[KbChunk]:
         )
 
 
-def build_corpus(courses: list[Course], faqs: list[Faq], site: dict[str, Any]) -> list[KbChunk]:
+def chunk_schedules(schedules: list[dict[str, Any]], courses: list[Course]) -> Iterator[KbChunk]:
+    """Lịch khai giảng ban tổ chức nhập trong trang quản trị.
+
+    Không có lịch thì không sinh chunk nào — chatbot rơi về chunk thông tin tổ
+    chức, vốn nói rõ là chưa công bố. Như vậy nó không bao giờ bịa ra ngày.
+    """
+    by_code: dict[str, list[dict[str, Any]]] = {}
+    for row in schedules:
+        if row.get("status") == "cancelled":
+            continue
+        code = str(row.get("courseCode", "")).upper()
+        if code:
+            by_code.setdefault(code, []).append(row)
+
+    names = {c.code: c.shortTitle for c in courses}
+
+    for code, rows in by_code.items():
+        name = f"Khóa {code[1:]}"
+        lines: list[str] = []
+        for row in rows:
+            start = _format_date(row.get("startDate", ""))
+            end = _format_date(row.get("endDate", ""))
+            when = f"{start} đến {end}" if end and end != start else start or "chưa xác định ngày"
+            parts = [f"- Từ {when}"]
+            if row.get("location"):
+                parts.append(f"tại {row['location']}")
+            if row.get("format"):
+                parts.append(f"hình thức {row['format']}")
+            if row.get("capacity"):
+                parts.append(f"{row['capacity']} chỗ")
+            if row.get("registrationDeadline"):
+                parts.append(f"hạn đăng ký {_format_date(row['registrationDeadline'])}")
+            status = _SCHEDULE_STATUS.get(str(row.get("status", "")), "")
+            if status:
+                parts.append(f"trạng thái {status}")
+            contact = ", ".join(
+                str(row[k]) for k in ("contactName", "contactEmail", "contactPhone") if row.get(k)
+            )
+            if contact:
+                parts.append(f"đầu mối {contact}")
+            lines.append(", ".join(parts) + ".")
+
+        content = (
+            f"Lịch khai giảng {name} — {names.get(code, '')}.\n" + "\n".join(lines)
+        )
+        yield KbChunk(
+            id=f"schedule-{code.lower()}",
+            courseCode=code,
+            sourceDoc="Lịch khai giảng",
+            section="lich-khai-giang",
+            title=f"{name} — Lịch khai giảng",
+            content=content,
+            tokens=_estimate_tokens(content),
+        )
+
+
+def build_corpus(
+    courses: list[Course],
+    faqs: list[Faq],
+    site: dict[str, Any],
+    schedules: list[dict[str, Any]] | None = None,
+) -> list[KbChunk]:
     chunks: list[KbChunk] = []
     for course in courses:
         chunks.extend(chunk_course(course))
     chunks.extend(chunk_faq(f) for f in faqs)
     chunks.extend(chunk_site(site))
+    chunks.extend(chunk_schedules(schedules or [], courses))
     return chunks

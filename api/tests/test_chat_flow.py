@@ -82,3 +82,36 @@ async def test_index_covers_every_course():
     await retrieval.ensure_index()
     covered = {c.chunk.courseCode for c in retrieval._index if c.chunk.courseCode}
     assert covered == {f"K2{i}" for i in range(1, 9)}
+
+
+@pytest.mark.asyncio
+async def test_schedule_is_pinned_for_logistics_questions(monkeypatch):
+    """Chunk lịch ngắn nên không bao giờ thắng điểm; phải được ghim.
+
+    Nếu không, người hỏi "khóa 22 khai giảng khi nào" sẽ nhận về phần giới
+    thiệu khóa học thay vì ngày cụ thể ban tổ chức đã nhập.
+    """
+    from app.services import firestore as fs
+
+    fs._memory["sessions_schedule"] = {}
+    fs.add_document(
+        "sessions_schedule",
+        {
+            "courseCode": "K22",
+            "startDate": "2026-10-15",
+            "endDate": "2026-10-16",
+            "location": "Hà Nội",
+            "status": "open",
+        },
+    )
+    retrieval = get_retrieval()
+    await retrieval.reindex()
+    try:
+        _, outcome = await get_chat_service().answer(
+            "Khóa 22 khai giảng khi nào và ở đâu?", [], None
+        )
+        assert outcome.intent is Intent.REGISTER
+        assert "schedule-k22" in {c.chunkId for c in outcome.citations}
+    finally:
+        fs._memory["sessions_schedule"] = {}
+        await retrieval.reindex()

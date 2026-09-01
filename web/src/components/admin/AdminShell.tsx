@@ -6,14 +6,38 @@ import { useEffect, useState } from 'react'
 
 import { getToken, setToken } from '@/lib/admin'
 
-const NAV = [
-  { href: '/admin', label: 'Bảng điều khiển', icon: '▤' },
-  { href: '/admin/hoi-thoai', label: 'Hội thoại', icon: '💬' },
-  { href: '/admin/knowledge-base', label: 'Knowledge Base', icon: '⚙' },
-  { href: '/admin/dang-ky', label: 'Đăng ký', icon: '✓' },
-  { href: '/admin/cau-hinh', label: 'Cấu hình AI', icon: '◆' },
-  { href: '/admin/nhat-ky', label: 'Nhật ký', icon: '≡' },
+type NavItem = { href: string; label: string; icon: string }
+
+const NAV: { group: string; items: NavItem[] }[] = [
+  {
+    group: 'Vận hành',
+    items: [
+      { href: '/admin', label: 'Bảng điều khiển', icon: '▤' },
+      { href: '/admin/dang-ky', label: 'Đăng ký', icon: '✓' },
+      { href: '/admin/hoi-thoai', label: 'Hội thoại', icon: '💬' },
+    ],
+  },
+  {
+    group: 'Nội dung',
+    items: [
+      { href: '/admin/khoa-hoc', label: 'Khóa học', icon: '▦' },
+      { href: '/admin/lich-khai-giang', label: 'Lịch khai giảng', icon: '📅' },
+      { href: '/admin/faq', label: 'Hỏi đáp', icon: '?' },
+      { href: '/admin/noi-dung', label: 'Nội dung trang', icon: '✎' },
+    ],
+  },
+  {
+    group: 'Hệ thống',
+    items: [
+      { href: '/admin/knowledge-base', label: 'Knowledge Base', icon: '⚙' },
+      { href: '/admin/cau-hinh', label: 'Cấu hình AI', icon: '◆' },
+      { href: '/admin/nguoi-dung', label: 'Người dùng', icon: '☺' },
+      { href: '/admin/nhat-ky', label: 'Nhật ký', icon: '≡' },
+    ],
+  },
 ]
+
+const FLAT_NAV = NAV.flatMap((section) => section.items)
 
 function SignIn({ onSignedIn }: { onSignedIn: () => void }) {
   const [value, setValue] = useState('')
@@ -77,28 +101,37 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
           </Link>
           <p className="mt-1 px-2 text-[11px] uppercase tracking-wide muted">Quản trị</p>
 
-          <nav className="mt-5 flex flex-col gap-1">
-            {NAV.map((item) => {
-              const active =
-                item.href === '/admin' ? pathname === '/admin' : pathname?.startsWith(item.href)
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  aria-current={active ? 'page' : undefined}
-                  className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm transition ${
-                    active
-                      ? 'bg-brand-50 font-medium text-brand-700 dark:bg-brand-900/40 dark:text-brand-300'
-                      : 'muted hover:text-[rgb(var(--text))]'
-                  }`}
-                >
-                  <span aria-hidden className="w-4 text-center">
-                    {item.icon}
-                  </span>
-                  {item.label}
-                </Link>
-              )
-            })}
+          <nav className="mt-5 flex flex-col gap-5 overflow-y-auto">
+            {NAV.map((section) => (
+              <div key={section.group}>
+                <p className="px-3 pb-1.5 text-[10px] font-semibold uppercase tracking-wider muted">
+                  {section.group}
+                </p>
+                <div className="flex flex-col gap-0.5">
+                  {section.items.map((item) => {
+                    const active =
+                      item.href === '/admin' ? pathname === '/admin' : pathname?.startsWith(item.href)
+                    return (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        aria-current={active ? 'page' : undefined}
+                        className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm transition ${
+                          active
+                            ? 'bg-brand-50 font-medium text-brand-700 dark:bg-brand-900/40 dark:text-brand-300'
+                            : 'muted hover:text-[rgb(var(--text))]'
+                        }`}
+                      >
+                        <span aria-hidden className="w-4 text-center">
+                          {item.icon}
+                        </span>
+                        {item.label}
+                      </Link>
+                    )
+                  })}
+                </div>
+              </div>
+            ))}
           </nav>
 
           <div className="mt-auto space-y-2 pt-4">
@@ -121,7 +154,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
 
       <div className="min-w-0 flex-1">
         <nav className="flex gap-1 overflow-x-auto border-b surface px-4 py-2 lg:hidden">
-          {NAV.map((item) => (
+          {FLAT_NAV.map((item) => (
             <Link key={item.href} href={item.href} className="whitespace-nowrap rounded-lg px-3 py-1.5 text-xs muted">
               {item.label}
             </Link>

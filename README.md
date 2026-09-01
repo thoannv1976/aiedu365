@@ -38,7 +38,8 @@ aiedu365/
 ├── data/                    Dữ liệu khóa học — nguồn sự thật
 │   ├── courses/K21..K28.json
 │   ├── groups.json · faqs.json · site.json
-│   └── eval/questions.json  36 câu kiểm thử chatbot
+│   ├── eval/questions.json  36 câu kiểm thử chatbot
+│   └── seed.py              Đẩy dữ liệu gốc lên Firestore
 ├── api/                     FastAPI: RAG, guardrail, admin
 ├── web/                     Next.js 15: landing page + khu quản trị
 ├── infra/                   Script khởi tạo GCP, Firestore rules
@@ -87,10 +88,12 @@ chuyên sâu số 1"* đến *"số 8"* — hệ thống nhận cả hai cách g
 - Trích dẫn nguồn dưới mỗi câu trả lời
 - Guardrail chặn khẳng định vi phạm ràng buộc trong thư mời
 
-**Khu quản trị**
-- Bảng điều khiển, hội thoại, Knowledge Base (index lại + thử truy hồi)
+**Khu quản trị** — 11 màn hình, chia ba nhóm
+- *Vận hành*: bảng điều khiển, đăng ký + xuất CSV, hội thoại
+- *Nội dung*: sửa 08 khóa học (5 thẻ), lịch khai giảng, hỏi đáp, nội dung trang
+- *Hệ thống*: Knowledge Base (index lại + thử truy hồi), cấu hình AI,
+  người dùng, nhật ký kiểm toán
 - Vòng lặp cải tiến: câu trả lời kém → viết lại thành FAQ → chatbot tốt lên
-- Đăng ký + xuất CSV, cấu hình AI, system prompt có version, audit log
 - Ba vai trò: Super Admin · Editor · Viewer
 
 ---
@@ -98,7 +101,7 @@ chuyên sâu số 1"* đến *"số 8"* — hệ thống nhận cả hai cách g
 ## Kiểm thử
 
 ```bash
-cd api && ../.venv/bin/python -m pytest tests/ -q    # 134 test
+cd api && ../.venv/bin/python -m pytest tests/ -q    # 156 test
 cd web && npm run typecheck
 ```
 
@@ -112,6 +115,7 @@ Bộ câu hỏi eval ở `data/eval/questions.json` gồm cả các câu **phả
 ```bash
 ./infra/setup-gcp.sh aiedu365 asia-southeast1
 gcloud builds submit --config cloudbuild.yaml
+python data/seed.py --project aiedu365    # đẩy dữ liệu gốc lên Firestore
 ```
 
 Chi tiết ở [`docs/KIEN-TRUC.md`](docs/KIEN-TRUC.md).

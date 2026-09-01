@@ -10,7 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import get_settings
 from app.core.logging import configure_logging
-from app.routers import admin, chat, content, leads
+from app.routers import admin, admin_content, chat, content, leads
 from app.services.retrieval import get_retrieval
 from app.services.store import get_store
 
@@ -54,6 +54,7 @@ def create_app() -> FastAPI:
     app.include_router(chat.router, prefix="/api")
     app.include_router(leads.router, prefix="/api")
     app.include_router(admin.router, prefix="/api")
+    app.include_router(admin_content.router, prefix="/api")
 
     @app.get("/healthz", tags=["system"])
     def healthz() -> dict:

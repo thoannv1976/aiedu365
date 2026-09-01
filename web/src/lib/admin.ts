@@ -65,6 +65,7 @@ export const adminPatch = <T,>(path: string, body: unknown) =>
   request<T>(path, { method: 'PATCH', body: JSON.stringify(body) })
 export const adminPut = <T,>(path: string, body: unknown) =>
   request<T>(path, { method: 'PUT', body: JSON.stringify(body) })
+export const adminDelete = <T,>(path: string) => request<T>(path, { method: 'DELETE' })
 
 /**
  * Tải file đăng ký.

@@ -22,30 +22,55 @@ cấp quyền.
 
 ## 2. Việc cần làm ngay sau khi nhận hệ thống
 
-### 2.1 Điền thông tin còn trống trong thư mời
-
 Thư mời gốc để trống thời gian, địa điểm, hạn đăng ký và đầu mối liên hệ.
-Chatbot được lập trình để **không tự bịa** những thông tin này — nó sẽ trả lời
-"ban tổ chức sẽ cung cấp". Sau khi anh/chị điền, chatbot trả lời được ngay.
+Chatbot được lập trình để **không tự bịa** những thông tin này — nó trả lời
+"ban tổ chức sẽ cung cấp". Ba bước dưới đây khiến nó trả lời được cụ thể.
 
-Vào **Cấu hình → Nội dung trang**, điền:
+### Bước 1 — Điền thông tin đơn vị tổ chức
 
-- Tên đơn vị tổ chức
-- Địa chỉ, email, số điện thoại đầu mối
-- Hạn đăng ký
+Vào **Nội dung trang**, điền:
 
-Rồi vào **Knowledge Base → Cập nhật Knowledge Base** để chatbot áp dụng.
+| Mục | Hiện ở đâu |
+|---|---|
+| Đơn vị tổ chức | Chân trang mọi trang |
+| Đơn vị đầu mối, email, điện thoại, địa chỉ | Chân trang, trang Đăng ký, và câu trả lời của chatbot |
+| Hạn đăng ký | Trang Đăng ký và câu trả lời của chatbot |
 
-### 2.2 Kiểm tra chatbot trả lời đúng
+Nếu chưa điền, màn hình sẽ hiện cảnh báo màu vàng nhắc anh/chị.
+
+### Bước 2 — Thêm lịch khai giảng
+
+Vào **Lịch khai giảng → Thêm đợt khai giảng**. Mỗi đợt gồm khóa, ngày bắt đầu
+và kết thúc, địa điểm, số chỗ, hạn đăng ký và đầu mối riêng của đợt đó.
+
+**Trạng thái** quyết định cách hiển thị:
+
+| Trạng thái | Ý nghĩa |
+|---|---|
+| Dự kiến | Đã có kế hoạch, chưa mở đăng ký |
+| Đang nhận đăng ký | Hiển thị nổi bật, khuyến khích đăng ký |
+| Đã đóng đăng ký / Đã tổ chức | Vẫn hiện để tham khảo |
+| Đã hủy | **Ẩn hoàn toàn** khỏi trang công khai và khỏi chatbot |
+
+Lịch hiện ở trang chi tiết khóa, trang Đăng ký, và chatbot dùng để trả lời câu
+"khóa này khai giảng khi nào".
+
+### Bước 3 — Cập nhật Knowledge Base
+
+Vào **Knowledge Base → Cập nhật Knowledge Base**. Đây là bước bắt buộc sau mỗi
+lần sửa nội dung — chatbot chỉ áp dụng sau khi index lại.
+
+> Trang công khai có bộ đệm 60 giây, nên đợi khoảng một phút rồi tải lại để
+> thấy nội dung mới.
+
+### Bước 4 — Kiểm tra chatbot trả lời đúng
 
 Vào **Knowledge Base → Thử truy hồi**, gõ vài câu hỏi thật mà anh/chị nghĩ các
-trường sẽ hỏi. Màn hình cho biết:
-
-- Chatbot có đủ căn cứ để trả lời không
-- Nó lấy đoạn tài liệu nào, điểm bao nhiêu
+trường sẽ hỏi. Màn hình cho biết chatbot có đủ căn cứ để trả lời không, và nó
+lấy đoạn tài liệu nào.
 
 Nếu một câu hỏi quan trọng bị báo "không đủ căn cứ", nghĩa là tài liệu chưa có
-nội dung đó — cần bổ sung bằng FAQ (mục 3).
+nội dung đó — bổ sung bằng FAQ (mục 3).
 
 ---
 
@@ -108,38 +133,65 @@ khóa — giúp biết kênh nào hiệu quả.
 
 ---
 
-## 6. Điều chỉnh cách chatbot trả lời
+## 6. Sửa nội dung khóa học và hỏi đáp
 
-Vào **Cấu hình AI** (cần quyền Super Admin).
+### Nội dung khóa học
 
-### Hai nút xoay quan trọng nhất
+Vào **Khóa học**, chọn khóa cần sửa. Nội dung chia thành năm thẻ:
 
-**Ngưỡng tương đồng** (mặc định 0.50)
+| Thẻ | Nội dung |
+|---|---|
+| Thông tin chung | Tiêu đề, thời lượng, đoạn mở đầu, từ khóa nhận diện, hiển thị |
+| Nội dung từng ngày | Các mục học và kết quả đầu ra của mỗi ngày |
+| Kết quả & KPI | Kết quả mang về, chỉ số hiệu quả, dữ liệu cần mang theo |
+| Phần mềm | Tên bộ phần mềm, danh sách module, phạm vi chuyển giao |
+| Nguyên tắc & đối tượng | Nguyên tắc AI có trách nhiệm, thành phần nên cử, so với khóa khác |
 
-- Chatbot **từ chối quá nhiều** câu hợp lệ → **giảm** xuống 0.45, 0.40.
-- Chatbot **trả lời lan man**, không bám tài liệu → **tăng** lên 0.55, 0.60.
+**Không sửa được:** mã khóa, đường dẫn và số hiệu trong thư mời. Đổi chúng sẽ
+phá các đường dẫn đã phát hành và bảng quy đổi mã khóa của chatbot. Hệ thống
+tự bỏ qua nếu có ai cố gửi lên.
 
-Sau mỗi lần đổi, dùng **Knowledge Base → Thử truy hồi** để kiểm tra.
+**Cần cẩn trọng:**
 
-**Temperature** (mặc định 0.2)
+- **Từ khóa nhận diện** — chatbot dùng để hiểu người hỏi đang nói về khóa nào
+  khi họ không nêu mã. Thêm cách gọi mà các trường hay dùng thì chatbot nhận
+  diện tốt hơn.
+- **Nguyên tắc AI có trách nhiệm** — lấy từ ràng buộc trong thư mời và được
+  chatbot bắt buộc tuân thủ. Chỉ sửa khi thư mời thay đổi.
+- **Lưu ý về chỉ số** — chatbot nhắc lại mỗi lần nêu con số hiệu quả, để không
+  ai hiểu nhầm thành cam kết. Không nên xóa.
 
-Càng thấp, câu trả lời càng bám sát tài liệu. Không nên đặt trên 0.5 cho hệ
-thống này.
+Danh sách nhập theo kiểu **mỗi dòng một mục** — dán thẳng từ Word xuống là ra
+đúng danh sách.
 
-### System prompt
+### Hỏi đáp
 
-Đây là bộ quy tắc trả lời của chatbot. Mỗi lần lưu tạo một phiên bản mới, có
-thể quay lui. **Không xóa các quy tắc về AI có trách nhiệm** — chúng lấy trực
-tiếp từ ràng buộc ghi trong thư mời:
+Vào **Hỏi đáp** để thêm, sửa, ẩn hoặc xóa câu hỏi. FAQ hiện trên trang công
+khai và được chatbot **ưu tiên hơn nội dung thư mời** — đây là cách nhanh nhất
+để sửa một câu trả lời sai.
 
-- Khóa 27: AI không tự quyết định tuyển dụng, bổ nhiệm, đánh giá, kỷ luật
-- Khóa 26: AI không thay giảng viên chấm điểm chính thức
-- Khóa 28: AI không tự quyết định chấp nhận hay từ chối bản thảo
-- Mọi con số hiệu quả là mức tham chiếu, không phải cam kết
+- **Độ ưu tiên** cao hơn = chatbot ưu tiên dùng hơn.
+- **Thứ tự hiển thị** nhỏ hơn = hiện trước trên trang Hỏi đáp.
+- **Khóa liên quan**: để trống nếu câu hỏi áp dụng cho cả chương trình.
+
+15 câu hỏi mặc định đi kèm hệ thống chỉ **ẩn** được, không xóa vĩnh viễn.
+
+### Người dùng quản trị
+
+Vào **Người dùng** (cần quyền Super Admin) để cấp quyền. Quy trình hai bước là
+cố ý:
+
+1. Thêm email và vai trò ở đây — ghi nhận ai nên có quyền gì.
+2. Bộ phận kỹ thuật gán custom claim `role` trong Firebase Authentication —
+   bước này mới thực sự cấp quyền đăng nhập.
+
+Anh/chị không thể tự gỡ quyền của chính mình.
 
 ---
 
-## 7. Thêm khóa học mới
+## 7. Điều chỉnh cách chatbot trả lời
+
+## 8. Thêm khóa học mới
 
 Hệ thống thiết kế mở. Thêm Khóa 29, 30… chỉ cần:
 
@@ -151,7 +203,7 @@ liệu thật — không cần sửa tay ở đâu cả.
 
 ---
 
-## 8. Khi có sự cố
+## 9. Khi có sự cố
 
 | Hiện tượng | Cách xử lý |
 |---|---|

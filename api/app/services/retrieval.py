@@ -72,7 +72,10 @@ class RetrievalService:
         return len(self._index)
 
     def build_chunks(self) -> list[KbChunk]:
-        return build_corpus(self.store.courses, self.store.faqs, self.store.site)
+        from app.services import firestore as fs
+
+        schedules = fs.list_documents("sessions_schedule", limit=500)
+        return build_corpus(self.store.courses, self.store.faqs, self.store.site, schedules)
 
     async def ensure_index(self, force: bool = False) -> None:
         if self._ready and not force:

@@ -98,15 +98,27 @@ nhất hệ thống này có thể mắc, nên việc quy đổi phải tất đ
 
 ## 3. Knowledge Base
 
-151 chunk, khoảng 31.700 token, tách **theo cấu trúc mục** chứ không theo số
-ký tự. Mỗi chunk là một đơn vị ý nghĩa trọn vẹn (một ngày học, một bảng module,
-một bộ KPI), nên khi trích dẫn vẫn đọc được và không đứt giữa câu.
+151 chunk khi chưa có lịch khai giảng, khoảng 31.700 token, tách **theo cấu
+trúc mục** chứ không theo số ký tự. Mỗi chunk là một đơn vị ý nghĩa trọn vẹn
+(một ngày học, một bảng module, một bộ KPI), nên khi trích dẫn vẫn đọc được và
+không đứt giữa câu.
 
 | Nguồn | Số chunk |
 |---|---|
 | 08 khóa × ~19 mục | 134 |
 | FAQ do ban tổ chức soạn | 15 |
 | Thông tin tổ chức và nguyên tắc chung | 2 |
+| Lịch khai giảng | 1 chunk cho mỗi khóa có lịch |
+
+### Ghim chunk cho câu hỏi hậu cần
+
+Chunk lịch khai giảng ngắn nên luôn thua điểm tương đồng trước các chunk nội
+dung dài của cùng khóa — kể cả khi câu hỏi nói rõ "khóa 22 khai giảng khi nào".
+Vì vậy với ý định ĐĂNG KÝ, hệ thống **ghim thẳng** chunk lịch của khóa được
+nhắc tới cùng chunk thông tin tổ chức, thay vì trông chờ vào xếp hạng.
+
+Nguyên tắc chung: loại câu hỏi nào luôn có một nguồn trả lời đúng thì ghim
+nguồn đó, không để nó cạnh tranh điểm.
 
 Chỉ mục vector nằm trong bộ nhớ tiến trình, dựng lúc khởi động. Với corpus cỡ
 này, cách đó nhanh và rẻ hơn một dịch vụ tìm kiếm riêng.
@@ -151,17 +163,28 @@ CI mà không tốn chi phí API.
 
 ## 6. Dữ liệu
 
-Nguồn mặc định là các file JSON trong `data/`. Khi bật `USE_FIRESTORE=true`,
-Firestore là nguồn ưu tiên và JSON còn là phương án dự phòng — nhờ vậy frontend
-chạy được ngay từ lúc chưa có hạ tầng GCP, và một sự cố Firestore không làm sập
-trang công khai.
+Nguồn mặc định là các file JSON trong `data/`. Nội dung ban tổ chức sửa trong
+trang quản trị được ghi đè lên trên. JSON còn là phương án dự phòng — nhờ vậy
+frontend chạy được ngay từ lúc chưa có hạ tầng GCP, và một sự cố Firestore
+không làm sập trang công khai.
+
+Lớp đọc và lớp ghi dùng chung một trừu tượng (`services/firestore.py`), tự
+chuyển sang bộ nhớ tiến trình khi chưa bật Firestore. Nhờ vậy môi trường phát
+triển hành xử giống hệt production — sửa nội dung là thấy ngay, thay vì im lặng
+biến mất.
+
+Chạy `python data/seed.py --project aiedu365` một lần sau khi tạo Firestore để
+đẩy dữ liệu gốc lên. Mặc định script chỉ tạo document còn thiếu, không ghi đè
+nội dung ban tổ chức đã sửa.
 
 ### Collection
 
 | Collection | Nội dung |
 |---|---|
 | `courses` | 08 khóa: mã, `legacyNumber`, `aliases[]`, nội dung từng ngày, module |
+| `sessions_schedule` | Lịch khai giảng từng đợt, trạng thái, đầu mối riêng |
 | `faqs` | Hỏi đáp do ban tổ chức soạn, có độ ưu tiên |
+| `admin_users` | Danh sách tài khoản quản trị và vai trò |
 | `chat_messages` | Log hội thoại: câu hỏi, ý định, trích dẫn, điểm, token, đánh giá |
 | `leads` | Đăng ký, trạng thái xử lý |
 | `app_config` | Model, ngưỡng, phiên bản prompt |

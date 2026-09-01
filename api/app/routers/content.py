@@ -81,6 +81,25 @@ def get_site() -> dict:
     return site
 
 
+@router.get("/schedules")
+def list_schedules(course: str | None = Query(default=None)) -> list[dict]:
+    """Lịch khai giảng đã công bố.
+
+    Ban tổ chức nhập trong trang quản trị; chừng nào chưa có đợt nào thì danh
+    sách rỗng và giao diện hiển thị “sẽ được thông báo” thay vì bịa ra ngày.
+    """
+    from app.services import firestore as fs
+
+    rows = fs.list_documents(
+        "sessions_schedule", limit=200, order_by="startDate", descending=False
+    )
+    rows = [r for r in rows if r.get("status") != "cancelled"]
+    if course:
+        code = course.upper()
+        rows = [r for r in rows if r.get("courseCode") == code]
+    return rows
+
+
 @router.get("/software")
 def list_software() -> list[dict]:
     """Toàn bộ module phần mềm được chuyển giao, gom theo khóa."""

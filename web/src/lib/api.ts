@@ -7,6 +7,7 @@ import type {
   CourseGroup,
   CourseSummary,
   Faq,
+  Schedule,
   SiteContent,
   SoftwareGroup,
 } from './types'
@@ -38,6 +39,26 @@ export const getCourses = () => getJson<CourseSummary[]>('/courses', [])
 export const getGroups = () => getJson<CourseGroup[]>('/groups', [])
 export const getFaqs = () => getJson<Faq[]>('/faqs', [])
 export const getSoftware = () => getJson<SoftwareGroup[]>('/software', [])
+
+/** Lịch khai giảng đã công bố. Rỗng khi ban tổ chức chưa nhập đợt nào. */
+export const getSchedules = (course?: string) =>
+  getJson<Schedule[]>(`/schedules${course ? `?course=${course}` : ''}`, [])
+
+/** Ngày dạng 2026-10-15 → 15/10/2026. Chuỗi rỗng hoặc sai định dạng giữ nguyên. */
+export function formatDate(value: string): string {
+  if (!value) return ''
+  const match = value.match(/^(\d{4})-(\d{2})-(\d{2})/)
+  return match ? `${match[3]}/${match[2]}/${match[1]}` : value
+}
+
+/** "15/10/2026 → 16/10/2026", gộp lại nếu cùng ngày. */
+export function formatDateRange(start: string, end: string): string {
+  const from = formatDate(start)
+  const to = formatDate(end)
+  if (!from) return to
+  if (!to || to === from) return from
+  return `${from} → ${to}`
+}
 
 export const getSite = () =>
   getJson<SiteContent & { stats_computed?: unknown }>('/site', {

@@ -29,6 +29,8 @@ export type CourseDay = {
 
 export type Course = CourseSummary & {
   method: string
+  aliases: string[]
+  published: boolean
   intro: string[]
   coreGoal: string
   highlight: { label?: string; text?: string }
@@ -107,6 +109,22 @@ export type SiteContent = {
   }
   chat: { greeting: string; suggestions: string[]; fallback: string }
   stats_?: never
+}
+
+export type Schedule = {
+  id: string
+  courseCode: string
+  startDate: string
+  endDate: string
+  location: string
+  format: string
+  registrationDeadline: string
+  capacity: number | string
+  contactName: string
+  contactEmail: string
+  contactPhone: string
+  status: string
+  note: string
 }
 
 export type Citation = {

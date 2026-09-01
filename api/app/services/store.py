@@ -53,36 +53,48 @@ class ContentStore:
             self._site = _read_json(base / "site.json")
             self._loaded = True
             logger.info("Đã nạp %d khóa học từ %s", len(courses), base)
+            self._overlay_stored()
 
-            if self.settings.use_firestore:
-                self._overlay_firestore()
+    def _overlay_stored(self) -> None:
+        """Ghi đè bằng nội dung ban tổ chức đã sửa trong trang quản trị.
 
-    def _overlay_firestore(self) -> None:
-        """Ghi đè bằng dữ liệu Firestore nếu có — cho phép admin sửa nội dung."""
+        Đọc qua lớp ``firestore`` chứ không qua client Firestore trực tiếp: lớp
+        đó tự chuyển sang bộ nhớ tiến trình khi chưa bật Firestore, nên môi
+        trường phát triển hành xử giống hệt production — sửa nội dung là thấy
+        ngay, thay vì im lặng biến mất.
+        """
         try:
-            from app.services.firestore import get_firestore
+            from app.services import firestore as fs
 
-            db = get_firestore()
-            if db is None:
-                return
-            for doc in db.collection("courses").stream():
-                data = doc.to_dict() or {}
+            for data in fs.list_documents("courses", limit=100):
                 if not data.get("code"):
                     continue
                 try:
                     course = Course.model_validate(data)
-                except Exception:  # nội dung admin nhập có thể thiếu trường
-                    logger.warning("Bỏ qua khóa %s: dữ liệu Firestore không hợp lệ", doc.id)
+                except Exception:
+                    logger.warning("Bỏ qua khóa %s: dữ liệu đã lưu không hợp lệ", data.get("id"))
                     continue
                 self._courses[course.code] = course
-            faqs = [Faq.model_validate(d.to_dict()) for d in db.collection("faqs").stream()]
-            if faqs:
-                self._faqs = faqs
-            site_doc = db.collection("site_content").document("main").get()
-            if site_doc.exists:
-                self._site = {**self._site, **(site_doc.to_dict() or {})}
+
+            stored_faqs = {}
+            for data in fs.list_documents("faqs", limit=500):
+                try:
+                    faq = Faq.model_validate(data)
+                except Exception:
+                    logger.warning("Bỏ qua FAQ %s: dữ liệu không hợp lệ", data.get("id"))
+                    continue
+                stored_faqs[faq.id] = faq
+            if stored_faqs:
+                merged = {f.id: f for f in self._faqs}
+                merged.update(stored_faqs)
+                self._faqs = list(merged.values())
+
+            site = fs.get_document("site_content", "main")
+            if site:
+                self._site = {**self._site, **{k: v for k, v in site.items()
+                                               if not k.startswith("_")}}
         except Exception as exc:  # pragma: no cover - phụ thuộc hạ tầng
-            logger.warning("Không đọc được Firestore, dùng dữ liệu JSON: %s", exc)
+            logger.warning("Không nạp được nội dung đã sửa, dùng dữ liệu gốc: %s", exc)
 
     # -- truy vấn ---------------------------------------------------------
 

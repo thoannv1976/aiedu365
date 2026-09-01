@@ -27,6 +27,10 @@ _memory: dict[str, dict[str, dict[str, Any]]] = {
     "chat_messages": {},
     "audit_logs": {},
     "app_config": {},
+    "sessions_schedule": {},
+    "faqs": {},
+    "admin_users": {},
+    "site_content": {},
 }
 
 
@@ -120,6 +124,17 @@ def list_documents(
     key = order_by or "_createdAt"
     rows.sort(key=lambda r: str(r.get(key, "")), reverse=descending)
     return rows[:limit]
+
+
+def delete_document(collection: str, doc_id: str) -> bool:
+    db = get_firestore()
+    if db is not None:
+        try:
+            db.collection(collection).document(doc_id).delete()
+            return True
+        except Exception as exc:  # pragma: no cover
+            logger.error("Xóa Firestore thất bại (%s/%s): %s", collection, doc_id, exc)
+    return _memory.get(collection, {}).pop(doc_id, None) is not None
 
 
 def write_audit(actor: str, action: str, target: str, before: Any = None, after: Any = None) -> str:
