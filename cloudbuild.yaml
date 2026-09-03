@@ -13,6 +13,9 @@ substitutions:
   _WEB_SERVICE: aiedu365-web
   _REPO: aiedu365
   _SITE_URL: ''
+  # Email được cấp quyền Super Admin ở lần đăng nhập đầu, khi tài khoản chưa
+  # được gán custom claim. Nhiều email thì ngăn cách bằng dấu phẩy.
+  _ADMIN_EMAILS: 'hoanganh.goldenlight@gmail.com'
 
 options:
   logging: CLOUD_LOGGING_ONLY
@@ -52,7 +55,7 @@ steps:
       - --platform=managed
       - --no-allow-unauthenticated
       - --service-account=aiedu365-api@$PROJECT_ID.iam.gserviceaccount.com
-      - --set-env-vars=ENVIRONMENT=production,USE_FIRESTORE=true,LLM_PROVIDER=vertex,GCP_PROJECT=$PROJECT_ID,GCP_LOCATION=${_REGION}
+      - --set-env-vars=^@^ENVIRONMENT=production@USE_FIRESTORE=true@LLM_PROVIDER=vertex@GCP_PROJECT=$PROJECT_ID@GCP_LOCATION=${_REGION}@ADMIN_EMAILS=${_ADMIN_EMAILS}
       - --memory=1Gi
       - --cpu=1
       - --min-instances=0
