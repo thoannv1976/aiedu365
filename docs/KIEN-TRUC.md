@@ -263,21 +263,24 @@ IP người dùng được **băm** trước khi ghi log, không lưu IP thô.
 ## 8. Triển khai
 
 ```bash
-./infra/setup-gcp.sh aiedu365 asia-southeast1     # chạy một lần
-gcloud builds submit --config cloudbuild.yaml     # mỗi lần deploy
+./infra/setup-gcp.sh aiedu365 asia-southeast1          # 1. hạ tầng + quyền
+gcloud builds submit --config cloudbuild.yaml \
+  --substitutions=_REGION=asia-southeast1              # 2. build và deploy
+./infra/finish-deploy.sh aiedu365 asia-southeast1      # 3. cấp quyền, in URL
+python data/seed.py --project aiedu365                 # 4. đẩy dữ liệu gốc
 ```
 
-`cloudbuild.yaml` deploy API trước để lấy URL nội bộ, rồi mới build web —
-vì URL đó được nhúng vào cấu hình proxy lúc build.
+`cloudbuild.yaml` deploy API trước để lấy URL nội bộ, rồi mới build web — vì
+URL đó được nhúng vào cấu hình proxy lúc build.
 
-Sau lần deploy đầu tiên, cấp quyền cho web gọi API:
+Hai quyền hay bị bỏ sót, `setup-gcp.sh` cấp sẵn:
 
-```bash
-gcloud run services add-iam-policy-binding aiedu365-api \
-  --region=asia-southeast1 \
-  --member="serviceAccount:aiedu365-web@aiedu365.iam.gserviceaccount.com" \
-  --role=roles/run.invoker
-```
+* Cloud Build cần `roles/run.admin` và `roles/iam.serviceAccountUser` trên hai
+  service account đích. Thiếu chúng thì build chạy xong nhưng deploy báo
+  `PERMISSION_DENIED`.
+* Service web cần `roles/run.invoker` trên service API. Thiếu nó thì trang lên
+  được nhưng mọi lời gọi API trả về 403 và chatbot không phản hồi.
+  `finish-deploy.sh` cấp quyền này sau khi cả hai service đã tồn tại.
 
 CI/CD chạy test trước, chỉ deploy khi xanh, và dùng Workload Identity Federation
 nên không có file khóa service account nào được tạo hay lưu.

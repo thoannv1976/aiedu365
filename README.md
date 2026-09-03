@@ -118,9 +118,11 @@ Bộ câu hỏi eval ở `data/eval/questions.json` gồm cả các câu **phả
 ## Triển khai lên GCP
 
 ```bash
-./infra/setup-gcp.sh aiedu365 asia-southeast1
-gcloud builds submit --config cloudbuild.yaml
-python data/seed.py --project aiedu365    # đẩy dữ liệu gốc lên Firestore
+./infra/setup-gcp.sh aiedu365 asia-southeast1          # hạ tầng + quyền
+gcloud builds submit --config cloudbuild.yaml \
+  --substitutions=_REGION=asia-southeast1              # build và deploy
+./infra/finish-deploy.sh aiedu365 asia-southeast1      # cấp quyền, in URL
+python data/seed.py --project aiedu365                 # đẩy dữ liệu gốc
 ```
 
 Chi tiết ở [`docs/KIEN-TRUC.md`](docs/KIEN-TRUC.md).

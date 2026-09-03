@@ -55,29 +55,41 @@ steps:
       - --timeout=300
     waitFor: ['push-api']
 
-  # 3. Build web với URL nội bộ của API vừa deploy
-  - id: build-web
+  # 3. Lấy URL nội bộ của API vừa deploy, ghi ra file dùng chung giữa các bước
+  - id: resolve-api-url
     name: gcr.io/google.com/cloudsdktool/cloud-sdk
     entrypoint: bash
     args:
       - -c
       - |
         set -euo pipefail
-        API_URL="$(gcloud run services describe ${_API_SERVICE} \
-          --region=${_REGION} --format='value(status.url)')"
-        echo "API nội bộ: $$API_URL"
+        gcloud run services describe ${_API_SERVICE} --region=${_REGION} \
+          --format='value(status.url)' > /workspace/api_url.txt
+        echo "API nội bộ: $(cat /workspace/api_url.txt)"
+    waitFor: ['deploy-api']
+
+  # 4. Build web. URL nội bộ được nhúng vào cấu hình proxy lúc build, nên phải
+  #    có API trước. Dùng builder docker chính thức thay vì gọi docker từ image
+  #    cloud-sdk — image đó không bảo đảm có sẵn docker CLI.
+  - id: build-web
+    name: gcr.io/cloud-builders/docker
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        set -euo pipefail
         docker build -f web/Dockerfile \
-          --build-arg API_INTERNAL_URL="$$API_URL" \
+          --build-arg API_INTERNAL_URL="$(cat /workspace/api_url.txt)" \
           --build-arg NEXT_PUBLIC_SITE_URL="${_SITE_URL}" \
           -t '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/web:$SHORT_SHA' .
-    waitFor: ['deploy-api']
+    waitFor: ['resolve-api-url']
 
   - id: push-web
     name: gcr.io/cloud-builders/docker
     args: ['push', '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/web:$SHORT_SHA']
     waitFor: ['build-web']
 
-  # 4. Deploy web — service duy nhất mở ra Internet
+  # 5. Deploy web — service duy nhất mở ra Internet
   - id: deploy-web
     name: gcr.io/google.com/cloudsdktool/cloud-sdk
     entrypoint: gcloud
