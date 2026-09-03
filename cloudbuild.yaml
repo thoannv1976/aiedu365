@@ -4,6 +4,11 @@
 #     --substitutions=_REGION=asia-southeast1
 substitutions:
   _REGION: asia-southeast1
+  # Nhãn ảnh container. Phải là biến tự đặt (_TAG), KHÔNG dùng SHORT_SHA:
+  # SHORT_SHA chỉ có giá trị khi build được kích hoạt từ kho mã đã kết nối.
+  # Với `gcloud builds submit` (tải mã từ máy lên) biến đó rỗng, làm nhãn ảnh
+  # kết thúc bằng dấu ":" và Docker báo "invalid reference format" ngay bước đầu.
+  _TAG: latest
   _API_SERVICE: aiedu365-api
   _WEB_SERVICE: aiedu365-web
   _REPO: aiedu365
@@ -14,8 +19,8 @@ options:
   machineType: E2_HIGHCPU_8
 
 images:
-  - '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/api:$SHORT_SHA'
-  - '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/web:$SHORT_SHA'
+  - '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/api:${_TAG}'
+  - '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/web:${_TAG}'
 
 steps:
   # 1. Build API
@@ -26,12 +31,12 @@ steps:
       - -f
       - api/Dockerfile
       - -t
-      - '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/api:$SHORT_SHA'
+      - '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/api:${_TAG}'
       - .
 
   - id: push-api
     name: gcr.io/cloud-builders/docker
-    args: ['push', '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/api:$SHORT_SHA']
+    args: ['push', '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/api:${_TAG}']
     waitFor: ['build-api']
 
   # 2. Deploy API trước, để lấy URL nội bộ cho bước build web
@@ -42,7 +47,7 @@ steps:
       - run
       - deploy
       - ${_API_SERVICE}
-      - --image=${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/api:$SHORT_SHA
+      - --image=${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/api:${_TAG}
       - --region=${_REGION}
       - --platform=managed
       - --no-allow-unauthenticated
@@ -81,12 +86,12 @@ steps:
         docker build -f web/Dockerfile \
           --build-arg API_INTERNAL_URL="$(cat /workspace/api_url.txt)" \
           --build-arg NEXT_PUBLIC_SITE_URL="${_SITE_URL}" \
-          -t '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/web:$SHORT_SHA' .
+          -t '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/web:${_TAG}' .
     waitFor: ['resolve-api-url']
 
   - id: push-web
     name: gcr.io/cloud-builders/docker
-    args: ['push', '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/web:$SHORT_SHA']
+    args: ['push', '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/web:${_TAG}']
     waitFor: ['build-web']
 
   # 5. Deploy web — service duy nhất mở ra Internet
@@ -97,7 +102,7 @@ steps:
       - run
       - deploy
       - ${_WEB_SERVICE}
-      - --image=${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/web:$SHORT_SHA
+      - --image=${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/web:${_TAG}
       - --region=${_REGION}
       - --platform=managed
       - --allow-unauthenticated

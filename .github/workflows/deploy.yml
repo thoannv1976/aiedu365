@@ -69,4 +69,4 @@ jobs:
       - name: Build và deploy
         run: |
           gcloud builds submit --config cloudbuild.yaml \
-            --substitutions=_REGION=${{ env.REGION }},_SITE_URL=${{ secrets.SITE_URL }}
+            --substitutions=_REGION=${{ env.REGION }},_SITE_URL=${{ secrets.SITE_URL }},_TAG=${{ github.sha }}
