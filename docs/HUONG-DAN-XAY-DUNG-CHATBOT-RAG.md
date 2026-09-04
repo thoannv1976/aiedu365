@@ -205,8 +205,11 @@ tồn tại.** Thiếu bước này trang vẫn lên nhưng mọi lời gọi AP
   thúc bằng `:` → Docker báo `invalid reference format` ngay bước đầu. Dùng biến
   tự đặt có giá trị mặc định.
 - **`--set-env-vars` mặc định ngăn cách bằng dấu phẩy.** Giá trị chứa dấu phẩy
-  (danh sách email) sẽ bị hiểu thành biến riêng. Dùng cú pháp đổi dấu phân cách:
-  `--set-env-vars=^@^KEY1=v1@KEY2=v2`.
+  (danh sách email) sẽ bị hiểu thành biến riêng. Đổi dấu phân tách bằng cú pháp
+  `--set-env-vars=^;^KEY1=v1;KEY2=v2`. **Ký tự phân tách phải không xuất hiện
+  trong bất kỳ giá trị nào** — dự án này từng chọn `^@^` cho biến chứa địa chỉ
+  email, gcloud cắt `hoanganh@gmail.com` thành hai phần và cả bước deploy hỏng.
+  Đừng chọn dấu phân tách theo cảm tính: nhìn vào giá trị thật rồi mới chọn.
 - **Next.js `output: standalone`** phải chép thủ công `.next/static` và `public`.
   Thiếu thì trang lên nhưng mất toàn bộ CSS/JS. Lệnh đúng là
   `cp -r .next/static .next/standalone/.next/` — có dấu `/` cuối, nếu không sẽ

@@ -55,7 +55,10 @@ steps:
       - --platform=managed
       - --no-allow-unauthenticated
       - --service-account=aiedu365-api@$PROJECT_ID.iam.gserviceaccount.com
-      - --set-env-vars=^@^ENVIRONMENT=production@USE_FIRESTORE=true@LLM_PROVIDER=vertex@GCP_PROJECT=$PROJECT_ID@GCP_LOCATION=${_REGION}@ADMIN_EMAILS=${_ADMIN_EMAILS}
+      # Dấu phân tách phải là ký tự KHÔNG xuất hiện trong bất kỳ giá trị nào.
+      # Không dùng @ vì ADMIN_EMAILS là địa chỉ email; không dùng dấu phẩy vì
+      # danh sách nhiều email ngăn nhau bằng dấu phẩy.
+      - --set-env-vars=^;^ENVIRONMENT=production;USE_FIRESTORE=true;LLM_PROVIDER=vertex;GCP_PROJECT=$PROJECT_ID;GCP_LOCATION=${_REGION};ADMIN_EMAILS=${_ADMIN_EMAILS}
       - --memory=1Gi
       - --cpu=1
       - --min-instances=0
