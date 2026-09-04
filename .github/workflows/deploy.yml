@@ -1,14 +1,15 @@
 name: Deploy lên Cloud Run
 
 on:
+  # Cố ý KHÔNG tự deploy khi đẩy mã lên nhánh làm việc: quy trình hiện tại là
+  # deploy tay qua Cloud Shell, để hai đường deploy không tranh nhau ghi đè
+  # phiên bản của nhau.
   push:
-    branches:
-      - main
-      - claude/chatbot-training-advisor-plan-0r9qjx
-    # Sửa tài liệu thì không cần deploy lại — tránh tốn build vô ích.
+    branches: [main]
     paths-ignore:
       - 'docs/**'
       - '**/*.md'
+  # Vẫn bấm chạy tay được: tab Actions → "Deploy lên Cloud Run" → Run workflow.
   workflow_dispatch:
 
 permissions:
