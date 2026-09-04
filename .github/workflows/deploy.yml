@@ -2,7 +2,13 @@ name: Deploy lên Cloud Run
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - claude/chatbot-training-advisor-plan-0r9qjx
+    # Sửa tài liệu thì không cần deploy lại — tránh tốn build vô ích.
+    paths-ignore:
+      - 'docs/**'
+      - '**/*.md'
   workflow_dispatch:
 
 permissions:
@@ -52,9 +58,9 @@ jobs:
   deploy:
     name: Deploy
     needs: test
-    # Chạy khi bấm nút thủ công, hoặc khi đẩy lên main (nhánh main hiện chưa
-    # tồn tại — giữ điều kiện này để sau tạo main là tự động chạy).
-    if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
+    # Nhánh nào được phép chạy đã khai báo ở mục on.push.branches phía trên,
+    # nên ở đây chỉ cần loại trừ các sự kiện khác.
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
