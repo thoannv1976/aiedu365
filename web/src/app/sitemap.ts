@@ -1,9 +1,10 @@
 import type { MetadataRoute } from 'next'
 
 import { getCourses } from '@/lib/api'
+import { siteUrl } from '@/lib/siteUrl'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aiedu365.example'
+  const base = siteUrl()
   const courses = await getCourses()
   const now = new Date()
 

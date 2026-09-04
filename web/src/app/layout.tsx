@@ -8,6 +8,7 @@ import { SiteHeader } from '@/components/layout/SiteHeader'
 import { getSite } from '@/lib/api'
 
 import './globals.css'
+import { siteUrl } from '@/lib/siteUrl'
 
 const beVietnam = Be_Vietnam_Pro({
   subsets: ['vietnamese', 'latin'],
@@ -17,7 +18,7 @@ const beVietnam = Be_Vietnam_Pro({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aiedu365.example'),
+  metadataBase: new URL(siteUrl()),
   title: {
     default: 'Tập huấn AI chuyên sâu cho Chuyển đổi số Đại học',
     template: '%s · AIEDU365',
