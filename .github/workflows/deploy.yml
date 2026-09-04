@@ -52,7 +52,9 @@ jobs:
   deploy:
     name: Deploy
     needs: test
-    if: github.ref == 'refs/heads/main'
+    # Chạy khi bấm nút thủ công, hoặc khi đẩy lên main (nhánh main hiện chưa
+    # tồn tại — giữ điều kiện này để sau tạo main là tự động chạy).
+    if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
